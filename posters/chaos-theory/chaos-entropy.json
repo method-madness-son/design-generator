@@ -1,0 +1,11 @@
+{
+  "id": "chaos-entropy",
+  "title": "Entropy",
+  "subtitle": "Things fall apart. It is the law.",
+  "palette": "white",
+  "icon": {
+    "name": "Activity",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

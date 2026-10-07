@@ -1,0 +1,11 @@
+{
+  "id": "the-persona",
+  "title": "The Persona",
+  "subtitle": "Do not mistake the role you play for the soul you possess.",
+  "palette": "gold",
+  "icon": {
+    "name": "VenetianMask",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

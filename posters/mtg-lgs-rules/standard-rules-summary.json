@@ -1,0 +1,12 @@
+{
+  "id": "standard-rules-summary",
+  "title": "Standard Format Rules",
+  "subtitle": "Quick Reference",
+  "body": ["60-Card Minimum Deck", "15-Card Maximum Sideboard", "Max 4 Copies Per Named Card", "20 Starting Life Total"],
+  "palette": "white",
+  "icon": {
+    "name": "Layers",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

@@ -6,7 +6,12 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-2xl font-semibold">Projects</h1>
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-2xl font-semibold">Projects</h1>
+        <Link href="/typography" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+          Typography &rarr;
+        </Link>
+      </div>
       {projects.length === 0 && (
         <p className="mt-4 text-neutral-600">
           No projects yet. Add a folder with a project.json under posters/.

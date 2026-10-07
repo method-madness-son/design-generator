@@ -1,0 +1,11 @@
+{
+  "id": "star-stuff",
+  "title": "Star Stuff",
+  "subtitle": "“The nitrogen in our DNA, the calcium in our teeth... we are made of starstuff.” — Carl Sagan",
+  "palette": "white",
+  "icon": {
+    "name": "Sparkles",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

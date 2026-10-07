@@ -1,0 +1,11 @@
+{
+  "id": "the-way",
+  "title": "The Way",
+  "subtitle": "“There is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter.” — Miyamoto Musashi",
+  "palette": "paper",
+  "icon": {
+    "name": "Target",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

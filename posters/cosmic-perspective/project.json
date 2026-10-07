@@ -1,0 +1,40 @@
+{
+  "id": "cosmic-perspective",
+  "title": "The Cosmic Perspective",
+  "description": "Deep space minimalist posters pairing cosmic imagery with quotes on scale, physics, and wonder.",
+  "colorPalette": {
+    "background": "#05070D",
+    "ink": "#D7DCE8",
+    "accent": "#3E63FF"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-5 p-14 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "var(--font-lexend), sans-serif",
+    "titleClasses": "font-bold uppercase tracking-[0.2em] text-[var(--poster-ink)]",
+    "subtitleClasses": "font-normal italic text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "titleRem": 2.5,
+    "subtitleRem": 1.25
+  },
+  "palettes": {
+    "blue": {
+      "accent": "#3E63FF"
+    },
+    "white": {
+      "accent": "#F5F7FF"
+    }
+  },
+  "iconRem": 5,
+  "sizeScale": {
+    "icon": [3, 4, 5, 6, 7, 8],
+    "title": [1.75, 2, 2.25, 2.5, 2.75, 3, 3.25],
+    "subtitle": [1, 1.125, 1.25, 1.5, 1.75]
+  }
+}

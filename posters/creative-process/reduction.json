@@ -1,0 +1,11 @@
+{
+  "id": "reduction",
+  "title": "Reduction",
+  "subtitle": "“Less, but better.” — Dieter Rams",
+  "palette": "blue",
+  "icon": {
+    "name": "Minimize2",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

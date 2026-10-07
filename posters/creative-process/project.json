@@ -1,0 +1,43 @@
+{
+  "id": "creative-process",
+  "title": "The Creative Process",
+  "description": "Bauhaus/Swiss-style grid posters pairing bold primary color blocks with quotes on craft and creative discipline.",
+  "colorPalette": {
+    "background": "#F2EDE4",
+    "ink": "#1A1A1A",
+    "accent": "#0047AB"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-5 p-14 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "var(--font-atkinson), sans-serif",
+    "titleClasses": "font-bold uppercase tracking-tight text-[var(--poster-ink)]",
+    "subtitleClasses": "font-medium text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "titleRem": 3,
+    "subtitleRem": 1.25
+  },
+  "palettes": {
+    "red": {
+      "accent": "#D62828"
+    },
+    "blue": {
+      "accent": "#0047AB"
+    },
+    "yellow": {
+      "accent": "#E3B23C"
+    }
+  },
+  "iconRem": 5,
+  "sizeScale": {
+    "icon": [3, 4, 5, 6, 7, 8],
+    "title": [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5],
+    "subtitle": [1, 1.125, 1.25, 1.5, 1.75]
+  }
+}

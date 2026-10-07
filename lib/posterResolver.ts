@@ -92,6 +92,7 @@ export function getResolvedPoster(
     title: poster.title,
     subtitle: poster.subtitle,
     icon: poster.icon,
+    graphic: poster.graphic,
     pinterest: poster.pinterest,
     etsy: poster.etsy,
     aspectRatio: overrides?.defaultLayout?.aspectRatio || project.defaultLayout.aspectRatio,
@@ -109,7 +110,7 @@ export function getResolvedPoster(
     titleRem: Number(selected.titleRem) || overrides?.defaultTypography?.titleRem || project.defaultTypography.titleRem,
     subtitleRem:
       Number(selected.subtitleRem) || overrides?.defaultTypography?.subtitleRem || project.defaultTypography.subtitleRem,
-    iconRem: Number(selected.iconRem) || poster.icon?.sizeRem || project.iconRem,
+    iconRem: Number(selected.iconRem) || poster.icon?.sizeRem || poster.graphic?.sizeRem || project.iconRem,
     body: poster.body ?? [],
     bodyClasses: overrides?.defaultTypography?.bodyClasses || project.defaultTypography.bodyClasses || '',
     titleFont: fontPair?.title || fontFamily,

@@ -1,0 +1,11 @@
+{
+  "id": "the-abyss",
+  "title": "The Abyss",
+  "subtitle": "“And if you gaze long enough into an abyss, the abyss will gaze back into you.” — Friedrich Nietzsche",
+  "palette": "gray",
+  "icon": {
+    "name": "Eye",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

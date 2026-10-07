@@ -1,4 +1,4 @@
-import { Andika, Atkinson_Hyperlegible, Fraunces, Lexend, Nunito } from "next/font/google";
+import { Andika, Atkinson_Hyperlegible, Cinzel, Fraunces, Lexend, Nunito, Playfair_Display } from "next/font/google";
 
 // Fonts available to poster "fontPairs" as CSS variables, e.g. var(--font-lexend).
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend", preload: false });
@@ -11,5 +11,15 @@ const atkinson = Atkinson_Hyperlegible({
   preload: false,
 });
 const andika = Andika({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-andika", preload: false });
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-cinzel", preload: false });
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair-display",
+  preload: false,
+});
 
-export const posterFontVariables = [lexend, fraunces, nunito, atkinson, andika].map((font) => font.variable).join(" ");
+export const posterFontVariables = [lexend, fraunces, nunito, atkinson, andika, cinzel, playfairDisplay]
+  .map((font) => font.variable)
+  .join(" ");

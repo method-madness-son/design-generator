@@ -53,6 +53,13 @@ export type PosterFile = {
     className?: string;
     sizeRem?: number;
   };
+  // Renders a built-in generative graphic (components/Fractal.tsx) instead of a lucide icon.
+  graphic?: {
+    type: 'lorenz' | 'tree' | 'spiral';
+    position: 'top' | 'bottom';
+    className?: string;
+    sizeRem?: number;
+  };
   overrides?: DeepPartial<Omit<ProjectConfig, 'id' | 'title' | 'description' | 'colorPalette' | 'palettes' | 'fontPairs'>> & {
     colorPalette?: Record<string, string>;
   };
@@ -95,6 +102,7 @@ export type ResolvedPoster = {
   colorPalette: Record<string, string>;
   paletteName?: string;
   icon?: PosterFile['icon'];
+  graphic?: PosterFile['graphic'];
   pinterest?: PosterFile['pinterest'];
   etsy?: PosterFile['etsy'];
 };

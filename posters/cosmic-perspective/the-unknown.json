@@ -1,0 +1,11 @@
+{
+  "id": "the-unknown",
+  "title": "The Unknown",
+  "subtitle": "“I would rather have questions that can't be answered than answers that can't be questioned.” — Richard Feynman",
+  "palette": "blue",
+  "icon": {
+    "name": "Atom",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

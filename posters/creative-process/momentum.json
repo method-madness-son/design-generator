@@ -1,0 +1,11 @@
+{
+  "id": "momentum",
+  "title": "Momentum",
+  "subtitle": "“Inspiration exists, but it has to find you working.” — Pablo Picasso",
+  "palette": "yellow",
+  "icon": {
+    "name": "Hammer",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

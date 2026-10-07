@@ -1,0 +1,11 @@
+{
+  "id": "event-judge",
+  "title": "\"JUDGE!\"",
+  "subtitle": "Keep your hand raised. Please do not yell across the room.",
+  "palette": "gold",
+  "icon": {
+    "name": "Gavel",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

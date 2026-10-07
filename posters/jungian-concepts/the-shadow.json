@@ -1,0 +1,11 @@
+{
+  "id": "the-shadow",
+  "title": "The Shadow",
+  "subtitle": "Acknowledge the darkness within, or be ruled by it.",
+  "palette": "ethereal",
+  "icon": {
+    "name": "Moon",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

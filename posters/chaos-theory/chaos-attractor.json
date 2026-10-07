@@ -1,0 +1,11 @@
+{
+  "id": "chaos-attractor",
+  "title": "Strange Attractors",
+  "subtitle": "Endless complexity. Zero repetition.",
+  "palette": "magenta",
+  "icon": {
+    "name": "Orbit",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

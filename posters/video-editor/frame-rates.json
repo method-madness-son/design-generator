@@ -1,0 +1,11 @@
+{
+  "id": "frame-rates",
+  "title": "Frame Rates",
+  "subtitle": "24fps for film. 30fps for TV. 60fps for gaming and slow-mo.",
+  "palette": "blue",
+  "icon": {
+    "name": "Film",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

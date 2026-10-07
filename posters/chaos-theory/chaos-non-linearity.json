@@ -1,0 +1,11 @@
+{
+  "id": "chaos-non-linearity",
+  "title": "Non-Linearity",
+  "subtitle": "The output is never equal to the input.",
+  "palette": "magenta",
+  "icon": {
+    "name": "GitCommit",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

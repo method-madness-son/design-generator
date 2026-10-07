@@ -1,0 +1,37 @@
+{
+  "id": "existentialism",
+  "title": "Existentialism & Absurdism",
+  "description": "Brutalist, high-contrast posters pairing heavy typography with existentialist and absurdist philosophy.",
+  "colorPalette": {
+    "background": "#141414",
+    "ink": "#EDEDED",
+    "accent": "#8A8A86"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-5 p-14 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "var(--font-lexend), sans-serif",
+    "titleClasses": "font-black uppercase tracking-tight text-[var(--poster-ink)]",
+    "subtitleClasses": "font-normal text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "titleRem": 3,
+    "subtitleRem": 1.25
+  },
+  "palettes": {
+    "gray": {
+      "accent": "#8A8A86"
+    }
+  },
+  "iconRem": 5,
+  "sizeScale": {
+    "icon": [3, 4, 5, 6, 7, 8],
+    "title": [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5],
+    "subtitle": [1, 1.125, 1.25, 1.5, 1.75]
+  }
+}

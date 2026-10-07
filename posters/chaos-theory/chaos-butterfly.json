@@ -1,0 +1,11 @@
+{
+  "id": "chaos-butterfly",
+  "title": "The Butterfly Effect",
+  "subtitle": "Tiny changes. Massive consequences.",
+  "palette": "neon",
+  "icon": {
+    "name": "Tornado",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

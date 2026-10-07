@@ -1,0 +1,11 @@
+{
+  "id": "event-timer",
+  "title": "Time in Round",
+  "subtitle": "50-minute rounds. When time is called, active player is Turn 0.",
+  "palette": "red",
+  "icon": {
+    "name": "Hourglass",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

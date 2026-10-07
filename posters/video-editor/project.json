@@ -1,0 +1,46 @@
+{
+  "id": "video-editor",
+  "title": "The Video Editor",
+  "description": "Editing bay dark mode posters for the inside jokes and technical truths every video editor knows.",
+  "colorPalette": {
+    "background": "#1B1E22",
+    "ink": "#E8E8EA",
+    "accent": "#3B82F6"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-6 p-14 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
+    "titleClasses": "font-bold tracking-tight text-[var(--poster-ink)]",
+    "subtitleClasses": "font-medium text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "titleRem": 3.25,
+    "subtitleRem": 1.5
+  },
+  "palettes": {
+    "red": {
+      "accent": "#E5484D"
+    },
+    "green": {
+      "accent": "#2FB344"
+    },
+    "blue": {
+      "accent": "#3B82F6"
+    },
+    "gray": {
+      "accent": "#9CA3AF"
+    }
+  },
+  "iconRem": 6,
+  "sizeScale": {
+    "icon": [4, 5, 6, 7, 8, 9],
+    "title": [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4],
+    "subtitle": [1, 1.25, 1.5, 1.75, 2]
+  }
+}

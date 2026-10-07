@@ -1,0 +1,11 @@
+{
+  "id": "zone-stack",
+  "title": "The Stack",
+  "subtitle": "Last in, first out. Pass priority.",
+  "palette": "blue",
+  "icon": {
+    "name": "Layers",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

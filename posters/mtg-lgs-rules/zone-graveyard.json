@@ -1,0 +1,11 @@
+{
+  "id": "zone-graveyard",
+  "title": "The Graveyard",
+  "subtitle": "Public knowledge. Do not reorder.",
+  "palette": "black",
+  "icon": {
+    "name": "Skull",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

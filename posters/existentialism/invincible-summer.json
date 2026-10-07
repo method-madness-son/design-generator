@@ -1,0 +1,11 @@
+{
+  "id": "invincible-summer",
+  "title": "Invincible Summer",
+  "subtitle": "“In the midst of winter, I found there was, within me, an invincible summer.” — Albert Camus",
+  "palette": "gray",
+  "icon": {
+    "name": "Sun",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

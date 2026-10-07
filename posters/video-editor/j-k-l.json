@@ -1,0 +1,11 @@
+{
+  "id": "j-k-l",
+  "title": "J, K, L",
+  "subtitle": "Rewind. Pause. Fast Forward. The holy trinity of playback.",
+  "palette": "blue",
+  "icon": {
+    "name": "FastForward",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

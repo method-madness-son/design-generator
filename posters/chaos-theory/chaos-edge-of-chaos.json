@@ -1,0 +1,11 @@
+{
+  "id": "chaos-edge-of-chaos",
+  "title": "The Edge of Chaos",
+  "subtitle": "Creativity and collapse live on the boundary.",
+  "palette": "neon",
+  "icon": {
+    "name": "Flame",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

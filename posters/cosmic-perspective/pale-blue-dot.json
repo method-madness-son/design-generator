@@ -1,0 +1,11 @@
+{
+  "id": "pale-blue-dot",
+  "title": "Pale Blue Dot",
+  "subtitle": "“Look again at that dot. That's here. That's home. That's us.” — Carl Sagan",
+  "palette": "blue",
+  "icon": {
+    "name": "Earth",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

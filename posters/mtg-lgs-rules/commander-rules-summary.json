@@ -1,0 +1,12 @@
+{
+  "id": "commander-rules-summary",
+  "title": "Commander Rules",
+  "subtitle": "Quick Reference",
+  "body": ["100-Card Singleton Deck", "Strict Color Identity Limits", "40 Starting Life Total", "21 Commander Damage Lethal"],
+  "palette": "gold",
+  "icon": {
+    "name": "Crown",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

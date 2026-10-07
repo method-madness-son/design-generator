@@ -1,0 +1,11 @@
+{
+  "id": "chaos-bifurcation",
+  "title": "Bifurcation",
+  "subtitle": "Order splits into instability.",
+  "palette": "white",
+  "icon": {
+    "name": "Split",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

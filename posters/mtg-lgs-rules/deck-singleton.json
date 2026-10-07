@@ -1,0 +1,11 @@
+{
+  "id": "deck-singleton",
+  "title": "The Singleton Rule",
+  "subtitle": "One copy per named card. Basic lands are the only exception.",
+  "palette": "gold",
+  "icon": {
+    "name": "FileDigit",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

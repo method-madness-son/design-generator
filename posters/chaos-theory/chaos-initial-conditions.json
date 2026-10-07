@@ -1,0 +1,11 @@
+{
+  "id": "chaos-initial-conditions",
+  "title": "Initial Conditions",
+  "subtitle": "A tiny shift at the start changes everything.",
+  "palette": "neon",
+  "icon": {
+    "name": "Compass",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

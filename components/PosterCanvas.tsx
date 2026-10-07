@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { Fractal } from '@/components/Fractal';
 import { IconRenderer } from '@/components/IconRenderer';
 import { cn } from '@/lib/utils';
 import type { ResolvedPoster } from '@/types/poster';
@@ -18,6 +19,12 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
       className={cn('shrink-0', poster.icon.className)}
     />
   );
+  const graphic = poster.graphic && (
+    <Fractal type={poster.graphic.type} sizeRem={poster.iconRem} className={cn('shrink-0', poster.graphic.className)} />
+  );
+  // graphic replaces icon when both are set; position follows whichever one is active.
+  const visual = graphic ?? icon;
+  const visualPosition = poster.graphic?.position ?? poster.icon?.position;
 
   return (
     <div
@@ -33,7 +40,7 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
         } as CSSProperties
       }
     >
-      {poster.icon?.position === 'top' && icon}
+      {visualPosition === 'top' && visual}
       <h1 className={poster.titleClasses} style={{ fontFamily: poster.titleFont, fontSize: `${poster.titleRem}rem` }}>
         {poster.title}
       </h1>
@@ -47,7 +54,7 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
           ))}
         </ul>
       )}
-      {poster.icon?.position === 'bottom' && icon}
+      {visualPosition === 'bottom' && visual}
     </div>
   );
 }

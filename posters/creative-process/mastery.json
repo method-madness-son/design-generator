@@ -1,0 +1,11 @@
+{
+  "id": "mastery",
+  "title": "Mastery",
+  "subtitle": "“Learn the rules like a pro, so you can break them like an artist.” — Pablo Picasso",
+  "palette": "red",
+  "icon": {
+    "name": "PenTool",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}

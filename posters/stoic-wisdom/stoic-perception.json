@@ -1,0 +1,12 @@
+{
+  "id": "stoic-perception",
+  "title": "Perception",
+  "subtitle": "“Men are disturbed not by things, but by the view which they take of them.”\n— Epictetus",
+  "palette": "bronze",
+  "fonts": "classic",
+  "icon": {
+    "name": "Eye",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  }
+}
