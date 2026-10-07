@@ -1,0 +1,49 @@
+{
+  "id": "sensory-room",
+  "title": "Sensory Room",
+  "subtitle": "A calm space to rest, move, and reset.",
+  "palette": "lavender",
+  "icon": {
+    "name": "Sparkles",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Sensory Room Sign | Printable Wall Art for Sensory-Friendly Spaces",
+    "description": "A soft Sensory Room sign marking a calm space to rest, move, and reset. Printable wall art for home sensory rooms, school sensory spaces, and therapy offices supporting autistic and sensory-sensitive kids and adults.",
+    "keywords": [
+      "sensory room sign printable",
+      "sensory room decor ideas",
+      "sensory room aesthetic",
+      "autism classroom decor",
+      "sensory friendly sign",
+      "sensory space decor",
+      "autism home decor",
+      "sensory room wall art",
+      "neurodivergent decor",
+      "sensory corner sign"
+    ],
+    "board": "Sensory Rooms & Spaces",
+    "altText": "Sensory Room printable sign with a sparkles icon on a soft lavender background, for sensory-friendly spaces."
+  },
+  "etsy": {
+    "title": "Sensory Room Sign, Printable Sensory Decor, Autism Classroom Wall Art, Sensory Friendly Sign, Digital Download",
+    "description": "A soft Sensory Room sign marking a calm space to rest, move, and reset.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame at the entrance of a home or school sensory room, or a therapy office sensory space.\n\nThis listing is a printable sign, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "tags": [
+      "sensory room sign",
+      "sensory room decor",
+      "autism classroom art",
+      "sensory friendly",
+      "sensory space decor",
+      "autism home decor",
+      "sensory room art",
+      "printable wall art",
+      "digital download",
+      "neurodivergent decor",
+      "sensory corner sign",
+      "therapy room decor",
+      "calm space sign"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

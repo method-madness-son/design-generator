@@ -1,0 +1,50 @@
+{
+  "id": "aquarius",
+  "title": "Aquarius",
+  "subtitle": "January 20 – February 18",
+  "body": ["Independent", "Visionary", "Unconventional"],
+  "palette": "air",
+  "icon": {
+    "name": "ZodiacAquarius",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Aquarius Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Aquarius poster with the water-bearer symbol, birth date range, and core traits: independent, visionary, unconventional. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "aquarius poster",
+      "aquarius zodiac sign",
+      "aquarius wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "aquarius birthday gift",
+      "minimalist astrology print",
+      "aquarius symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Aquarius zodiac poster with a water-bearer symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Aquarius Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Aquarius poster featuring the water-bearer symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "aquarius poster",
+      "aquarius zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "aquarius gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "aquarius symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "aquarius wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

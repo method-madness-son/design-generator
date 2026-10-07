@@ -1,0 +1,54 @@
+{
+  "id": "console-log",
+  "title": "console.log('here');",
+  "subtitle": "The world's most popular debugging tool.",
+  "palette": "yellow",
+  "icon": {
+    "name": "SquareTerminal",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.5
+    }
+  },
+  "pinterest": {
+    "title": "console.log('here') Poster | Funny Dark Mode Developer Wall Art",
+    "description": "A dark-mode poster for every developer who debugs with console.log. Printable wall art for home offices, dev dens, and coding setups.",
+    "keywords": [
+      "console log poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "javascript joke poster",
+      "software engineer gift",
+      "debugging joke print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading console.log('here'); with a terminal icon in yellow, for developer office decor."
+  },
+  "etsy": {
+    "title": "console.log Poster, Funny Programmer Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster for every developer who debugs with console.log.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "console log poster",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "javascript joke",
+      "software engineer gift",
+      "debugging poster",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

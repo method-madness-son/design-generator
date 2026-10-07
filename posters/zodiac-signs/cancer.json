@@ -1,0 +1,50 @@
+{
+  "id": "cancer",
+  "title": "Cancer",
+  "subtitle": "June 21 – July 22",
+  "body": ["Nurturing", "Intuitive", "Sentimental"],
+  "palette": "water",
+  "icon": {
+    "name": "ZodiacCancer",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Cancer Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Cancer poster with the crab symbol, birth date range, and core traits: nurturing, intuitive, sentimental. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "cancer poster",
+      "cancer zodiac sign",
+      "cancer wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "cancer birthday gift",
+      "minimalist astrology print",
+      "cancer symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Cancer zodiac poster with a crab symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Cancer Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Cancer poster featuring the crab symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "cancer poster",
+      "cancer zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "cancer gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "cancer symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "cancer wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

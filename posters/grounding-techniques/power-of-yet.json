@@ -1,0 +1,11 @@
+{
+  "id": "power-of-yet",
+  "title": "The Power of Yet",
+  "subtitle": "\"I can't... yet.\"",
+  "palette": "peach",
+  "icon": {
+    "name": "Sprout",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "eslint-disable",
+  "title": "// eslint-disable-next-line",
+  "subtitle": "The official solution to React warnings.",
+  "palette": "yellow",
+  "icon": {
+    "name": "AlertTriangle",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 2.5
+    }
+  },
+  "pinterest": {
+    "title": "eslint-disable-next-line Poster | Funny Dark Mode React Wall Art",
+    "description": "A dark-mode poster for the official solution to every React warning: disable the lint rule. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "eslint joke poster",
+      "react joke poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "javascript humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading // eslint-disable-next-line with an alert triangle icon in yellow, for developer office decor."
+  },
+  "etsy": {
+    "title": "eslint-disable-next-line Poster, Funny React Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster for the official solution to every React warning: disable the lint rule.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "eslint joke poster",
+      "react joke poster",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "software engineer gift",
+      "javascript humor print",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

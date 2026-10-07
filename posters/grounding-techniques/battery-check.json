@@ -1,0 +1,11 @@
+{
+  "id": "battery-check",
+  "title": "Check Your Battery",
+  "subtitle": "Recharge before you're empty.",
+  "palette": "rose",
+  "icon": {
+    "name": "BatteryMedium",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

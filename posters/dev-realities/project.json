@@ -1,0 +1,55 @@
+{
+  "id": "dev-realities",
+  "title": "Developer Realities",
+  "description": "Dark-mode posters for the jokes, quirks, and rituals every developer knows.",
+  "colorPalette": {
+    "background": "#0D1117",
+    "ink": "#E6EDF3",
+    "accent": "#58A6FF"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-6 p-16 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
+    "titleClasses": "font-bold tracking-tight text-[var(--poster-accent)]",
+    "subtitleClasses": "font-medium text-[var(--poster-ink)]",
+    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "titleRem": 3.5,
+    "subtitleRem": 1.75
+  },
+  "palettes": {
+    "yellow": {
+      "accent": "#E3B341"
+    },
+    "red": {
+      "accent": "#F85149"
+    },
+    "purple": {
+      "accent": "#BC8CFF"
+    },
+    "green": {
+      "accent": "#3FB950"
+    },
+    "blue": {
+      "accent": "#58A6FF"
+    }
+  },
+  "fontPairs": {
+    "mono": {
+      "title": "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
+      "body": "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace"
+    }
+  },
+  "iconRem": 6,
+  "sizeScale": {
+    "icon": [4, 5, 6, 7, 8, 9],
+    "title": [1.75, 2, 2.25, 2.5, 3, 3.5, 3.75, 4, 4.5, 5],
+    "subtitle": [1.25, 1.5, 1.75, 2, 2.25]
+  }
+}

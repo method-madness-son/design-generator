@@ -1,0 +1,54 @@
+{
+  "id": "const-self",
+  "title": "const self = this;",
+  "subtitle": "When you lose track of who you are in a callback.",
+  "palette": "purple",
+  "icon": {
+    "name": "Crosshair",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.5
+    }
+  },
+  "pinterest": {
+    "title": "const self = this Poster | Funny Dark Mode JavaScript Wall Art",
+    "description": "A dark-mode poster for every developer who's lost track of 'this' inside a callback. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "javascript joke poster",
+      "const self this poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "javascript context print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading const self = this; with a crosshair icon in purple, for developer office decor."
+  },
+  "etsy": {
+    "title": "const self = this Poster, Funny JavaScript Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster for every developer who's lost track of 'this' inside a callback.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "javascript joke poster",
+      "const self this",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "software engineer gift",
+      "javascript context",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

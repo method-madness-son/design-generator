@@ -1,0 +1,50 @@
+{
+  "id": "gemini",
+  "title": "Gemini",
+  "subtitle": "May 21 – June 20",
+  "body": ["Curious", "Witty", "Adaptable"],
+  "palette": "air",
+  "icon": {
+    "name": "ZodiacGemini",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Gemini Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Gemini poster with the twins symbol, birth date range, and core traits: curious, witty, adaptable. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "gemini poster",
+      "gemini zodiac sign",
+      "gemini wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "gemini birthday gift",
+      "minimalist astrology print",
+      "gemini symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Gemini zodiac poster with a twins symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Gemini Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Gemini poster featuring the twins symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "gemini poster",
+      "gemini zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "gemini gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "gemini symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "gemini wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

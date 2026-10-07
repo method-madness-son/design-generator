@@ -1,0 +1,11 @@
+{
+  "id": "box-breathing",
+  "title": "Box Breathing",
+  "subtitle": "4 in. 4 hold. 4 out. 4 hold.",
+  "palette": "seafoam",
+  "icon": {
+    "name": "Square",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

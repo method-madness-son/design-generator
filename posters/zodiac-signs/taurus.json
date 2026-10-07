@@ -1,0 +1,50 @@
+{
+  "id": "taurus",
+  "title": "Taurus",
+  "subtitle": "April 20 – May 20",
+  "body": ["Steady", "Loyal", "Stubborn"],
+  "palette": "earth",
+  "icon": {
+    "name": "ZodiacTaurus",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Taurus Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Taurus poster with the bull symbol, birth date range, and core traits: steady, loyal, stubborn. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "taurus poster",
+      "taurus zodiac sign",
+      "taurus wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "taurus birthday gift",
+      "minimalist astrology print",
+      "taurus symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Taurus zodiac poster with a bull symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Taurus Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Taurus poster featuring the bull symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "taurus poster",
+      "taurus zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "taurus gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "taurus symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "taurus wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

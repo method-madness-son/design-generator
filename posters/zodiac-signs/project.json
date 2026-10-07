@@ -1,0 +1,65 @@
+{
+  "id": "zodiac-signs",
+  "title": "Zodiac Signs",
+  "description": "Minimalist astrology posters with each sign's symbol, dates, and core traits.",
+  "colorPalette": {
+    "background": "#161B33",
+    "ink": "#F4EFE3",
+    "accent": "#D4AF37"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 8,
+    "containerClasses": "items-center justify-center gap-5 p-12 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-[var(--poster-background)]"
+  },
+  "defaultTypography": {
+    "fontFamily": "var(--font-fraunces), serif",
+    "titleClasses": "font-bold tracking-wide text-[var(--poster-ink)]",
+    "subtitleClasses": "uppercase tracking-[0.2em] text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-1 text-xl uppercase tracking-[0.15em] text-[var(--poster-ink)]",
+    "titleRem": 4,
+    "subtitleRem": 1.5
+  },
+  "palettes": {
+    "fire": {
+      "accent": "#E2725B"
+    },
+    "earth": {
+      "accent": "#8C9A6B"
+    },
+    "air": {
+      "accent": "#A9C4D9"
+    },
+    "water": {
+      "accent": "#5E8C9C"
+    },
+    "daylight": {
+      "background": "#F4EFE3",
+      "ink": "#161B33",
+      "accent": "#B8860B"
+    }
+  },
+  "fontPairs": {
+    "classic": {
+      "title": "Georgia, 'Times New Roman', serif",
+      "body": "Georgia, 'Times New Roman', serif"
+    },
+    "celestial": {
+      "title": "var(--font-fraunces), serif",
+      "body": "var(--font-lexend), sans-serif"
+    },
+    "clear": {
+      "title": "var(--font-lexend), sans-serif",
+      "body": "var(--font-atkinson), sans-serif"
+    }
+  },
+  "iconRem": 7,
+  "sizeScale": {
+    "icon": [4, 5, 6, 7, 8, 9, 10, 11],
+    "title": [2.25, 2.5, 3, 3.5, 3.75, 4, 4.5, 5, 5.5, 6],
+    "subtitle": [1, 1.25, 1.5, 1.75, 2, 2.25, 2.5]
+  }
+}

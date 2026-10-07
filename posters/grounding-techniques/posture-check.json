@@ -1,0 +1,11 @@
+{
+  "id": "posture-check",
+  "title": "Posture Check",
+  "subtitle": "Feet flat. Shoulders back. Jaw loose.",
+  "palette": "peach",
+  "icon": {
+    "name": "PersonStanding",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

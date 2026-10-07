@@ -1,0 +1,50 @@
+{
+  "id": "libra",
+  "title": "Libra",
+  "subtitle": "September 23 – October 22",
+  "body": ["Diplomatic", "Charming", "Indecisive"],
+  "palette": "air",
+  "icon": {
+    "name": "ZodiacLibra",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Libra Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Libra poster with the scales symbol, birth date range, and core traits: diplomatic, charming, indecisive. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "libra poster",
+      "libra zodiac sign",
+      "libra wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "libra birthday gift",
+      "minimalist astrology print",
+      "libra symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Libra zodiac poster with a scales symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Libra Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Libra poster featuring the scales symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "libra poster",
+      "libra zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "libra gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "libra symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "libra wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

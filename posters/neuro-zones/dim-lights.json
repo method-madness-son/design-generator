@@ -1,0 +1,49 @@
+{
+  "id": "dim-lights",
+  "title": "Dim Lights Ahead",
+  "subtitle": "Soft lighting only. No fluorescents, no glare.",
+  "palette": "dusk",
+  "icon": {
+    "name": "Lamp",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Dim Lights Ahead Sign | Printable Low-Glare Room Wall Art for Sensory Spaces",
+    "description": "A gentle Dim Lights Ahead sign marking low-glare, soft-lighting spaces. Printable wall art for sensory rooms, calm corners, and neurodivergent-friendly homes and classrooms that avoid harsh fluorescent light.",
+    "keywords": [
+      "dim lights sign",
+      "low glare room sign",
+      "soft lighting decor",
+      "sensory friendly lighting",
+      "autism classroom lighting",
+      "low light room sign",
+      "calm room decor",
+      "neurodivergent home sign",
+      "sensory space printable",
+      "no fluorescent lights sign"
+    ],
+    "board": "Calm Corners & Sensory Spaces",
+    "altText": "Dim Lights Ahead printable sign with a lamp icon on a dark slate background, for low-glare sensory spaces."
+  },
+  "etsy": {
+    "title": "Dim Lights Ahead Sign, Low Glare Room Printable, Sensory Friendly Lighting Decor, Calm Space Wall Art, Digital Download",
+    "description": "A gentle Dim Lights Ahead sign marking low-glare, soft-lighting spaces.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame near the entrance of a dimmed room or sensory space to let visitors know what lighting to expect.\n\nThis listing is a printable sign, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "tags": [
+      "dim lights sign",
+      "low glare decor",
+      "soft lighting sign",
+      "sensory friendly decor",
+      "calm room sign",
+      "low light sign",
+      "autism home decor",
+      "neurodivergent sign",
+      "sensory space art",
+      "printable wall art",
+      "digital download",
+      "no fluorescent sign",
+      "calm space decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

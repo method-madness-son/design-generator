@@ -1,0 +1,50 @@
+{
+  "id": "leo",
+  "title": "Leo",
+  "subtitle": "July 23 – August 22",
+  "body": ["Confident", "Generous", "Dramatic"],
+  "palette": "fire",
+  "icon": {
+    "name": "ZodiacLeo",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Leo Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Leo poster with the lion symbol, birth date range, and core traits: confident, generous, dramatic. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "leo poster",
+      "leo zodiac sign",
+      "leo wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "leo birthday gift",
+      "minimalist astrology print",
+      "leo symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Leo zodiac poster with a lion symbol on a deep navy background, listing the sign's dates and traits."
+  },
+  "etsy": {
+    "title": "Leo Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
+    "description": "A minimalist Leo poster featuring the lion symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "tags": [
+      "leo poster",
+      "leo zodiac art",
+      "astrology wall art",
+      "zodiac sign print",
+      "leo gift",
+      "star sign poster",
+      "celestial decor",
+      "minimalist astrology",
+      "leo symbol art",
+      "printable wall art",
+      "digital download",
+      "zodiac birthday gift",
+      "leo wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

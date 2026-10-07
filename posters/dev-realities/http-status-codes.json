@@ -1,0 +1,54 @@
+{
+  "id": "http-status-codes",
+  "title": "200 | 400 | 500",
+  "subtitle": "200: OK. 400: Your fault. 500: My fault.",
+  "palette": "green",
+  "icon": {
+    "name": "ServerCrash",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.5
+    }
+  },
+  "pinterest": {
+    "title": "HTTP Status Codes Poster | Funny Dark Mode Backend Wall Art",
+    "description": "A dark-mode poster explaining HTTP status codes the honest way: 200 OK, 400 your fault, 500 my fault. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "http status code poster",
+      "backend joke poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "api humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading 200 | 400 | 500 with a crashed server icon in green, for developer office decor."
+  },
+  "etsy": {
+    "title": "HTTP Status Codes Poster, Funny Backend Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster explaining HTTP status codes the honest way: 200 OK, 400 your fault, 500 my fault.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "http status poster",
+      "backend joke poster",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "software engineer gift",
+      "api humor print",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

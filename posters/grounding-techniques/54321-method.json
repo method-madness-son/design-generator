@@ -1,0 +1,11 @@
+{
+  "id": "54321-method",
+  "title": "The 5-4-3-2-1 Method",
+  "subtitle": "5 see. 4 feel. 3 hear. 2 smell. 1 taste.",
+  "palette": "sand",
+  "icon": {
+    "name": "Hand",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

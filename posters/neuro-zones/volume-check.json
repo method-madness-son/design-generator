@@ -1,0 +1,49 @@
+{
+  "id": "volume-check",
+  "title": "Volume Check",
+  "subtitle": "Soft voices, please. This space stays low-noise.",
+  "palette": "sage",
+  "icon": {
+    "name": "Volume1",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Volume Check Sign | Printable Noise Reminder Wall Art for Classroom & Office",
+    "description": "A simple Volume Check sign reminding visitors to keep their voices soft in shared, low-noise spaces. Printable wall art for classrooms, libraries, offices, and sensory-friendly homes.",
+    "keywords": [
+      "volume check sign",
+      "indoor voice sign printable",
+      "quiet voices sign",
+      "noise level reminder",
+      "classroom noise sign",
+      "library volume sign",
+      "sensory friendly noise sign",
+      "low noise room decor",
+      "office quiet reminder",
+      "soft voices sign"
+    ],
+    "board": "Quiet Spaces & Sensory Corners",
+    "altText": "Volume Check printable sign with a volume icon on a soft sage green background, for low-noise shared spaces."
+  },
+  "etsy": {
+    "title": "Volume Check Sign, Indoor Voice Printable, Noise Reminder Decor, Classroom Wall Art, Digital Download",
+    "description": "A simple Volume Check sign reminding visitors to keep their voices soft in shared, low-noise spaces.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame in a classroom, library corner, office, or shared home space that needs a gentle noise reminder.\n\nThis listing is a printable sign, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "tags": [
+      "volume check sign",
+      "indoor voice sign",
+      "quiet voices decor",
+      "noise reminder sign",
+      "classroom noise sign",
+      "library volume sign",
+      "sensory friendly sign",
+      "low noise decor",
+      "office quiet sign",
+      "printable wall art",
+      "digital download",
+      "soft voices sign",
+      "calm space decor"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

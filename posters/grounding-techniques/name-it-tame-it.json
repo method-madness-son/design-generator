@@ -1,0 +1,11 @@
+{
+  "id": "name-it-tame-it",
+  "title": "Name It To Tame It",
+  "subtitle": "Name the feeling to tame it.",
+  "palette": "sand",
+  "icon": {
+    "name": "Tag",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  }
+}

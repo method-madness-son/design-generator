@@ -1,0 +1,54 @@
+{
+  "id": "from-ubuntu-latest",
+  "title": "FROM ubuntu:latest",
+  "subtitle": "Shipping \"my machine\" to production.",
+  "palette": "blue",
+  "icon": {
+    "name": "Box",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.25
+    }
+  },
+  "pinterest": {
+    "title": "FROM ubuntu:latest Poster | Funny Dark Mode Docker Wall Art",
+    "description": "A dark-mode poster for every Dockerfile that just ships 'my machine' to prod. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "docker joke poster",
+      "ubuntu latest poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "docker humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading FROM ubuntu:latest with a box icon in blue, for developer office decor."
+  },
+  "etsy": {
+    "title": "FROM ubuntu:latest Poster, Funny Docker Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster for every Dockerfile that just ships 'my machine' to prod.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "docker joke poster",
+      "ubuntu latest poster",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "software engineer gift",
+      "docker humor print",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}

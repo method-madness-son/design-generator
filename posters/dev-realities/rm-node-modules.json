@@ -1,0 +1,59 @@
+{
+  "id": "rm-node-modules",
+  "title": "rm -rf node_modules\nnpm install",
+  "subtitle": "The universal fix for everything.",
+  "palette": "yellow",
+  "icon": {
+    "name": "Trash2",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-start justify-start gap-6 p-16 text-left"
+    },
+    "defaultTypography": {
+      "titleRem": 3,
+      "titleClasses": "font-bold tracking-tight text-[var(--poster-accent)] whitespace-pre-line leading-snug",
+      "subtitleClasses": "font-medium text-[var(--poster-ink)] border-l-4 border-[var(--poster-ink)]/30 pl-4"
+    }
+  },
+  "pinterest": {
+    "title": "rm -rf node_modules Poster | Funny Dark Mode npm Wall Art",
+    "description": "A dark-mode poster for the universal fix: delete node_modules and reinstall. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "npm joke poster",
+      "node modules poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "npm humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading rm -rf node_modules, npm install with a trash can icon in yellow, for developer office decor."
+  },
+  "etsy": {
+    "title": "rm -rf node_modules Poster, Funny npm Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
+    "description": "A dark-mode poster for the universal fix: delete node_modules and reinstall.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "tags": [
+      "npm joke poster",
+      "node modules poster",
+      "programmer humor",
+      "developer wall art",
+      "coding poster",
+      "software engineer gift",
+      "npm humor print",
+      "dev office decor",
+      "code quote print",
+      "tech humor art",
+      "printable wall art",
+      "digital download",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+  }
+}
