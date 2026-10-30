@@ -2,7 +2,6 @@
   "id": "chaos-attractor",
   "title": "Strange Attractors",
   "subtitle": "Endless complexity. Zero repetition.",
-  "palette": "magenta",
   "graphic": {
     "type": "spiral",
     "position": "top",

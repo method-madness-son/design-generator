@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getPosterIds, getProjects } from "@/lib/posterResolver";
+import { PosterThumbnail } from "@/components/PosterThumbnail";
+import { getPosterIds, getProjects, getResolvedPoster } from "@/lib/posterResolver";
 
 export default function Home() {
   const projects = getProjects();
@@ -17,20 +18,36 @@ export default function Home() {
           No projects yet. Add a folder with a project.json under posters/.
         </p>
       )}
-      <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+      <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((project) => {
-          const count = getPosterIds(project.id).length;
+          const posterIds = getPosterIds(project.id);
+          const count = posterIds.length;
+          const firstPoster = count > 0 ? getResolvedPoster(project.id, posterIds[0]) : null;
+
           return (
             <li key={project.id}>
               <Link
                 href={`/${project.id}`}
-                className="block rounded-lg border border-neutral-200 bg-white p-4 hover:border-neutral-400"
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white p-3 shadow-sm transition hover:border-neutral-400 hover:shadow-md"
               >
-                <h2 className="font-semibold">{project.title}</h2>
-                <p className="mt-1 text-sm text-neutral-600">{project.description}</p>
-                <p className="mt-3 text-sm text-neutral-500">
-                  {count} {count === 1 ? "poster" : "posters"}
-                </p>
+                {firstPoster && (
+                  <div className="overflow-hidden rounded-lg bg-neutral-100">
+                    <PosterThumbnail poster={firstPoster} />
+                  </div>
+                )}
+                <div className="mt-3 flex flex-1 flex-col justify-between">
+                  <div>
+                    <h2 className="font-semibold text-neutral-900 group-hover:text-black">
+                      {project.title}
+                    </h2>
+                    <p className="mt-1 line-clamp-2 text-xs text-neutral-600">
+                      {project.description}
+                    </p>
+                  </div>
+                  <p className="mt-3 text-xs font-medium text-neutral-400">
+                    {count} {count === 1 ? "poster" : "posters"}
+                  </p>
+                </div>
               </Link>
             </li>
           );

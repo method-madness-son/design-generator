@@ -2,11 +2,10 @@
   "id": "two-problems-regex",
   "title": "^([a-zA-Z0-9_\\.-]+)@$",
   "subtitle": "Now you have two problems.",
-  "palette": "blue",
   "icon": {
     "name": "Brackets",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
   "overrides": {
     "defaultTypography": {
@@ -32,8 +31,8 @@
     "altText": "Dark mode poster showing a regex pattern with a brackets icon in blue, for developer office decor."
   },
   "etsy": {
-    "title": "Now You Have Two Problems Poster, Funny Regex Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
-    "description": "A dark-mode poster for the classic regex joke: now you have two problems.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "title": "Now You Have Two Problems Poster, Funny Regex Wall Art, Dark Mode Coding Print, Developer Gift",
+    "description": "A dark-mode poster for the classic regex joke: now you have two problems.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
       "regex joke poster",
       "two problems poster",
@@ -45,10 +44,10 @@
       "dev office decor",
       "code quote print",
       "tech humor art",
-      "printable wall art",
-      "digital download",
+      "poster wall art",
+      "poster print",
       "dark mode poster"
     ],
-    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+    "category": "Home & Living > Home Decor > Posters"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "id": "j-k-l",
+  "title": "J, K, L",
+  "subtitle": "Rewind.\nPause.\nFast Forward.\nEvery editor's muscle memory.",
+  "icon": {
+    "name": "FastForward",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  }
+}

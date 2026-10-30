@@ -1,17 +1,11 @@
 {
   "id": "quiet-zone",
   "title": "Quiet Zone",
-  "subtitle": "Soft voices and headphones welcome.",
-  "palette": "dusk",
+  "subtitle": "Soft voices. Headphones welcome.",
   "icon": {
     "name": "volume-off",
-    "position": "bottom",
+    "position": "top",
     "className": "text-[var(--poster-accent)]"
-  },
-  "overrides": {
-    "defaultLayout": {
-      "containerClasses": "items-start justify-end gap-6 p-16 text-left"
-    }
   },
   "pinterest": {
     "title": "Quiet Zone Sign | Printable Low-Stimulation Wall Art for Home, School & Office",
@@ -29,11 +23,11 @@
       "soft voices sign"
     ],
     "board": "Quiet Spaces & Sensory Corners",
-    "altText": "Quiet Zone printable sign with a muted volume icon on a dark slate background, for low-stimulation spaces."
+    "altText": "Quiet Zone physical poster print with a muted volume icon on a dark slate background, for low-stimulation spaces."
   },
   "etsy": {
-    "title": "Quiet Zone Sign, Printable Low Stimulation Decor, Library Quiet Sign, Sensory Friendly Wall Art, Digital Download",
-    "description": "A calm Quiet Zone sign for low-stimulation spaces where soft voices and headphones are welcome.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame near a library corner, classroom quiet area, office nook, or sensory-friendly home space.\n\nThis listing is a printable sign, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "title": "Quiet Zone Sign, Printable Low Stimulation Decor, Library Quiet Sign, Sensory Friendly Wall Art",
+    "description": "A calm Quiet Zone sign for low-stimulation spaces where soft voices and headphones are welcome.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang near a library corner, classroom quiet area, office nook, or sensory-friendly home space.\n\nThis listing is a physical poster print, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
     "tags": [
       "quiet zone sign",
       "library quiet sign",
@@ -43,12 +37,12 @@
       "classroom quiet sign",
       "office quiet sign",
       "quiet room decor",
-      "printable wall art",
-      "digital download",
+      "poster wall art",
+      "poster print",
       "neurodivergent sign",
       "soft voices sign",
       "calm space decor"
     ],
-    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+    "category": "Home & Living > Home Decor > Posters"
   }
 }

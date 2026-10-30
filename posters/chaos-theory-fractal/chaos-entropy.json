@@ -2,7 +2,6 @@
   "id": "chaos-entropy",
   "title": "Entropy",
   "subtitle": "Things fall apart. It is the law.",
-  "palette": "white",
   "graphic": {
     "type": "tree",
     "position": "top",

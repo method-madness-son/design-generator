@@ -2,7 +2,6 @@
   "id": "chaos-butterfly",
   "title": "The Butterfly Effect",
   "subtitle": "Tiny changes. Massive consequences.",
-  "palette": "neon",
   "graphic": {
     "type": "lorenz",
     "position": "top",

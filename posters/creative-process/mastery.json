@@ -1,11 +1,15 @@
 {
   "id": "mastery",
-  "title": "Mastery",
+  "title": "Learn,\nThen Break",
   "subtitle": "“Learn the rules like a pro, so you can break them like an artist.” — Pablo Picasso",
-  "palette": "red",
   "icon": {
     "name": "PenTool",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleClasses": "font-bold leading-[1.05] uppercase tracking-tight text-[var(--poster-ink)] whitespace-pre-line"
+    }
   }
 }

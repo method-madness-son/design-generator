@@ -1,0 +1,10 @@
+{
+  "id": "offline-media",
+  "title": "Offline Media",
+  "subtitle": "The terrifying red screen of death. Find your hard drive.",
+  "icon": {
+    "name": "MonitorOff",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  }
+}

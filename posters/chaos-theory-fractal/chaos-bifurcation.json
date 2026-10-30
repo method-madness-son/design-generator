@@ -2,7 +2,6 @@
   "id": "chaos-bifurcation",
   "title": "Bifurcation",
   "subtitle": "Order splits into instability.",
-  "palette": "white",
   "graphic": {
     "type": "tree",
     "position": "top",

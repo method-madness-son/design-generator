@@ -21,16 +21,19 @@ export function Fractal({
   type = 'lorenz',
   className,
   sizeRem,
+  style,
 }: {
   type?: FractalType;
   className?: string;
   sizeRem: number;
+  // Merged in after the size, so e.g. an explicit color here wins over the className's.
+  style?: CSSProperties;
 }) {
   return (
     <svg
       viewBox="0 0 100 100"
       className={className}
-      style={{ width: `${sizeRem}rem`, height: `${sizeRem}rem` } as CSSProperties}
+      style={{ width: `${sizeRem}rem`, height: `${sizeRem}rem`, ...style } as CSSProperties}
       stroke="currentColor"
       fill="none"
       strokeWidth={1.5}

@@ -1,0 +1,10 @@
+{
+  "id": "aspect-ratios",
+  "title": "Aspect Ratios",
+  "subtitle": "16:9 for YouTube.\n9:16 for Reels.\n2.35:1 for Cinema.",
+  "icon": {
+    "name": "MonitorSmartphone",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  }
+}

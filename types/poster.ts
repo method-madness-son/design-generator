@@ -1,4 +1,4 @@
-export type AspectRatioOption = '2/3' | '3/2' | '3/4' | '4/3' | '4/5' | '5/4' | '1/1';
+export type AspectRatioOption = '2/3' | '3/2' | '3/4' | '4/3' | '4/5' | '5/4' | '1/1' | '11/17';
 
 export type ProjectConfig = {
   id: string;
@@ -8,11 +8,8 @@ export type ProjectConfig = {
   colorPalette: Record<string, string>;
   // Named alternatives to colorPalette that a poster can pick with "palette".
   palettes?: Record<string, Record<string, string>>;
-  // Named title/body font pairings (CSS font-family values) a poster can pick with "fonts".
-  // titleClasses, if set, is merged over the poster's title classes (e.g. a heavier weight).
-  fontPairs?: Record<string, { title: string; body: string; titleClasses?: string }>;
-  // Rem options offered in the icon/title/subtitle size dropdowns.
-  sizeScale?: { icon: number[]; title: number[]; subtitle: number[] };
+  // Rem options offered in the icon/title/subtitle/body size dropdowns.
+  sizeScale?: { icon: number[]; title: number[]; subtitle: number[]; body?: number[] };
   // Default icon size in rem; a poster's icon.sizeRem overrides it.
   iconRem: number;
   defaultLayout: {
@@ -25,13 +22,19 @@ export type ProjectConfig = {
     className: string;
   };
   defaultTypography: {
+    // Applies to both title and subtitle unless titleFontFamily/subtitleFontFamily override it.
     fontFamily: string;
-    // Non-size styling only (weight, tracking, leading, color); size comes from titleRem/subtitleRem.
+    titleFontFamily?: string;
+    subtitleFontFamily?: string;
+    // Weight/tracking/leading plus the default text color; an explicit titleColor/subtitleColor
+    // selection overrides the color via inline style. Size comes from titleRem/subtitleRem.
     titleClasses: string;
     subtitleClasses: string;
     bodyClasses?: string;
+    bodyFontFamily?: string;
     titleRem: number;
     subtitleRem: number;
+    bodyRem?: number;
   };
 };
 
@@ -46,7 +49,12 @@ export type PosterFile = {
   // Optional short lines shown as a list under the subtitle.
   body?: string[];
   palette?: string;
-  fonts?: string;
+  titleFont?: string;
+  subtitleFont?: string;
+  titleColor?: string;
+  subtitleColor?: string;
+  iconColor?: string;
+  backgroundColor?: string;
   icon?: {
     name: string;
     position: 'top' | 'bottom';
@@ -60,7 +68,7 @@ export type PosterFile = {
     className?: string;
     sizeRem?: number;
   };
-  overrides?: DeepPartial<Omit<ProjectConfig, 'id' | 'title' | 'description' | 'colorPalette' | 'palettes' | 'fontPairs'>> & {
+  overrides?: DeepPartial<Omit<ProjectConfig, 'id' | 'title' | 'description' | 'colorPalette' | 'palettes'>> & {
     colorPalette?: Record<string, string>;
   };
   // Copy-paste-ready fields for listing this poster as a Pinterest pin.
@@ -94,11 +102,27 @@ export type ResolvedPoster = {
   titleRem: number;
   subtitleRem: number;
   iconRem: number;
+  bodyRem: number;
+  // Un-customized sizes (ignoring any selection); see lib/posterResolver.ts.
+  titleDefaultRem: number;
+  subtitleDefaultRem: number;
+  iconDefaultRem: number;
+  bodyDefaultRem: number;
   body: string[];
   bodyClasses: string;
   titleFont: string;
+  subtitleFont: string;
   bodyFont: string;
-  fontsName?: string;
+  titleFontName?: string;
+  subtitleFontName?: string;
+  bodyFontName?: string;
+  // CSS color values; set only when explicitly picked, overriding the default color baked into
+  // titleClasses/subtitleClasses, the icon's className, or colorPalette.background.
+  titleColor?: string;
+  subtitleColor?: string;
+  iconColor?: string;
+  bodyColor?: string;
+  backgroundColor?: string;
   colorPalette: Record<string, string>;
   paletteName?: string;
   icon?: PosterFile['icon'];

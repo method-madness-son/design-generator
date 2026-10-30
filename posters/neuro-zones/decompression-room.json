@@ -1,18 +1,17 @@
 {
   "id": "decompression-room",
-  "title": "Unwind Room",
-  "subtitle": "Take the time you need. No questions asked.",
-  "palette": "mist",
+  "title": "Unwind Zone",
+  "subtitle": "Take a quiet moment. No explanation needed.",
   "icon": {
     "name": "Sofa",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
   },
   "pinterest": {
-    "title": "Unwind Room Sign | Printable Calm Room & Decompression Space Wall Art",
-    "description": "A soft, calming Unwind Room sign for decompression spaces, relaxation corners, and no-pressure retreat rooms. Printable wall art that tells visitors this is a space to rest without explanation — ideal for homes, schools, and therapy offices.",
+    "title": "Unwind Zone Sign | Printable Calm Room & Decompression Space Wall Art",
+    "description": "A soft, calming Unwind Zone sign for decompression spaces, relaxation corners, and no-pressure retreat rooms. Printable wall art that tells visitors this is a space to rest without explanation — ideal for homes, schools, and therapy offices.",
     "keywords": [
-      "unwind room sign",
+      "Unwind Zone sign",
       "decompression room printable",
       "calm room decor",
       "relaxation room sign",
@@ -24,26 +23,26 @@
       "meditation room decor"
     ],
     "board": "Calm Corners & Sensory Spaces",
-    "altText": "Unwind Room printable sign with a sofa icon on a soft blue background, for calm and decompression spaces."
+    "altText": "Unwind Zone physical poster print with a sofa icon on a soft blue background, for calm and decompression spaces."
   },
   "etsy": {
-    "title": "Unwind Room Sign, Decompression Room Printable, Calm Room Wall Art, Relaxation Space Decor, Digital Download",
-    "description": "A soft, calming Unwind Room sign for decompression spaces, relaxation corners, and no-pressure retreat rooms.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame near a reading chair, relaxation corner, or retreat space at home, school, or a therapy office.\n\nThis listing is a printable sign, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "title": "Unwind Zone Sign, Decompression Room Printable, Calm Room Wall Art, Relaxation Space Decor",
+    "description": "A soft, calming Unwind Zone sign for decompression spaces, relaxation corners, and no-pressure retreat rooms.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang near a reading chair, relaxation corner, or retreat space at home, school, or a therapy office.\n\nThis listing is a physical poster print, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
     "tags": [
-      "unwind room sign",
+      "Unwind Zone sign",
       "calm room decor",
       "decompression sign",
       "relaxation decor",
       "quiet room sign",
       "therapy office art",
       "calm corner sign",
-      "printable wall art",
-      "digital download",
+      "poster wall art",
+      "poster print",
       "no pressure sign",
       "rest room sign",
       "meditation decor",
       "neurodivergent art"
     ],
-    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+    "category": "Home & Living > Home Decor > Posters"
   }
 }

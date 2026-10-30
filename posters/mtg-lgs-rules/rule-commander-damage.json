@@ -2,7 +2,6 @@
   "id": "rule-commander-damage",
   "title": "Commander Damage",
   "subtitle": "21 points of combat damage from a single Commander equals game over.",
-  "palette": "red",
   "icon": {
     "name": "Swords",
     "position": "top",

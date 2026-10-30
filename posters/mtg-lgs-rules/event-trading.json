@@ -2,7 +2,6 @@
   "id": "event-trading",
   "title": "Trading Policy",
   "subtitle": "Trade cards freely. No cash transactions on the store floor.",
-  "palette": "blue",
   "icon": {
     "name": "ArrowRightLeft",
     "position": "top",

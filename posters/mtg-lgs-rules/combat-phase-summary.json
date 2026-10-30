@@ -2,8 +2,13 @@
   "id": "combat-phase-summary",
   "title": "The Combat Phase",
   "subtitle": "Step by Step",
-  "body": ["1. Beginning of Combat", "2. Declare Attackers", "3. Declare Blockers", "4. Combat Damage", "5. End of Combat"],
-  "palette": "red",
+  "body": [
+    "1. Beginning of Combat",
+    "2. Declare Attackers",
+    "3. Declare Blockers",
+    "4. Combat Damage",
+    "5. End of Combat"
+  ],
   "icon": {
     "name": "Swords",
     "position": "top",

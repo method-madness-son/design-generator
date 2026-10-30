@@ -1,0 +1,15 @@
+{
+  "id": "render-in-to-out",
+  "title": "Render In\nto Out",
+  "subtitle": "Go grab a coffee. The fans are about to get loud.",
+  "icon": {
+    "name": "Cpu",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleClasses": "font-bold leading-[1.05] uppercase tracking-tight text-[var(--poster-ink)] whitespace-pre-line"
+    }
+  }
+}

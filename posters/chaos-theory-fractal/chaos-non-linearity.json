@@ -2,7 +2,6 @@
   "id": "chaos-non-linearity",
   "title": "Non-Linearity",
   "subtitle": "The output is never equal to the input.",
-  "palette": "magenta",
   "graphic": {
     "type": "lorenz",
     "position": "top",

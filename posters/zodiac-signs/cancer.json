@@ -2,8 +2,11 @@
   "id": "cancer",
   "title": "Cancer",
   "subtitle": "June 21 – July 22",
-  "body": ["Nurturing", "Intuitive", "Sentimental"],
-  "palette": "water",
+  "body": [
+    "Nurturing",
+    "Intuitive",
+    "Sentimental"
+  ],
   "icon": {
     "name": "ZodiacCancer",
     "position": "top",
@@ -28,8 +31,8 @@
     "altText": "Minimalist Cancer zodiac poster with a crab symbol on a deep navy background, listing the sign's dates and traits."
   },
   "etsy": {
-    "title": "Cancer Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor, Digital Download",
-    "description": "A minimalist Cancer poster featuring the crab symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a printable digital art piece, for entertainment purposes only. Thank you for supporting a small shop!",
+    "title": "Cancer Zodiac Poster, Astrology Wall Art Print, Star Sign Birthday Gift, Minimalist Celestial Decor",
+    "description": "A minimalist Cancer poster featuring the crab symbol, birth date range, and three core traits.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a bedroom, gallery wall, or as a personalized zodiac birthday gift.\n\nThis listing is a physical poster print, for entertainment purposes only. Thank you for supporting a small shop!",
     "tags": [
       "cancer poster",
       "cancer zodiac art",
@@ -40,11 +43,11 @@
       "celestial decor",
       "minimalist astrology",
       "cancer symbol art",
-      "printable wall art",
-      "digital download",
+      "poster wall art",
+      "poster print",
       "zodiac birthday gift",
       "cancer wall decor"
     ],
-    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+    "category": "Home & Living > Home Decor > Posters"
   }
 }

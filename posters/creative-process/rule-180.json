@@ -1,0 +1,10 @@
+{
+  "id": "rule-180",
+  "title": "The 180° Rule",
+  "subtitle": "Shutter speed = 2 × Frame Rate. Keep the motion blur natural.",
+  "icon": {
+    "name": "Aperture",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  }
+}

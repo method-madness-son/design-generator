@@ -2,7 +2,6 @@
   "id": "deck-sideboard",
   "title": "The Sideboard",
   "subtitle": "15 cards maximum. Always de-sideboard before your next match.",
-  "palette": "white",
   "icon": {
     "name": "Layers",
     "position": "top",

@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import { cn } from '@/lib/utils';
+import { BACKGROUND_COLORS } from '@/lib/backgroundColors';
+import { getColorOptions } from '@/lib/colorOptions';
+import { GLOBAL_FONTS } from '@/lib/fontOptions';
+import { POSTER_SIZES, type PosterSizeName } from '@/lib/posterSizes';
 import type { PosterFile, ProjectConfig, ResolvedPoster } from '@/types/poster';
 
 const POSTERS_DIR = path.join(process.cwd(), 'posters');
@@ -42,11 +45,39 @@ export function getPosterIds(projectId: string): string[] {
 
 export type VariantSelection = {
   palette?: string;
-  fonts?: string;
+  titleFont?: string;
+  subtitleFont?: string;
+  bodyFont?: string;
+  titleColor?: string;
+  subtitleColor?: string;
+  iconColor?: string;
+  bodyColor?: string;
+  backgroundColor?: string;
   iconRem?: string;
   titleRem?: string;
   subtitleRem?: string;
+  bodyRem?: string;
+  // One of PosterSizeName (e.g. "11x17"); empty means the project's own default layout (8x10).
+  printSize?: string;
+  // Horizontal alignment of the icon and text: 'left' | 'center' | 'right'; empty means the
+  // project's own containerClasses alignment.
+  align?: string;
 };
+
+const ALIGN_OPTIONS = ['left', 'center', 'right'] as const;
+type AlignOption = (typeof ALIGN_OPTIONS)[number];
+const isAlignOption = (value: string): value is AlignOption =>
+  (ALIGN_OPTIONS as readonly string[]).includes(value);
+
+// Rewrites containerClasses to reflect a chosen horizontal alignment: swaps any existing
+// items-{start|center|end} and text-{left|center|right} tokens, appending defaults if absent.
+function applyAlign(containerClasses: string, align: AlignOption): string {
+  const itemsClass = align === 'left' ? 'items-start' : align === 'right' ? 'items-end' : 'items-center';
+  const textClass = `text-${align}`;
+  const withoutItems = containerClasses.replace(/\bitems-(?:start|center|end)\b/g, '').trim();
+  const withoutText = withoutItems.replace(/\btext-(?:left|center|right)\b/g, '').trim();
+  return `${withoutText} ${itemsClass} ${textClass}`.replace(/\s+/g, ' ').trim();
+}
 
 // A rem value is valid only if it's one of the project's own dropdown options.
 function validRem(value: string | undefined, options: number[] | undefined): string {
@@ -54,19 +85,48 @@ function validRem(value: string | undefined, options: number[] | undefined): str
   return options.includes(Number(value)) ? value : '';
 }
 
-// Returns the selection with anything the project does not define blanked out.
+// Returns the selection with anything invalid (or not offered by the project) blanked out.
 export function getValidSelection(project: ProjectConfig, selection: VariantSelection) {
-  const { palette, fonts, iconRem, titleRem, subtitleRem } = selection;
+  const {
+    palette,
+    titleFont,
+    subtitleFont,
+    bodyFont,
+    titleColor,
+    subtitleColor,
+    iconColor,
+    bodyColor,
+    backgroundColor,
+    iconRem,
+    titleRem,
+    subtitleRem,
+    bodyRem,
+    printSize,
+    align,
+  } = selection;
+  const colorOptions = getColorOptions(project);
   return {
     palette: palette && project.palettes?.[palette] ? palette : '',
-    fonts: fonts && project.fontPairs?.[fonts] ? fonts : '',
+    titleFont: titleFont && GLOBAL_FONTS[titleFont] ? titleFont : '',
+    subtitleFont: subtitleFont && GLOBAL_FONTS[subtitleFont] ? subtitleFont : '',
+    bodyFont: bodyFont && GLOBAL_FONTS[bodyFont] ? bodyFont : '',
+    titleColor: titleColor && colorOptions[titleColor] ? titleColor : '',
+    subtitleColor: subtitleColor && colorOptions[subtitleColor] ? subtitleColor : '',
+    iconColor: iconColor && colorOptions[iconColor] ? iconColor : '',
+    bodyColor: bodyColor && colorOptions[bodyColor] ? bodyColor : '',
+    // Background colors come from a fixed global list (dark + light), not the project's own
+    // accent palette, since not every accent color makes a good full-canvas background.
+    backgroundColor: backgroundColor && BACKGROUND_COLORS[backgroundColor] ? backgroundColor : '',
     iconRem: validRem(iconRem, project.sizeScale?.icon),
     titleRem: validRem(titleRem, project.sizeScale?.title),
     subtitleRem: validRem(subtitleRem, project.sizeScale?.subtitle),
+    bodyRem: validRem(bodyRem, project.sizeScale?.body),
+    printSize: printSize && POSTER_SIZES[printSize as PosterSizeName] ? printSize : '',
+    align: align && isAlignOption(align) ? align : '',
   };
 }
 
-// A valid selection replaces the poster's own palette and font pair.
+// A valid selection replaces the poster's own palette, fonts, and colors.
 export function getResolvedPoster(
   projectId: string,
   posterId: string,
@@ -81,10 +141,22 @@ export function getResolvedPoster(
   const { overrides } = poster;
   const selected = getValidSelection(project, selection);
   const palettes = project.palettes ?? {};
+  const colorOptions = getColorOptions(project);
   const activePalette = selected.palette || poster.palette;
-  const fontsName = selected.fonts || poster.fonts;
-  const fontPair = fontsName ? project.fontPairs?.[fontsName] : undefined;
-  const fontFamily = overrides?.defaultTypography?.fontFamily || project.defaultTypography.fontFamily;
+
+  const typography = { ...project.defaultTypography, ...overrides?.defaultTypography };
+  const titleFontName = selected.titleFont || poster.titleFont;
+  const subtitleFontName = selected.subtitleFont || poster.subtitleFont;
+  const bodyFontName = selected.bodyFont;
+  const titleColorName = selected.titleColor || poster.titleColor;
+  const subtitleColorName = selected.subtitleColor || poster.subtitleColor;
+  const iconColorName = selected.iconColor || poster.iconColor;
+  const bodyColorName = selected.bodyColor;
+  const backgroundColorName = selected.backgroundColor || poster.backgroundColor;
+  const sizeOverride = selected.printSize ? POSTER_SIZES[selected.printSize as PosterSizeName] : undefined;
+  // text-xl (1.25rem) is the baked-in default body size when the project doesn't override it,
+  // so SizeStepper's "Default" lines up with what's actually on screen.
+  const bodyDefaultRem = typography.bodyRem ?? 1.25;
 
   return {
     id: posterId,
@@ -95,27 +167,42 @@ export function getResolvedPoster(
     graphic: poster.graphic,
     pinterest: poster.pinterest,
     etsy: poster.etsy,
-    aspectRatio: overrides?.defaultLayout?.aspectRatio || project.defaultLayout.aspectRatio,
+    aspectRatio: sizeOverride?.aspectRatio || overrides?.defaultLayout?.aspectRatio || project.defaultLayout.aspectRatio,
     printWidthInches:
+      sizeOverride?.printWidthInches ||
       overrides?.defaultLayout?.printWidthInches ||
       project.defaultLayout.printWidthInches ||
       DEFAULT_PRINT_WIDTH_INCHES,
-    containerClasses: overrides?.defaultLayout?.containerClasses || project.defaultLayout.containerClasses,
+    containerClasses: (() => {
+      const base = overrides?.defaultLayout?.containerClasses || project.defaultLayout.containerClasses;
+      return selected.align ? applyAlign(base, selected.align as AlignOption) : base;
+    })(),
     bgClass: overrides?.defaultBackground?.className || project.defaultBackground.className,
-    titleClasses: cn(
-      overrides?.defaultTypography?.titleClasses || project.defaultTypography.titleClasses,
-      fontPair?.titleClasses,
-    ),
-    subtitleClasses: overrides?.defaultTypography?.subtitleClasses || project.defaultTypography.subtitleClasses,
-    titleRem: Number(selected.titleRem) || overrides?.defaultTypography?.titleRem || project.defaultTypography.titleRem,
-    subtitleRem:
-      Number(selected.subtitleRem) || overrides?.defaultTypography?.subtitleRem || project.defaultTypography.subtitleRem,
+    titleClasses: typography.titleClasses,
+    subtitleClasses: typography.subtitleClasses,
+    titleRem: Number(selected.titleRem) || typography.titleRem,
+    subtitleRem: Number(selected.subtitleRem) || typography.subtitleRem,
     iconRem: Number(selected.iconRem) || poster.icon?.sizeRem || poster.graphic?.sizeRem || project.iconRem,
+    bodyRem: Number(selected.bodyRem) || bodyDefaultRem,
+    // The un-customized sizes (ignoring any selection), so a SizeStepper can place "Default" at
+    // its real position in the scale instead of always treating it as the floor.
+    titleDefaultRem: typography.titleRem,
+    subtitleDefaultRem: typography.subtitleRem,
+    iconDefaultRem: poster.icon?.sizeRem || poster.graphic?.sizeRem || project.iconRem,
+    bodyDefaultRem,
     body: poster.body ?? [],
-    bodyClasses: overrides?.defaultTypography?.bodyClasses || project.defaultTypography.bodyClasses || '',
-    titleFont: fontPair?.title || fontFamily,
-    bodyFont: fontPair?.body || fontFamily,
-    fontsName: fontPair ? fontsName : undefined,
+    bodyClasses: typography.bodyClasses || '',
+    titleFont: titleFontName ? GLOBAL_FONTS[titleFontName] : typography.titleFontFamily || typography.fontFamily,
+    subtitleFont: subtitleFontName ? GLOBAL_FONTS[subtitleFontName] : typography.subtitleFontFamily || typography.fontFamily,
+    bodyFont: bodyFontName ? GLOBAL_FONTS[bodyFontName] : typography.bodyFontFamily || typography.subtitleFontFamily || typography.fontFamily,
+    titleFontName: titleFontName || undefined,
+    subtitleFontName: subtitleFontName || undefined,
+    bodyFontName: bodyFontName || undefined,
+    titleColor: titleColorName ? colorOptions[titleColorName] : undefined,
+    subtitleColor: subtitleColorName ? colorOptions[subtitleColorName] : undefined,
+    iconColor: iconColorName ? colorOptions[iconColorName] : undefined,
+    bodyColor: bodyColorName ? colorOptions[bodyColorName] : undefined,
+    backgroundColor: backgroundColorName ? BACKGROUND_COLORS[backgroundColorName] : undefined,
     paletteName: activePalette,
     colorPalette: {
       ...project.colorPalette,

@@ -1,47 +1,46 @@
-import Link from 'next/link';
-import { CANVAS_WIDTH, PosterCanvas } from '@/components/PosterCanvas';
-import type { ResolvedPoster } from '@/types/poster';
+const SAMPLE_SUBTITLE = 'The quick brown fox jumps over the lazy dog.';
 
-const THUMBNAIL_SCALE = 0.55;
-
-export type FontSpecimenData = {
+export function TypographySpecimen({
+  name,
+  cssValue,
+  weights,
+  usedBy,
+}: {
   name: string;
-  // CSS variable the font is exposed under, e.g. "--font-lexend".
-  cssVar: string;
-  category: string;
-  weights: string;
+  // Full CSS font-family value, e.g. "var(--font-lexend), sans-serif".
+  cssValue: string;
+  // Heaviest weight loaded (title preview) and closest-to-600 weight loaded (subtitle preview).
+  weights: { bold: number; semibold: number };
+  // Project titles whose default typography actually uses this font.
   usedBy: string[];
-};
-
-export function TypographySpecimen({ font, poster }: { font: FontSpecimenData; poster: ResolvedPoster }) {
+}) {
   return (
-    <section className="flex flex-col gap-5 rounded-lg border border-neutral-200 bg-white p-6 sm:flex-row sm:items-start">
-      <Link
-        href={`/${poster.projectId}/${poster.id}`}
-        className="block shrink-0 overflow-hidden rounded border border-neutral-100"
-        style={{
-          width: CANVAS_WIDTH * THUMBNAIL_SCALE,
-          aspectRatio: poster.aspectRatio.replace('/', ' / '),
-        }}
-      >
-        <div className="origin-top-left" style={{ transform: `scale(${THUMBNAIL_SCALE})` }}>
-          <PosterCanvas poster={poster} />
-        </div>
-      </Link>
+    <section className="flex flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white">
+      <div className="bg-[#D6EAF8] px-5 py-6">
+        <p
+          className="text-3xl leading-tight break-words"
+          style={{ fontFamily: cssValue, fontWeight: weights.bold, color: '#2B2B2E' }}
+        >
+          {name}
+        </p>
+        <p
+          className="mt-2 text-base leading-snug break-words"
+          style={{ fontFamily: cssValue, fontWeight: weights.semibold, color: '#4A90C4' }}
+        >
+          {SAMPLE_SUBTITLE}
+        </p>
+      </div>
 
-      <div>
+      <div className="p-4">
         <div className="flex flex-wrap items-baseline gap-2">
-          <h2 className="text-lg font-semibold text-neutral-900">{font.name}</h2>
-          <code className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-500">{font.cssVar}</code>
+          <h2 className="text-sm font-semibold text-neutral-900">{name}</h2>
+          <code className="rounded bg-neutral-100 px-1.5 py-0.5 text-[10px] text-neutral-500">{cssValue}</code>
         </div>
-        <p className="mt-1 text-sm text-neutral-500">
-          {font.category} &middot; {font.weights}
+        <p className="mt-1 text-xs text-neutral-500">
+          Title weight {weights.bold} · Subtitle weight {weights.semibold}
         </p>
-        <p className="mt-3 text-sm text-neutral-600">
-          Shown as rendered in <span className="font-medium">{poster.title}</span> ({poster.projectId})
-        </p>
-        {font.usedBy.length > 0 && (
-          <p className="mt-4 text-xs uppercase tracking-wide text-neutral-400">Used in: {font.usedBy.join(' · ')}</p>
+        {usedBy.length > 0 && (
+          <p className="mt-2 text-[10px] uppercase tracking-wide text-neutral-400">Used by: {usedBy.join(' · ')}</p>
         )}
       </div>
     </section>

@@ -1,17 +1,16 @@
 {
   "id": "git-stash",
   "title": "git stash",
-  "subtitle": "I'll definitely look at this code later.\n(I won't.)",
-  "palette": "blue",
+  "subtitle": "I'll definitely look at this code later.",
   "icon": {
     "name": "Archive",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
   "overrides": {
     "defaultTypography": {
       "titleRem": 4.5,
-      "subtitleClasses": "font-medium text-[var(--poster-ink)]/70 whitespace-pre-line leading-relaxed"
+      "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)]/70 whitespace-pre-line"
     }
   },
   "pinterest": {
@@ -33,8 +32,8 @@
     "altText": "Dark mode poster reading git stash with an archive box icon in blue, for developer office decor."
   },
   "etsy": {
-    "title": "git stash Poster, Funny Git Wall Art, Dark Mode Coding Print, Developer Gift, Digital Download",
-    "description": "A dark-mode poster for every stash you swear you'll come back to.\n\nWHAT YOU'LL GET\n• High-resolution PNG, ready to print at 300 DPI\n• Sized for an 8x10in frame (other sizes available on request)\n• Instant digital download — no physical item is shipped\n\nHOW TO USE\nPrint and frame for a home office, dev den, or coding setup.\n\nThis listing is a printable digital art piece. Thank you for supporting a small shop!",
+    "title": "git stash Poster, Funny Git Wall Art, Dark Mode Coding Print, Developer Gift",
+    "description": "A dark-mode poster for every stash you swear you'll come back to.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
       "git joke poster",
       "git stash poster",
@@ -46,10 +45,10 @@
       "dev office decor",
       "code quote print",
       "tech humor art",
-      "printable wall art",
-      "digital download",
+      "poster wall art",
+      "poster print",
       "dark mode poster"
     ],
-    "category": "Home & Living > Home Decor > Decorative Signs (Digital Download)"
+    "category": "Home & Living > Home Decor > Posters"
   }
 }

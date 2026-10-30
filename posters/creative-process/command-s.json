@@ -1,0 +1,10 @@
+{
+  "id": "command-s",
+  "title": "Command + S",
+  "subtitle": "Because Premiere will crash. It is not a matter of if, but when.",
+  "icon": {
+    "name": "Save",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  }
+}
