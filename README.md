@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## KDP interior wireframe
+
+Grayscale paperback interiors live under `kdp/` (logbook, journal, and cheat-sheet page types). They are separate from the poster projects. See [docs/KDP-WIREFRAME.md](docs/KDP-WIREFRAME.md) for trim, bleed, gutter, and what is intentionally missing (branding, cover, EPUB).
+
+```bash
+npm run kdp:check
+npm run book-pdf -- track-day-logbook
+```
+
+Preview at `/kdp` while `npm run dev` is running. Sample PDFs are written to `exports/kdp/`.
+
 ## Getting Started
 
 First, run the development server:
