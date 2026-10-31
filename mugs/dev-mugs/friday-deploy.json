@@ -1,0 +1,46 @@
+{
+  "id": "friday-deploy",
+  "project": "Dev Mugs",
+  "market": "dev",
+  "lines": [
+    {
+      "text": "friday",
+      "font": "display"
+    },
+    {
+      "text": "deploy",
+      "font": "supporting"
+    }
+  ],
+  "graphic": {
+    "type": "cursor-block"
+  },
+  "wrap": "drinker-right",
+  "sizes": [
+    "11oz",
+    "15oz"
+  ],
+  "fonts": {
+    "display": "Space Mono"
+  },
+  "etsy": {
+    "title": "Friday Deploy Mug, Funny Software Coffee Cup, Office Gift",
+    "description": "A white ceramic mug with \"friday / deploy\" printed on the outside.\n\nWHAT YOU'LL GET\n• A physical 11 oz or 15 oz white ceramic mug\n• The design is printed on the outside of the mug\n\nThis listing is a physical mug, shipped to you. It is a joke, not a health product.",
+    "tags": [
+      "friday deploy",
+      "coder mug",
+      "ship day mug",
+      "funny coffee mug",
+      "office humor",
+      "developer mug",
+      "programmer gift",
+      "white ceramic mug",
+      "coffee cup gift",
+      "weekend joke",
+      "desk mug",
+      "tech humor",
+      "work mug"
+    ],
+    "category": "Home & Living > Kitchen & Dining > Drinkware > Mugs"
+  }
+}

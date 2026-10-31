@@ -1,0 +1,1113 @@
+{
+  "meta": {
+    "name": "Global Design Theme",
+    "version": "1.0.0",
+    "created": "2026-10-30",
+    "source_file": "/workspace/neurodivergent-tee-design-guide.md",
+    "consumer": "design-generator render pipelines (tee first)",
+    "verification": {
+      "verified": [
+        "Font licenses checked against github.com/google/fonts directories on 2026-10-30 (all OFL-1.1 except Permanent Marker = Apache-2.0; guide said OFL for all)",
+        "WCAG 2.x contrast ratios computed by script vs reference shirt hexes",
+        "Puzzle-piece avoidance and symbol guidance sourced in guide"
+      ],
+      "proposed_unverified": [
+        "All palette hexes (designer picks, no sales data)",
+        "Shirt hexes are approximate; confirm against Comfort Colors chart",
+        "per_market_overrides dev/hockey/rally/cooking are not from the guide"
+      ]
+    },
+    "contrast_method": "WCAG relative luminance; >=4.5 AA_normal, >=3.0 AA_large_graphics_only; inks below 3.0 are excluded from ink lists. Light reference = Ivory, dark reference = Pepper.",
+    "local_additions": [
+      "Black, White, Heather Gray, and Navy were added for the tee preview toggle. They are not in the Design Bot Comfort Colors 1717 list. Hex values are approximate.",
+      "Granite is named by the hockey override and is not a shirt color. shirt_colors.fallbacks maps it to Pepper."
+    ]
+  },
+  "shirt_colors": {
+    "blank": "Comfort Colors 1717",
+    "hex_note": "approximate",
+    "colors": [
+      {
+        "name": "Pepper",
+        "hex": "#4F4F4F",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt"
+      },
+      {
+        "name": "Ivory",
+        "hex": "#F3EEDF",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt"
+      },
+      {
+        "name": "Bay",
+        "hex": "#B6C2B0",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt"
+      },
+      {
+        "name": "Moss",
+        "hex": "#6E7451",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt"
+      },
+      {
+        "name": "Butter",
+        "hex": "#F5E1A4",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt"
+      },
+      {
+        "name": "Chalky Mint",
+        "hex": "#B8E2D0",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt"
+      },
+      {
+        "name": "Blossom",
+        "hex": "#F4C6D0",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt"
+      },
+      {
+        "name": "Yam",
+        "hex": "#C3683A",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt"
+      },
+      {
+        "name": "Blue Spruce",
+        "hex": "#3E5B59",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt"
+      },
+      {
+        "name": "Black",
+        "hex": "#111111",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt",
+        "source": "added_for_preview",
+        "hex_note": "approximate; not a Comfort Colors 1717 chart value"
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt",
+        "source": "added_for_preview",
+        "hex_note": "approximate; not a Comfort Colors 1717 chart value"
+      },
+      {
+        "name": "Heather Gray",
+        "hex": "#9A9A9A",
+        "is_dark": false,
+        "default_ink_set": "on_light_shirt",
+        "source": "added_for_preview",
+        "hex_note": "approximate; not a Comfort Colors 1717 chart value"
+      },
+      {
+        "name": "Navy",
+        "hex": "#14213D",
+        "is_dark": true,
+        "default_ink_set": "on_dark_shirt",
+        "source": "added_for_preview",
+        "hex_note": "approximate; not a Comfort Colors 1717 chart value"
+      }
+    ],
+    "listing_rule": "offer 6-8 colors per listing",
+    "top_sellers": [
+      "Pepper",
+      "Ivory"
+    ],
+    "fallbacks": [
+      {
+        "name": "Granite",
+        "fallback": "Pepper",
+        "reason": "Granite is listed on the hockey override and is not in shirt_colors. Pepper is the closest listed dark heather. Confirm the real blank before production; Granite may be lighter than Pepper."
+      }
+    ]
+  },
+  "palettes": {
+    "rainbow_infinity_retro": {
+      "display_name": "Rainbow Infinity Retro",
+      "use_case": "General neurodiversity (rainbow infinity symbol)",
+      "status": "guide_proposed_unverified_sales",
+      "colors": [
+        {
+          "name": "red",
+          "hex": "#E63946",
+          "role": "accent"
+        },
+        {
+          "name": "orange",
+          "hex": "#F4A261",
+          "role": "accent"
+        },
+        {
+          "name": "yellow",
+          "hex": "#E9C46A",
+          "role": "accent"
+        },
+        {
+          "name": "teal",
+          "hex": "#2A9D8F",
+          "role": "accent"
+        },
+        {
+          "name": "blue",
+          "hex": "#3D5A80",
+          "role": "primary_text"
+        },
+        {
+          "name": "purple",
+          "hex": "#7B2CBF",
+          "role": "accent"
+        }
+      ],
+      "recommended_shirts": [
+        "Ivory"
+      ],
+      "fonts": {
+        "display": "Shrikhand",
+        "supporting": "Righteous"
+      },
+      "ink": {
+        "reference_light_shirt": {
+          "name": "Ivory",
+          "hex": "#F3EEDF"
+        },
+        "reference_dark_shirt": {
+          "name": "Pepper",
+          "hex": "#4F4F4F"
+        },
+        "on_light_shirt": [
+          {
+            "name": "ink_black",
+            "hex": "#1A1A1A",
+            "contrast_ratio": 15.01,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "purple",
+            "hex": "#7B2CBF",
+            "contrast_ratio": 6.13,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "blue",
+            "hex": "#3D5A80",
+            "contrast_ratio": 6.09,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "red",
+            "hex": "#E63946",
+            "contrast_ratio": 3.59,
+            "wcag": "AA_large_graphics_only"
+          }
+        ],
+        "on_dark_shirt": [
+          {
+            "name": "ink_white",
+            "hex": "#FFFFFF",
+            "contrast_ratio": 8.19,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "yellow",
+            "hex": "#E9C46A",
+            "contrast_ratio": 4.9,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "orange",
+            "hex": "#F4A261",
+            "contrast_ratio": 3.97,
+            "wcag": "AA_large_graphics_only"
+          }
+        ]
+      }
+    },
+    "gold_infinity": {
+      "display_name": "Gold Infinity",
+      "use_case": "Autism (gold infinity; Au = gold)",
+      "status": "guide_proposed_unverified_sales",
+      "colors": [
+        {
+          "name": "gold",
+          "hex": "#D4A017",
+          "role": "primary"
+        },
+        {
+          "name": "light_gold",
+          "hex": "#F2D16B",
+          "role": "highlight"
+        },
+        {
+          "name": "cream",
+          "hex": "#FFF8E7",
+          "role": "primary_text"
+        }
+      ],
+      "recommended_shirts": [
+        "Pepper",
+        "Blue Spruce"
+      ],
+      "fonts": {
+        "display": "Caprasimo",
+        "supporting": "Bebas Neue"
+      },
+      "ink": {
+        "reference_light_shirt": {
+          "name": "Ivory",
+          "hex": "#F3EEDF"
+        },
+        "reference_dark_shirt": {
+          "name": "Pepper",
+          "hex": "#4F4F4F"
+        },
+        "on_light_shirt": [
+          {
+            "name": "ink_black",
+            "hex": "#1A1A1A",
+            "contrast_ratio": 15.01,
+            "wcag": "AA_normal"
+          }
+        ],
+        "on_dark_shirt": [
+          {
+            "name": "ink_white",
+            "hex": "#FFFFFF",
+            "contrast_ratio": 8.19,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "cream",
+            "hex": "#FFF8E7",
+            "contrast_ratio": 7.74,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "light_gold",
+            "hex": "#F2D16B",
+            "contrast_ratio": 5.5,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "gold",
+            "hex": "#D4A017",
+            "contrast_ratio": 3.45,
+            "wcag": "AA_large_graphics_only"
+          }
+        ]
+      }
+    },
+    "calm_sensory_pastel": {
+      "display_name": "Calm Sensory Pastel",
+      "use_case": "Low-stim affirmations",
+      "status": "guide_proposed_unverified_sales",
+      "colors": [
+        {
+          "name": "powder_blue",
+          "hex": "#A8DADC",
+          "role": "background_shape"
+        },
+        {
+          "name": "off_white",
+          "hex": "#F1FAEE",
+          "role": "highlight"
+        },
+        {
+          "name": "lavender",
+          "hex": "#CDB4DB",
+          "role": "accent"
+        },
+        {
+          "name": "pink",
+          "hex": "#FFAFCC",
+          "role": "accent"
+        },
+        {
+          "name": "steel_blue",
+          "hex": "#457B9D",
+          "role": "primary_text"
+        },
+        {
+          "name": "deep_navy",
+          "hex": "#1D3557",
+          "role": "cover_title_ink"
+        },
+        {
+          "name": "butter",
+          "hex": "#FFE8A3",
+          "role": "alt_cover_background"
+        }
+      ],
+      "recommended_shirts": [
+        "Chalky Mint",
+        "Bay"
+      ],
+      "fonts": {
+        "display": "Fredoka",
+        "supporting": "Caveat"
+      },
+      "ink": {
+        "reference_light_shirt": {
+          "name": "Ivory",
+          "hex": "#F3EEDF"
+        },
+        "reference_dark_shirt": {
+          "name": "Pepper",
+          "hex": "#4F4F4F"
+        },
+        "on_light_shirt": [
+          {
+            "name": "ink_black",
+            "hex": "#1A1A1A",
+            "contrast_ratio": 15.01,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "steel_blue",
+            "hex": "#457B9D",
+            "contrast_ratio": 3.96,
+            "wcag": "AA_large_graphics_only"
+          }
+        ],
+        "on_dark_shirt": [
+          {
+            "name": "ink_white",
+            "hex": "#FFFFFF",
+            "contrast_ratio": 8.19,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "off_white",
+            "hex": "#F1FAEE",
+            "contrast_ratio": 7.66,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "powder_blue",
+            "hex": "#A8DADC",
+            "contrast_ratio": 5.35,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "pink",
+            "hex": "#FFAFCC",
+            "contrast_ratio": 4.78,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "lavender",
+            "hex": "#CDB4DB",
+            "contrast_ratio": 4.35,
+            "wcag": "AA_large_graphics_only"
+          }
+        ]
+      }
+    },
+    "dopamine_chaos": {
+      "display_name": "Dopamine Chaos",
+      "use_case": "ADHD humor",
+      "status": "guide_proposed_unverified_sales",
+      "colors": [
+        {
+          "name": "hot_pink",
+          "hex": "#FF3EA5",
+          "role": "primary"
+        },
+        {
+          "name": "yellow",
+          "hex": "#FFD60A",
+          "role": "accent"
+        },
+        {
+          "name": "aqua",
+          "hex": "#00F5D4",
+          "role": "accent"
+        },
+        {
+          "name": "violet",
+          "hex": "#9B5DE5",
+          "role": "accent"
+        }
+      ],
+      "recommended_shirts": [
+        "Black",
+        "Pepper"
+      ],
+      "fonts": {
+        "display": "Titan One",
+        "supporting": "Permanent Marker"
+      },
+      "ink": {
+        "reference_light_shirt": {
+          "name": "Ivory",
+          "hex": "#F3EEDF"
+        },
+        "reference_dark_shirt": {
+          "name": "Pepper",
+          "hex": "#4F4F4F"
+        },
+        "on_light_shirt": [
+          {
+            "name": "ink_black",
+            "hex": "#1A1A1A",
+            "contrast_ratio": 15.01,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "violet",
+            "hex": "#9B5DE5",
+            "contrast_ratio": 3.56,
+            "wcag": "AA_large_graphics_only"
+          }
+        ],
+        "on_dark_shirt": [
+          {
+            "name": "ink_white",
+            "hex": "#FFFFFF",
+            "contrast_ratio": 8.19,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "aqua",
+            "hex": "#00F5D4",
+            "contrast_ratio": 5.86,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "yellow",
+            "hex": "#FFD60A",
+            "contrast_ratio": 5.8,
+            "wcag": "AA_normal"
+          }
+        ]
+      }
+    },
+    "earthy_vintage": {
+      "display_name": "Earthy Vintage",
+      "use_case": "AuDHD / neurospicy retro",
+      "status": "guide_proposed_unverified_sales",
+      "colors": [
+        {
+          "name": "yam",
+          "hex": "#BC6C25",
+          "role": "primary"
+        },
+        {
+          "name": "ochre",
+          "hex": "#DDA15E",
+          "role": "accent"
+        },
+        {
+          "name": "moss",
+          "hex": "#606C38",
+          "role": "accent"
+        },
+        {
+          "name": "deep_green",
+          "hex": "#283618",
+          "role": "primary_text"
+        }
+      ],
+      "recommended_shirts": [
+        "Ivory",
+        "Butter"
+      ],
+      "fonts": {
+        "display": "Alfa Slab One",
+        "supporting": "Lilita One"
+      },
+      "ink": {
+        "reference_light_shirt": {
+          "name": "Ivory",
+          "hex": "#F3EEDF"
+        },
+        "reference_dark_shirt": {
+          "name": "Pepper",
+          "hex": "#4F4F4F"
+        },
+        "on_light_shirt": [
+          {
+            "name": "ink_black",
+            "hex": "#1A1A1A",
+            "contrast_ratio": 15.01,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "deep_green",
+            "hex": "#283618",
+            "contrast_ratio": 11.1,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "moss",
+            "hex": "#606C38",
+            "contrast_ratio": 4.89,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "yam",
+            "hex": "#BC6C25",
+            "contrast_ratio": 3.41,
+            "wcag": "AA_large_graphics_only"
+          }
+        ],
+        "on_dark_shirt": [
+          {
+            "name": "ink_white",
+            "hex": "#FFFFFF",
+            "contrast_ratio": 8.19,
+            "wcag": "AA_normal"
+          },
+          {
+            "name": "ochre",
+            "hex": "#DDA15E",
+            "contrast_ratio": 3.64,
+            "wcag": "AA_large_graphics_only"
+          }
+        ]
+      },
+      "texture": "distressed halftone"
+    }
+  },
+  "fonts": {
+    "display": [
+      {
+        "family": "Shrikhand",
+        "google_fonts_name": "Shrikhand",
+        "google_fonts_url": "https://fonts.google.com/specimen/Shrikhand",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/shrikhand",
+        "commercial_use": true,
+        "recommended_use": "70s groovy wavy/stacked slogans",
+        "min_size_note": "cap height >=0.75in on DTG"
+      },
+      {
+        "family": "Caprasimo",
+        "google_fonts_name": "Caprasimo",
+        "google_fonts_url": "https://fonts.google.com/specimen/Caprasimo",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/caprasimo",
+        "commercial_use": true,
+        "recommended_use": "Cooper Black-style retro",
+        "min_size_note": "cap height >=0.75in"
+      },
+      {
+        "family": "Righteous",
+        "google_fonts_name": "Righteous",
+        "google_fonts_url": "https://fonts.google.com/specimen/Righteous",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/righteous",
+        "commercial_use": true,
+        "recommended_use": "retro display / secondary headline",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Lilita One",
+        "google_fonts_name": "Lilita One",
+        "google_fonts_url": "https://fonts.google.com/specimen/Lilita+One",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/lilitaone",
+        "commercial_use": true,
+        "recommended_use": "retro, holds up on dark DTG",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Anton",
+        "google_fonts_name": "Anton",
+        "google_fonts_url": "https://fonts.google.com/specimen/Anton",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/anton",
+        "commercial_use": true,
+        "recommended_use": "blunt deadpan condensed lines",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Bebas Neue",
+        "google_fonts_name": "Bebas Neue",
+        "google_fonts_url": "https://fonts.google.com/specimen/Bebas+Neue",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/bebasneue",
+        "commercial_use": true,
+        "recommended_use": "deadpan caps; loosen tracking on dark tees (+50 to +100)",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Alfa Slab One",
+        "google_fonts_name": "Alfa Slab One",
+        "google_fonts_url": "https://fonts.google.com/specimen/Alfa+Slab+One",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/alfaslabone",
+        "commercial_use": true,
+        "recommended_use": "heavy slab, strong on dark DTG",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Titan One",
+        "google_fonts_name": "Titan One",
+        "google_fonts_url": "https://fonts.google.com/specimen/Titan+One",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/titanone",
+        "commercial_use": true,
+        "recommended_use": "chunky playful ADHD humor",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Fredoka",
+        "google_fonts_name": "Fredoka",
+        "google_fonts_url": "https://fonts.google.com/specimen/Fredoka",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/fredoka",
+        "commercial_use": true,
+        "recommended_use": "rounded friendly, kids/soft affirmations",
+        "min_size_note": "cap height >=0.4in"
+      },
+      {
+        "family": "Monoton",
+        "google_fonts_name": "Monoton",
+        "google_fonts_url": "https://fonts.google.com/specimen/Monoton",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/monoton",
+        "commercial_use": true,
+        "recommended_use": "neon accent, only 1-2 large words",
+        "min_size_note": "letter height >=3in on DTG"
+      }
+    ],
+    "supporting": [
+      {
+        "family": "Righteous",
+        "google_fonts_name": "Righteous",
+        "google_fonts_url": "https://fonts.google.com/specimen/Righteous",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/righteous",
+        "commercial_use": true,
+        "recommended_use": "support for groovy display",
+        "min_size_note": "x-height >=0.25in"
+      },
+      {
+        "family": "Bebas Neue",
+        "google_fonts_name": "Bebas Neue",
+        "google_fonts_url": "https://fonts.google.com/specimen/Bebas+Neue",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/bebasneue",
+        "commercial_use": true,
+        "recommended_use": "support caps subline",
+        "min_size_note": "cap height >=0.3in"
+      },
+      {
+        "family": "Lilita One",
+        "google_fonts_name": "Lilita One",
+        "google_fonts_url": "https://fonts.google.com/specimen/Lilita+One",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/lilitaone",
+        "commercial_use": true,
+        "recommended_use": "support for slab display",
+        "min_size_note": "cap height >=0.3in"
+      },
+      {
+        "family": "Oswald",
+        "google_fonts_name": "Oswald",
+        "google_fonts_url": "https://fonts.google.com/specimen/Oswald",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/oswald",
+        "commercial_use": true,
+        "recommended_use": "neutral condensed subline",
+        "min_size_note": "cap height >=0.3in"
+      },
+      {
+        "family": "Work Sans",
+        "google_fonts_name": "Work Sans",
+        "google_fonts_url": "https://fonts.google.com/specimen/Work+Sans",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/worksans",
+        "commercial_use": true,
+        "recommended_use": "clean sans small text; dyslexia-themed with wide tracking",
+        "min_size_note": "x-height >=0.25in"
+      },
+      {
+        "family": "Lexend",
+        "google_fonts_name": "Lexend",
+        "google_fonts_url": "https://fonts.google.com/specimen/Lexend",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/lexend METADATA.pb",
+        "commercial_use": true,
+        "recommended_use": "interior page headers",
+        "min_size_note": "18–20 pt headers"
+      },
+      {
+        "family": "Atkinson Hyperlegible Next",
+        "google_fonts_name": "Atkinson Hyperlegible Next",
+        "google_fonts_url": "https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/atkinsonhyperlegiblenext METADATA.pb",
+        "commercial_use": true,
+        "recommended_use": "interior labels, prompts, and numbers",
+        "min_size_note": "prompts 11–12 pt; micro labels at least 9 pt"
+      }
+    ],
+    "hand_drawn": [
+      {
+        "family": "Caveat",
+        "google_fonts_name": "Caveat",
+        "google_fonts_url": "https://fonts.google.com/specimen/Caveat",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/caveat",
+        "commercial_use": true,
+        "recommended_use": "side notes, crossed-out words",
+        "min_size_note": "x-height >=0.3in; avoid for key words"
+      },
+      {
+        "family": "Permanent Marker",
+        "google_fonts_name": "Permanent Marker",
+        "google_fonts_url": "https://fonts.google.com/specimen/Permanent+Marker",
+        "license": "Apache-2.0",
+        "license_verified_via": "github.com/google/fonts/apache/permanentmarker",
+        "commercial_use": true,
+        "recommended_use": "messy-brain marker lines",
+        "min_size_note": "cap height >=0.4in"
+      }
+    ],
+    "mono": [
+      {
+        "family": "JetBrains Mono",
+        "google_fonts_name": "JetBrains Mono",
+        "google_fonts_url": "https://fonts.google.com/specimen/JetBrains+Mono",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/jetbrainsmono",
+        "commercial_use": true,
+        "recommended_use": "dev/code humor",
+        "min_size_note": "x-height >=0.25in"
+      },
+      {
+        "family": "Fira Code",
+        "google_fonts_name": "Fira Code",
+        "google_fonts_url": "https://fonts.google.com/specimen/Fira+Code",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/firacode",
+        "commercial_use": true,
+        "recommended_use": "code snippets (ligatures)",
+        "min_size_note": "x-height >=0.25in"
+      },
+      {
+        "family": "Space Mono",
+        "google_fonts_name": "Space Mono",
+        "google_fonts_url": "https://fonts.google.com/specimen/Space+Mono",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/spacemono",
+        "commercial_use": true,
+        "recommended_use": "retro-tech mono headline",
+        "min_size_note": "cap height >=0.4in"
+      },
+      {
+        "family": "IBM Plex Mono",
+        "google_fonts_name": "IBM Plex Mono",
+        "google_fonts_url": "https://fonts.google.com/specimen/IBM+Plex+Mono",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/ibmplexmono",
+        "commercial_use": true,
+        "recommended_use": "clean terminal text",
+        "min_size_note": "x-height >=0.25in"
+      }
+    ],
+    "pairing_rules": [
+      "Exactly one display + one supporting font per design (hand_drawn may replace supporting).",
+      "Do not mix decades (e.g., 70s groovy with 90s arcade).",
+      "Monoton only for 1-2 words at >=3in tall.",
+      "Dark-shirt DTG: prefer Lilita One, Alfa Slab One, Bebas Neue, Anton; increase tracking for Bebas.",
+      "Dyslexia-themed: heavy sans, generous letter spacing, no scripts for key words [unverified design judgment]."
+    ],
+    "banned": [
+      {
+        "family": "Keep on Truckin'",
+        "reason": "free for personal use only"
+      },
+      {
+        "rule": "Any font labeled 'free for personal use', demo, or without a commercial license; only Google Fonts OFL/Apache families listed here are allowed."
+      }
+    ]
+  },
+  "per_market_overrides": {
+    "nd": {
+      "status": "from_guide",
+      "default_palette": "rainbow_infinity_retro",
+      "palettes": [
+        "rainbow_infinity_retro",
+        "gold_infinity",
+        "calm_sensory_pastel",
+        "dopamine_chaos",
+        "earthy_vintage"
+      ],
+      "palette_by_subniche": {
+        "neurodiversity_general": "rainbow_infinity_retro",
+        "autism": "gold_infinity",
+        "low_stim_affirmation": "calm_sensory_pastel",
+        "adhd_humor": "dopamine_chaos",
+        "audhd_neurospicy": "earthy_vintage"
+      },
+      "symbols_allowed": [
+        "rainbow infinity",
+        "gold infinity",
+        "butterfly",
+        "brain doodle",
+        "low battery icon",
+        "side-quest/RPG motifs"
+      ],
+      "symbols_banned": [
+        "puzzle piece",
+        "blue-only 'Light It Up Blue' look",
+        "Autism Speaks branding"
+      ],
+      "tone": "first-person, humorous, self-accepting; no fix/cure framing",
+      "print_note": "prefer DTG/water-based ink on large designs; soft blanks"
+    },
+    "dev": {
+      "status": "proposed_unverified",
+      "palette": [
+        {
+          "name": "terminal_green",
+          "hex": "#39FF14",
+          "role": "primary_on_dark",
+          "contrast_vs_ivory": 1.17,
+          "contrast_vs_pepper": 6.04
+        },
+        {
+          "name": "amber",
+          "hex": "#FFB000",
+          "role": "accent",
+          "contrast_vs_ivory": 1.58,
+          "contrast_vs_pepper": 4.47
+        },
+        {
+          "name": "syntax_blue",
+          "hex": "#61AFEF",
+          "role": "accent",
+          "contrast_vs_ivory": 2.04,
+          "contrast_vs_pepper": 3.47
+        },
+        {
+          "name": "syntax_purple",
+          "hex": "#C678DD",
+          "role": "accent",
+          "contrast_vs_ivory": 2.54,
+          "contrast_vs_pepper": 2.78
+        },
+        {
+          "name": "code_bg",
+          "hex": "#282C34",
+          "role": "primary_on_light",
+          "contrast_vs_ivory": 12.07,
+          "contrast_vs_pepper": 1.71
+        }
+      ],
+      "fonts": {
+        "display": "Space Mono",
+        "supporting": "JetBrains Mono"
+      },
+      "recommended_shirts": [
+        "Pepper",
+        "Black",
+        "Blue Spruce",
+        "Ivory"
+      ],
+      "notes": "Code-syntax / terminal humor; mono is the supporting face. Alt display: Press Start 2P (OFL) for pixel/arcade.",
+      "alt_fonts": [
+        "Press Start 2P",
+        "Fira Code",
+        "IBM Plex Mono"
+      ]
+    },
+    "hockey": {
+      "status": "proposed_unverified",
+      "palette": [
+        {
+          "name": "ice_white",
+          "hex": "#F5F7FA",
+          "role": "primary_on_dark",
+          "contrast_vs_ivory": 1.08,
+          "contrast_vs_pepper": 7.63
+        },
+        {
+          "name": "rink_red",
+          "hex": "#C8102E",
+          "role": "accent",
+          "contrast_vs_ivory": 5.07,
+          "contrast_vs_pepper": 1.39
+        },
+        {
+          "name": "navy",
+          "hex": "#0B2545",
+          "role": "primary_on_light",
+          "contrast_vs_ivory": 13.27,
+          "contrast_vs_pepper": 1.88
+        },
+        {
+          "name": "ice_blue",
+          "hex": "#8ECAE6",
+          "role": "accent",
+          "contrast_vs_ivory": 1.54,
+          "contrast_vs_pepper": 4.58
+        }
+      ],
+      "fonts": {
+        "display": "Graduate",
+        "supporting": "Oswald"
+      },
+      "recommended_shirts": [
+        "Pepper",
+        "Ivory",
+        "Blue Spruce",
+        "Granite"
+      ],
+      "notes": "Varsity/athletic collegiate block lettering; avoid NHL/team marks and team color combos that imply affiliation.",
+      "alt_fonts": [
+        "Anton",
+        "Bebas Neue"
+      ]
+    },
+    "rally": {
+      "status": "proposed_unverified",
+      "palette": [
+        {
+          "name": "rally_orange",
+          "hex": "#FF6B00",
+          "role": "primary",
+          "contrast_vs_ivory": 2.46,
+          "contrast_vs_pepper": 2.87
+        },
+        {
+          "name": "checker_black",
+          "hex": "#111111",
+          "role": "primary_on_light",
+          "contrast_vs_ivory": 16.28,
+          "contrast_vs_pepper": 2.31
+        },
+        {
+          "name": "livery_yellow",
+          "hex": "#FFD100",
+          "role": "accent",
+          "contrast_vs_ivory": 1.26,
+          "contrast_vs_pepper": 5.61
+        },
+        {
+          "name": "gravel_tan",
+          "hex": "#C2A878",
+          "role": "accent",
+          "contrast_vs_ivory": 1.98,
+          "contrast_vs_pepper": 3.58
+        },
+        {
+          "name": "white",
+          "hex": "#FFFFFF",
+          "role": "primary_on_dark",
+          "contrast_vs_ivory": 1.16,
+          "contrast_vs_pepper": 8.19
+        }
+      ],
+      "fonts": {
+        "display": "Racing Sans One",
+        "supporting": "Russo One"
+      },
+      "recommended_shirts": [
+        "Pepper",
+        "Ivory",
+        "Butter",
+        "Moss"
+      ],
+      "notes": "Motorsport speed italics, checker/stripe motifs; avoid manufacturer logos, WRC marks, and sponsor liveries.",
+      "alt_fonts": [
+        "Orbitron",
+        "Bebas Neue"
+      ]
+    },
+    "cooking": {
+      "status": "proposed_unverified",
+      "palette": [
+        {
+          "name": "tomato",
+          "hex": "#D64933",
+          "role": "primary",
+          "contrast_vs_ivory": 3.73,
+          "contrast_vs_pepper": 1.9
+        },
+        {
+          "name": "basil",
+          "hex": "#4F7942",
+          "role": "accent",
+          "contrast_vs_ivory": 4.37,
+          "contrast_vs_pepper": 1.62
+        },
+        {
+          "name": "butter_cream",
+          "hex": "#F6E7B4",
+          "role": "primary_on_dark",
+          "contrast_vs_ivory": 1.06,
+          "contrast_vs_pepper": 6.63
+        },
+        {
+          "name": "cast_iron",
+          "hex": "#2B2B2B",
+          "role": "primary_on_light",
+          "contrast_vs_ivory": 12.21,
+          "contrast_vs_pepper": 1.73
+        },
+        {
+          "name": "paprika",
+          "hex": "#B5521B",
+          "role": "accent",
+          "contrast_vs_ivory": 4.32,
+          "contrast_vs_pepper": 1.63
+        }
+      ],
+      "fonts": {
+        "display": "Caprasimo",
+        "supporting": "Work Sans"
+      },
+      "recommended_shirts": [
+        "Ivory",
+        "Butter",
+        "Pepper",
+        "Moss",
+        "Yam"
+      ],
+      "notes": "Retro diner/kitchen badge style; optional script accent Pacifico (OFL) for 1-2 words.",
+      "alt_fonts": [
+        "Shrikhand",
+        "Pacifico",
+        "Playfair Display"
+      ]
+    }
+  },
+  "rules": {
+    "do": [
+      "Make the text/message the main design element",
+      "Use one display + one supporting font",
+      "Use rainbow infinity (ND), gold infinity (autism), or butterfly",
+      "Use first-person, humorous, identity-affirming language",
+      "Pick ink from the palette's on_light_shirt/on_dark_shirt set matching the shirt's is_dark flag",
+      "Require contrast >=3.0 for all ink; >=4.5 for small text",
+      "Run a USPTO (Class 25) trademark search for every phrase before listing",
+      "Keep a license screenshot/record with each design",
+      "Prefer DTG or water-based ink for large prints"
+    ],
+    "dont": [
+      "No puzzle piece for autism",
+      "No blue-only 'Light It Up Blue' look",
+      "No fix/cure framing",
+      "No mixing decades in one design",
+      "No Monoton under 3in letter height",
+      "No personal-use-only fonts (e.g., Keep on Truckin')",
+      "No brand names or character IP (Autism Speaks, team/manufacturer logos)",
+      "No scripts for key words in dyslexia-themed designs"
+    ],
+    "trademark_watch": [
+      {
+        "phrase": "NEUROSPICY",
+        "note": "USPTO Reg. 8233894 for dietary supplements; 2023 application for dating services; not Class 25 per guide but not exhaustively checked"
+      }
+    ]
+  }
+}

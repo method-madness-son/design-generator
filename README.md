@@ -13,6 +13,19 @@ npm run book-pdf -- gratitude-habit-tracker
 
 Preview at `/kdp` while `npm run dev` is running. Sample PDFs are written to `exports/kdp/`.
 
+## Tee print pipeline
+
+Tee designs live under `tees/` and use the shared theme in `theme/global.json`. They are separate from poster projects. See [docs/TEE-PIPELINE.md](docs/TEE-PIPELINE.md).
+
+```bash
+npm run tee:check
+npm run tee-art -- --all
+npm run tee-preview -- --all
+npm run tee-preview -- brain-tabs --shirt Black
+```
+
+Preview at `/tees` while `npm run dev` is running. Print PNGs go to `exports/tees/`. Wireframes go to `exports/tees/previews/`.
+
 ## Getting Started
 
 First, run the development server:

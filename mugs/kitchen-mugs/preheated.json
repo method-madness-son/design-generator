@@ -1,0 +1,46 @@
+{
+  "id": "preheated",
+  "project": "Kitchen Mugs",
+  "market": "cooking",
+  "lines": [
+    {
+      "text": "preheated",
+      "font": "display"
+    },
+    {
+      "text": "emotionally",
+      "font": "supporting"
+    }
+  ],
+  "graphic": {
+    "type": "steam"
+  },
+  "wrap": "front",
+  "sizes": [
+    "11oz",
+    "15oz"
+  ],
+  "fonts": {
+    "display": "Caprasimo"
+  },
+  "etsy": {
+    "title": "Preheated Emotionally Mug, Funny Baking Coffee Cup",
+    "description": "A white ceramic mug with \"preheated / emotionally\" printed on the outside.\n\nWHAT YOU'LL GET\n• A physical 11 oz or 15 oz white ceramic mug\n• The design is printed on the outside of the mug\n\nThis listing is a physical mug, shipped to you. It is a joke, not a health product.",
+    "tags": [
+      "preheated mug",
+      "baking mug",
+      "baker gift",
+      "funny kitchen mug",
+      "oven joke",
+      "home baker",
+      "kitchen gift",
+      "white ceramic mug",
+      "dessert humor",
+      "cooking humor",
+      "baker coffee cup",
+      "chef gift",
+      "baking quote"
+    ],
+    "category": "Home & Living > Kitchen & Dining > Drinkware > Mugs"
+  }
+}

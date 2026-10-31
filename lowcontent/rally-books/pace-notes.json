@@ -1,0 +1,62 @@
+{
+  "id": "pace-notes",
+  "project": "Rally Books",
+  "projectSlug": "rally-books",
+  "market": "rally",
+  "title": "Rally Pace Notes Notebook",
+  "subtitle": "Stage log for distance, time, surface, and notes",
+  "trim": "5x8",
+  "pageCount": 24,
+  "paper": "white",
+  "ink": "premium-color",
+  "bleed": true,
+  "author": null,
+  "theme": {
+    "palette": "rally",
+    "displayFont": "Racing Sans One",
+    "supportingFont": "Russo One"
+  },
+  "kdp": {
+    "title": "Rally Pace Notes Notebook",
+    "subtitle": "Stage log for distance, time, surface, and notes",
+    "description": "A pocket notebook for stage notes. Each page has lines for distance, time, surface, the car, and notes. No series name and no manufacturer name.",
+    "keywords": [
+      "rally pace notes",
+      "stage notes notebook",
+      "gravel stage log",
+      "rally time log",
+      "pace notes journal",
+      "stage distance log",
+      "driver notes book"
+    ],
+    "categories": [
+      { "label": "Sports & Outdoors" },
+      { "label": "Crafts, Hobbies & Home" }
+    ],
+    "priceUsd": 8.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    { "template": "title", "repeat": 1 },
+    { "template": "belongs-to", "repeat": 1 },
+    { "template": "contents", "repeat": 1 },
+    {
+      "template": "logbook",
+      "repeat": 18,
+      "config": {
+        "heading": "Stage notes",
+        "fields": [
+          { "label": "Stage", "lines": 1 },
+          { "label": "Distance", "lines": 1 },
+          { "label": "Time", "lines": 1 },
+          { "label": "Surface", "lines": 1 },
+          { "label": "Car", "lines": 1 }
+        ]
+      }
+    },
+    { "template": "lined", "repeat": 3, "config": { "heading": "Lined notes" } }
+  ]
+}

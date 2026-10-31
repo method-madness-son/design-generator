@@ -1,0 +1,530 @@
+{
+  "id": "nd-planner",
+  "project": "ND Books",
+  "projectSlug": "nd-books",
+  "market": "nd",
+  "title": "12-Week Undated ADHD Planner",
+  "subtitle": "Daily pages, weekly overviews, and room to start again",
+  "trim": "6x9",
+  "pageCount": 120,
+  "paper": "white",
+  "ink": "black",
+  "bleed": false,
+  "margins": { "inside": 0.625, "outside": 0.5, "top": 0.5, "bottom": 0.55 },
+  "finish": "matte",
+  "author": null,
+  "theme": {
+    "palette": "calm_sensory_pastel",
+    "displayFont": "Fredoka",
+    "supportingFont": "Work Sans"
+  },
+  "kdp": {
+    "title": "12-Week Undated ADHD Planner",
+    "subtitle": "Daily pages, weekly overviews, and room to start again",
+    "description": "An undated 12-week planner for ADHD adults. Each week has an overview, four daily pages, and a short reset. The toolkit has a brain dump, a dopamine menu, and a fresh start after a gap. It is a paper tool for your own notes. It is not medical advice.",
+    "keywords": [
+      "undated adhd planner",
+      "12 week adhd planner",
+      "adhd daily planner",
+      "weekly overview planner",
+      "brain dump planner",
+      "adhd friendly planner",
+      "focus planner notebook"
+    ],
+    "categories": [
+      {
+        "label": "Self-Help / Journaling"
+      },
+      {
+        "label": "Crafts, Hobbies & Home"
+      }
+    ],
+    "priceUsd": 12.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    {
+      "template": "title",
+      "repeat": 1
+    },
+    {
+      "template": "belongs-to",
+      "repeat": 1
+    },
+    {
+      "template": "quick-start",
+      "repeat": 1,
+      "config": {
+        "heading": "Quick start",
+        "variant": "loop"
+      }
+    },
+    {
+      "template": "quick-start",
+      "repeat": 1,
+      "config": {
+        "heading": "If you skipped ahead",
+        "variant": "skip"
+      }
+    },
+    {
+      "template": "dopamine-menu",
+      "repeat": 1,
+      "config": {
+        "heading": "Dopamine menu",
+        "variant": "example"
+      }
+    },
+    {
+      "template": "dopamine-menu",
+      "repeat": 1,
+      "config": {
+        "heading": "Your menu",
+        "variant": "blank"
+      }
+    },
+    {
+      "template": "task-reward",
+      "repeat": 1,
+      "config": {
+        "heading": "Task and reward"
+      }
+    },
+    {
+      "template": "launch-shutdown",
+      "repeat": 1,
+      "config": {
+        "heading": "Launch",
+        "variant": "launch"
+      }
+    },
+    {
+      "template": "launch-shutdown",
+      "repeat": 1,
+      "config": {
+        "heading": "Shutdown",
+        "variant": "shutdown"
+      }
+    },
+    {
+      "template": "day-routine",
+      "repeat": 1,
+      "config": {
+        "heading": "Morning",
+        "variant": "morning"
+      }
+    },
+    {
+      "template": "day-routine",
+      "repeat": 1,
+      "config": {
+        "heading": "Evening",
+        "variant": "evening"
+      }
+    },
+    {
+      "template": "low-energy",
+      "repeat": 2,
+      "config": {
+        "heading": "Low-energy day"
+      }
+    },
+    {
+      "template": "decision-helper",
+      "repeat": 1,
+      "config": {
+        "heading": "Good enough pick"
+      }
+    },
+    {
+      "template": "body-double",
+      "repeat": 1,
+      "config": {
+        "heading": "Body double"
+      }
+    },
+    {
+      "template": "brain-dump",
+      "repeat": 2,
+      "config": {
+        "heading": "Brain dump"
+      }
+    },
+    {
+      "template": "sort-page",
+      "repeat": 2,
+      "config": {
+        "heading": "Sort"
+      }
+    },
+    {
+      "template": "urgent-important",
+      "repeat": 2,
+      "config": {
+        "heading": "Urgent or important"
+      }
+    },
+    {
+      "template": "monthly-planner",
+      "repeat": 3,
+      "config": {
+        "heading": "Month",
+        "dated": false
+      }
+    },
+    {
+      "template": "appointments",
+      "repeat": 2,
+      "config": {
+        "heading": "Appointments and contacts"
+      }
+    },
+    {
+      "template": "project-planner",
+      "repeat": 2,
+      "config": {
+        "heading": "Project"
+      }
+    },
+    {
+      "template": "tiny-step",
+      "repeat": 4,
+      "config": {
+        "heading": "Next tiny step"
+      }
+    },
+    {
+      "template": "parking-lot",
+      "repeat": 2,
+      "config": {
+        "heading": "Parking lot"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 1"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 2"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 3"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 4"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "fresh-start",
+      "repeat": 1,
+      "config": {
+        "heading": "Fresh start"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 5"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 6"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 7"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 8"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "fresh-start",
+      "repeat": 1,
+      "config": {
+        "heading": "Fresh start"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 9"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 10"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 11"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "weekly-overview",
+      "repeat": 1,
+      "config": {
+        "heading": "Week 12"
+      }
+    },
+    {
+      "template": "daily-plan",
+      "repeat": 4,
+      "config": {
+        "heading": "Day"
+      }
+    },
+    {
+      "template": "weekly-reset",
+      "repeat": 1,
+      "config": {
+        "heading": "Weekly reset"
+      }
+    },
+    {
+      "template": "fresh-start",
+      "repeat": 1,
+      "config": {
+        "heading": "Fresh start"
+      }
+    },
+    {
+      "template": "monthly-review",
+      "repeat": 3,
+      "config": {
+        "heading": "Monthly review"
+      }
+    },
+    {
+      "template": "habit-tracker",
+      "repeat": 1,
+      "config": {
+        "heading": "Habits",
+        "days": 14,
+        "habits": [
+          "Outside",
+          "Start one thing",
+          "A message",
+          "Tidy one spot",
+          "Stop time"
+        ]
+      }
+    },
+    {
+      "template": "mood-sleep",
+      "repeat": 1,
+      "config": {
+        "heading": "Mood and sleep"
+      }
+    },
+    {
+      "template": "focus-log",
+      "repeat": 2,
+      "config": {
+        "heading": "Focus timer"
+      }
+    },
+    {
+      "template": "wins-list",
+      "repeat": 2,
+      "config": {
+        "heading": "Wins"
+      }
+    },
+    {
+      "template": "dot-grid",
+      "repeat": 2,
+      "config": {
+        "heading": "Notes"
+      }
+    }
+  ]
+}

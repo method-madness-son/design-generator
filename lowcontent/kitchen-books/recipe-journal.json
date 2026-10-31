@@ -1,0 +1,50 @@
+{
+  "id": "recipe-journal",
+  "project": "Kitchen Books",
+  "projectSlug": "kitchen-books",
+  "market": "cooking",
+  "title": "Recipe Journal and Meal Planner",
+  "subtitle": "Blank recipe pages and a weekly meal grid",
+  "trim": "8x10",
+  "pageCount": 24,
+  "paper": "white",
+  "ink": "premium-color",
+  "bleed": true,
+  "author": null,
+  "theme": {
+    "palette": "cooking",
+    "displayFont": "Caprasimo",
+    "supportingFont": "Work Sans"
+  },
+  "kdp": {
+    "title": "Recipe Journal and Meal Planner",
+    "subtitle": "Blank recipe pages and a weekly meal grid",
+    "description": "Blank recipe pages and a weekly meal grid. Write the dish, the amounts, and the steps. Each recipe page is a form, not a finished recipe.",
+    "keywords": [
+      "recipe journal",
+      "blank recipe book",
+      "meal planner weekly",
+      "write in cookbook",
+      "recipe log book",
+      "weekly meal grid",
+      "home cooking journal"
+    ],
+    "categories": [
+      { "label": "Cookbooks, Food & Wine" },
+      { "label": "Crafts, Hobbies & Home" }
+    ],
+    "priceUsd": 9.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    { "template": "title", "repeat": 1 },
+    { "template": "belongs-to", "repeat": 1 },
+    { "template": "contents", "repeat": 1 },
+    { "template": "recipe", "repeat": 12, "config": { "heading": "Recipe" } },
+    { "template": "meal-planner", "repeat": 8, "config": { "heading": "Meal plan", "dated": false } },
+    { "template": "lined", "repeat": 1, "config": { "heading": "Lined notes" } }
+  ]
+}

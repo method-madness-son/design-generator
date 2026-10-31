@@ -1,0 +1,57 @@
+{
+  "id": "stats-tracker",
+  "project": "Hockey Books",
+  "projectSlug": "hockey-books",
+  "market": "hockey",
+  "title": "Hockey Stats Tracker",
+  "subtitle": "Game log for goals, assists, shots, and notes",
+  "trim": "8.5x11",
+  "pageCount": 24,
+  "paper": "white",
+  "ink": "premium-color",
+  "bleed": true,
+  "author": null,
+  "theme": {
+    "palette": "hockey",
+    "displayFont": "Graduate",
+    "supportingFont": "Oswald"
+  },
+  "kdp": {
+    "title": "Hockey Stats Tracker",
+    "subtitle": "Game log for goals, assists, shots, and notes",
+    "description": "A game log for ice hockey. Blank tables for the date, the opponent, goals, assists, shots, and notes. No league name and no club name, so you can use it for any rink.",
+    "keywords": [
+      "hockey stats tracker",
+      "hockey game log",
+      "goals assists shots",
+      "ice hockey notebook",
+      "player stats log",
+      "season game tracker",
+      "hockey notes journal"
+    ],
+    "categories": [
+      { "label": "Sports & Outdoors" },
+      { "label": "Crafts, Hobbies & Home" }
+    ],
+    "priceUsd": 8.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    { "template": "title", "repeat": 1 },
+    { "template": "belongs-to", "repeat": 1 },
+    { "template": "contents", "repeat": 1 },
+    {
+      "template": "stats-tracker",
+      "repeat": 16,
+      "config": {
+        "heading": "Game log",
+        "columns": ["Date", "Opponent", "Goals", "Assists", "Shots", "Notes"],
+        "rows": 12
+      }
+    },
+    { "template": "graph", "repeat": 5, "config": { "heading": "Graph paper" } }
+  ]
+}

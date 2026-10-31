@@ -1,0 +1,70 @@
+{
+  "id": "adhd-planner",
+  "project": "ND Books",
+  "projectSlug": "nd-books",
+  "market": "nd",
+  "title": "ADHD-Friendly Daily Planner",
+  "subtitle": "Weekly pages, a month grid, habits, and gratitude",
+  "trim": "6x9",
+  "pageCount": 24,
+  "paper": "white",
+  "ink": "premium-color",
+  "bleed": true,
+  "author": null,
+  "theme": {
+    "palette": "calm_sensory_pastel",
+    "displayFont": "Fredoka",
+    "supportingFont": "Work Sans"
+  },
+  "kdp": {
+    "title": "ADHD-Friendly Daily Planner",
+    "subtitle": "Weekly pages, a month grid, habits, and gratitude",
+    "description": "A fill-in planner for ADHDers. Weekly grids, a month overview, habit boxes, and short gratitude prompts. The pages are there to write on. No fix, no plan of care, and no puzzle imagery.",
+    "keywords": [
+      "adhd planner undated",
+      "weekly planner adhd",
+      "habit tracker journal",
+      "gratitude journal",
+      "neurodivergent planner",
+      "daily focus planner",
+      "adhd notebook"
+    ],
+    "categories": [
+      { "label": "Self-Help / Journaling" },
+      { "label": "Crafts, Hobbies & Home" }
+    ],
+    "priceUsd": 9.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    { "template": "title", "repeat": 1 },
+    { "template": "belongs-to", "repeat": 1 },
+    { "template": "contents", "repeat": 1 },
+    { "template": "monthly-planner", "repeat": 1, "config": { "heading": "Dated month", "dated": true } },
+    { "template": "monthly-planner", "repeat": 1, "config": { "heading": "Open month", "dated": false } },
+    { "template": "weekly-planner", "repeat": 2, "config": { "heading": "Dated week", "dated": true } },
+    { "template": "weekly-planner", "repeat": 2, "config": { "heading": "Open week", "dated": false } },
+    {
+      "template": "habit-tracker",
+      "repeat": 2,
+      "config": {
+        "heading": "Habits",
+        "days": 7,
+        "habits": ["Water", "A meal", "Move", "One start", "Lights out"]
+      }
+    },
+    {
+      "template": "gratitude",
+      "repeat": 4,
+      "config": {
+        "heading": "Gratitude",
+        "prompts": ["One thing that went well", "Someone I appreciate", "A small thing I noticed"]
+      }
+    },
+    { "template": "lined", "repeat": 6, "config": { "heading": "Lined notes" } },
+    { "template": "dot-grid", "repeat": 3, "config": { "heading": "Dot grid" } }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "works-on-my-machine",
+  "project": "Dev Mugs",
+  "market": "dev",
+  "lines": [
+    {
+      "text": "it works",
+      "font": "display"
+    },
+    {
+      "text": "on my machine",
+      "font": "supporting"
+    }
+  ],
+  "graphic": {
+    "type": "cursor-block"
+  },
+  "wrap": "front",
+  "sizes": [
+    "11oz",
+    "15oz"
+  ],
+  "fonts": {
+    "display": "Space Mono"
+  },
+  "etsy": {
+    "title": "It Works On My Machine Mug, Funny Coder Coffee Cup, Programmer Gift",
+    "description": "A white ceramic mug with \"it works / on my machine\" printed on the outside.\n\nWHAT YOU'LL GET\n• A physical 11 oz or 15 oz white ceramic mug\n• The design is printed on the outside of the mug\n\nThis listing is a physical mug, shipped to you. It is a joke, not a health product.",
+    "tags": [
+      "coder mug",
+      "programmer gift",
+      "funny coffee mug",
+      "developer mug",
+      "office desk mug",
+      "coding humor",
+      "computer joke",
+      "white ceramic mug",
+      "coffee cup gift",
+      "desk mug",
+      "tech humor",
+      "work from home",
+      "programmer humor"
+    ],
+    "category": "Home & Living > Kitchen & Dining > Drinkware > Mugs"
+  }
+}
