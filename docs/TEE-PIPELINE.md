@@ -173,6 +173,32 @@ npm run tee-preview -- brain-tabs --shirt Black
 
 `tee-art` and `tee-preview` start `next dev` on port 4313 unless you pass `--base-url`. App dev is `npm run dev` (port 4310).
 
+## nd-shirts tabs windows
+
+`tees/nd-shirts/` has two designs ported from the Design Bot file `tabs-open-windows.html` (not redrawn). The component is `components/tees/TabsOpenWindow.tsx`. It lays the reference out at 640 px, then scales that box to the front print area so the 6 px art pixel, the 24 px teal shadow, and the window widths stay in proportion.
+
+Jersey 10 (`github.com/google/fonts/ofl/jersey10/METADATA.pb`, license field `OFL`, checked 2026-10-31) is the pixel face. It is weight 400 only. Press Start 2P is the fallback. Light shirts use ink `#111111` and white paper. Dark shirts use cream `#F5EEE1`, transparent paper, and the Warning title-bar text switches to `#111111` because the bar fill becomes cream. Pink `#E0529A`, teal `#4FB3B0`, and yellow `#F5C842` do not change.
+
+## Pace-note CSS
+
+`tees/rally-shirts/` has a stencil pace note and a handwritten one. The rally market stays `proposed_unverified`. Wording is generic pace-note language. No series, team, or manufacturer marks.
+
+Font tokens in `theme/global.json` `fonts.role_tokens`:
+
+| Token | Family | Use |
+|---|---|---|
+| `display_stencil` | Big Shoulders Stencil, weight 800 | `LEFT 4` and `OVER CREST` |
+| `label_wide` | Barlow Condensed, weight 600 | `DON'T CUT` |
+| `hand_note` | Kalam, weight 400 | The pen note |
+
+At the 4500×5400 canvas the design box is 12 in wide (3600 px). Stencil caps are 1.55 in and 1.43 in (`3600/12 * inches`). The label is 0.48 in with `letter-spacing: 0.22em`. Handwritten lines are 0.95 in.
+
+Orange accent token `pace_orange` is `#DA5A2A`, sampled from the stencil reference (the cluster around that hex; the brief's `#E8601C` was the starting guess). It does not change between light and dark shirts. Ink is `#111111` on light shirts and cream `#F5EEE1` on dark shirts.
+
+Stencil distress is an SVG `feTurbulence` mask (`filterUnits="objectBoundingBox"`) composited with `operator="in"` on the two big lines only, so the grain stays vector and scales with the print. The road arrow is inline SVG: two lane strokes plus a short orange segment and an arrow head.
+
+The handwritten "don't cut" highlight is a skewed CSS block at 60% opacity with `mix-blend-mode: multiply` on light shirts. On dark shirts the blend is `normal` and the opacity is 0.85 so the orange stays visible. The export keeps that orange alpha instead of forcing it to solid. "caution" has a solid pen underline in the ink color.
+
 ## Shared modules
 
 Tee files stay under `tees/`, `types/tee.ts`, `lib/teeDesigns.ts`, `lib/teeSizes.ts`, `components/tees/`, `app/(browse)/tees/`, `app/(print)/tees/`, and `scripts/tee-export.ts`.

@@ -138,12 +138,13 @@ function withDpi(png: Buffer): Buffer {
   return Buffer.concat([signature, png.subarray(8, 8 + ihdrLength), chunk, png.subarray(8 + ihdrLength)]);
 }
 
-function hardenPng(source: Buffer, allowedHex: string[]): Buffer {
+function hardenPng(source: Buffer, allowedHex: string[], softHex: string[] = []): Buffer {
   const png = PNG.sync.read(source);
   const palette = allowedHex.map((hex) => {
     const value = hex.replace('#', '');
     return [parseInt(value.slice(0, 2), 16), parseInt(value.slice(2, 4), 16), parseInt(value.slice(4, 6), 16)] as const;
   });
+  const soft = new Set(softHex.map((hex) => hex.replace('#', '').toUpperCase()));
   if (palette.length === 0) throw new Error('No ink colors to snap to.');
   const data = png.data;
   for (let index = 0; index < data.length; index += 4) {
@@ -165,19 +166,23 @@ function hardenPng(source: Buffer, allowedHex: string[]): Buffer {
         bestDistance = distance;
       }
     }
+    const bestHex = best.map((channel) => channel.toString(16).padStart(2, '0')).join('').toUpperCase();
     data[index] = best[0];
     data[index + 1] = best[1];
     data[index + 2] = best[2];
-    data[index + 3] = 255;
+    data[index + 3] = soft.has(bestHex) && alpha < 250 ? alpha : 255;
   }
   return withDpi(PNG.sync.write(png));
 }
 
-function assertBinaryAlpha(buffer: Buffer, label: string) {
+function assertBinaryAlpha(buffer: Buffer, label: string, softHex: string[] = []) {
   const png = PNG.sync.read(buffer);
-  for (let index = 3; index < png.data.length; index += 4) {
-    const alpha = png.data[index];
-    if (alpha !== 0 && alpha !== 255) throw new Error(`${label} still has a semi-transparent pixel.`);
+  const soft = new Set(softHex.map((hex) => hex.replace('#', '').toUpperCase()));
+  for (let index = 0; index < png.data.length; index += 4) {
+    const alpha = png.data[index + 3];
+    if (alpha === 0 || alpha === 255) continue;
+    const hex = [0, 1, 2].map((offset) => png.data[index + offset].toString(16).padStart(2, '0')).join('').toUpperCase();
+    if (!soft.has(hex)) throw new Error(`${label} still has a semi-transparent pixel.`);
   }
   return png;
 }
@@ -210,8 +215,9 @@ async function renderArt(page: Page, baseUrl: string, tee: ResolvedTee, inkSet: 
     throw new Error(`${tee.id} canvas is ${box.width}×${box.height}, expected ${tee.print.widthPx}×${tee.print.heightPx}.`);
   }
   const shot = await canvas.screenshot({ type: 'png', omitBackground: true });
-  const hardened = hardenPng(shot, inkHexes(ink));
-  const decoded = assertBinaryAlpha(hardened, tee.id);
+  const soft = tee.graphic?.type === 'nd' && tee.graphic.kind === 'pace-hand' ? ['#DA5A2A'] : [];
+  const hardened = hardenPng(shot, inkHexes(ink), soft);
+  const decoded = assertBinaryAlpha(hardened, tee.id, soft);
   if (decoded.width !== tee.print.widthPx || decoded.height !== tee.print.heightPx) {
     throw new Error(`${tee.id} PNG is ${decoded.width}×${decoded.height}.`);
   }

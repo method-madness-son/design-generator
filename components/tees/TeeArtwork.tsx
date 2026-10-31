@@ -1,4 +1,6 @@
 import type { CSSProperties } from 'react';
+import { PaceNotes } from '@/components/tees/PaceNotes';
+import { TabsOpenWindow } from '@/components/tees/TabsOpenWindow';
 import type { ResolvedInkSet, ResolvedTee } from '@/types/tee';
 
 function advanceRatio(family: string, role: 'display' | 'supporting'): number {
@@ -70,7 +72,23 @@ export function TeeArtwork({
   heightPx: number;
 }) {
   const graphic = tee.graphic;
-  const position = graphic?.position ?? 'top';
+  const dark = ink.text.hex.toUpperCase() === '#F5EEE1';
+  if (graphic?.type === 'nd' && (graphic.kind === 'error-window' || graphic.kind === 'warning-box')) {
+    const side = Math.min(widthPx, heightPx);
+    return (
+      <div style={frameStyle(widthPx, heightPx, ink.text.hex)} data-font-display={tee.fonts.display} data-font-supporting={tee.fonts.supporting}>
+        <TabsOpenWindow kind={graphic.kind} dark={dark} size={side} />
+      </div>
+    );
+  }
+  if (graphic?.type === 'nd' && (graphic.kind === 'pace-stencil' || graphic.kind === 'pace-hand')) {
+    return (
+      <div data-font-display={tee.fonts.display} data-font-supporting={tee.fonts.supporting}>
+        <PaceNotes kind={graphic.kind} tee={tee} ink={ink.text.hex} dark={dark} widthPx={widthPx} heightPx={heightPx} />
+      </div>
+    );
+  }
+  const position = graphic && 'position' in graphic ? graphic.position ?? 'top' : 'top';
   const shapeHexes = ink.shapeInks.map((swatch) => swatch.hex);
   const tabCount = graphic?.type === 'browser-tabs' ? graphic.count ?? 6 : 6;
   const graphicHeight = Math.max(12, Math.min(heightPx * 0.22, widthPx * 0.28));
@@ -82,24 +100,7 @@ export function TeeArtwork({
     ) : null;
 
   return (
-    <div
-      data-font-display={tee.fonts.display}
-      data-font-supporting={tee.fonts.supporting}
-      style={{
-        width: widthPx,
-        height: heightPx,
-        boxSizing: 'border-box',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: Math.round(heightPx * 0.035),
-        padding: Math.round(widthPx * 0.03),
-        color: ink.text.hex,
-        background: 'transparent',
-        overflow: 'hidden',
-      }}
-    >
+    <div data-font-display={tee.fonts.display} data-font-supporting={tee.fonts.supporting} style={frameStyle(widthPx, heightPx, ink.text.hex)}>
       {position === 'top' ? visual : null}
       {tee.lines.map((line) => {
         const family = line.font === 'display' ? tee.fonts.display : tee.fonts.supporting;
@@ -130,4 +131,21 @@ export function TeeArtwork({
       {position === 'bottom' ? visual : null}
     </div>
   );
+}
+
+function frameStyle(widthPx: number, heightPx: number, ink: string): CSSProperties {
+  return {
+    width: widthPx,
+    height: heightPx,
+    boxSizing: 'border-box',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Math.round(heightPx * 0.035),
+    padding: Math.round(widthPx * 0.03),
+    color: ink,
+    background: 'transparent',
+    overflow: 'hidden',
+  };
 }

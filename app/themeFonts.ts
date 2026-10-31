@@ -2,25 +2,33 @@ import {
   Alfa_Slab_One,
   Atkinson_Hyperlegible_Next,
   Anton,
+  Barlow_Condensed,
   Bebas_Neue,
+  Big_Shoulders_Stencil,
   Caprasimo,
   Caveat,
+  DM_Serif_Display,
   Fira_Code,
   Fredoka,
   Graduate,
   IBM_Plex_Mono,
+  Jersey_10,
+  Kalam,
   Lilita_One,
   Monoton,
   Orbitron,
   Oswald,
   Pacifico,
   Permanent_Marker,
+  Pixelify_Sans,
   Racing_Sans_One,
   Righteous,
   Russo_One,
   Shrikhand,
+  Silkscreen,
   Space_Mono,
   Titan_One,
+  VT323,
   Work_Sans,
 } from "next/font/google";
 
@@ -74,6 +82,39 @@ const racingSansOne = Racing_Sans_One({
 const russoOne = Russo_One({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-russo-one" });
 const orbitron = Orbitron({ subsets: ["latin"], preload: false, variable: "--font-theme-orbitron" });
 const pacifico = Pacifico({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-pacifico" });
+const silkscreen = Silkscreen({
+  subsets: ["latin"],
+  weight: "400",
+  preload: false,
+  variable: "--font-theme-silkscreen",
+});
+const pixelifySans = Pixelify_Sans({ subsets: ["latin"], preload: false, variable: "--font-theme-pixelify-sans" });
+const vt323 = VT323({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-vt323" });
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  preload: false,
+  variable: "--font-theme-dm-serif-display",
+});
+const jersey10 = Jersey_10({
+  subsets: ["latin"],
+  weight: "400",
+  preload: false,
+  variable: "--font-theme-jersey-10",
+});
+const bigShouldersStencil = Big_Shoulders_Stencil({
+  subsets: ["latin"],
+  weight: "800",
+  preload: false,
+  variable: "--font-theme-big-shoulders-stencil",
+});
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: "600",
+  preload: false,
+  variable: "--font-theme-barlow-condensed",
+});
+const kalam = Kalam({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-kalam" });
 const atkinsonNext = Atkinson_Hyperlegible_Next({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -106,6 +147,14 @@ export const themeFontVariables = [
   orbitron,
   pacifico,
   atkinsonNext,
+  silkscreen,
+  pixelifySans,
+  vt323,
+  dmSerif,
+  jersey10,
+  bigShouldersStencil,
+  barlowCondensed,
+  kalam,
 ]
   .map((font) => font.variable)
   .join(" ");

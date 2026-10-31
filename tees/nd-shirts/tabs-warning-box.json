@@ -1,0 +1,34 @@
+{
+  "id": "tabs-warning-box",
+  "project": "ND Shirts",
+  "market": "nd",
+  "palette": "nd_shirts",
+  "fonts": { "display": "Jersey 10", "supporting": "Jersey 10" },
+  "lines": [
+    { "text": "42 tabs open.", "font": "display" },
+    { "text": "Close some?", "font": "display" }
+  ],
+  "graphic": { "type": "nd", "kind": "warning-box", "accent": "#4FB3B0", "accent2": "#F5C842" },
+  "placement": { "side": "front", "size": "full-front" },
+  "ink": { "on_light_shirt": "ink_window", "on_dark_shirt": "ink_cream" },
+  "shirts": ["White", "Black", "Heather Gray", "Navy", "Ivory", "Pepper"],
+  "etsy": {
+    "title": "Close Some Tabs Tee, Warning Window Shirt, Unisex Graphic Tee",
+    "description": "A unisex tee with a pixel warning box: 42 tabs open. Close some?\n\nWHAT YOU'LL GET\n• A physical unisex t-shirt, printed and shipped to you\n• Front print on a transparent artwork file\n• Dark ink on light shirts, cream ink on dark shirts\n\nThis listing is a physical shirt. It is a joke, not a medical claim.",
+    "tags": [
+      "close some tabs",
+      "tabs open tee",
+      "warning box tee",
+      "funny graphic tee",
+      "unisex graphic tee",
+      "front print tee",
+      "pixel text tee",
+      "office humor shirt",
+      "statement tee",
+      "identity humor tee",
+      "text slogan tee",
+      "casual cotton tee"
+    ],
+    "category": "Clothing > Gender-Neutral Adult Clothing > Tops & Tees > T-shirts"
+  }
+}

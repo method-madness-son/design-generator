@@ -9,11 +9,16 @@ export type TeeFontRole = 'display' | 'supporting';
 export type TeeLine = {
   text: string;
   font: TeeFontRole;
+  /** ink uses the shirt ink. accent and accent2 stay the same on light and dark shirts. */
+  swatch?: 'ink' | 'accent' | 'accent2';
 };
+
+export type NdArtKind = 'error-window' | 'warning-box' | 'pace-stencil' | 'pace-hand';
 
 export type TeeGraphic =
   | { type: 'browser-tabs'; count?: number; position?: 'top' | 'bottom' }
-  | { type: 'progress-bar'; value: number; position?: 'top' | 'bottom' };
+  | { type: 'progress-bar'; value: number; position?: 'top' | 'bottom' }
+  | { type: 'nd'; kind: NdArtKind; accent: string; accent2?: string; position?: 'top' | 'bottom' };
 
 export type TeePlacementSize = 'full-front' | 'left-chest';
 export type TeePlacementSide = 'front' | 'back';
