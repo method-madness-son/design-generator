@@ -153,6 +153,11 @@ function parseConfig(input: Record<string, unknown>, index: number, errors: stri
     if (typeof input.note !== 'string') errors.push(`pages[${index}].config.note must be a string.`);
     else config.note = input.note;
   }
+  if (input.variant !== undefined) {
+    if (typeof input.variant !== 'string' || input.variant.trim().length === 0) {
+      errors.push(`pages[${index}].config.variant must be a non-empty string.`);
+    } else config.variant = input.variant;
+  }
   if (input.rows !== undefined) {
     if (typeof input.rows !== 'number' || !Number.isInteger(input.rows) || input.rows < 1 || input.rows > 40) {
       errors.push(`pages[${index}].config.rows must be an integer from 1 to 40.`);

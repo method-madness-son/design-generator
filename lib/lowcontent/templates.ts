@@ -16,6 +16,30 @@ export const TEMPLATE_LABELS: Record<LcTemplateId, string> = {
   recipe: 'Recipe',
   'meal-planner': 'Meal planner',
   logbook: 'Stage log',
+  'quick-start': 'Quick start',
+  'brain-dump': 'Brain dump',
+  'sort-page': 'Sort',
+  'daily-plan': 'Day',
+  'weekly-overview': 'Week overview',
+  'weekly-reset': 'Weekly reset',
+  'tiny-step': 'Next tiny step',
+  'dopamine-menu': 'Dopamine menu',
+  'task-reward': 'Task and reward',
+  'launch-shutdown': 'Launch and shutdown',
+  'urgent-important': 'Urgent or important',
+  'monthly-review': 'Monthly review',
+  'fresh-start': 'Fresh start',
+  'low-energy': 'Low-energy day',
+  'energy-check': 'Energy check',
+  'body-double': 'Body double',
+  'decision-helper': 'Good enough pick',
+  'parking-lot': 'Parking lot',
+  'wins-list': 'Wins',
+  'day-routine': 'Routine',
+  'focus-log': 'Focus timer',
+  'appointments': 'Appointments and contacts',
+  'project-planner': 'Project',
+  'mood-sleep': 'Mood and sleep',
 };
 
 const WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -79,7 +103,13 @@ export function defaultConfig(template: LcTemplateId, config: LcPageConfig | und
     case 'graph':
       return { heading, note: config?.note };
     default:
-      return { heading };
+      return {
+        heading,
+        note: config?.note,
+        variant: config?.variant,
+        prompts: config?.prompts,
+        rows: config?.rows,
+      };
   }
 }
 

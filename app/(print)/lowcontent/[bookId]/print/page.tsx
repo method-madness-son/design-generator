@@ -51,6 +51,7 @@ export default async function LowContentPrintPage({ params }: { params: Promise<
           geometry={geometry}
           theme={theme}
           mode="print"
+          monochrome={manifest.ink === 'black'}
         />
       ))}
     </div>

@@ -4,7 +4,8 @@ import { CoverSheet } from '@/components/lowcontent/CoverSheet';
 import { InteriorSheet } from '@/components/lowcontent/InteriorSheet';
 import { ScaledSheet } from '@/components/lowcontent/ScaledSheet';
 import { getBookIds, loadBook } from '@/lib/lowcontent/books';
-import { formatInches } from '@/lib/lowcontent/specs';
+import { formatInches, type InteriorGeometry } from '@/lib/lowcontent/specs';
+import type { LowContentManifest, RenderedLcPage, ResolvedInteriorTheme, LcOutlineEntry } from '@/types/lowcontent';
 
 export function generateStaticParams() {
   return getBookIds().map((bookId) => ({ bookId }));
@@ -81,29 +82,97 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
               />
             </ScaledSheet>
           </div>
-          <h2 className="mt-8 text-lg font-semibold">Interior spreads</h2>
-          <div className="mt-3 space-y-6">
-            {pairPages(pages).map((pair) => (
-              <div key={pair[0].pageNumber} className="flex flex-wrap gap-3 bg-neutral-200 p-3">
-                {pair.map((page) => (
-                  <ScaledSheet key={page.pageNumber} widthPx={geometry.pageWidthPx} heightPx={geometry.pageHeightPx} displayWidth={320}>
-                    <InteriorSheet
-                      title={manifest.title}
-                      subtitle={manifest.subtitle}
-                      page={page}
-                      outline={outline}
-                      geometry={geometry}
-                      theme={theme}
-                      mode="preview"
-                    />
-                  </ScaledSheet>
+          {pages.length > 40 ? (
+            <ContactSheet
+              pages={pages}
+              manifest={manifest}
+              geometry={geometry}
+              theme={theme}
+              outline={outline}
+            />
+          ) : (
+            <>
+              <h2 className="mt-8 text-lg font-semibold">Interior spreads</h2>
+              <div className="mt-3 space-y-6">
+                {pairPages(pages).map((pair) => (
+                  <div key={pair[0].pageNumber} className="flex flex-wrap gap-3 bg-neutral-200 p-3">
+                    {pair.map((page) => (
+                      <ScaledSheet key={page.pageNumber} widthPx={geometry.pageWidthPx} heightPx={geometry.pageHeightPx} displayWidth={320}>
+                        <InteriorSheet
+                          title={manifest.title}
+                          subtitle={manifest.subtitle}
+                          page={page}
+                          outline={outline}
+                          geometry={geometry}
+                          theme={theme}
+                          mode="preview"
+                          monochrome={manifest.ink === 'black'}
+                        />
+                      </ScaledSheet>
+                    ))}
+                  </div>
                 ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </>
       ) : null}
     </>
+  );
+}
+
+function ContactSheet({
+  pages,
+  manifest,
+  geometry,
+  theme,
+  outline,
+}: {
+  pages: RenderedLcPage[];
+  manifest: LowContentManifest;
+  geometry: InteriorGeometry;
+  theme: ResolvedInteriorTheme;
+  outline: LcOutlineEntry[];
+}) {
+  const groups: { label: string; pages: RenderedLcPage[] }[] = [];
+  for (const page of pages) {
+    const label = page.config.heading || page.template;
+    const last = groups[groups.length - 1];
+    if (last && last.label === label) last.pages.push(page);
+    else groups.push({ label, pages: [page] });
+  }
+  return (
+    <div data-contact-sheet="1">
+      <h2 className="mt-8 text-lg font-semibold">Pages</h2>
+      <p className="mt-1 text-sm text-neutral-600">Every interior page, in order. Thumbnails are the print pages.</p>
+      {groups.map((group) => (
+        <section key={`${group.label}-${group.pages[0].pageNumber}`} className="mt-6">
+          <h3 className="text-sm font-semibold text-neutral-800">
+            {group.label}{' '}
+            <span className="font-normal text-neutral-500">
+              p. {group.pages[0].pageNumber}
+              {group.pages.length > 1 ? `–${group.pages[group.pages.length - 1].pageNumber}` : ''}
+            </span>
+          </h3>
+          <div className="mt-2 flex flex-wrap gap-3 bg-neutral-200 p-3">
+            {group.pages.map((page) => (
+              <ScaledSheet key={page.pageNumber} widthPx={geometry.pageWidthPx} heightPx={geometry.pageHeightPx} displayWidth={150}>
+                <InteriorSheet
+                  title={manifest.title}
+                  subtitle={manifest.subtitle}
+                  page={page}
+                  outline={outline}
+                  geometry={geometry}
+                  theme={theme}
+                  mode="print"
+                  monochrome={manifest.ink === 'black'}
+                />
+              </ScaledSheet>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
   );
 }
 

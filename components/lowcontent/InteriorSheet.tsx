@@ -9,6 +9,7 @@ import {
   type InteriorGeometry,
 } from '@/lib/lowcontent/specs';
 import { WEEKDAY_LABELS } from '@/lib/lowcontent/templates';
+import { PlannerBody } from '@/components/lowcontent/plannerPages';
 import type { LcOutlineEntry, RenderedLcPage, ResolvedInteriorTheme } from '@/types/lowcontent';
 
 type SheetProps = {
@@ -19,16 +20,18 @@ type SheetProps = {
   geometry: InteriorGeometry;
   theme: ResolvedInteriorTheme;
   mode: 'print' | 'preview';
+  /** Black ink interiors draw in black on white. The cover keeps the palette. */
+  monochrome?: boolean;
 };
 
-type Metrics = {
+export type SheetMetrics = {
   x: (inches: number) => number;
   y: (inches: number) => number;
   pt: (points: number) => number;
   rule: number;
 };
 
-function metrics(geometry: InteriorGeometry): Metrics {
+function metrics(geometry: InteriorGeometry): SheetMetrics {
   return {
     x: (inches) => scaleX(geometry.pageWidthIn, geometry.pageWidthPx, inches),
     y: (inches) => scaleY(geometry.pageHeightIn, geometry.pageHeightPx, inches),
@@ -37,7 +40,8 @@ function metrics(geometry: InteriorGeometry): Metrics {
   };
 }
 
-export function InteriorSheet({ title, subtitle, page, outline, geometry, theme, mode }: SheetProps) {
+export function InteriorSheet({ title, subtitle, page, outline, geometry, theme, mode, monochrome = false }: SheetProps) {
+  const drawTheme = monochrome ? { ...theme, paper: '#FFFFFF', ink: '#141414', accent: '#141414', rule: '#141414' } : theme;
   const odd = page.pageNumber % 2 === 1;
   const insets = safeInsetsIn(geometry, odd);
   const m = metrics(geometry);
@@ -45,7 +49,7 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
   const trimTop = m.y(geometry.bleedIn);
   const body: CSSProperties = {
     fontFamily: theme.supportingFontCss,
-    color: theme.ink,
+    color: drawTheme.ink,
     fontSize: m.pt(9),
     lineHeight: 1.25,
   };
@@ -58,7 +62,7 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
         position: 'relative',
         width: geometry.pageWidthPx,
         height: geometry.pageHeightPx,
-        background: theme.paper,
+        background: drawTheme.paper,
         overflow: 'hidden',
         ...body,
       }}
@@ -75,9 +79,9 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
           minWidth: 0,
         }}
       >
-        <Header title={title} page={page} theme={theme} m={m} />
+        <Header title={title} page={page} theme={drawTheme} m={m} />
         <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-          <PageBody page={page} outline={outline} title={title} subtitle={subtitle} theme={theme} m={m} />
+          <PageBody page={page} outline={outline} title={title} subtitle={subtitle} theme={drawTheme} m={m} />
         </div>
         <footer
           style={{
@@ -130,7 +134,7 @@ function Header({
   title: string;
   page: RenderedLcPage;
   theme: ResolvedInteriorTheme;
-  m: Metrics;
+  m: SheetMetrics;
 }) {
   if (page.template === 'title') return null;
   const label = page.entryCount > 1 ? `${page.config.heading} ${page.entryIndex}` : page.config.heading;
@@ -167,7 +171,7 @@ function PageBody({
   title: string;
   subtitle: string;
   theme: ResolvedInteriorTheme;
-  m: Metrics;
+  m: SheetMetrics;
 }) {
   switch (page.template) {
     case 'title':
@@ -199,7 +203,7 @@ function PageBody({
     case 'logbook':
       return <LogPage page={page} theme={theme} m={m} />;
     default:
-      return null;
+      return <PlannerBody page={page} theme={theme} m={m} />;
   }
 }
 
@@ -212,7 +216,7 @@ function TitlePage({
   title: string;
   subtitle: string;
   theme: ResolvedInteriorTheme;
-  m: Metrics;
+  m: SheetMetrics;
 }) {
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: m.pt(12) }}>
@@ -226,7 +230,7 @@ function TitlePage({
   );
 }
 
-function BelongsPage({ theme, m }: { theme: ResolvedInteriorTheme; m: Metrics }) {
+function BelongsPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: m.pt(18) }}>
       <h2 style={{ margin: 0, fontFamily: theme.displayFontCss, fontSize: m.pt(26), fontWeight: 400 }}>
@@ -240,7 +244,7 @@ function BelongsPage({ theme, m }: { theme: ResolvedInteriorTheme; m: Metrics })
   );
 }
 
-function ContentsPage({ outline, theme, m }: { outline: LcOutlineEntry[]; theme: ResolvedInteriorTheme; m: Metrics }) {
+function ContentsPage({ outline, theme, m }: { outline: LcOutlineEntry[]; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: m.pt(8) }}>
       {outline.map((entry) => (
@@ -253,7 +257,7 @@ function ContentsPage({ outline, theme, m }: { outline: LcOutlineEntry[]; theme:
   );
 }
 
-function WeeklyPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function WeeklyPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const dated = page.config.dated === true;
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0, gap: m.pt(6) }}>
@@ -273,7 +277,7 @@ function WeeklyPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedI
   );
 }
 
-function MonthlyPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function MonthlyPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const dated = page.config.dated === true;
   const cells = dated
     ? Array.from({ length: 35 }, (_, index) => (index < 31 ? String(index + 1) : ''))
@@ -302,7 +306,7 @@ function MonthlyPage({ page, theme, m }: { page: RenderedLcPage; theme: Resolved
   );
 }
 
-function HabitPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function HabitPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const habits = page.config.habits ?? [];
   const days = page.config.days ?? 7;
   const labels = Array.from({ length: days }, (_, index) => String(index + 1));
@@ -330,7 +334,7 @@ function HabitPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedIn
   );
 }
 
-function GratitudePage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function GratitudePage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const prompts = page.config.prompts ?? [];
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: m.pt(10), minHeight: 0 }}>
@@ -344,7 +348,7 @@ function GratitudePage({ page, theme, m }: { page: RenderedLcPage; theme: Resolv
   );
 }
 
-function StatsPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function StatsPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const columns = page.config.columns ?? [];
   const rows = page.config.rows ?? 8;
   return (
@@ -369,7 +373,7 @@ function StatsPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedIn
   );
 }
 
-function RecipePage({ theme, m }: { theme: ResolvedInteriorTheme; m: Metrics }) {
+function RecipePage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: m.pt(8), minHeight: 0 }}>
       <LabeledLine label="Dish" theme={theme} m={m} />
@@ -385,7 +389,7 @@ function RecipePage({ theme, m }: { theme: ResolvedInteriorTheme; m: Metrics }) 
   );
 }
 
-function MealPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function MealPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const days = WEEKDAY_LABELS;
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0, gap: m.pt(6) }}>
@@ -414,7 +418,7 @@ function MealPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInt
   );
 }
 
-function LogPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: Metrics }) {
+function LogPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const fields = page.config.fields ?? [];
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: m.pt(8), minHeight: 0 }}>
@@ -426,7 +430,7 @@ function LogPage({ page, theme, m }: { page: RenderedLcPage; theme: ResolvedInte
   );
 }
 
-function RuledPage({ kind, theme, m }: { kind: 'lined' | 'dot' | 'graph'; theme: ResolvedInteriorTheme; m: Metrics }) {
+function RuledPage({ kind, theme, m }: { kind: 'lined' | 'dot' | 'graph'; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   const spacing = m.y(kind === 'lined' ? 0.34 : 0.25);
   const thickness = m.rule;
   let backgroundImage = '';
@@ -443,7 +447,7 @@ function RuledPage({ kind, theme, m }: { kind: 'lined' | 'dot' | 'graph'; theme:
   return <div style={{ flex: 1, backgroundImage, backgroundSize, backgroundPosition: '0 0' }} />;
 }
 
-function Section({ title, theme, m }: { title: string; theme: ResolvedInteriorTheme; m: Metrics }) {
+function Section({ title, theme, m }: { title: string; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <section style={{ display: 'flex', flexDirection: 'column', minHeight: 0, flex: 1, gap: m.pt(4) }}>
       <h2 style={{ margin: 0, fontSize: m.pt(11), letterSpacing: '0.06em', textTransform: 'uppercase' }}>{title}</h2>
@@ -452,7 +456,7 @@ function Section({ title, theme, m }: { title: string; theme: ResolvedInteriorTh
   );
 }
 
-function LabeledLine({ label, theme, m }: { label: string; theme: ResolvedInteriorTheme; m: Metrics }) {
+function LabeledLine({ label, theme, m }: { label: string; theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <div>
       <div style={{ fontSize: m.pt(8), letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: m.pt(3) }}>{label}</div>
@@ -461,18 +465,18 @@ function LabeledLine({ label, theme, m }: { label: string; theme: ResolvedInteri
   );
 }
 
-function Rule({ theme, m }: { theme: ResolvedInteriorTheme; m: Metrics }) {
+function Rule({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return <div style={{ height: m.rule, background: theme.ink }} />;
 }
 
-function lineFill(theme: ResolvedInteriorTheme, m: Metrics): CSSProperties {
+function lineFill(theme: ResolvedInteriorTheme, m: SheetMetrics): CSSProperties {
   const spacing = m.y(0.32);
   return {
     backgroundImage: `repeating-linear-gradient(to bottom, transparent 0, transparent ${spacing - m.rule}px, ${theme.rule} ${spacing - m.rule}px, ${theme.rule} ${spacing}px)`,
   };
 }
 
-function th(theme: ResolvedInteriorTheme, m: Metrics, width?: string): CSSProperties {
+function th(theme: ResolvedInteriorTheme, m: SheetMetrics, width?: string): CSSProperties {
   return {
     borderBottom: `${m.rule}px solid ${theme.ink}`,
     borderRight: `${m.rule}px solid ${theme.rule}`,
@@ -486,7 +490,7 @@ function th(theme: ResolvedInteriorTheme, m: Metrics, width?: string): CSSProper
   };
 }
 
-function td(theme: ResolvedInteriorTheme, m: Metrics): CSSProperties {
+function td(theme: ResolvedInteriorTheme, m: SheetMetrics): CSSProperties {
   return {
     borderBottom: `${m.rule}px solid ${theme.rule}`,
     borderRight: `${m.rule}px solid ${theme.rule}`,

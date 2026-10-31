@@ -246,7 +246,7 @@ function SpineTitle({
         writingMode: 'vertical-rl',
         transform: 'rotate(180deg)',
         fontFamily: theme.displayFontCss,
-        fontSize: sy(0.16),
+        fontSize: sy(Math.min(0.14, Math.max(0.08, (geometry.spine.width - geometry.spineMarginIn * 2) * 0.72))),
         letterSpacing: '0.08em',
         overflow: 'hidden',
         color: theme.ink,

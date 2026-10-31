@@ -110,7 +110,7 @@ Wireframe guides (trim line, safe-zone dash, spine line, barcode label) are draw
 
 `market` is `nd`, `hockey`, `cooking`, or `rally`, matching `per_market_overrides` in the theme file.
 
-Page templates: `title`, `belongs-to`, `contents`, `weekly-planner`, `monthly-planner`, `habit-tracker`, `lined`, `dot-grid`, `graph`, `gratitude`, `stats-tracker`, `recipe`, `meal-planner`, `logbook`. Weekly, monthly, and meal pages take `config.dated`. Every template draws rules or text, so a page is not a blank sheet. Rules are at least 0.75 pt. Type is at least 7 pt.
+Page templates: `title`, `belongs-to`, `contents`, `weekly-planner`, `monthly-planner`, `habit-tracker`, `lined`, `dot-grid`, `graph`, `gratitude`, `stats-tracker`, `recipe`, `meal-planner`, `logbook`, plus the ADHD planner templates below. Weekly, monthly, and meal pages take `config.dated`. Every template draws rules or text, so a page is not a blank sheet. Rules are at least 0.75 pt. Type is at least 7 pt. Black-ink books draw the interior in black on white. The cover still uses the named palette.
 
 Samples:
 
@@ -121,7 +121,47 @@ Samples:
 | `recipe-journal` | Kitchen Books | 8×10 | Recipe forms and a meal week |
 | `pace-notes` | Rally Books | 5×8 | Stage log (distance, time, surface, car, notes) |
 
-Copy is generic. No league, club, series, or manufacturer names. No puzzle piece. No diagnosis or treatment language. The ND planner speaks to ADHDers without a cure or a care plan.
+Copy is generic. No league, club, series, or manufacturer names. No puzzle piece. No diagnosis or treatment language. The ND books speak to ADHD adults without a cure or a care plan.
+
+## 12-week planner (`nd-planner`)
+
+`lowcontent/nd-books/nd-planner.json` is the full book. It does not replace the 24-page `adhd-planner` sample. That sample stays so the earlier templates still have a short book. `nd-planner` is the one to publish.
+
+Trim 6×9, black ink, white paper, no interior bleed, 120 pages. Gutter is the 24–150 band (0.375"). Spine text is allowed because 120 is more than 79. The project name stays in the manifest.
+
+The research lineup in `adhd-planner-pages.md` sums to 140 before the trim. Cutting 4 daily pages per 4-week block (12 pages) and 4 dot-grid notes leaves 124, not the 120 the note claims (140 − 12 − 4 = 124). This book keeps the 12-week shape the note asked for after that trim: 48 daily pages, 12 weekly overviews, and 12 weekly resets. Four more sheets are left out so the total is even and exactly 120:
+
+- the two extra brain-dump pages at the back (two full dumps remain in the toolkit)
+- one of the two habit trackers (one 14-day tracker remains)
+- one of the three remaining dot-grid notes (two remain)
+
+The optional mood-and-sleep page stays. `energy-check` is built and is not given its own sheet: the daily page has an energy box, and two low-energy pages follow. Water, meals, and a medication log are not built (v2).
+
+Black-ink interiors are high contrast. Fonts still come from the theme (`Fredoka` and `Work Sans` on `calm_sensory_pastel`). `/lowcontent/nd-planner` shows every page as a thumbnail, grouped by heading.
+
+| Order | Section | Template | Pages |
+|---|---|---|---|
+| 1 | Front matter | `title`, `belongs-to` | 2 |
+| 2 | Quick start | `quick-start` (loop, then skip-ahead) | 2 |
+| 3 | Toolkit | `dopamine-menu` example + blank, `task-reward`, `launch-shutdown` launch + shutdown, `day-routine` morning + evening, `low-energy` ×2, `decision-helper`, `body-double` | 11 |
+| 4 | Capture | `brain-dump` ×2, `sort-page` ×2, `urgent-important` ×2 | 6 |
+| 5 | Month and people | undated `monthly-planner` ×3, `appointments` ×2 | 5 |
+| 6 | Projects | `project-planner` ×2, `tiny-step` ×4, `parking-lot` ×2 | 8 |
+| 7 | Weeks 1–4 | each week: `weekly-overview`, `daily-plan` ×4, `weekly-reset` | 24 |
+| 8 | Fresh start | `fresh-start` | 1 |
+| 9 | Weeks 5–8 | same week pattern | 24 |
+| 10 | Fresh start | `fresh-start` | 1 |
+| 11 | Weeks 9–12 | same week pattern | 24 |
+| 12 | Fresh start | `fresh-start` | 1 |
+| 13 | Monthly reviews | `monthly-review` ×3 | 3 |
+| 14 | Back matter | `habit-tracker` (14 days, 5 habits), `mood-sleep`, `focus-log` ×2, `wins-list` ×2, `dot-grid` ×2 | 8 |
+| | **Total** | | **120** |
+
+| Template | v1 in `nd-planner` | Notes |
+|---|---|---|
+| `quick-start`, `brain-dump`, `sort-page`, `daily-plan`, `weekly-overview`, `weekly-reset`, `tiny-step`, `dopamine-menu`, `task-reward`, `launch-shutdown`, `urgent-important`, `monthly-review`, `fresh-start`, `low-energy`, `body-double`, `decision-helper`, `parking-lot`, `wins-list`, `day-routine`, `focus-log`, `appointments`, `project-planner`, `mood-sleep` | yes | New. Existing `title`, `belongs-to`, `monthly-planner`, `habit-tracker`, and `dot-grid` are reused. |
+| `energy-check` | built, not bound in | Daily energy box plus the low-energy pages cover this job. |
+| Water, meals, medication log | no | v2. Not built. |
 
 ## Specs
 

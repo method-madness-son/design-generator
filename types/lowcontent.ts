@@ -33,6 +33,30 @@ export const LC_TEMPLATES = [
   'recipe',
   'meal-planner',
   'logbook',
+  'quick-start',
+  'brain-dump',
+  'sort-page',
+  'daily-plan',
+  'weekly-overview',
+  'weekly-reset',
+  'tiny-step',
+  'dopamine-menu',
+  'task-reward',
+  'launch-shutdown',
+  'urgent-important',
+  'monthly-review',
+  'fresh-start',
+  'low-energy',
+  'energy-check',
+  'body-double',
+  'decision-helper',
+  'parking-lot',
+  'wins-list',
+  'day-routine',
+  'focus-log',
+  'appointments',
+  'project-planner',
+  'mood-sleep',
 ] as const;
 export type LcTemplateId = (typeof LC_TEMPLATES)[number];
 
@@ -54,6 +78,8 @@ export type LcPageConfig = {
   days?: number;
   fields?: LcField[];
   note?: string;
+  /** Page variant, such as launch vs shutdown or an example menu vs a blank one. */
+  variant?: string;
 };
 
 export type LcPageRef = {
