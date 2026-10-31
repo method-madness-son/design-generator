@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { BookSheet, pageCountLabel } from "@/components/kdp/BookSheet";
 import { getBookIds, loadBook } from "@/lib/kdpBooks";
 import { formatInches, type BookGeometry } from "@/lib/kdpSizes";
+import { lowContentUploadNotes } from "@/lib/kdpTemplates";
 import type { BookManifest, RenderedPage } from "@/types/kdp";
 
 export function generateStaticParams() {
@@ -71,6 +72,13 @@ export default async function KdpBookPage({ params }: { params: Promise<{ bookId
           <Spec term="Gutter" value={formatInches(geometry.gutterIn)} />
           <Spec term="Outside margin" value={`${formatInches(geometry.outsideMarginIn)} from the trim`} />
           <Spec term="Paper / ink" value={`${book.manifest.paper} / ${book.manifest.ink}`} />
+          <Spec term="Interior" value={book.manifest.content === "low-content" ? "Low-content" : "Standard"} />
+          {book.manifest.content === "low-content" ? (
+            <Spec
+              term="ISBN choice"
+              value={book.manifest.isbn === "none" ? "Publish without an ISBN" : "Use my own ISBN"}
+            />
+          ) : null}
           <div className="sm:col-span-2">
             <dt className="text-neutral-500">Keywords</dt>
             <dd className="text-neutral-900">{book.manifest.kdp.keywords.join(" · ")}</dd>
@@ -82,6 +90,14 @@ export default async function KdpBookPage({ params }: { params: Promise<{ bookId
             </dd>
           </div>
         </dl>
+      ) : null}
+
+      {book.manifest?.content === "low-content" ? (
+        <ul className="mt-4 max-w-3xl list-disc space-y-1 rounded-lg border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+          {lowContentUploadNotes(book.manifest.isbn).map((note) => (
+            <li key={note}>{note}</li>
+          ))}
+        </ul>
       ) : null}
 
       {book.manifest && geometry ? (

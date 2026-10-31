@@ -2,6 +2,8 @@
   "id": "track-day-logbook",
   "market": "sim-racing",
   "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "none",
   "trim": "6x9",
   "bleed": true,
   "paper": "white",

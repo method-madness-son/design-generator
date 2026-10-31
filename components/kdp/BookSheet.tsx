@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { pageKindLabel } from '@/lib/kdpBooks';
 import { insetsPx, safeInsetsIn, scaleX, scaleY, type BookGeometry } from '@/lib/kdpSizes';
 import type { BookManifest, RenderedPage } from '@/types/kdp';
@@ -141,6 +142,12 @@ function PageBody({
       return <NotesBody page={page} geometry={geometry} />;
     case 'cheatsheet':
       return <CheatSheetBody page={page} geometry={geometry} />;
+    case 'checklist':
+      return <ChecklistBody page={page} geometry={geometry} />;
+    case 'paper':
+      return <PaperBody page={page} geometry={geometry} />;
+    case 'habit':
+      return <HabitBody page={page} geometry={geometry} />;
     default: {
       const unreachable: never = page;
       return unreachable;
@@ -343,6 +350,169 @@ function CheatSheetBody({
       </div>
     </div>
   );
+}
+
+function ChecklistBody({
+  page,
+  geometry,
+}: {
+  page: Extract<RenderedPage, { type: 'checklist' }>;
+  geometry: BookGeometry;
+}) {
+  const box = pt(9, geometry);
+  const stroke = rulePx(geometry);
+  return (
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', gap: pt(6, geometry) }}>
+      <SectionLabel geometry={geometry}>Checklist</SectionLabel>
+      <div style={{ fontSize: pt(14, geometry), fontWeight: 650 }}>{page.heading ?? 'Placeholder checklist'}</div>
+      {page.entryCount > 1 ? (
+        <div style={{ fontSize: pt(8, geometry), color: MUTED }}>
+          Placeholder list {page.entryIndex} of {page.entryCount}
+        </div>
+      ) : null}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: pt(5, geometry) }}>
+        {page.items.map((item, index) => (
+          <div key={`${item}-${index}`} style={{ display: 'flex', alignItems: 'center', gap: pt(6, geometry) }}>
+            <div
+              style={{
+                width: box,
+                height: box,
+                border: `${stroke}px solid ${INK}`,
+                flexShrink: 0,
+              }}
+            />
+            <span style={{ fontSize: pt(10, geometry), lineHeight: 1.3 }}>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PaperBody({
+  page,
+  geometry,
+}: {
+  page: Extract<RenderedPage, { type: 'paper' }>;
+  geometry: BookGeometry;
+}) {
+  const label = page.style === 'lined' ? 'Lined page' : page.style === 'dot' ? 'Dot-grid page' : 'Square-grid page';
+  const spacing = scaleX(geometry, 0.25);
+  const stroke = rulePx(geometry);
+  const pattern =
+    page.style === 'lined'
+      ? {
+          image: `repeating-linear-gradient(to bottom, transparent, transparent ${spacing - stroke}px, ${LINE} ${spacing - stroke}px, ${LINE} ${spacing}px)`,
+          size: undefined,
+        }
+      : page.style === 'dot'
+        ? {
+            image: `radial-gradient(circle, ${LINE} ${Math.max(1.5, stroke * 0.45)}px, transparent ${Math.max(1.6, stroke * 0.5)}px)`,
+            size: `${spacing}px ${spacing}px`,
+          }
+        : {
+            image: `linear-gradient(to right, ${LINE} ${stroke}px, transparent ${stroke}px), linear-gradient(to bottom, ${LINE} ${stroke}px, transparent ${stroke}px)`,
+            size: `${spacing}px ${spacing}px`,
+          };
+  return (
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', gap: pt(6, geometry) }}>
+      <SectionLabel geometry={geometry}>{label}</SectionLabel>
+      <div style={{ fontSize: pt(14, geometry), fontWeight: 650 }}>{page.heading ?? label}</div>
+      {page.entryCount > 1 ? (
+        <div style={{ fontSize: pt(8, geometry), color: MUTED }}>
+          Placeholder page {page.entryIndex} of {page.entryCount}
+        </div>
+      ) : null}
+      <div
+        style={{
+          flex: 1,
+          minHeight: 0,
+          border: `${stroke}px solid ${LINE}`,
+          backgroundImage: pattern.image,
+          backgroundSize: pattern.size,
+        }}
+      />
+    </div>
+  );
+}
+
+function HabitBody({
+  page,
+  geometry,
+}: {
+  page: Extract<RenderedPage, { type: 'habit' }>;
+  geometry: BookGeometry;
+}) {
+  const stroke = rulePx(geometry);
+  return (
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', gap: pt(6, geometry) }}>
+      <SectionLabel geometry={geometry}>Habit tracker</SectionLabel>
+      <div style={{ fontSize: pt(14, geometry), fontWeight: 650 }}>{page.heading ?? 'Placeholder habit tracker'}</div>
+      {page.entryCount > 1 ? (
+        <div style={{ fontSize: pt(8, geometry), color: MUTED }}>
+          Placeholder week {page.entryIndex} of {page.entryCount}
+        </div>
+      ) : null}
+      <div
+        style={{
+          flex: 1,
+          minHeight: 0,
+          display: 'grid',
+          gridTemplateColumns: `minmax(0, 1.7fr) repeat(${page.days}, minmax(0, 1fr))`,
+          gridTemplateRows: `auto repeat(${page.habits.length}, minmax(0, 1fr))`,
+          borderTop: `${stroke}px solid ${LINE}`,
+          borderLeft: `${stroke}px solid ${LINE}`,
+        }}
+      >
+        <div style={habitHeaderStyle(geometry, stroke)}>Habit</div>
+        {Array.from({ length: page.days }, (_, day) => (
+          <div key={`day-${day}`} style={{ ...habitHeaderStyle(geometry, stroke), textAlign: 'center' }}>
+            {day + 1}
+          </div>
+        ))}
+        {page.habits.flatMap((habit, row) => [
+          <div
+            key={`${row}-label`}
+            style={{
+              borderRight: `${stroke}px solid ${HAIRLINE}`,
+              borderBottom: `${stroke}px solid ${HAIRLINE}`,
+              padding: pt(3, geometry),
+              fontSize: pt(8, geometry),
+              display: 'flex',
+              alignItems: 'center',
+              minWidth: 0,
+            }}
+          >
+            {habit}
+          </div>,
+          ...Array.from({ length: page.days }, (_, day) => (
+            <div
+              key={`${row}-${day}`}
+              style={{
+                borderRight: `${stroke}px solid ${HAIRLINE}`,
+                borderBottom: `${stroke}px solid ${HAIRLINE}`,
+              }}
+            />
+          )),
+        ])}
+      </div>
+    </div>
+  );
+}
+
+function habitHeaderStyle(geometry: BookGeometry, stroke: number): CSSProperties {
+  return {
+    background: HEADER_FILL,
+    borderRight: `${stroke}px solid ${LINE}`,
+    borderBottom: `${stroke}px solid ${LINE}`,
+    padding: pt(3, geometry),
+    fontSize: pt(8, geometry),
+    fontWeight: 650,
+  };
+}
+
+function rulePx(geometry: BookGeometry): number {
+  return Math.max(1, Math.round(pt(0.75, geometry)));
 }
 
 function RuledTable({

@@ -10,7 +10,7 @@
  *
  * Usage:
  *   npm run kdp:check
- *   npm run book-pdf -- track-day-logbook
+ *   npm run book-pdf -- generic-log-book
  *   npm run book-pdf -- --all
  *   npm run book-pdf -- track-day-logbook --base-url http://127.0.0.1:4310
  */
@@ -20,7 +20,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { PDFDocument } from 'pdf-lib';
 import { chromium } from 'playwright';
-import { getBookIds, loadBook, type LoadedBook } from '../lib/kdpBooks';
+import { assertLowContentPipeline, getBookIds, loadBook, type LoadedBook } from '../lib/kdpBooks';
 import { assertReferenceGeometry, printBoxes, type BookGeometry } from '../lib/kdpSizes';
 
 const OUTPUT_DIR = path.join(process.cwd(), 'exports', 'kdp');
@@ -70,7 +70,9 @@ Books: ${getBookIds().join(', ') || '(none)'}`);
 
 function reportBook(book: LoadedBook): boolean {
   const pages = book.geometry?.pageCount ?? book.pages.length;
-  console.log(`\n${book.id}: ${book.manifest ? book.manifest.kdp.title : 'invalid'} · ${pages} pages`);
+  const content = book.manifest?.content ?? book.content ?? 'invalid';
+  const isbn = book.manifest?.content === 'low-content' ? ` · isbn ${book.manifest.isbn}` : '';
+  console.log(`\n${book.id}: ${book.manifest ? book.manifest.kdp.title : 'invalid'} · ${pages} pages · ${content}${isbn}`);
   for (const warning of book.warnings) console.log(`  warning: ${warning}`);
   for (const error of book.errors) console.log(`  error: ${error}`);
   if (book.geometry) {
@@ -238,7 +240,8 @@ async function renderBook(baseUrl: string, book: LoadedBook & { geometry: BookGe
 async function main(): Promise<void> {
   const cli = parseArgs(process.argv.slice(2));
   assertReferenceGeometry();
-  console.log('KDP reference sizes and gutter bands match the help pages.');
+  assertLowContentPipeline();
+  console.log('KDP reference sizes, gutter bands, and low-content templates match.');
 
   if (cli.check && cli.ids.length === 0 && !cli.all) {
     const ids = getBookIds();

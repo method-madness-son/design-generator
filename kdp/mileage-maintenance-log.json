@@ -1,0 +1,42 @@
+{
+  "id": "mileage-maintenance-log",
+  "market": "generic",
+  "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "own",
+  "trim": "6x9",
+  "bleed": true,
+  "paper": "white",
+  "ink": "black",
+  "kdp": {
+    "title": "Vehicle Mileage and Maintenance Log",
+    "subtitle": "Placeholder trip and service records",
+    "description": "Placeholder description for a mileage and maintenance log. Pages repeat a trip grid and a service record. No manufacturer, model, or shop name is included. Replace this text before any listing. The ISBN number is entered at upload and is not stored in this file.",
+    "categories": [
+      {
+        "label": "TRANSPORTATION / Automotive / Repair & Maintenance",
+        "bisac": "TRA001140"
+      },
+      {
+        "label": "TRANSPORTATION / Automotive / General",
+        "bisac": "TRA001000"
+      }
+    ],
+    "keywords": [
+      "mileage log book",
+      "vehicle mileage log",
+      "odometer reading log",
+      "maintenance log book",
+      "service record log",
+      "repair log book",
+      "vehicle service log"
+    ]
+  },
+  "pages": [
+    { "template": "title" },
+    { "template": "copyright" },
+    { "template": "mileage-log", "repeat": 14, "heading": "Placeholder trip log" },
+    { "template": "maintenance-log", "repeat": 6 },
+    { "template": "lined", "repeat": 2 }
+  ]
+}

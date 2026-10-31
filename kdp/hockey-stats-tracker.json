@@ -2,6 +2,8 @@
   "id": "hockey-stats-tracker",
   "market": "hockey",
   "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "none",
   "trim": "8.5x11",
   "bleed": true,
   "paper": "white",

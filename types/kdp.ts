@@ -1,7 +1,7 @@
 // Unbranded KDP interior manifest. Field meanings follow the book-details form
-// described in KDP Help (see lib/kdpMetadata.ts and lib/kdpSizes.ts for the
-// pages these limits were checked against). No brand, imprint, or ISBN fields:
-// those are follow-ups, not part of this wireframe.
+// described in KDP Help (see lib/kdpMetadata.ts, lib/kdpSizes.ts, and
+// lib/kdpTemplates.ts). No brand, imprint, or ISBN number: a low-content book
+// records only the bookshelf ISBN choice (`none` or `own`).
 
 export const TRIM_SIZE_IDS = ['5.5x8.5', '6x9', '8.5x11'] as const;
 export type TrimSizeId = (typeof TRIM_SIZE_IDS)[number];
@@ -11,6 +11,18 @@ export type BookMarket = (typeof BOOK_MARKETS)[number];
 
 export const BOOK_FORMATS = ['kdp-logbook', 'kdp-journal', 'kdp-cheatsheet'] as const;
 export type BookFormat = (typeof BOOK_FORMATS)[number];
+
+/** `low-content` is the bookshelf Low-content box. `standard` is every other interior. */
+export const BOOK_CONTENTS = ['standard', 'low-content'] as const;
+export type BookContent = (typeof BOOK_CONTENTS)[number];
+
+/**
+ * Print-ISBN choice for a low-content book. Free KDP ISBNs are not eligible.
+ * `none` is "Publish without an ISBN". `own` is "Use my own ISBN".
+ * The number itself is entered at upload and is not stored here.
+ */
+export const LOW_CONTENT_ISBN_OPTIONS = ['none', 'own'] as const;
+export type LowContentIsbn = (typeof LOW_CONTENT_ISBN_OPTIONS)[number];
 
 export const BOOK_PAPERS = ['white', 'cream'] as const;
 export type BookPaper = (typeof BOOK_PAPERS)[number];
@@ -75,6 +87,30 @@ export type NotesPage = {
   heading?: string;
 };
 
+export type ChecklistPage = {
+  type: 'checklist';
+  heading?: string;
+  items: string[];
+};
+
+export const PAPER_STYLES = ['lined', 'dot', 'grid'] as const;
+export type PaperStyle = (typeof PAPER_STYLES)[number];
+
+/** Lined, dot-grid, or square-grid notebook paper. These pages are not blank. */
+export type PaperPage = {
+  type: 'paper';
+  style: PaperStyle;
+  heading?: string;
+};
+
+export type HabitPage = {
+  type: 'habit';
+  heading?: string;
+  habits: string[];
+  /** Day columns. 7 is a week. Up to 31 is a month. */
+  days: number;
+};
+
 export type CheatSheetRow = {
   label: string;
   value: string;
@@ -89,14 +125,23 @@ export type CheatSheetPage = {
   }[];
 };
 
-export type BookPageBody = TitlePage | CopyrightPage | LogPage | StatsPage | NotesPage | CheatSheetPage;
+export type BookPageBody =
+  | TitlePage
+  | CopyrightPage
+  | LogPage
+  | StatsPage
+  | NotesPage
+  | CheatSheetPage
+  | ChecklistPage
+  | PaperPage
+  | HabitPage;
 
 export type BookPageSpec = BookPageBody & {
   /** How many interior pages this template expands to. Defaults to 1. */
   repeat?: number;
 };
 
-export type BookManifest = {
+type BookManifestBase = {
   id: string;
   market: BookMarket;
   format: BookFormat;
@@ -109,6 +154,10 @@ export type BookManifest = {
   kdp: KdpMetadata;
   pages: BookPageSpec[];
 };
+
+export type BookManifest =
+  | (BookManifestBase & { content: 'low-content'; isbn: LowContentIsbn })
+  | (BookManifestBase & { content: 'standard' });
 
 export type RenderedPage = BookPageBody & {
   /** 1-based index within this template's repeat run. */

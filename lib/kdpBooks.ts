@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import type {
+  BookContent,
   BookFormat,
   BookManifest,
   BookMarket,
@@ -8,17 +9,35 @@ import type {
   BookPageSpec,
   BookPaper,
   CheatSheetPage,
+  ChecklistPage,
   CopyrightPage,
+  HabitPage,
+  KdpMetadata,
   LogPage,
+  LowContentIsbn,
   NotesPage,
+  PaperPage,
   RenderedPage,
   StatsPage,
   TitlePage,
   TrimSizeId,
 } from '@/types/kdp';
-import { BOOK_FORMATS, BOOK_MARKETS, BOOK_PAPERS, TRIM_SIZE_IDS } from '@/types/kdp';
+import {
+  BOOK_CONTENTS,
+  BOOK_FORMATS,
+  BOOK_MARKETS,
+  BOOK_PAPERS,
+  LOW_CONTENT_ISBN_OPTIONS,
+  PAPER_STYLES,
+  TRIM_SIZE_IDS,
+} from '@/types/kdp';
 import { validateKdpMetadata } from '@/lib/kdpMetadata';
 import { MIN_PAGE_COUNT, TRIM_SPECS, buildGeometry, gutterInches, type BookGeometry } from '@/lib/kdpSizes';
+import {
+  LOW_CONTENT_TEMPLATE_IDS,
+  isLowContentTemplateId,
+  lowContentTemplate,
+} from '@/lib/kdpTemplates';
 
 const BOOKS_DIR = path.join(process.cwd(), 'kdp');
 
@@ -37,6 +56,8 @@ export type LoadedBook = {
   manifest: BookManifest | null;
   pages: RenderedPage[];
   geometry: BookGeometry | null;
+  /** Parsed even when the rest of the manifest fails, so the index can still group the book. */
+  content: BookContent | null;
   errors: string[];
   warnings: string[];
 };
@@ -71,7 +92,7 @@ export function loadBooks(): LoadedBook[] {
 }
 
 function emptyBook(id: string, errors: string[]): LoadedBook {
-  return { id, manifest: null, pages: [], geometry: null, errors, warnings: [] };
+  return { id, manifest: null, pages: [], geometry: null, content: null, errors, warnings: [] };
 }
 
 export function evaluateManifest(id: string, raw: unknown): LoadedBook {
@@ -92,6 +113,7 @@ export function evaluateManifest(id: string, raw: unknown): LoadedBook {
   if (typeof raw.bleed !== 'boolean') errors.push('bleed must be true or false.');
   if (!isOneOf<BookPaper>(raw.paper, BOOK_PAPERS)) errors.push('paper must be "white" or "cream".');
   if (raw.ink !== 'black') errors.push('ink must be "black". Color interiors are not part of this wireframe.');
+  const content = parseContent(raw, errors);
   if (!Array.isArray(raw.pages) || raw.pages.length === 0) errors.push('pages must be a non-empty array.');
 
   const metadataReport = validateKdpMetadata(raw.kdp);
@@ -101,6 +123,12 @@ export function evaluateManifest(id: string, raw: unknown): LoadedBook {
   const pageSpecs = Array.isArray(raw.pages) ? raw.pages.map((page, index) => parsePage(page, index, errors)) : [];
   const parsedPages = pageSpecs.filter((page): page is BookPageSpec => page !== null);
   const rendered = parsedPages.flatMap((page) => expandPage(page));
+
+  if (content === 'low-content' && parsedPages.some((page) => page.type === 'cheatsheet')) {
+    warnings.push(
+      'Low-content book includes a cheat-sheet page with filled-in reference text. KDP lists manuals and nonfiction as not generally low-content. Confirm the Low-content box still fits.',
+    );
+  }
 
   if (rendered.length > 0 && rendered.length < MIN_PAGE_COUNT) {
     errors.push(
@@ -127,29 +155,21 @@ export function evaluateManifest(id: string, raw: unknown): LoadedBook {
     }
   }
 
-  const manifest =
-    errors.length === 0 &&
-    metadataReport.metadata &&
-    trimId &&
-    paper &&
-    typeof raw.bleed === 'boolean' &&
-    isOneOf<BookMarket>(raw.market, BOOK_MARKETS) &&
-    isOneOf<BookFormat>(raw.format, BOOK_FORMATS)
-      ? ({
-          id,
-          market: raw.market,
-          format: raw.format,
-          trim: trimId,
-          bleed: raw.bleed,
-          paper,
-          ink: 'black',
-          kdp: metadataReport.metadata,
-          pages: parsedPages,
-        } satisfies BookManifest)
-      : null;
+  const manifest = buildManifest({
+    errors,
+    id,
+    raw,
+    metadata: metadataReport.metadata,
+    trimId,
+    paper,
+    pages: parsedPages,
+  });
 
   if (manifest && geometry === null) {
     errors.push('Could not build page geometry.');
+  }
+  if (errors.length === 0 && manifest === null) {
+    errors.push('Could not build the manifest.');
   }
 
   return {
@@ -157,9 +177,71 @@ export function evaluateManifest(id: string, raw: unknown): LoadedBook {
     manifest: errors.length === 0 ? manifest : null,
     pages: errors.length === 0 ? rendered : [],
     geometry: errors.length === 0 ? geometry : null,
+    content,
     errors,
     warnings,
   };
+}
+
+function parseContent(raw: Record<string, unknown>, errors: string[]): BookContent | null {
+  if (!isOneOf<BookContent>(raw.content, BOOK_CONTENTS)) {
+    errors.push(`content must be one of ${BOOK_CONTENTS.join(', ')}.`);
+    return null;
+  }
+  if (raw.content === 'low-content') {
+    if (raw.isbn === 'kdp') {
+      errors.push('Low-content books are not eligible for a free KDP ISBN. Set isbn to "none" or "own".');
+    } else if (!isOneOf<LowContentIsbn>(raw.isbn, LOW_CONTENT_ISBN_OPTIONS)) {
+      errors.push('Low-content books must set isbn to "none" (publish without an ISBN) or "own" (use your own ISBN).');
+    }
+    return 'low-content';
+  }
+  if (raw.isbn !== undefined) {
+    errors.push('Remove isbn from a standard interior. The none/own choice is only for low-content books.');
+  }
+  return 'standard';
+}
+
+function buildManifest(input: {
+  errors: string[];
+  id: string;
+  raw: Record<string, unknown>;
+  metadata: KdpMetadata | null;
+  trimId: TrimSizeId | null;
+  paper: BookPaper | null;
+  pages: BookPageSpec[];
+}): BookManifest | null {
+  const { errors, id, raw, metadata, trimId, paper, pages } = input;
+  if (
+    errors.length > 0 ||
+    !metadata ||
+    !trimId ||
+    !paper ||
+    typeof raw.bleed !== 'boolean' ||
+    !isOneOf<BookMarket>(raw.market, BOOK_MARKETS) ||
+    !isOneOf<BookFormat>(raw.format, BOOK_FORMATS) ||
+    !isOneOf<BookContent>(raw.content, BOOK_CONTENTS)
+  ) {
+    return null;
+  }
+  const shared = {
+    id,
+    market: raw.market,
+    format: raw.format,
+    trim: trimId,
+    bleed: raw.bleed,
+    paper,
+    ink: 'black' as const,
+    kdp: metadata,
+    pages,
+  };
+  if (raw.content === 'low-content' && isOneOf<LowContentIsbn>(raw.isbn, LOW_CONTENT_ISBN_OPTIONS)) {
+    return { ...shared, content: 'low-content', isbn: raw.isbn };
+  }
+  if (raw.content === 'standard') {
+    return { ...shared, content: 'standard' };
+  }
+  return null;
 }
 
 function expandPage(page: BookPageSpec): RenderedPage[] {
@@ -177,9 +259,58 @@ function parsePage(input: unknown, index: number, errors: string[]): BookPageSpe
     return null;
   }
   const repeat = parseRepeat(input.repeat, index, errors);
-  const body = parseBody(input, index, errors);
+  const body = input.template !== undefined ? parseTemplatePage(input, index, errors) : parseBody(input, index, errors);
   if (repeat === null || body === null) return null;
   return { ...body, repeat };
+}
+
+function parseTemplatePage(input: Record<string, unknown>, index: number, errors: string[]): BookPageBody | null {
+  const where = `pages[${index}]`;
+  if (input.type !== undefined) {
+    errors.push(`${where} sets both template and type. Use one.`);
+    return null;
+  }
+  let extraField = false;
+  for (const key of Object.keys(input)) {
+    if (key !== 'template' && key !== 'repeat' && key !== 'heading') {
+      extraField = true;
+      errors.push(`${where}.${key} is not a template field. A template reference accepts template, repeat, and heading.`);
+    }
+  }
+  if (typeof input.template !== 'string' || !isLowContentTemplateId(input.template)) {
+    errors.push(`${where}.template must be one of ${LOW_CONTENT_TEMPLATE_IDS.join(', ')}.`);
+    return null;
+  }
+  const heading = optionalText(input, 'heading', where, errors);
+  if (heading === null || extraField) return null;
+  const body = lowContentTemplate(input.template);
+  if (heading === undefined) return body;
+  const headed = withHeading(body, heading);
+  if (!headed) {
+    errors.push(`${where}.heading does not apply to the ${input.template} template.`);
+    return null;
+  }
+  return headed;
+}
+
+function withHeading(body: BookPageBody, heading: string): BookPageBody | null {
+  switch (body.type) {
+    case 'title':
+    case 'copyright':
+      return null;
+    case 'log':
+    case 'stats':
+    case 'notes':
+    case 'cheatsheet':
+    case 'checklist':
+    case 'paper':
+    case 'habit':
+      return { ...body, heading };
+    default: {
+      const unreachable: never = body;
+      return unreachable;
+    }
+  }
 }
 
 function parseRepeat(input: unknown, index: number, errors: string[]): number | null {
@@ -206,8 +337,16 @@ function parseBody(input: Record<string, unknown>, index: number, errors: string
       return parseNotes(input, where, errors);
     case 'cheatsheet':
       return parseCheatSheet(input, where, errors);
+    case 'checklist':
+      return parseChecklist(input, where, errors);
+    case 'paper':
+      return parsePaper(input, where, errors);
+    case 'habit':
+      return parseHabit(input, where, errors);
     default:
-      errors.push(`${where}.type must be title, copyright, log, stats, notes, or cheatsheet.`);
+      errors.push(
+        `${where}.type must be title, copyright, log, stats, notes, cheatsheet, checklist, paper, or habit.`,
+      );
       return null;
   }
 }
@@ -321,6 +460,48 @@ function parseNotes(input: Record<string, unknown>, where: string, errors: strin
   return { type: 'notes', heading };
 }
 
+function parseChecklist(input: Record<string, unknown>, where: string, errors: string[]): ChecklistPage | null {
+  const heading = optionalText(input, 'heading', where, errors);
+  if (heading === null) return null;
+  if (!Array.isArray(input.items) || input.items.length < 1 || input.items.length > 40) {
+    errors.push(`${where}.items must contain 1 to 40 labels.`);
+    return null;
+  }
+  if (input.items.some((item) => typeof item !== 'string' || item.trim().length === 0)) {
+    errors.push(`${where}.items must be non-empty strings.`);
+    return null;
+  }
+  return { type: 'checklist', heading, items: input.items as string[] };
+}
+
+function parsePaper(input: Record<string, unknown>, where: string, errors: string[]): PaperPage | null {
+  const heading = optionalText(input, 'heading', where, errors);
+  if (heading === null) return null;
+  if (typeof input.style !== 'string' || !(PAPER_STYLES as readonly string[]).includes(input.style)) {
+    errors.push(`${where}.style must be lined, dot, or grid.`);
+    return null;
+  }
+  return { type: 'paper', style: input.style as PaperPage['style'], heading };
+}
+
+function parseHabit(input: Record<string, unknown>, where: string, errors: string[]): HabitPage | null {
+  const heading = optionalText(input, 'heading', where, errors);
+  if (heading === null) return null;
+  if (!Array.isArray(input.habits) || input.habits.length < 1 || input.habits.length > 16) {
+    errors.push(`${where}.habits must contain 1 to 16 labels.`);
+    return null;
+  }
+  if (input.habits.some((habit) => typeof habit !== 'string' || habit.trim().length === 0)) {
+    errors.push(`${where}.habits must be non-empty strings.`);
+    return null;
+  }
+  if (typeof input.days !== 'number' || !Number.isInteger(input.days) || input.days < 1 || input.days > 31) {
+    errors.push(`${where}.days must be an integer from 1 to 31.`);
+    return null;
+  }
+  return { type: 'habit', heading, habits: input.habits as string[], days: input.days };
+}
+
 function parseCheatSheet(input: Record<string, unknown>, where: string, errors: string[]): CheatSheetPage | null {
   const heading = optionalText(input, 'heading', where, errors);
   if (heading === null) return null;
@@ -371,9 +552,126 @@ export function pageKindLabel(page: BookPageBody): string {
       return 'Notes page';
     case 'cheatsheet':
       return 'Cheat-sheet page';
+    case 'checklist':
+      return 'Checklist page';
+    case 'paper':
+      if (page.style === 'lined') return 'Lined page';
+      if (page.style === 'dot') return 'Dot-grid page';
+      return 'Square-grid page';
+    case 'habit':
+      return 'Habit tracker';
     default: {
       const unreachable: never = page;
       return unreachable;
     }
+  }
+}
+
+const CHECK_METADATA = {
+  title: 'Template Check',
+  subtitle: 'Placeholder',
+  description: 'Placeholder description for the low-content template check. Interior pages are fill-in templates.',
+  categories: [{ label: 'NON-CLASSIFIABLE', bisac: 'NON000000' }],
+  keywords: ['alpha log', 'bravo log', 'charlie log', 'delta log', 'echo log', 'foxtrot log', 'golf log'],
+};
+
+/**
+ * Locks the low-content path: every catalog id resolves, a template book reaches
+ * the 24-page minimum, a free KDP ISBN is rejected, and a standard interior
+ * still validates without an ISBN choice.
+ */
+export function assertLowContentPipeline(): void {
+  const failures: string[] = [];
+  for (const id of LOW_CONTENT_TEMPLATE_IDS) {
+    const body = lowContentTemplate(id);
+    if (!body || body.type.length === 0) failures.push(`Template ${id} did not resolve.`);
+  }
+
+  const ready = evaluateManifest('low-content-check', {
+    id: 'low-content-check',
+    market: 'generic',
+    format: 'kdp-logbook',
+    content: 'low-content',
+    isbn: 'none',
+    trim: '5.5x8.5',
+    bleed: true,
+    paper: 'white',
+    ink: 'black',
+    kdp: CHECK_METADATA,
+    pages: [
+      { template: 'title' },
+      { template: 'copyright' },
+      { template: 'mileage-log', repeat: 20, heading: 'Placeholder mileage check' },
+      { template: 'lined', repeat: 2 },
+    ],
+  });
+  if (ready.errors.length > 0) failures.push(`Template book failed: ${ready.errors.join(' ')}`);
+  if (ready.pages.length !== 24) failures.push(`Template book expanded to ${ready.pages.length} pages, expected 24.`);
+  if (ready.geometry?.pageWidthPt !== 405 || ready.geometry.pageHeightPt !== 630) {
+    failures.push('Template book did not use the 5.5x8.5 with-bleed page size.');
+  }
+  const mileage = ready.pages[2];
+  if (!mileage || mileage.type !== 'log' || mileage.heading !== 'Placeholder mileage check' || mileage.entryCount !== 20) {
+    failures.push('Template heading override or repeat count did not apply.');
+  }
+  if (ready.content !== 'low-content' || ready.manifest?.content !== 'low-content' || ready.manifest.isbn !== 'none') {
+    failures.push('Template book did not record the low-content ISBN choice.');
+  }
+
+  const freeIsbn = evaluateManifest('low-content-check', {
+    id: 'low-content-check',
+    market: 'generic',
+    format: 'kdp-logbook',
+    content: 'low-content',
+    isbn: 'kdp',
+    trim: '6x9',
+    bleed: true,
+    paper: 'white',
+    ink: 'black',
+    kdp: CHECK_METADATA,
+    pages: [{ template: 'lined', repeat: 24 }],
+  });
+  if (!freeIsbn.errors.some((error) => error.includes('free KDP ISBN'))) {
+    failures.push('A free KDP ISBN was accepted for a low-content book.');
+  }
+
+  const standard = evaluateManifest('standard-check', {
+    id: 'standard-check',
+    market: 'generic',
+    format: 'kdp-cheatsheet',
+    content: 'standard',
+    trim: '6x9',
+    bleed: false,
+    paper: 'cream',
+    ink: 'black',
+    kdp: CHECK_METADATA,
+    pages: [{ type: 'notes', heading: 'Placeholder notes', repeat: 24 }],
+  });
+  if (standard.errors.length > 0 || standard.manifest?.content !== 'standard') {
+    failures.push(`Standard interior failed: ${standard.errors.join(' ') || 'no manifest'}`);
+  }
+  if (standard.geometry?.pageWidthPt !== 432) {
+    failures.push('Standard interior did not keep the no-bleed 6x9 page size.');
+  }
+
+  const standardIsbn = evaluateManifest('standard-check', {
+    id: 'standard-check',
+    market: 'generic',
+    format: 'kdp-journal',
+    content: 'standard',
+    isbn: 'none',
+    trim: '6x9',
+    bleed: true,
+    paper: 'white',
+    ink: 'black',
+    kdp: CHECK_METADATA,
+    pages: [{ type: 'notes', heading: 'Placeholder notes', repeat: 24 }],
+  });
+  if (!standardIsbn.errors.some((error) => error.includes('Remove isbn'))) {
+    failures.push('A standard interior accepted a low-content ISBN choice.');
+  }
+
+  if (failures.length > 0) {
+    throw new Error(failures.join('\n'));
   }
 }
