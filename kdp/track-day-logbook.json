@@ -1,0 +1,125 @@
+{
+  "id": "track-day-logbook",
+  "market": "sim-racing",
+  "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "none",
+  "trim": "6x9",
+  "bleed": true,
+  "paper": "white",
+  "ink": "black",
+  "kdp": {
+    "title": "Track Day Logbook",
+    "subtitle": "Placeholder session log for practice days",
+    "description": "Placeholder description for a track day logbook wireframe. Interior pages are blank session fields, a lap grid, and a stats table. No brand name, cover, or marketing claim is included. Replace this text before any listing.",
+    "categories": [
+      {
+        "label": "SPORTS & RECREATION / Motor Sports / Automobile Racing",
+        "bisac": "SPO028010"
+      },
+      {
+        "label": "SPORTS & RECREATION / Training",
+        "bisac": "SPO047000"
+      }
+    ],
+    "keywords": [
+      "track day log",
+      "hpde logbook",
+      "race car logbook",
+      "session notes",
+      "lap time log",
+      "driver journal",
+      "practice day log"
+    ]
+  },
+  "pages": [
+    {
+      "type": "title",
+      "kicker": "Placeholder title page",
+      "note": "No cover art, logo, or brand color in this file. Replace this text before listing."
+    },
+    {
+      "type": "copyright",
+      "year": "2026",
+      "holder": "[Rights holder placeholder]",
+      "notices": [
+        "Placeholder notice. This page is not a real copyright registration.",
+        "No imprint, ISBN, logo, or brand name is assigned in this wireframe."
+      ]
+    },
+    {
+      "type": "cheatsheet",
+      "heading": "Placeholder reference",
+      "sections": [
+        {
+          "title": "Before the session",
+          "rows": [
+            { "label": "Tires", "value": "Placeholder" },
+            { "label": "Pressures", "value": "Placeholder" },
+            { "label": "Fuel", "value": "Placeholder" },
+            { "label": "Weather", "value": "Placeholder" }
+          ]
+        },
+        {
+          "title": "After the session",
+          "rows": [
+            { "label": "Best lap", "value": "Placeholder" },
+            { "label": "Balance", "value": "Placeholder" },
+            { "label": "Changes", "value": "Placeholder" },
+            { "label": "Next session", "value": "Placeholder" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "notes",
+      "heading": "Placeholder notes"
+    },
+    {
+      "type": "log",
+      "dated": true,
+      "heading": "Placeholder session log",
+      "repeat": 12,
+      "fields": [
+        { "label": "Date (placeholder)" },
+        { "label": "Session (placeholder)" },
+        { "label": "Location (placeholder)" },
+        { "label": "Conditions (placeholder)" },
+        { "label": "Best lap (placeholder)" },
+        { "label": "Notes (placeholder)", "lines": 2 }
+      ],
+      "grid": {
+        "columns": ["Lap", "Time", "Note"],
+        "rows": 8
+      }
+    },
+    {
+      "type": "log",
+      "dated": false,
+      "heading": "Placeholder setup log",
+      "repeat": 4,
+      "fields": [
+        { "label": "Session (placeholder)" },
+        { "label": "Setup (placeholder)" },
+        { "label": "Result (placeholder)" },
+        { "label": "Notes (placeholder)", "lines": 2 }
+      ],
+      "grid": {
+        "columns": ["Item", "Value"],
+        "rows": 8
+      }
+    },
+    {
+      "type": "stats",
+      "heading": "Placeholder session stats",
+      "repeat": 2,
+      "columns": ["Session", "Best", "Average", "Notes"],
+      "rows": 10
+    },
+    {
+      "type": "notes",
+      "heading": "Placeholder notes",
+      "repeat": 2
+    }
+  ]
+}

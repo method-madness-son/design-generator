@@ -1,0 +1,104 @@
+{
+  "id": "hockey-stats-tracker",
+  "market": "hockey",
+  "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "none",
+  "trim": "8.5x11",
+  "bleed": true,
+  "paper": "white",
+  "ink": "black",
+  "kdp": {
+    "title": "Hockey Stats Tracker",
+    "subtitle": "Placeholder game log for a season",
+    "description": "Placeholder description for a hockey stats tracker wireframe. Pages include a game log, a stats table, and notes. League names, team names, and logos are omitted on purpose. Replace this text before any listing.",
+    "categories": [
+      {
+        "label": "SPORTS & RECREATION / Winter Sports / Hockey",
+        "bisac": "SPO020000"
+      },
+      {
+        "label": "SPORTS & RECREATION / Reference",
+        "bisac": "SPO033000"
+      }
+    ],
+    "keywords": [
+      "hockey stats book",
+      "hockey stat tracker",
+      "hockey game log",
+      "player stats log",
+      "goals and assists",
+      "season game notes",
+      "rink stat sheet"
+    ]
+  },
+  "pages": [
+    {
+      "type": "title",
+      "kicker": "Placeholder title page",
+      "note": "No cover art, logo, or brand color in this file. Replace this text before listing."
+    },
+    {
+      "type": "copyright",
+      "year": "2026",
+      "holder": "[Rights holder placeholder]",
+      "notices": [
+        "Placeholder notice. This page is not a real copyright registration.",
+        "No imprint, ISBN, logo, or brand name is assigned in this wireframe."
+      ]
+    },
+    {
+      "type": "cheatsheet",
+      "heading": "Placeholder stat labels",
+      "sections": [
+        {
+          "title": "Counting stats",
+          "rows": [
+            { "label": "Goals", "value": "Placeholder count" },
+            { "label": "Assists", "value": "Placeholder count" },
+            { "label": "Shots", "value": "Placeholder count" },
+            { "label": "Saves", "value": "Placeholder count" }
+          ]
+        },
+        {
+          "title": "Game log labels",
+          "rows": [
+            { "label": "Date", "value": "Placeholder" },
+            { "label": "Opponent", "value": "Placeholder, no team names" },
+            { "label": "Position", "value": "Placeholder" },
+            { "label": "Result", "value": "Placeholder" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "log",
+      "dated": true,
+      "heading": "Placeholder game day",
+      "repeat": 4,
+      "fields": [
+        { "label": "Date (placeholder)" },
+        { "label": "Opponent (placeholder)" },
+        { "label": "Position (placeholder)" },
+        { "label": "Ice time (placeholder)" },
+        { "label": "Notes (placeholder)", "lines": 2 }
+      ],
+      "grid": {
+        "columns": ["Period", "Goals", "Assists", "Notes"],
+        "rows": 6
+      }
+    },
+    {
+      "type": "stats",
+      "heading": "Placeholder game stats",
+      "repeat": 14,
+      "columns": ["Game", "Goals", "Assists", "Shots", "Saves", "Notes"],
+      "rows": 12
+    },
+    {
+      "type": "notes",
+      "heading": "Placeholder notes",
+      "repeat": 3
+    }
+  ]
+}

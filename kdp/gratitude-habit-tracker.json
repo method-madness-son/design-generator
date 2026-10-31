@@ -1,0 +1,42 @@
+{
+  "id": "gratitude-habit-tracker",
+  "market": "generic",
+  "format": "kdp-journal",
+  "content": "low-content",
+  "isbn": "none",
+  "trim": "6x9",
+  "bleed": true,
+  "paper": "white",
+  "ink": "black",
+  "kdp": {
+    "title": "Gratitude and Habit Tracker",
+    "subtitle": "Placeholder daily thanks and a weekly grid",
+    "description": "Placeholder description for a gratitude and habit tracker. The interior repeats a thankfulness page and a seven-day habit grid, then dot-grid paper. No brand name, cover, or marketing claim is included. Replace this text before any listing.",
+    "categories": [
+      {
+        "label": "SELF-HELP / Journaling",
+        "bisac": "SEL045000"
+      },
+      {
+        "label": "SELF-HELP / Emotions",
+        "bisac": "SEL042000"
+      }
+    ],
+    "keywords": [
+      "gratitude journal",
+      "habit tracker book",
+      "daily gratitude log",
+      "weekly habit tracker",
+      "thankfulness journal",
+      "habit log book",
+      "write in journal"
+    ]
+  },
+  "pages": [
+    { "template": "title" },
+    { "template": "copyright" },
+    { "template": "gratitude-log", "repeat": 12 },
+    { "template": "habit-tracker", "repeat": 8 },
+    { "template": "dot-grid", "repeat": 2 }
+  ]
+}

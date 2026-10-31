@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## KDP interior wireframe
+
+Grayscale paperback interiors live under `kdp/`. Low-content books (log books, trackers, journals, notebooks) are a first-class section: set `content` to `low-content`, repeat a template from `lib/kdpTemplates.ts`, and build the same way as any other interior. They are separate from the poster projects. See [docs/KDP-WIREFRAME.md](docs/KDP-WIREFRAME.md) for trim, bleed, gutter, the low-content rules, and what is intentionally missing (branding, cover, EPUB).
+
+```bash
+npm run kdp:check
+npm run book-pdf -- generic-log-book
+npm run book-pdf -- mileage-maintenance-log
+npm run book-pdf -- gratitude-habit-tracker
+```
+
+Preview at `/kdp` while `npm run dev` is running. Sample PDFs are written to `exports/kdp/`.
+
 ## Getting Started
 
 First, run the development server:

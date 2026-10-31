@@ -1,0 +1,41 @@
+{
+  "id": "generic-log-book",
+  "market": "generic",
+  "format": "kdp-logbook",
+  "content": "low-content",
+  "isbn": "none",
+  "trim": "5.5x8.5",
+  "bleed": true,
+  "paper": "white",
+  "ink": "black",
+  "kdp": {
+    "title": "Daily Log Book",
+    "subtitle": "Placeholder dated and undated pages",
+    "description": "Placeholder description for a generic log book. The interior repeats dated logs, undated logs, a checklist, and lined, dot-grid, and square-grid pages. No brand name, cover, or marketing claim is included. Replace this text before any listing.",
+    "categories": [
+      {
+        "label": "NON-CLASSIFIABLE",
+        "bisac": "NON000000"
+      }
+    ],
+    "keywords": [
+      "daily log book",
+      "undated logbook",
+      "write in log",
+      "checklist notebook",
+      "lined journal pages",
+      "dot grid notebook",
+      "square grid pages"
+    ]
+  },
+  "pages": [
+    { "template": "title" },
+    { "template": "copyright" },
+    { "template": "dated-log", "repeat": 8 },
+    { "template": "undated-log", "repeat": 6 },
+    { "template": "checklist", "repeat": 2 },
+    { "template": "lined", "repeat": 2 },
+    { "template": "dot-grid", "repeat": 2 },
+    { "template": "square-grid", "repeat": 2 }
+  ]
+}
