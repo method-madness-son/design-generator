@@ -15,7 +15,10 @@
     "lc:check": "tsx scripts/lowcontent.ts check",
     "lc:interior": "tsx scripts/lowcontent.ts interior",
     "lc:cover": "tsx scripts/lowcontent.ts cover",
-    "lc:preview": "tsx scripts/lowcontent.ts preview"
+    "lc:preview": "tsx scripts/lowcontent.ts preview",
+    "mug:check": "tsx scripts/mug-export.ts --check",
+    "mug-art": "tsx scripts/mug-export.ts --art",
+    "mug-preview": "tsx scripts/mug-export.ts --preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -13,6 +13,9 @@ export default function Home() {
           <Link href="/tees" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             Tees &rarr;
           </Link>
+          <Link href="/mugs" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+            Mugs &rarr;
+          </Link>
           <Link href="/kdp" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             KDP wireframes &rarr;
           </Link>
