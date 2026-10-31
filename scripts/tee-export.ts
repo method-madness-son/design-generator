@@ -97,7 +97,7 @@ function runChecks(): boolean {
   if (!bridge) {
     theme.errors.push(`Could not read ${DEV_REALITIES_PROJECT}.`);
   } else {
-    console.log(`\nPoster bridge ${DEV_REALITIES_PROJECT} (file not modified):`);
+    console.log(`\nPoster bridge posters/${DEV_REALITIES_PROJECT} (file not modified):`);
     for (const role of bridge.roles) console.log(`  ${role.role} ${role.hex}`);
     console.log(`  fontFamily ${bridge.fontFamily}`);
     console.log('  Tee dev market uses per_market_overrides.dev, not this poster palette.');

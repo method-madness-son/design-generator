@@ -16,7 +16,7 @@ Colors and fonts are global. Tee designs name a palette and a font; they do not 
 | `lib/themeFontFaces.ts` | CSS `font-family` for every allowed face |
 | `app/themeFonts.ts` | `next/font` loads. Playwright and the browser both get these files |
 
-`lib/theme.ts` also exposes `mapPosterColorPalette`. A later poster pipeline can map `colorPalette.background`, `ink`, and `accent` into theme roles. `posters/dev-realities/project.json` is not rewritten. `npm run tee:check` prints that file's palette and font stack so the bridge stays visible. Tee **Dev** designs do not use that poster palette. They use `per_market_overrides.dev` from the theme (Space Mono + JetBrains Mono).
+`lib/theme.ts` also exposes `mapPosterColorPalette`. A later poster pipeline can map `colorPalette.background`, `ink`, and `accent` into theme roles. `posters/dev-realities/project.json` is not rewritten. `npm run tee:check` prints that file's palette and font stack so the bridge stays visible. The reader only opens files under `posters/`. Tee **Dev** designs do not use that poster palette. They use `per_market_overrides.dev` from the theme (Space Mono + JetBrains Mono).
 
 ### What the theme file says
 

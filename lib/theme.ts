@@ -5,7 +5,6 @@ import { THEME_FONT_CSS } from '@/lib/themeFontFaces';
 import type {
   GlobalTheme,
   InkChoice,
-  InkSetName,
   InkSwatch,
   MarketOverride,
   MarketSwatch,
@@ -14,7 +13,7 @@ import type {
   WcagBand,
 } from '@/types/theme';
 
-export const globalTheme: GlobalTheme = rawTheme;
+export const globalTheme = rawTheme as GlobalTheme;
 
 /** Inks below this contrast vs the reference shirt are left off the ink lists. */
 export const MIN_INK_CONTRAST = 3;
@@ -171,13 +170,14 @@ export function mapPosterColorPalette(palette: Record<string, string>): PosterPa
   return roles.filter((role) => Boolean(palette[role])).map((role) => ({ role, hex: palette[role] }));
 }
 
-export const DEV_REALITIES_PROJECT = 'posters/dev-realities/project.json';
+export const DEV_REALITIES_PROJECT = 'dev-realities/project.json';
 
-export function readPosterPaletteBridge(relativePath: string): {
+export function readPosterPaletteBridge(projectFile: string): {
   roles: PosterPaletteRole[];
   fontFamily: string;
 } | null {
-  const filePath = path.join(process.cwd(), relativePath);
+  if (projectFile.includes('..') || path.isAbsolute(projectFile)) return null;
+  const filePath = path.join(process.cwd(), 'posters', projectFile);
   if (!fs.existsSync(filePath)) return null;
   const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
     colorPalette?: Record<string, string>;
@@ -206,6 +206,9 @@ export function validateGlobalTheme(): { errors: string[]; warnings: string[] } 
   for (const shirt of listShirts()) {
     if (names.has(shirt.name)) errors.push(`Duplicate shirt color ${shirt.name}.`);
     names.add(shirt.name);
+    if (shirt.default_ink_set !== 'on_light_shirt' && shirt.default_ink_set !== 'on_dark_shirt') {
+      errors.push(`${shirt.name} default_ink_set must be on_light_shirt or on_dark_shirt.`);
+    }
     checkHex(shirt.name, shirt.hex, errors);
     if (shirt.source === 'added_for_preview') {
       warnings.push(`${shirt.name} was added for previews and is not a ${globalTheme.shirt_colors.blank} chart color.`);
