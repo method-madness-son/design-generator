@@ -11,7 +11,11 @@
     "book-pdf": "tsx scripts/book-pdf.ts",
     "tee:check": "tsx scripts/tee-export.ts --check",
     "tee-art": "tsx scripts/tee-export.ts --art",
-    "tee-preview": "tsx scripts/tee-export.ts --preview"
+    "tee-preview": "tsx scripts/tee-export.ts --preview",
+    "lc:check": "tsx scripts/lowcontent.ts check",
+    "lc:interior": "tsx scripts/lowcontent.ts interior",
+    "lc:cover": "tsx scripts/lowcontent.ts cover",
+    "lc:preview": "tsx scripts/lowcontent.ts preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",

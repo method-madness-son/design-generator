@@ -16,6 +16,9 @@ export default function Home() {
           <Link href="/kdp" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             KDP wireframes &rarr;
           </Link>
+          <Link href="/lowcontent" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+            Low-content books &rarr;
+          </Link>
           <Link href="/typography" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             Typography &rarr;
           </Link>
