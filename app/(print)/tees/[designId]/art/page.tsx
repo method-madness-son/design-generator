@@ -43,6 +43,7 @@ export default async function TeeArtPage({
 
   return (
     <div style={{ background: "transparent" }}>
+      <style>{`html, body { background: transparent !important; }`}</style>
       <TeePrintCanvas tee={tee} inkSet={inkSet} />
     </div>
   );

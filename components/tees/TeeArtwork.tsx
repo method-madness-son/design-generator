@@ -3,15 +3,17 @@ import type { ResolvedInkSet, ResolvedTee } from '@/types/tee';
 
 function advanceRatio(family: string, role: 'display' | 'supporting'): number {
   if (/mono|space mono|press start/i.test(family)) return 0.62;
-  if (role === 'supporting') return 0.56;
-  return 0.78;
+  // Wide display faces. A low ratio clips the last letters inside the design box.
+  if (/alfa slab|shrikhand|titan|caprasimo|lilita|permanent marker/i.test(family)) return 1.15;
+  if (role === 'supporting') return 0.62;
+  return 0.9;
 }
 
 function lineFontSize(text: string, family: string, role: 'display' | 'supporting', widthPx: number): number {
   const inner = widthPx * 0.94;
   const fitted = inner / (Math.max(text.length, 1) * advanceRatio(family, role));
   const max = widthPx * (role === 'display' ? 0.22 : 0.16);
-  return Math.max(8, Math.min(max, fitted));
+  return Math.max(1, Math.min(max, fitted));
 }
 
 function Tabs({ inks, count, heightPx }: { inks: string[]; count: number; heightPx: number }) {
