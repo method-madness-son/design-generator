@@ -1,0 +1,34 @@
+{
+  "id": "brain-tabs",
+  "project": "ND Tees",
+  "market": "nd",
+  "palette": "rainbow_infinity_retro",
+  "lines": [
+    { "text": "Brain:", "font": "display" },
+    { "text": "47 tabs open", "font": "supporting" }
+  ],
+  "graphic": { "type": "browser-tabs", "count": 6, "position": "top" },
+  "placement": { "side": "front", "size": "full-front" },
+  "ink": { "on_light_shirt": "blue", "on_dark_shirt": "yellow" },
+  "shirts": ["White", "Black", "Heather Gray", "Navy", "Ivory", "Pepper"],
+  "etsy": {
+    "title": "47 Tabs Open Tee, Funny Brain Shirt, Unisex Graphic T-Shirt",
+    "description": "A unisex tee for the day your brain has 47 tabs open.\n\nWHAT YOU'LL GET\n• A physical unisex t-shirt, printed and shipped to you\n• Front print, sized inside the printable area\n• Dark ink on light shirts, light ink on dark shirts\n\nThis listing is a physical shirt. It is a joke, not a medical claim.",
+    "tags": [
+      "47 tabs shirt",
+      "tabs open tee",
+      "brain tabs shirt",
+      "funny graphic tee",
+      "unisex graphic tee",
+      "front print tee",
+      "text slogan tee",
+      "office humor shirt",
+      "coworker gift tee",
+      "statement tee",
+      "casual cotton tee",
+      "identity humor tee",
+      "rainbow ink tee"
+    ],
+    "category": "Clothing > Gender-Neutral Adult Clothing > Tops & Tees > T-shirts"
+  }
+}

@@ -8,7 +8,10 @@
     "start": "next start -p 4310",
     "lint": "eslint",
     "kdp:check": "tsx scripts/book-pdf.ts --check",
-    "book-pdf": "tsx scripts/book-pdf.ts"
+    "book-pdf": "tsx scripts/book-pdf.ts",
+    "tee:check": "tsx scripts/tee-export.ts --check",
+    "tee-art": "tsx scripts/tee-export.ts --art",
+    "tee-preview": "tsx scripts/tee-export.ts --preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -16,6 +19,7 @@
     "jszip": "^3.10.2",
     "lucide-react": "^1.52.0",
     "next": "16.3.8",
+    "pngjs": "^7.0.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "tailwind-merge": "^3.7.0"
@@ -23,6 +27,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pngjs": "^6.0.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

@@ -1,0 +1,32 @@
+{
+  "id": "git-commit-wip",
+  "project": "Dev Tees",
+  "market": "dev",
+  "lines": [
+    { "text": "git commit -m", "font": "supporting" },
+    { "text": "\"wip\"", "font": "display" }
+  ],
+  "placement": { "side": "front", "size": "full-front" },
+  "ink": { "on_light_shirt": "code_bg", "on_dark_shirt": "terminal_green" },
+  "shirts": ["White", "Black", "Heather Gray", "Navy", "Pepper", "Ivory", "Blue Spruce"],
+  "etsy": {
+    "title": "git commit wip Tee, Funny Programmer Shirt, Unisex Coding T-Shirt",
+    "description": "A unisex tee for the commit message that just says wip.\n\nWHAT YOU'LL GET\n• A physical unisex t-shirt, printed and shipped to you\n• Front print, sized inside the printable area\n• Dark ink on light shirts, light ink on dark shirts\n\nThis listing is a physical shirt.",
+    "tags": [
+      "git commit shirt",
+      "wip commit tee",
+      "programmer tee",
+      "coding humor shirt",
+      "developer gift tee",
+      "funny coder shirt",
+      "software dev tee",
+      "unisex graphic tee",
+      "front print tee",
+      "monospace tee",
+      "office humor shirt",
+      "text slogan tee",
+      "command line tee"
+    ],
+    "category": "Clothing > Gender-Neutral Adult Clothing > Tops & Tees > T-shirts"
+  }
+}

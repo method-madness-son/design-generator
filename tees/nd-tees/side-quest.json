@@ -1,0 +1,33 @@
+{
+  "id": "side-quest",
+  "project": "ND Tees",
+  "market": "nd",
+  "palette": "earthy_vintage",
+  "lines": [
+    { "text": "Side quest", "font": "display" },
+    { "text": "in progress", "font": "supporting" }
+  ],
+  "placement": { "side": "front", "size": "left-chest" },
+  "ink": { "on_light_shirt": "deep_green", "on_dark_shirt": "ink_white" },
+  "shirts": ["White", "Black", "Heather Gray", "Navy", "Ivory", "Butter"],
+  "etsy": {
+    "title": "Side Quest In Progress Tee, Left Chest Shirt, Unisex Graphic Tee",
+    "description": "A small left-chest print for when the main quest can wait.\n\nWHAT YOU'LL GET\n• A physical unisex t-shirt, printed and shipped to you\n• Left-chest front print inside the printable area\n• Dark ink on light shirts, light ink on dark shirts\n\nThis listing is a physical shirt. It is a joke, not a medical claim.",
+    "tags": [
+      "side quest shirt",
+      "side quest tee",
+      "in progress tee",
+      "quest humor tee",
+      "left chest tee",
+      "funny graphic tee",
+      "unisex graphic tee",
+      "text slogan tee",
+      "office humor shirt",
+      "statement tee",
+      "casual cotton tee",
+      "earthy vintage tee",
+      "retro slogan tee"
+    ],
+    "category": "Clothing > Gender-Neutral Adult Clothing > Tops & Tees > T-shirts"
+  }
+}
