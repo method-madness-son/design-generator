@@ -3,20 +3,21 @@ import { WIREFRAME, wireframeDesignRect, wireframePrintRect } from '@/lib/teeSiz
 import type { InkSetName, ShirtColor } from '@/types/theme';
 import type { ResolvedTee } from '@/types/tee';
 
+// Flat short-sleeve tee: shallow crew neck, sleeves angling down and out,
+// straight angled sleeve hems, a short armhole notch, vertical sides, straight hem.
 const BODY_PATH = [
-  'M 124 168',
-  'L 46 228',
-  'L 98 286',
-  'L 164 228',
-  'L 184 700',
-  'Q 340 732 496 700',
-  'L 516 228',
-  'L 582 286',
-  'L 634 228',
-  'L 556 168',
-  'C 470 150 430 176 404 178',
-  'L 276 178',
-  'C 250 176 210 150 124 168',
+  'M 100 236',
+  'L 200 164',
+  'L 258 146',
+  'Q 340 202 422 146',
+  'L 480 164',
+  'L 580 236',
+  'L 512 296',
+  'L 494 296',
+  'L 494 700',
+  'L 186 700',
+  'L 186 296',
+  'L 168 296',
   'Z',
 ].join(' ');
 
@@ -52,8 +53,14 @@ export function TeeWireframe({
         role="img"
         aria-label={`${shirt.name} tee wireframe`}
       >
-        <path d={BODY_PATH} fill={shirt.hex} stroke={line} strokeWidth={3} strokeLinejoin="round" />
-        <path d="M 268 178 Q 340 292 412 178" fill="none" stroke={line} strokeWidth={3} />
+        <path
+          d={BODY_PATH}
+          fill={shirt.hex}
+          stroke={line}
+          strokeWidth={2.75}
+          strokeLinejoin="miter"
+          strokeMiterlimit={3}
+        />
         {guides ? (
           <>
             <rect
@@ -76,7 +83,14 @@ export function TeeWireframe({
               strokeWidth={1.25}
               strokeDasharray="3 4"
             />
-            <text x={print.x} y={print.y - 8} fill={line} fontSize={15} fontFamily="ui-sans-serif, sans-serif">
+            <text
+              x={WIREFRAME.centerX}
+              y={128}
+              textAnchor="middle"
+              fill={line}
+              fontSize={15}
+              fontFamily="ui-sans-serif, sans-serif"
+            >
               {label}
             </text>
           </>

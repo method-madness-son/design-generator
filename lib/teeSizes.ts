@@ -81,8 +81,9 @@ export const WIREFRAME = {
   viewHeight: 820,
   pxPerIn: 18,
   centerX: 340,
-  necklineBottom: 286,
-  gapBelowNeckIn: 0.4,
+  // Lowest point of the shallow crew scoop in TeeWireframe (quadratic at t=0.5).
+  necklineBottom: 174,
+  gapBelowNeckIn: 1.25,
 };
 
 export function wireframePrintRect() {
