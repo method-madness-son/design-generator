@@ -32,7 +32,6 @@ export default async function LowContentFrontPage({ params }: { params: Promise<
   return (
     <div style={{ width, height }}>
       <CoverSheet
-        kicker={book.manifest.project}
         title={book.manifest.title}
         subtitle={book.manifest.subtitle}
         description={book.manifest.kdp.description}

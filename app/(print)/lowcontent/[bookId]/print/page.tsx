@@ -44,7 +44,6 @@ export default async function LowContentPrintPage({ params }: { params: Promise<
       {book.pages.map((page) => (
         <InteriorSheet
           key={page.pageNumber}
-          kicker={manifest.project}
           title={manifest.title}
           subtitle={manifest.subtitle}
           page={page}

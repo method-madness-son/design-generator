@@ -70,7 +70,6 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
           <div className="mt-3 inline-block bg-neutral-200 p-3">
             <ScaledSheet widthPx={cover.fullWidthPx} heightPx={cover.fullHeightPx} displayWidth={720}>
               <CoverSheet
-                kicker={manifest.project}
                 title={manifest.title}
                 subtitle={manifest.subtitle}
                 description={manifest.kdp.description}
@@ -89,7 +88,6 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
                 {pair.map((page) => (
                   <ScaledSheet key={page.pageNumber} widthPx={geometry.pageWidthPx} heightPx={geometry.pageHeightPx} displayWidth={320}>
                     <InteriorSheet
-                      kicker={manifest.project}
                       title={manifest.title}
                       subtitle={manifest.subtitle}
                       page={page}

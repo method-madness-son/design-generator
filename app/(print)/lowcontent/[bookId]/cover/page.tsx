@@ -35,7 +35,6 @@ export default async function LowContentCoverPage({ params }: { params: Promise<
   return (
     <div data-lc-cover-ready="1" style={{ width: cover.fullWidthPx, height: cover.fullHeightPx }}>
       <CoverSheet
-        kicker={manifest.project}
         title={manifest.title}
         subtitle={manifest.subtitle}
         description={manifest.kdp.description}

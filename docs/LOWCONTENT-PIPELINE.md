@@ -106,6 +106,8 @@ Wireframe guides (trim line, safe-zone dash, spine line, barcode label) are draw
 
 `pageCount` must equal the sum of `repeat`. `theme.palette` is a name in the global theme (`calm_sensory_pastel`) or a market override id (`hockey`, `rally`, `cooking`). Fonts are named the same way.
 
+`project` is an internal grouping name. The `/lowcontent` index shows it. The cover, spine, headers, and page text do not.
+
 `market` is `nd`, `hockey`, `cooking`, or `rally`, matching `per_market_overrides` in the theme file.
 
 Page templates: `title`, `belongs-to`, `contents`, `weekly-planner`, `monthly-planner`, `habit-tracker`, `lined`, `dot-grid`, `graph`, `gratitude`, `stats-tracker`, `recipe`, `meal-planner`, `logbook`. Weekly, monthly, and meal pages take `config.dated`. Every template draws rules or text, so a page is not a blank sheet. Rules are at least 0.75 pt. Type is at least 7 pt.

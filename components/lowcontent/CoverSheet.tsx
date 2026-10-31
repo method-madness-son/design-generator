@@ -10,7 +10,6 @@ import {
 import type { ResolvedInteriorTheme } from '@/types/lowcontent';
 
 type CoverProps = {
-  kicker: string;
   title: string;
   subtitle: string;
   description: string;
@@ -22,14 +21,13 @@ type CoverProps = {
   variant: 'wrap' | 'front';
 };
 
-export function CoverSheet({ kicker, title, subtitle, description, pageCount, geometry, theme, mode, variant }: CoverProps) {
+export function CoverSheet({ title, subtitle, description, pageCount, geometry, theme, mode, variant }: CoverProps) {
   if (variant === 'front') {
     const widthPx = inchesToPixels(geometry.trimWidthIn);
     const heightPx = inchesToPixels(geometry.trimHeightIn);
     return (
       <div data-lc-front-ready="1" style={{ position: 'relative', width: widthPx, height: heightPx }}>
         <FrontPanel
-          kicker={kicker}
           title={title}
           subtitle={subtitle}
           theme={theme}
@@ -60,7 +58,6 @@ export function CoverSheet({ kicker, title, subtitle, description, pageCount, ge
       }}
     >
       <FrontPanel
-        kicker={kicker}
         title={title}
         subtitle={subtitle}
         theme={theme}
@@ -111,7 +108,6 @@ export function CoverSheet({ kicker, title, subtitle, description, pageCount, ge
 }
 
 function FrontPanel({
-  kicker,
   title,
   subtitle,
   theme,
@@ -122,7 +118,6 @@ function FrontPanel({
   offsetX = 0,
   offsetY = 0,
 }: {
-  kicker: string;
   title: string;
   subtitle: string;
   theme: ResolvedInteriorTheme;
@@ -163,10 +158,9 @@ function FrontPanel({
         }}
       >
         <div style={{ background: theme.accent, color: onAccent, padding: `${sy(0.28)}px ${sx(0.22)}px` }}>
-          <p style={{ margin: 0, letterSpacing: '0.16em', textTransform: 'uppercase', fontSize: sy(0.16) }}>{kicker}</p>
           <h1
             style={{
-              margin: `${sy(0.12)}px 0 0`,
+              margin: 0,
               fontFamily: theme.displayFontCss,
               fontSize: sy(0.62),
               lineHeight: 0.95,

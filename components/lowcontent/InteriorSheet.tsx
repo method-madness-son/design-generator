@@ -12,7 +12,6 @@ import { WEEKDAY_LABELS } from '@/lib/lowcontent/templates';
 import type { LcOutlineEntry, RenderedLcPage, ResolvedInteriorTheme } from '@/types/lowcontent';
 
 type SheetProps = {
-  kicker: string;
   title: string;
   subtitle: string;
   page: RenderedLcPage;
@@ -38,7 +37,7 @@ function metrics(geometry: InteriorGeometry): Metrics {
   };
 }
 
-export function InteriorSheet({ kicker, title, subtitle, page, outline, geometry, theme, mode }: SheetProps) {
+export function InteriorSheet({ title, subtitle, page, outline, geometry, theme, mode }: SheetProps) {
   const odd = page.pageNumber % 2 === 1;
   const insets = safeInsetsIn(geometry, odd);
   const m = metrics(geometry);
@@ -76,9 +75,9 @@ export function InteriorSheet({ kicker, title, subtitle, page, outline, geometry
           minWidth: 0,
         }}
       >
-        <Header kicker={kicker} title={title} page={page} theme={theme} m={m} />
+        <Header title={title} page={page} theme={theme} m={m} />
         <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-          <PageBody page={page} outline={outline} title={title} subtitle={subtitle} kicker={kicker} theme={theme} m={m} />
+          <PageBody page={page} outline={outline} title={title} subtitle={subtitle} theme={theme} m={m} />
         </div>
         <footer
           style={{
@@ -123,13 +122,11 @@ export function InteriorSheet({ kicker, title, subtitle, page, outline, geometry
 }
 
 function Header({
-  kicker,
   title,
   page,
   theme,
   m,
 }: {
-  kicker: string;
   title: string;
   page: RenderedLcPage;
   theme: ResolvedInteriorTheme;
@@ -151,8 +148,7 @@ function Header({
         textTransform: 'uppercase',
       }}
     >
-      <span>{kicker}</span>
-      <span style={{ textAlign: 'center', flex: 1 }}>{label}</span>
+      <span>{label}</span>
       <span>{title}</span>
     </div>
   );
@@ -163,7 +159,6 @@ function PageBody({
   outline,
   title,
   subtitle,
-  kicker,
   theme,
   m,
 }: {
@@ -171,13 +166,12 @@ function PageBody({
   outline: LcOutlineEntry[];
   title: string;
   subtitle: string;
-  kicker: string;
   theme: ResolvedInteriorTheme;
   m: Metrics;
 }) {
   switch (page.template) {
     case 'title':
-      return <TitlePage kicker={kicker} title={title} subtitle={subtitle} theme={theme} m={m} />;
+      return <TitlePage title={title} subtitle={subtitle} theme={theme} m={m} />;
     case 'belongs-to':
       return <BelongsPage theme={theme} m={m} />;
     case 'contents':
@@ -210,13 +204,11 @@ function PageBody({
 }
 
 function TitlePage({
-  kicker,
   title,
   subtitle,
   theme,
   m,
 }: {
-  kicker: string;
   title: string;
   subtitle: string;
   theme: ResolvedInteriorTheme;
@@ -225,7 +217,6 @@ function TitlePage({
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: m.pt(12) }}>
       <div style={{ width: m.pt(36), height: m.rule * 3, background: theme.accent }} />
-      <p style={{ margin: 0, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: m.pt(10) }}>{kicker}</p>
       <h1 style={{ margin: 0, fontFamily: theme.displayFontCss, fontSize: m.pt(32), lineHeight: 1.05, fontWeight: 400 }}>
         {title}
       </h1>
