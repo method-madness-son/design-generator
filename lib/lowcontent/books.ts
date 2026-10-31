@@ -17,6 +17,8 @@ import { LC_INKS, LC_MARKETS, LC_PAPERS, LC_TRIMS } from '@/types/lowcontent';
 import { copyGuard } from '@/lib/lowcontent/guard';
 import { validateLcMetadata } from '@/lib/lowcontent/metadata';
 import {
+  OUTSIDE_MARGIN_NO_BLEED_IN,
+  OUTSIDE_MARGIN_WITH_BLEED_IN,
   STANDARD_COLOR_SPINE_CONFLICT,
   buildCoverGeometry,
   buildInteriorGeometry,
@@ -25,6 +27,7 @@ import {
   spineFactor,
   type CoverGeometry,
   type InteriorGeometry,
+  type MarginOverride,
 } from '@/lib/lowcontent/specs';
 import { fontIssue, getMarket } from '@/lib/theme';
 import { resolveInteriorTheme } from '@/lib/lowcontent/theme';
@@ -320,9 +323,10 @@ export function loadBook(id: string): LoadedLowContentBook | null {
     warnings.push('Interior bleed is off. A background that stops at the trim can leave a white edge after cutting.');
   }
 
+  const margins = parseMargins(raw.margins, bleed, pageCount, errors);
   const geometry =
     trim && paper && ink && pageCount >= 24 && pageCount <= 828 && gutterInches(pageCount) !== null && bleed !== null
-      ? buildInteriorGeometry(trim, bleed, pageCount, paper, ink)
+      ? buildInteriorGeometry(trim, bleed, pageCount, paper, ink, margins)
       : null;
   const cover =
     trim && paper && ink && pageCount > 0 && spineFactor(ink, paper) !== null
@@ -355,6 +359,7 @@ export function loadBook(id: string): LoadedLowContentBook | null {
           paper,
           ink,
           bleed,
+          ...(margins ? { margins } : {}),
           theme: themeRef,
           author: null,
           pages: pageRefs,
@@ -375,6 +380,48 @@ export function loadBook(id: string): LoadedLowContentBook | null {
     errors,
     warnings,
   };
+}
+
+function parseMargins(
+  input: unknown,
+  bleed: boolean | null,
+  pageCount: number,
+  errors: string[],
+): MarginOverride | undefined {
+  if (input === undefined) return undefined;
+  if (!isRecord(input)) {
+    errors.push('margins must be an object with inside, outside, top, and bottom in inches.');
+    return undefined;
+  }
+  const read = (key: string): number | null => {
+    const value = input[key];
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
+      errors.push(`margins.${key} must be a number of inches.`);
+      return null;
+    }
+    return value;
+  };
+  const inside = read('inside');
+  const outside = read('outside');
+  const top = read('top');
+  const bottom = read('bottom');
+  if (inside === null || outside === null || top === null || bottom === null) return undefined;
+  const gutterMin = gutterInches(pageCount);
+  const outsideMin = bleed ? OUTSIDE_MARGIN_WITH_BLEED_IN : OUTSIDE_MARGIN_NO_BLEED_IN;
+  if (gutterMin !== null && inside < gutterMin - 1e-6) {
+    errors.push(`margins.inside is ${inside}", under the KDP gutter of ${gutterMin}" for ${pageCount} pages.`);
+  }
+  for (const [name, value] of [
+    ['outside', outside],
+    ['top', top],
+    ['bottom', bottom],
+  ] as const) {
+    if (value < outsideMin - 1e-6) {
+      errors.push(`margins.${name} is ${value}", under the KDP minimum of ${outsideMin}".`);
+    }
+  }
+  if (errors.some((error) => error.startsWith('margins.'))) return undefined;
+  return { inside, outside, top, bottom };
 }
 
 function safeCover(trim: LcTrimId, pageCount: number, paper: LcPaper, ink: LcInk): CoverGeometry | null {

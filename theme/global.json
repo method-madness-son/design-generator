@@ -331,6 +331,16 @@
           "name": "steel_blue",
           "hex": "#457B9D",
           "role": "primary_text"
+        },
+        {
+          "name": "deep_navy",
+          "hex": "#1D3557",
+          "role": "cover_title_ink"
+        },
+        {
+          "name": "butter",
+          "hex": "#FFE8A3",
+          "role": "alt_cover_background"
         }
       ],
       "recommended_shirts": [
@@ -717,6 +727,26 @@
         "commercial_use": true,
         "recommended_use": "clean sans small text; dyslexia-themed with wide tracking",
         "min_size_note": "x-height >=0.25in"
+      },
+      {
+        "family": "Lexend",
+        "google_fonts_name": "Lexend",
+        "google_fonts_url": "https://fonts.google.com/specimen/Lexend",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/lexend METADATA.pb",
+        "commercial_use": true,
+        "recommended_use": "interior page headers",
+        "min_size_note": "18–20 pt headers"
+      },
+      {
+        "family": "Atkinson Hyperlegible Next",
+        "google_fonts_name": "Atkinson Hyperlegible Next",
+        "google_fonts_url": "https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/atkinsonhyperlegiblenext METADATA.pb",
+        "commercial_use": true,
+        "recommended_use": "interior labels, prompts, and numbers",
+        "min_size_note": "prompts 11–12 pt; micro labels at least 9 pt"
       }
     ],
     "hand_drawn": [

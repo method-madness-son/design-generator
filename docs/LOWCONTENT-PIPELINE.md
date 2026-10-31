@@ -108,6 +108,30 @@ Wireframe guides (trim line, safe-zone dash, spine line, barcode label) are draw
 
 `project` is an internal grouping name. The `/lowcontent` index shows it. The cover, spine, headers, and page text do not.
 
+## nd-planner design system
+
+The Design Bot spec (`nd-planner-design-spec.md`, 2026-10-30) was applied on top of the locked 120-page order. The bot did not open this repo and did not view competitor cover images, so the cover art is a judgment call.
+
+Cover concepts, all at the computed wrap size (120 × 0.002252" spine, about 0.2702", full cover about 12.5202" × 9.25"):
+
+| Variant | Command | What it draws |
+|---|---|---|
+| A Brain Tabs (default) | `npm run lc:cover -- nd-planner` | Browser tabs today / later / ideas / wins. Active tab pink. Navy `#1D3557` Fredoka title. Powder-blue back and spine. |
+| B Bold brain dump | `npm run lc:cover -- nd-planner --variant b` | Type-only "brain dump" on butter `#FFE8A3`. |
+| C Now / next / later | `npm run lc:cover -- nd-planner --variant c` | Three rounded bars. |
+
+No project name is printed. Spine text is "ADHD Planner" at 8 pt. Finish in the spec is matte. This pipeline does not send a finish to KDP.
+
+Fonts added to `theme/global.json` and loaded with `next/font`: Lexend (already on the poster layout, used for interior headers at 600) and Atkinson Hyperlegible Next (400 and 700) for labels and the time column. Fredoka and Work Sans stay on the cover. Licenses are OFL.
+
+Interior margins on `nd-planner` only, measured from the trim: inside 0.625", outside 0.5", top 0.5", bottom 0.55". Those are above the KDP minimums for 120 pages with no bleed (inside 0.375", outside at least 0.25"), so `lc:check` accepts them. Other books keep the KDP minimums.
+
+Line weights: frames 1 pt, emphasis boxes 2 pt. The spec asked for 0.5 pt writing lines. KDP's submission guidelines require lines of at least 0.75 pt ([Paperback Submission Guidelines](https://kdp.amazon.com/en_US/help/topic/G201857950)). Writing lines and dots are 0.75 pt. Grey is only a 15% fill in a large battery cell, not under small type.
+
+The spec's alternate 120-page allocation (56 daily pages, 8 weekly pages, and so on) was not applied. It disagrees with the research lineup already bound into `nd-planner.json`. Page order stays the table above.
+
+`energy-check` is still built and not given its own sheet. Water, meals, and a medication log are still v2.
+
 `market` is `nd`, `hockey`, `cooking`, or `rally`, matching `per_market_overrides` in the theme file.
 
 Page templates: `title`, `belongs-to`, `contents`, `weekly-planner`, `monthly-planner`, `habit-tracker`, `lined`, `dot-grid`, `graph`, `gratitude`, `stats-tracker`, `recipe`, `meal-planner`, `logbook`, plus the ADHD planner templates below. Weekly, monthly, and meal pages take `config.dated`. Every template draws rules or text, so a page is not a blank sheet. Rules are at least 0.75 pt. Type is at least 7 pt. Black-ink books draw the interior in black on white. The cover still uses the named palette.

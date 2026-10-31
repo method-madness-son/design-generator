@@ -185,6 +185,8 @@ export type InteriorGeometry = {
   pageCount: number;
   gutterIn: number;
   outsideMarginIn: number;
+  topMarginIn: number;
+  bottomMarginIn: number;
   pageWidthIn: number;
   pageHeightIn: number;
   pageWidthPt: number;
@@ -244,21 +246,27 @@ export function inchesToPixels(inches: number): number {
   return Math.round(inches * PRINT_DPI);
 }
 
+export type MarginOverride = { inside: number; outside: number; top: number; bottom: number };
+
 export function buildInteriorGeometry(
   trimId: LcTrimId,
   bleed: boolean,
   pageCount: number,
   paper: LcPaper,
   ink: LcInk,
+  margins?: MarginOverride,
 ): InteriorGeometry {
   const trim = TRIM_SPECS[trimId];
-  const gutterIn = gutterInches(pageCount);
-  if (gutterIn === null) {
+  const gutterMin = gutterInches(pageCount);
+  if (gutterMin === null) {
     throw new Error(`Page count ${pageCount} is outside the gutter table (24–828).`);
   }
   const bleedIn = bleed ? BLEED_IN : 0;
+  const outsideMin = bleed ? OUTSIDE_MARGIN_WITH_BLEED_IN : OUTSIDE_MARGIN_NO_BLEED_IN;
   const pageWidthIn = trim.widthIn + bleedIn;
   const pageHeightIn = trim.heightIn + bleedIn * 2;
+  const gutterIn = margins?.inside ?? gutterMin;
+  const outsideMarginIn = margins?.outside ?? outsideMin;
   return {
     trim,
     largeTrim: isLargeTrim(trim.widthIn, trim.heightIn),
@@ -268,7 +276,9 @@ export function buildInteriorGeometry(
     ink,
     pageCount,
     gutterIn,
-    outsideMarginIn: bleed ? OUTSIDE_MARGIN_WITH_BLEED_IN : OUTSIDE_MARGIN_NO_BLEED_IN,
+    outsideMarginIn,
+    topMarginIn: margins?.top ?? outsideMarginIn,
+    bottomMarginIn: margins?.bottom ?? outsideMarginIn,
     pageWidthIn,
     pageHeightIn,
     pageWidthPt: inchesToPoints(pageWidthIn),
@@ -288,8 +298,8 @@ export function safeInsetsIn(geometry: InteriorGeometry, odd: boolean): Insets {
   const outer = geometry.bleedIn + geometry.outsideMarginIn;
   const gutter = geometry.bleedIn + geometry.gutterIn;
   return {
-    top: outer,
-    bottom: outer,
+    top: geometry.bleedIn + geometry.topMarginIn,
+    bottom: geometry.bleedIn + geometry.bottomMarginIn,
     left: odd ? gutter : outer,
     right: odd ? outer : gutter,
   };

@@ -38,6 +38,7 @@ type Cli = {
   ids: string[];
   baseUrl?: string;
   port: number;
+  variant: 'a' | 'b' | 'c';
 };
 
 function parseArgs(argv: string[]): Cli {
@@ -45,7 +46,7 @@ function parseArgs(argv: string[]): Cli {
   if (command !== 'check' && command !== 'interior' && command !== 'cover' && command !== 'preview') {
     throw new Error('First argument must be check, interior, cover, or preview.');
   }
-  const cli: Cli = { command, all: false, ids: [], port: 4314 };
+  const cli: Cli = { command, all: false, ids: [], port: 4314, variant: 'a' };
   for (let index = 1; index < argv.length; index += 1) {
     const arg = argv[index];
     if (arg === '--all') cli.all = true;
@@ -53,6 +54,11 @@ function parseArgs(argv: string[]): Cli {
       const value = argv[index + 1];
       if (!value) throw new Error('--base-url needs a value.');
       cli.baseUrl = value;
+      index += 1;
+    } else if (arg === '--variant') {
+      const value = argv[index + 1];
+      if (value !== 'a' && value !== 'b' && value !== 'c') throw new Error('--variant must be a, b, or c.');
+      cli.variant = value;
       index += 1;
     } else if (arg === '--port') {
       const value = Number(argv[index + 1]);
@@ -72,7 +78,7 @@ function printUsage(): void {
   console.log(`Usage:
   npm run lc:check
   npm run lc:interior -- <id> [--all]
-  npm run lc:cover -- <id> [--all]
+  npm run lc:cover -- <id> [--variant a|b|c] [--all]
   npm run lc:preview -- <id> [--all]
 
 Books: ${getBookIds().join(', ') || '(none)'}`);
@@ -199,12 +205,18 @@ async function renderInterior(baseUrl: string, book: LoadedLowContentBook & { ge
   }
 }
 
-async function renderCover(baseUrl: string, book: LoadedLowContentBook & { cover: CoverGeometry; manifest: NonNullable<LoadedLowContentBook['manifest']> }): Promise<{ pdf: string; png: string }> {
+async function renderCover(
+  baseUrl: string,
+  book: LoadedLowContentBook & { cover: CoverGeometry; manifest: NonNullable<LoadedLowContentBook['manifest']> },
+  variant: 'a' | 'b' | 'c',
+): Promise<{ pdf: string; png: string }> {
   const cover = book.cover;
   const root = baseUrl.replace(/\/$/, '');
   const browser = await chromium.launch(chromiumLaunchOptions);
   try {
-    const coverPage = await openPage(browser, `${root}/lowcontent/${book.id}/cover`, {
+    const query = variant === 'a' ? '' : `?variant=${variant}`;
+    const suffix = variant === 'a' ? '' : `-${variant}`;
+    const coverPage = await openPage(browser, `${root}/lowcontent/${book.id}/cover${query}`, {
       width: Math.min(cover.fullWidthPx, 1400),
       height: 900,
     });
@@ -234,7 +246,7 @@ async function renderCover(baseUrl: string, book: LoadedLowContentBook & { cover
     pdfPage.setBleedBox(boxes.media.x, boxes.media.y, boxes.media.width, boxes.media.height);
     pdfPage.setTrimBox(boxes.trim.x, boxes.trim.y, boxes.trim.width, boxes.trim.height);
 
-    const frontPage = await openPage(browser, `${root}/lowcontent/${book.id}/front`, {
+    const frontPage = await openPage(browser, `${root}/lowcontent/${book.id}/front${query}`, {
       width: Math.min(inchesToPixels(cover.trimWidthIn), 1200),
       height: 900,
     });
@@ -249,8 +261,8 @@ async function renderCover(baseUrl: string, book: LoadedLowContentBook & { cover
     const frontPng = await front.screenshot({ type: 'png' });
 
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-    const pdfPath = path.join(OUTPUT_DIR, `${book.id}-cover.pdf`);
-    const pngPath = path.join(OUTPUT_DIR, `${book.id}-front.png`);
+    const pdfPath = path.join(OUTPUT_DIR, `${book.id}-cover${suffix}.pdf`);
+    const pngPath = path.join(OUTPUT_DIR, `${book.id}-front${suffix}.png`);
     fs.writeFileSync(pdfPath, await pdf.save());
     fs.writeFileSync(pngPath, frontPng);
     return { pdf: pdfPath, png: pngPath };
@@ -337,7 +349,7 @@ async function main(): Promise<void> {
         const output = await renderInterior(baseUrl, book);
         console.log(`Wrote ${output} (${Math.round(fs.statSync(output).size / 1024)} KB)`);
       } else {
-        const output = await renderCover(baseUrl, book);
+        const output = await renderCover(baseUrl, book, cli.variant);
         console.log(`Wrote ${output.pdf} (${Math.round(fs.statSync(output.pdf).size / 1024)} KB)`);
         console.log(`Wrote ${output.png} (${Math.round(fs.statSync(output.png).size / 1024)} KB)`);
       }

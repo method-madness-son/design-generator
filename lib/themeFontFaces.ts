@@ -29,7 +29,9 @@ export const THEME_FONT_CSS: Record<string, string> = {
   Orbitron: 'var(--font-theme-orbitron), sans-serif',
   Pacifico: 'var(--font-theme-pacifico), cursive',
   'Playfair Display': 'var(--font-playfair-display), serif',
+  Lexend: 'var(--font-lexend), sans-serif',
+  'Atkinson Hyperlegible Next': 'var(--font-theme-atkinson-next), sans-serif',
 };
 
 /** Faces already loaded for posters. app/themeFonts.ts must not load them again. */
-export const FONTS_ALREADY_IN_POSTER_LAYOUT = ['JetBrains Mono', 'Press Start 2P', 'Playfair Display'] as const;
+export const FONTS_ALREADY_IN_POSTER_LAYOUT = ['JetBrains Mono', 'Press Start 2P', 'Playfair Display', 'Lexend'] as const;

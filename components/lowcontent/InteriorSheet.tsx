@@ -10,6 +10,7 @@ import {
 } from '@/lib/lowcontent/specs';
 import { WEEKDAY_LABELS } from '@/lib/lowcontent/templates';
 import { PlannerBody } from '@/components/lowcontent/plannerPages';
+import { fontFamilyCss } from '@/lib/theme';
 import type { LcOutlineEntry, RenderedLcPage, ResolvedInteriorTheme } from '@/types/lowcontent';
 
 type SheetProps = {
@@ -47,8 +48,10 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
   const m = metrics(geometry);
   const trimLeft = m.x(odd ? 0 : geometry.bleedIn);
   const trimTop = m.y(geometry.bleedIn);
+  const bodyFont = monochrome ? fontFamilyCss('Atkinson Hyperlegible Next') : theme.supportingFontCss;
+  const headerFont = monochrome ? fontFamilyCss('Lexend') : theme.supportingFontCss;
   const body: CSSProperties = {
-    fontFamily: theme.supportingFontCss,
+    fontFamily: bodyFont,
     color: drawTheme.ink,
     fontSize: m.pt(9),
     lineHeight: 1.25,
@@ -79,7 +82,7 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
           minWidth: 0,
         }}
       >
-        <Header title={title} page={page} theme={drawTheme} m={m} />
+        <Header title={title} page={page} theme={drawTheme} m={m} monochrome={monochrome} headerFont={headerFont} bodyFont={bodyFont} />
         <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
           <PageBody page={page} outline={outline} title={title} subtitle={subtitle} theme={drawTheme} m={m} />
         </div>
@@ -88,7 +91,8 @@ export function InteriorSheet({ title, subtitle, page, outline, geometry, theme,
             marginTop: m.pt(6),
             display: 'flex',
             justifyContent: odd ? 'flex-end' : 'flex-start',
-            fontSize: m.pt(Math.max(MIN_FONT_PT, 8)),
+            fontSize: m.pt(monochrome ? 9 : Math.max(MIN_FONT_PT, 8)),
+            fontWeight: monochrome ? 700 : 400,
             letterSpacing: '0.04em',
           }}
         >
@@ -130,14 +134,33 @@ function Header({
   page,
   theme,
   m,
+  monochrome,
+  headerFont,
+  bodyFont,
 }: {
   title: string;
   page: RenderedLcPage;
   theme: ResolvedInteriorTheme;
   m: SheetMetrics;
+  monochrome: boolean;
+  headerFont: string;
+  bodyFont: string;
 }) {
   if (page.template === 'title') return null;
   const label = page.entryCount > 1 ? `${page.config.heading} ${page.entryIndex}` : page.config.heading;
+  if (monochrome) {
+    return (
+      <div style={{ marginBottom: m.pt(8) }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: m.pt(8) }}>
+          <span style={{ fontFamily: headerFont, fontWeight: 600, fontSize: m.pt(18), lineHeight: 1.15 }}>{page.config.heading}</span>
+          {page.template === 'daily-plan' ? (
+            <span style={{ fontFamily: bodyFont, fontWeight: 700, fontSize: m.pt(11) }}>Day {page.entryIndex}</span>
+          ) : null}
+        </div>
+        <div style={{ marginTop: m.y(0.12), width: '40%', height: m.pt(2), background: theme.ink }} />
+      </div>
+    );
+  }
   return (
     <div
       style={{

@@ -10,6 +10,8 @@
   "paper": "white",
   "ink": "black",
   "bleed": false,
+  "margins": { "inside": 0.625, "outside": 0.5, "top": 0.5, "bottom": 0.55 },
+  "finish": "matte",
   "author": null,
   "theme": {
     "palette": "calm_sensory_pastel",

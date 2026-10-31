@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { CoverSheet } from '@/components/lowcontent/CoverSheet';
+import { coverConceptFor } from '@/components/lowcontent/NdCover';
 import { getBookIds, loadBook } from '@/lib/lowcontent/books';
 
 export function generateStaticParams() {
@@ -15,8 +16,15 @@ export async function generateMetadata({ params }: { params: Promise<{ bookId: s
   };
 }
 
-export default async function LowContentCoverPage({ params }: { params: Promise<{ bookId: string }> }) {
+export default async function LowContentCoverPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ bookId: string }>;
+  searchParams: Promise<{ variant?: string }>;
+}) {
   const { bookId } = await params;
+  const query = await searchParams;
   const book = loadBook(bookId);
   if (!book) notFound();
   if (!book.manifest || !book.cover || !book.theme || book.errors.length > 0) {
@@ -43,6 +51,7 @@ export default async function LowContentCoverPage({ params }: { params: Promise<
         theme={theme}
         mode="print"
         variant="wrap"
+        concept={coverConceptFor(book.id, query.variant)}
       />
     </div>
   );

@@ -1,5 +1,6 @@
 import {
   Alfa_Slab_One,
+  Atkinson_Hyperlegible_Next,
   Anton,
   Bebas_Neue,
   Caprasimo,
@@ -73,6 +74,12 @@ const racingSansOne = Racing_Sans_One({
 const russoOne = Russo_One({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-russo-one" });
 const orbitron = Orbitron({ subsets: ["latin"], preload: false, variable: "--font-theme-orbitron" });
 const pacifico = Pacifico({ subsets: ["latin"], weight: "400", preload: false, variable: "--font-theme-pacifico" });
+const atkinsonNext = Atkinson_Hyperlegible_Next({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  preload: false,
+  variable: "--font-theme-atkinson-next",
+});
 
 /** Class string for the root element. Poster faces stay in app/fonts.ts. */
 export const themeFontVariables = [
@@ -98,6 +105,7 @@ export const themeFontVariables = [
   russoOne,
   orbitron,
   pacifico,
+  atkinsonNext,
 ]
   .map((font) => font.variable)
   .join(" ");

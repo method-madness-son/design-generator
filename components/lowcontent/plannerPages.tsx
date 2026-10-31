@@ -44,7 +44,7 @@ export function PlannerBody({ page, theme, m }: BodyProps): ReactNode {
     case 'brain-dump':
       return <DumpPage theme={theme} m={m} />;
     case 'sort-page':
-      return <QuadPage theme={theme} m={m} cells={['Now', 'Next', 'Later', 'Let go']} />;
+      return <SortPage theme={theme} m={m} />;
     case 'daily-plan':
       return <DailyPage page={page} theme={theme} m={m} />;
     case 'weekly-overview':
@@ -119,9 +119,10 @@ function LoopPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics 
       {steps.map((step, index) => (
         <Box key={step} theme={theme} m={m}>
           <strong style={{ fontSize: m.pt(16) }}>{index + 1}</strong>
-          <span style={{ fontSize: m.pt(13) }}>{step}</span>
+          <span style={{ fontSize: m.pt(12), lineHeight: 1.5 }}>{step}</span>
         </Box>
       ))}
+      <p style={{ margin: 0, fontSize: m.pt(11) }}>Not medical advice.</p>
     </div>
   );
 }
@@ -130,7 +131,7 @@ function SkipPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: m.pt(16) }}>
       <h2 style={display(theme, m, 22)}>Skipped some pages?</h2>
-      <p style={{ margin: 0, fontSize: m.pt(16), lineHeight: 1.35 }}>Start at the next page. There is nothing to catch up.</p>
+      <p style={{ margin: 0, fontSize: m.pt(16), lineHeight: 1.5 }}>Start at the next page. Missed days are fine. Just start here.</p>
       <Box theme={theme} m={m}>
         <span style={label(m)}>Today I will</span>
       </Box>
@@ -144,54 +145,92 @@ function SkipPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics 
 function DumpPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: m.pt(8), minHeight: 0 }}>
-      <p style={lead(m)}>Empty your head. No order.</p>
-      <div style={{ flex: 1, ...lines(theme, m) }} />
+      <p style={lead(m)}>Write everything. Sort later.</p>
+      <div style={{ flex: 1, border: border(theme, m, 2), ...dots(theme, m) }} />
+      <p style={{ margin: 0, textAlign: 'right', fontSize: m.pt(12) }}>Sort it on the next page →</p>
     </div>
   );
 }
 
-function DailyPage({ page, theme, m }: BodyProps) {
+function SortPage({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
+  const cells = [
+    { name: 'Now', heavy: true, lines: 3 },
+    { name: 'Next', heavy: false, lines: 4 },
+    { name: 'Later', heavy: false, lines: 4 },
+    { name: 'Let go', heavy: false, lines: 4 },
+  ];
   return (
-    <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1.45fr 0.7fr', gap: m.pt(8), minHeight: 0 }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: m.pt(6), minHeight: 0 }}>
-        <p style={{ ...lead(m), marginBottom: 0 }}>Day {page.entryIndex} · Top 3</p>
-        {[1, 2, 3].map((n) => (
-          <Box key={n} theme={theme} m={m}>
-            <strong style={{ fontSize: m.pt(18) }}>{n}</strong>
-          </Box>
-        ))}
-        <Box theme={theme} m={m}>
-          <span style={label(m)}>Bonus, if there is room</span>
-          <div style={{ flex: 1, ...lines(theme, m, 0.28) }} />
+    <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: m.y(0.2), minHeight: 0 }}>
+      {cells.map((cell) => (
+        <Box key={cell.name} theme={theme} m={m} heavy={cell.heavy}>
+          <span style={{ ...label(m), fontSize: m.pt(18), fontFamily: fontFamilyHeader() }}>{cell.name}</span>
+          {Array.from({ length: cell.lines }, (_, index) => (
+            <div key={index} style={{ display: 'flex', gap: m.pt(6), alignItems: 'center' }}>
+              <span style={{ width: m.y(0.18), height: m.y(0.18), border: border(theme, m, 1) }} />
+              <span style={{ flex: 1, borderBottom: `${m.pt(0.75)}px solid ${theme.ink}` }} />
+            </div>
+          ))}
         </Box>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: m.pt(6), minHeight: m.pt(70) }}>
-          <Box theme={theme} m={m}>
-            <span style={label(m)}>Dump</span>
-          </Box>
+      ))}
+    </div>
+  );
+}
+
+function DailyPage({ theme, m }: BodyProps) {
+  return (
+    <div style={{ flex: 1, display: 'grid', gridTemplateColumns: `${m.x(1)}px 1fr`, gap: m.y(0.2), minHeight: 0 }}>
+      <TimeColumn theme={theme} m={m} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: m.y(0.2), minHeight: 0 }}>
+        <Box theme={theme} m={m} heavy>
+          <span style={label(m)}>Top 3</span>
+          {[1, 2, 3].map((n) => (
+            <div key={n} style={{ display: 'flex', gap: m.pt(6), alignItems: 'center', minHeight: m.y(0.42) }}>
+              <strong style={{ fontSize: m.pt(14) }}>{n}</strong>
+              <span style={{ flex: 1, borderBottom: `${m.pt(0.75)}px solid ${theme.ink}` }} />
+            </div>
+          ))}
+        </Box>
+        <Box theme={theme} m={m}>
+          <span style={label(m)}>Bonus if energy</span>
+          {[1, 2, 3].map((n) => (
+            <div key={n} style={{ display: 'flex', gap: m.pt(6), alignItems: 'center' }}>
+              <span style={{ width: m.y(0.18), height: m.y(0.18), border: border(theme, m, 1), borderRadius: m.y(0.04) }} />
+              <span style={{ flex: 1, borderBottom: `${m.pt(0.75)}px solid ${theme.ink}` }} />
+            </div>
+          ))}
+        </Box>
+        <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: m.y(0.2) }}>
           <Box theme={theme} m={m}>
             <span style={label(m)}>Energy</span>
-            <span style={{ fontSize: m.pt(10) }}>High · Medium · Low</span>
+            <span style={{ fontSize: m.pt(12) }}>Shade the battery</span>
+            <div style={{ display: 'flex', gap: m.pt(3), marginTop: m.pt(4) }}>
+              {[1, 2, 3, 4, 5].map((n) => (
+                <span key={n} style={{ flex: 1, height: m.y(0.28), border: border(theme, m, 1), background: n === 1 ? '#D9D9D9' : 'transparent' }} />
+              ))}
+            </div>
+          </Box>
+          <Box theme={theme} m={m}>
+            <span style={label(m)}>Wins</span>
+            {[1, 2, 3].map((n) => (
+              <div key={n} style={{ fontSize: m.pt(12) }}>★ ________</div>
+            ))}
           </Box>
         </div>
-        <Box theme={theme} m={m}>
-          <span style={label(m)}>One win</span>
-        </Box>
       </div>
-      <TimeColumn theme={theme} m={m} />
     </div>
   );
 }
 
 function TimeColumn({ theme, m }: { theme: ResolvedInteriorTheme; m: SheetMetrics }) {
-  const hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
+  const hours = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
   return (
     <div style={{ border: border(theme, m), display: 'flex', flexDirection: 'column', minHeight: 0, padding: m.pt(4) }}>
       <span style={label(m)}>Time</span>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-        {hours.map((hour) => (
-          <div key={hour} style={{ flex: 1, borderTop: `${m.rule}px solid ${theme.ink}`, position: 'relative', fontSize: m.pt(8) }}>
+        {hours.map((hour, index) => (
+          <div key={index} style={{ flex: 1, borderTop: `${m.pt(1)}px solid ${theme.ink}`, position: 'relative', fontSize: m.pt(9), fontWeight: 700 }}>
             <span>{hour}</span>
-            <span style={{ position: 'absolute', left: '55%', top: '50%', width: '30%', borderTop: `${Math.max(1, m.rule * 0.7)}px solid ${theme.ink}` }} />
+            <span style={{ position: 'absolute', left: '42%', top: '50%', width: '40%', borderTop: `${m.pt(0.75)}px dotted ${theme.ink}` }} />
           </div>
         ))}
       </div>
@@ -212,6 +251,10 @@ function OverviewPage({ page, theme, m }: BodyProps) {
           </Box>
         ))}
       </div>
+      <p style={{ margin: 0, fontSize: m.pt(11), lineHeight: 1.5 }}>Missed days are fine. Just start here.</p>
+      <Box theme={theme} m={m} heavy>
+        <span style={label(m)}>One focus this week</span>
+      </Box>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
         {WEEKDAY_LABELS.map((day) => (
           <div key={day} style={{ flex: 1, display: 'flex', gap: m.pt(8), borderTop: `${m.rule}px solid ${theme.ink}`, alignItems: 'center' }}>
@@ -444,20 +487,33 @@ function QuadPage({
   );
 }
 
-function Box({ theme, m, children }: { theme: ResolvedInteriorTheme; m: SheetMetrics; children: ReactNode }) {
+function Box({ theme, m, children, heavy = false }: { theme: ResolvedInteriorTheme; m: SheetMetrics; children: ReactNode; heavy?: boolean }) {
   return (
-    <div style={{ flex: 1, minHeight: 0, border: border(theme, m), padding: m.pt(6), display: 'flex', flexDirection: 'column', gap: m.pt(4) }}>
+    <div style={{ flex: 1, minHeight: 0, border: border(theme, m, heavy ? 2 : 1), borderRadius: m.y(0.08), padding: m.pt(8), display: 'flex', flexDirection: 'column', gap: m.pt(4) }}>
       {children}
     </div>
   );
 }
 
-function border(theme: ResolvedInteriorTheme, m: SheetMetrics): string {
-  return `${Math.max(m.rule, m.pt(1.1))}px solid ${theme.ink}`;
+function border(theme: ResolvedInteriorTheme, m: SheetMetrics, points = 1): string {
+  return `${Math.max(m.pt(0.75), m.pt(points))}px solid ${theme.ink}`;
 }
 
 function label(m: SheetMetrics): CSSProperties {
-  return { fontSize: m.pt(10), letterSpacing: '0.06em', textTransform: 'uppercase' };
+  return { fontSize: m.pt(12), letterSpacing: '0.02em', fontWeight: 700 };
+}
+
+function fontFamilyHeader(): string {
+  return 'var(--font-lexend), sans-serif';
+}
+
+function dots(theme: ResolvedInteriorTheme, m: SheetMetrics): CSSProperties {
+  const spacing = m.y(0.25);
+  const dot = Math.max(m.pt(0.75) / 2, 1.5);
+  return {
+    backgroundImage: `radial-gradient(circle, ${theme.ink} ${dot}px, transparent ${dot + 0.6}px)`,
+    backgroundSize: `${spacing}px ${spacing}px`,
+  };
 }
 
 function lead(m: SheetMetrics): CSSProperties {

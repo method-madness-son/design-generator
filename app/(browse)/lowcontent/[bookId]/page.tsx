@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CoverSheet } from '@/components/lowcontent/CoverSheet';
+import { coverConceptFor } from '@/components/lowcontent/NdCover';
 import { InteriorSheet } from '@/components/lowcontent/InteriorSheet';
 import { ScaledSheet } from '@/components/lowcontent/ScaledSheet';
 import { getBookIds, loadBook } from '@/lib/lowcontent/books';
@@ -79,6 +80,7 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
                 theme={theme}
                 mode="preview"
                 variant="wrap"
+                concept={coverConceptFor(manifest.id, undefined)}
               />
             </ScaledSheet>
           </div>

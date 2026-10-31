@@ -1,3 +1,4 @@
+import { NdCover, type CoverConcept } from '@/components/lowcontent/NdCover';
 import { contrastRatio } from '@/lib/lowcontent/theme';
 import {
   COVER_SAFE_INSET_IN,
@@ -19,9 +20,14 @@ type CoverProps = {
   mode: 'print' | 'preview';
   /** `wrap` is the full cover. `front` is the trimmed front panel for the listing image. */
   variant: 'wrap' | 'front';
+  /** nd-planner cover concepts. Omit for the generic cover. */
+  concept?: CoverConcept;
 };
 
-export function CoverSheet({ title, subtitle, description, pageCount, geometry, theme, mode, variant }: CoverProps) {
+export function CoverSheet({ title, subtitle, description, pageCount, geometry, theme, mode, variant, concept }: CoverProps) {
+  if (concept) {
+    return <NdCover concept={concept} geometry={geometry} theme={theme} mode={mode} variant={variant} pageCount={pageCount} />;
+  }
   if (variant === 'front') {
     const widthPx = inchesToPixels(geometry.trimWidthIn);
     const heightPx = inchesToPixels(geometry.trimHeightIn);

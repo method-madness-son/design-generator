@@ -143,6 +143,11 @@ export type LowContentManifest = {
   ink: LcInk;
   /** Interior bleed. Cover files always include bleed, even when this is false. */
   bleed: boolean;
+  /**
+   * Optional margins measured from the trim. Each value must be at least the
+   * KDP minimum for this page count. Omit them to use those minimums.
+   */
+  margins?: { inside: number; outside: number; top: number; bottom: number };
   theme: LcThemeRef;
   author: null;
   pages: LcPageRef[];
