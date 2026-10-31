@@ -20,7 +20,8 @@
     "contrast_method": "WCAG relative luminance; >=4.5 AA_normal, >=3.0 AA_large_graphics_only; inks below 3.0 are excluded from ink lists. Light reference = Ivory, dark reference = Pepper.",
     "local_additions": [
       "Black, White, Heather Gray, and Navy were added for the tee preview toggle. They are not in the Design Bot Comfort Colors 1717 list. Hex values are approximate.",
-      "Granite is named by the hockey override and is not a shirt color. shirt_colors.fallbacks maps it to Pepper."
+      "Granite is named by the hockey override and is not a shirt color. shirt_colors.fallbacks maps it to Pepper.",
+      "nd-shirts tokens and Silkscreen, Pixelify Sans, VT323, Playfair Display, and DM Serif Display were added after METADATA.pb license checks on 2026-10-31. All five license fields are OFL."
     ]
   },
   "shirt_colors": {
@@ -572,6 +573,52 @@
         ]
       },
       "texture": "distressed halftone"
+    },
+    "nd_shirts": {
+      "display_name": "ND Shirts",
+      "use_case": "Identity-first tee set rebuilt from the Design Bot nd-shirts plan",
+      "status": "nd_shirts_plan",
+      "colors": [
+        { "name": "ink_dark", "hex": "#1A1A1A", "role": "primary_text" },
+        { "name": "ink_cream", "hex": "#F5EEE1", "role": "primary_on_dark" },
+        { "name": "ink_brown", "hex": "#5A3318", "role": "primary_text" }
+      ],
+      "recommended_shirts": ["White", "Black", "Ivory", "Pepper", "Heather Gray", "Navy"],
+      "fonts": { "display": "Silkscreen", "supporting": "Caveat" },
+      "ink": {
+        "reference_light_shirt": { "name": "Ivory", "hex": "#F3EEDF" },
+        "reference_dark_shirt": { "name": "Pepper", "hex": "#4F4F4F" },
+        "on_light_shirt": [
+          { "name": "ink_window", "hex": "#111111", "contrast_ratio": 16.1, "wcag": "AA_normal" },
+          { "name": "ink_dark", "hex": "#1A1A1A", "contrast_ratio": 15.01, "wcag": "AA_normal" },
+          { "name": "ink_brown", "hex": "#5A3318", "contrast_ratio": 9.2, "wcag": "AA_normal" }
+        ],
+        "on_dark_shirt": [
+          { "name": "ink_cream", "hex": "#F5EEE1", "contrast_ratio": 7.9, "wcag": "AA_normal" }
+        ]
+      }
+    },
+    "pace_notes": {
+      "display_name": "Pace notes",
+      "use_case": "Generic rally pace-note lettering. No series or manufacturer marks.",
+      "status": "proposed_unverified",
+      "colors": [
+        { "name": "ink_window", "hex": "#111111", "role": "primary_text" },
+        { "name": "ink_cream", "hex": "#F5EEE1", "role": "primary_on_dark" },
+        { "name": "pace_orange", "hex": "#DA5A2A", "role": "accent" }
+      ],
+      "recommended_shirts": ["White", "Black", "Ivory", "Pepper", "Heather Gray", "Navy"],
+      "fonts": { "display": "Big Shoulders Stencil", "supporting": "Barlow Condensed" },
+      "ink": {
+        "reference_light_shirt": { "name": "Ivory", "hex": "#F3EEDF" },
+        "reference_dark_shirt": { "name": "Pepper", "hex": "#4F4F4F" },
+        "on_light_shirt": [
+          { "name": "ink_window", "hex": "#111111", "contrast_ratio": 16.1, "wcag": "AA_normal" }
+        ],
+        "on_dark_shirt": [
+          { "name": "ink_cream", "hex": "#F5EEE1", "contrast_ratio": 7.9, "wcag": "AA_normal" }
+        ]
+      }
     }
   },
   "fonts": {
@@ -675,6 +722,76 @@
         "commercial_use": true,
         "recommended_use": "neon accent, only 1-2 large words",
         "min_size_note": "letter height >=3in on DTG"
+      },
+      {
+        "family": "Silkscreen",
+        "google_fonts_name": "Silkscreen",
+        "google_fonts_url": "https://fonts.google.com/specimen/Silkscreen",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/silkscreen/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "pixel window and timer lettering",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Pixelify Sans",
+        "google_fonts_name": "Pixelify Sans",
+        "google_fonts_url": "https://fonts.google.com/specimen/Pixelify+Sans",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/pixelifysans/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "softer pixel display",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "VT323",
+        "google_fonts_name": "VT323",
+        "google_fonts_url": "https://fonts.google.com/specimen/VT323",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/vt323/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "terminal pixel supporting text",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Playfair Display",
+        "google_fonts_name": "Playfair Display",
+        "google_fonts_url": "https://fonts.google.com/specimen/Playfair+Display",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/playfairdisplay/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "high-contrast fashion serif",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "DM Serif Display",
+        "google_fonts_name": "DM Serif Display",
+        "google_fonts_url": "https://fonts.google.com/specimen/DM+Serif+Display",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/dmserifdisplay/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "serif subline for fashion layouts",
+        "min_size_note": "cap height >=0.5in"
+      },
+      {
+        "family": "Jersey 10",
+        "google_fonts_name": "Jersey 10",
+        "google_fonts_url": "https://fonts.google.com/specimen/Jersey+10",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/jersey10/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "pixel window lettering; closest match to the tabs-open references",
+        "min_size_note": "cap height >=0.5in; do not synthesize bold"
+      },
+      {
+        "family": "Big Shoulders Stencil",
+        "google_fonts_name": "Big Shoulders Stencil",
+        "google_fonts_url": "https://fonts.google.com/specimen/Big+Shoulders+Stencil+Display",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/bigshouldersstencildisplay/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "display_stencil pace-note caps at weight 800",
+        "min_size_note": "cap height >=0.5in"
       }
     ],
     "supporting": [
@@ -747,6 +864,16 @@
         "commercial_use": true,
         "recommended_use": "interior labels, prompts, and numbers",
         "min_size_note": "prompts 11–12 pt; micro labels at least 9 pt"
+      },
+      {
+        "family": "Barlow Condensed",
+        "google_fonts_name": "Barlow Condensed",
+        "google_fonts_url": "https://fonts.google.com/specimen/Barlow+Condensed",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/barlowcondensed/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "label_wide tracked small caps under stencil pace notes",
+        "min_size_note": "cap height >=0.4in"
       }
     ],
     "hand_drawn": [
@@ -769,6 +896,16 @@
         "commercial_use": true,
         "recommended_use": "messy-brain marker lines",
         "min_size_note": "cap height >=0.4in"
+      },
+      {
+        "family": "Kalam",
+        "google_fonts_name": "Kalam",
+        "google_fonts_url": "https://fonts.google.com/specimen/Kalam",
+        "license": "OFL-1.1",
+        "license_verified_via": "github.com/google/fonts/ofl/kalam/METADATA.pb license OFL, fetched 2026-10-31",
+        "commercial_use": true,
+        "recommended_use": "hand_note pace-note pen lettering",
+        "min_size_note": "x-height >=0.3in"
       }
     ],
     "mono": [
@@ -813,6 +950,12 @@
         "min_size_note": "x-height >=0.25in"
       }
     ],
+    "role_tokens": {
+      "pixel_window": "Jersey 10",
+      "display_stencil": "Big Shoulders Stencil",
+      "label_wide": "Barlow Condensed",
+      "hand_note": "Kalam"
+    },
     "pairing_rules": [
       "Exactly one display + one supporting font per design (hand_drawn may replace supporting).",
       "Do not mix decades (e.g., 70s groovy with 90s arcade).",
@@ -839,14 +982,16 @@
         "gold_infinity",
         "calm_sensory_pastel",
         "dopamine_chaos",
-        "earthy_vintage"
+        "earthy_vintage",
+        "nd_shirts"
       ],
       "palette_by_subniche": {
         "neurodiversity_general": "rainbow_infinity_retro",
         "autism": "gold_infinity",
         "low_stim_affirmation": "calm_sensory_pastel",
         "adhd_humor": "dopamine_chaos",
-        "audhd_neurospicy": "earthy_vintage"
+        "audhd_neurospicy": "earthy_vintage",
+        "nd_shirts": "nd_shirts"
       },
       "symbols_allowed": [
         "rainbow infinity",
@@ -1017,10 +1162,13 @@
         "Butter",
         "Moss"
       ],
-      "notes": "Motorsport speed italics, checker/stripe motifs; avoid manufacturer logos, WRC marks, and sponsor liveries.",
+      "notes": "Motorsport speed italics, checker/stripe motifs; avoid manufacturer logos, WRC marks, and sponsor liveries. Pace-note tees use font tokens display_stencil, label_wide, and hand_note. The orange road accent is sampled from the style reference as #DA5A2A. This market stays proposed_unverified.",
       "alt_fonts": [
         "Orbitron",
-        "Bebas Neue"
+        "Bebas Neue",
+        "Big Shoulders Stencil",
+        "Barlow Condensed",
+        "Kalam"
       ]
     },
     "cooking": {
@@ -1080,6 +1228,31 @@
         "Playfair Display"
       ]
     }
+  },
+  "color_tokens": {
+    "ink_dark": "#1A1A1A",
+    "ink_cream": "#F5EEE1",
+    "ink_brown": "#5A3318",
+    "shirt_light_ref": "#F3EEDF",
+    "shirt_dark_ref": "#4F4F4F",
+    "accents": {
+      "tab_pink": "#E0529A",
+      "tab_teal": "#4FB3B0",
+      "tab_yellow": "#F5C842",
+      "timer_orange": "#F07010",
+      "fashion_pink": "#D03070",
+      "masthead_red": "#C83838",
+      "loud_teal": "#10B090",
+      "loud_purple": "#6A4BB0",
+      "snack_red": "#E01E1E",
+      "snack_yellow": "#F0D010",
+      "badge_mustard": "#F0B030",
+      "badge_navy": "#103050",
+      "chili_red": "#F03030",
+      "retro_brown": "#6B4A2B",
+      "pace_orange": "#DA5A2A"
+    },
+    "note": "Accent hexes are sampled from the nd-shirts reference images and rounded. ink_cream replaces ink_dark on dark shirts. Accents stay the same."
   },
   "rules": {
     "do": [

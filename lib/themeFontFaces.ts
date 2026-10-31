@@ -29,8 +29,16 @@ export const THEME_FONT_CSS: Record<string, string> = {
   Orbitron: 'var(--font-theme-orbitron), sans-serif',
   Pacifico: 'var(--font-theme-pacifico), cursive',
   'Playfair Display': 'var(--font-playfair-display), serif',
+  Silkscreen: 'var(--font-theme-silkscreen), monospace',
+  'Pixelify Sans': 'var(--font-theme-pixelify-sans), sans-serif',
+  VT323: 'var(--font-theme-vt323), monospace',
+  'DM Serif Display': 'var(--font-theme-dm-serif-display), serif',
   Lexend: 'var(--font-lexend), sans-serif',
   'Atkinson Hyperlegible Next': 'var(--font-theme-atkinson-next), sans-serif',
+  'Jersey 10': 'var(--font-theme-jersey-10), var(--font-press-start-2p), monospace',
+  'Big Shoulders Stencil': 'var(--font-theme-big-shoulders-stencil), sans-serif',
+  'Barlow Condensed': 'var(--font-theme-barlow-condensed), sans-serif',
+  Kalam: 'var(--font-theme-kalam), cursive',
 };
 
 /** Faces already loaded for posters. app/themeFonts.ts must not load them again. */

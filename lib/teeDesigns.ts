@@ -81,7 +81,23 @@ function graphicIssue(graphic: TeeGraphic | undefined): string | null {
     }
     return null;
   }
+  if (graphic.type === 'nd') {
+    const kinds = ['error-window', 'warning-box', 'pace-stencil', 'pace-hand'];
+    if (!kinds.includes(graphic.kind)) return `Unknown nd art ${graphic.kind}.`;
+    if (!/^#[0-9A-Fa-f]{6}$/.test(graphic.accent)) return 'nd accent must be a #RRGGBB color.';
+    if (graphic.accent2 && !/^#[0-9A-Fa-f]{6}$/.test(graphic.accent2)) return 'nd accent2 must be a #RRGGBB color.';
+    return null;
+  }
   return 'Unknown graphic. Puzzle-piece graphics are not allowed.';
+}
+
+function snapHexes(design: TeeDesignFile, setName: InkSetName): string[] {
+  const graphic = design.graphic;
+  if (!graphic || graphic.type !== 'nd') return [];
+  const hexes = [graphic.accent, graphic.accent2, '#111111'].filter((hex): hex is string => Boolean(hex));
+  if (setName === 'on_light_shirt') hexes.push('#FFFFFF');
+  if (graphic.kind === 'pace-stencil' || graphic.kind === 'pace-hand') hexes.push('#DA5A2A');
+  return hexes;
 }
 
 function resolveInkSet(paletteId: string, setName: InkSetName, requested: string | undefined): ResolvedInkSet | null {
@@ -210,6 +226,8 @@ export function resolveTee(project: TeeProjectFile, design: TeeDesignFile): Reso
       const resolved = resolveInkSet(paletteId, setName, design.ink?.[setName]);
       if (!resolved) errors.push(`No ink list for ${paletteId} ${setName}.`);
       else {
+        const extra = snapHexes(design, setName).map((hex) => ({ name: hex.toUpperCase(), hex: hex.toUpperCase() }));
+        if (extra.length > 0) resolved.shapeInks = extra;
         inkBySet[setName] = resolved;
         warnings.push(...resolved.warnings);
       }

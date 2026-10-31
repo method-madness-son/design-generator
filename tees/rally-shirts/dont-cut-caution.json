@@ -1,0 +1,36 @@
+{
+  "id": "dont-cut-caution",
+  "project": "Rally Shirts",
+  "market": "rally",
+  "palette": "pace_notes",
+  "fonts": { "display": "Kalam", "supporting": "Kalam" },
+  "lines": [
+    { "text": "L4 ^ crest", "font": "display" },
+    { "text": "don't cut", "font": "display" },
+    { "text": "caution", "font": "display" },
+    { "text": "flat out", "font": "display" }
+  ],
+  "graphic": { "type": "nd", "kind": "pace-hand", "accent": "#DA5A2A" },
+  "placement": { "side": "front", "size": "full-front" },
+  "ink": { "on_light_shirt": "ink_window", "on_dark_shirt": "ink_cream" },
+  "shirts": ["White", "Black", "Heather Gray", "Navy", "Ivory", "Pepper"],
+  "etsy": {
+    "title": "Don't Cut Caution Tee, Handwritten Pace Note, Unisex Shirt",
+    "description": "A unisex tee with a handwritten pace note: L4 crest, don't cut, caution, flat out.\n\nWHAT YOU'LL GET\n• A physical unisex t-shirt, printed and shipped to you\n• Front print on a transparent artwork file\n• Dark ink on light shirts, cream ink on dark shirts\n\nNo team, series, or manufacturer marks. This listing is a physical shirt.",
+    "tags": [
+      "pace note tee",
+      "don't cut shirt",
+      "caution tee",
+      "flat out shirt",
+      "handwritten tee",
+      "funny graphic tee",
+      "unisex graphic tee",
+      "front print tee",
+      "rally humor tee",
+      "motorsport tee",
+      "statement tee",
+      "casual cotton tee"
+    ],
+    "category": "Clothing > Gender-Neutral Adult Clothing > Tops & Tees > T-shirts"
+  }
+}

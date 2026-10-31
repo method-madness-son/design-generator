@@ -104,6 +104,16 @@ export type MarketOverride = {
   print_note?: string;
 };
 
+export type ColorTokens = {
+  ink_dark: string;
+  ink_cream: string;
+  ink_brown?: string;
+  shirt_light_ref?: string;
+  shirt_dark_ref?: string;
+  accents: Record<string, string>;
+  note?: string;
+};
+
 export type GlobalTheme = {
   meta: ThemeMeta;
   shirt_colors: {
@@ -120,10 +130,12 @@ export type GlobalTheme = {
     supporting: FontFace[];
     hand_drawn: FontFace[];
     mono: FontFace[];
+    role_tokens?: Record<string, string>;
     pairing_rules: string[];
     banned: BannedFont[];
   };
   per_market_overrides: Record<string, MarketOverride>;
+  color_tokens?: ColorTokens;
   rules: {
     do: string[];
     dont: string[];
