@@ -179,6 +179,7 @@ export function getResolvedPoster(
     subtitle: poster.subtitle,
     icon: poster.icon,
     graphic: poster.graphic,
+    window: poster.window,
     pinterest: poster.pinterest,
     etsy: poster.etsy,
     aspectRatio: sizeOverride?.aspectRatio || overrides?.defaultLayout?.aspectRatio || project.defaultLayout.aspectRatio,

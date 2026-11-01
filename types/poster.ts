@@ -1,3 +1,4 @@
+import type { FractalType } from '@/components/Fractal';
 export type AspectRatioOption = '2/3' | '3/2' | '3/4' | '4/3' | '4/5' | '5/4' | '1/1' | '11/17';
 
 export type ProjectConfig = {
@@ -63,11 +64,13 @@ export type PosterFile = {
   };
   // Renders a built-in generative graphic (components/Fractal.tsx) instead of a lucide icon.
   graphic?: {
-    type: 'lorenz' | 'tree' | 'spiral' | 'road-arrow' | 'pen-arrow' | 'loop-arrow' | 'surfaces';
+    type: FractalType;
     position: 'top' | 'bottom';
     className?: string;
     sizeRem?: number;
   };
+  // Wraps the content in a retro dialog window (components/PosterWindow.tsx).
+  window?: PosterWindowConfig;
   overrides?: DeepPartial<Omit<ProjectConfig, 'id' | 'title' | 'description' | 'colorPalette' | 'palettes'>> & {
     colorPalette?: Record<string, string>;
   };
@@ -89,6 +92,18 @@ export type PosterFile = {
   // Evidence behind the etsy block, written by the etsy-listing-researcher agent. Not uploaded;
   // checked by `npm run listing:check` (lib/etsyListing.ts).
   research?: PosterResearch;
+};
+
+export type PosterWindowConfig = {
+  title: string;
+  controls?: 'close' | 'close-box' | 'alert' | 'min-max-close';
+  // dark: filled title bar; light: outlined title bar.
+  bar?: 'dark' | 'light';
+  // CSS color of an offset drop shadow behind the window.
+  shadow?: string;
+  // Classes for the window body (padding, gap, alignment) and the title bar (size, alignment).
+  className?: string;
+  barClassName?: string;
 };
 
 export type MarketResearch = {
@@ -149,6 +164,7 @@ export type ResolvedPoster = {
   paletteName?: string;
   icon?: PosterFile['icon'];
   graphic?: PosterFile['graphic'];
+  window?: PosterFile['window'];
   pinterest?: PosterFile['pinterest'];
   etsy?: PosterFile['etsy'];
 };

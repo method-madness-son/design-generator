@@ -39,6 +39,10 @@ export const GLOBAL_FONTS: Record<string, string> = {
   Kalam: THEME_FONT_CSS.Kalam,
   'Permanent Marker': THEME_FONT_CSS['Permanent Marker'],
   'Space Mono': THEME_FONT_CSS['Space Mono'],
+  'Pixelify Sans': THEME_FONT_CSS['Pixelify Sans'],
+  Anton: THEME_FONT_CSS.Anton,
+  Oswald: THEME_FONT_CSS.Oswald,
+  'Work Sans': THEME_FONT_CSS['Work Sans'],
   Georgia: "Georgia, 'Times New Roman', serif",
   Monospace: "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
 };

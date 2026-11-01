@@ -1,0 +1,20 @@
+{
+  "id": "out-of-spoons-badge",
+  "title": "",
+  "subtitle": "",
+  "graphic": {
+    "type": "spoon-badge",
+    "position": "top",
+    "className": "font-bold text-[#1F2F6B] [--graphic-font:var(--font-theme-oswald)]",
+    "sizeRem": 32
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#E36BA8"
+    },
+    "defaultTypography": {
+      "titleClasses": "hidden",
+      "subtitleClasses": "hidden"
+    }
+  }
+}

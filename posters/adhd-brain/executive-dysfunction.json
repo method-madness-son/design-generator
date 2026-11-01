@@ -1,0 +1,17 @@
+{
+  "id": "executive-dysfunction",
+  "title": "Executive\nDysfunction",
+  "subtitle": "but make it fashion",
+  "overrides": {
+    "colorPalette": {
+      "accent": "#D63C8C"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-playfair-display), serif",
+      "titleClasses": "whitespace-pre-line font-normal leading-[0.95] tracking-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "italic text-[var(--poster-ink)] after:mx-auto after:mt-6 after:block after:h-[3px] after:w-[4.5em] after:bg-[var(--poster-accent)] after:content-['']",
+      "titleRem": 5.6,
+      "subtitleRem": 2.2
+    }
+  }
+}

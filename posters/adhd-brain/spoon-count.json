@@ -1,0 +1,27 @@
+{
+  "id": "spoon-count",
+  "title": "Today's budget: 1\nChoose wisely.",
+  "subtitle": "",
+  "graphic": {
+    "type": "spoon-count",
+    "position": "top",
+    "className": "w-full text-[var(--poster-ink)]",
+    "sizeRem": 28
+  },
+  "window": {
+    "title": "Spoon Count",
+    "controls": "close-box",
+    "bar": "light",
+    "className": "items-start gap-6 p-7 text-left"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#F5D33F"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "hidden",
+      "titleClasses": "w-full whitespace-pre-line border-t-[5px] border-[var(--poster-ink)] pt-6 font-semibold leading-[1.5] text-[var(--poster-ink)]",
+      "titleRem": 2.6
+    }
+  }
+}

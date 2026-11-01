@@ -1,0 +1,22 @@
+{
+  "id": "out-of-spoons",
+  "title": "out of spoons",
+  "subtitle": "recharging",
+  "graphic": {
+    "type": "spoon-battery",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 22
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#E45C49"
+    },
+    "defaultTypography": {
+      "titleClasses": "font-bold leading-none text-[var(--poster-ink)]",
+      "subtitleClasses": "-mt-2 font-semibold text-[var(--poster-ink)] before:mr-4 before:text-[var(--poster-accent)] before:content-['♥'] after:ml-4 after:text-[var(--poster-accent)] after:content-['♥']",
+      "titleRem": 4.6,
+      "subtitleRem": 2.2
+    }
+  }
+}

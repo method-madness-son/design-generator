@@ -1,0 +1,27 @@
+{
+  "id": "hyperfocus-loading",
+  "title": "Hyperfocus loading",
+  "subtitle": "99% (do not disturb)",
+  "graphic": {
+    "type": "progress-bar",
+    "position": "bottom",
+    "className": "order-2 w-full",
+    "sizeRem": 26
+  },
+  "window": {
+    "title": "Loading...",
+    "controls": "min-max-close",
+    "barClassName": "text-center",
+    "className": "items-center gap-6 p-8 text-center"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#EFA03B"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "order-3 leading-tight text-[var(--poster-ink)]",
+      "titleRem": 2.8,
+      "subtitleRem": 1.9
+    }
+  }
+}

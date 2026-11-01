@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { Fractal } from '@/components/Fractal';
 import { IconRenderer } from '@/components/IconRenderer';
+import { PosterWindow } from '@/components/PosterWindow';
 import { cn } from '@/lib/utils';
 import type { ResolvedPoster } from '@/types/poster';
 
@@ -35,21 +36,8 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
   const visual = graphic ?? icon;
   const visualPosition = poster.graphic?.position ?? poster.icon?.position;
 
-  return (
-    <div
-      id={id}
-      // p-16 is the safety margin for bleed/frame-mat tolerance; containerClasses may widen it.
-      className={cn('flex shrink-0 flex-col overflow-hidden p-16', poster.bgClass, poster.containerClasses)}
-      style={
-        {
-          width: CANVAS_WIDTH,
-          aspectRatio: poster.aspectRatio.replace('/', ' / '),
-          fontFamily: poster.subtitleFont,
-          ...paletteVars,
-          backgroundColor: poster.backgroundColor,
-        } as CSSProperties
-      }
-    >
+  const content = (
+    <>
       {visualPosition === 'top' && visual}
       {/* break-words/min-w-0: a long run with no spaces (e.g. "console.log('here');") can't wrap
           at a space, so without this it overflows the canvas instead of shrinking to fit. */}
@@ -80,6 +68,25 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
         </ul>
       )}
       {visualPosition === 'bottom' && visual}
+    </>
+  );
+
+  return (
+    <div
+      id={id}
+      // p-16 is the safety margin for bleed/frame-mat tolerance; containerClasses may widen it.
+      className={cn('flex shrink-0 flex-col overflow-hidden p-16', poster.bgClass, poster.containerClasses)}
+      style={
+        {
+          width: CANVAS_WIDTH,
+          aspectRatio: poster.aspectRatio.replace('/', ' / '),
+          fontFamily: poster.subtitleFont,
+          ...paletteVars,
+          backgroundColor: poster.backgroundColor,
+        } as CSSProperties
+      }
+    >
+      {poster.window ? <PosterWindow config={poster.window}>{content}</PosterWindow> : content}
     </div>
   );
 }

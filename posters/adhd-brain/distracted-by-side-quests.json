@@ -1,0 +1,21 @@
+{
+  "id": "distracted-by-side-quests",
+  "title": "distracted by side quests",
+  "subtitle": "",
+  "graphic": {
+    "type": "side-quest-fork",
+    "position": "top",
+    "className": "text-[var(--poster-ink)] [--graphic-font:var(--font-theme-pixelify-sans)]",
+    "sizeRem": 30
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#B497E7"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "hidden",
+      "titleClasses": "font-bold leading-tight text-[var(--poster-ink)]",
+      "titleRem": 2.2
+    }
+  }
+}
