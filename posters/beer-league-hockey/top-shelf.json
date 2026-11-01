@@ -1,0 +1,22 @@
+{
+  "id": "top-shelf",
+  "title": "Top\nShelf",
+  "subtitle": "where mama keeps the cookies",
+  "overrides": {
+    "colorPalette": {
+      "accent": "#C8102E",
+      "background": "#F5F7FA",
+      "ink": "#0B2545"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-playfair-display), serif",
+      "titleClasses": "whitespace-pre-line font-normal leading-[0.95] tracking-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "italic text-[var(--poster-ink)] after:mx-auto after:mt-6 after:block after:h-[3px] after:w-[4.5em] after:bg-[var(--poster-accent)] after:content-['']",
+      "titleRem": 6.4,
+      "subtitleRem": 2.2,
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "bodyRem": 2.2,
+      "titleFontFamily": "var(--font-playfair-display), serif"
+    }
+  }
+}

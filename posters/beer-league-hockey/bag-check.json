@@ -1,0 +1,35 @@
+{
+  "id": "bag-check",
+  "title": "",
+  "subtitle": "",
+  "body": [
+    "Find the other glove",
+    "Skates: packed",
+    "Stick: taped"
+  ],
+  "window": {
+    "title": "Bag Check",
+    "controls": "close-box",
+    "barClassName": "py-3 text-center text-[2.8rem]",
+    "className": "px-6 py-3"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleClasses": "hidden",
+      "subtitleClasses": "hidden",
+      "bodyClasses": "[&>li]:tracking-tight w-full text-left [&>li]:flex [&>li]:items-center [&>li]:gap-5 [&>li]:py-5 [&>li]:border-b-4 [&>li]:border-dashed [&>li]:border-[var(--poster-ink)] [&>li:last-child]:border-b-0 [&>li]:before:grid [&>li]:before:size-[1.3em] [&>li]:before:shrink-0 [&>li]:before:place-items-center [&>li]:before:border-[5px] [&>li]:before:border-[var(--poster-ink)] [&>li]:before:text-[1.15em] [&>li]:before:font-bold [&>li]:before:leading-none [&>li]:before:text-[var(--poster-accent)] [&>li]:before:content-['✓'] [&>li:first-child]:text-neutral-400 [&>li:first-child]:before:bg-neutral-200 [&>li:first-child]:before:content-['']",
+      "bodyRem": 2.1,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleRem": 3,
+      "subtitleRem": 2
+    },
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-6 p-8 text-center"
+    },
+    "colorPalette": {
+      "background": "#F5F7FA",
+      "ink": "#0B2545",
+      "accent": "#C8102E"
+    }
+  }
+}

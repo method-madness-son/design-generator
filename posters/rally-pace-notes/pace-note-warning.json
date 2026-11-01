@@ -1,0 +1,31 @@
+{
+  "id": "pace-note-warning",
+  "title": "Square left.\nDon't cut.",
+  "subtitle": "",
+  "body": [
+    "Lift",
+    "Flat out"
+  ],
+  "window": {
+    "title": "Pace Note",
+    "controls": "close",
+    "shadow": "#DA5A2A",
+    "className": "items-start gap-8 p-8 text-left"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#DA5A2A",
+      "background": "#FAF8F3",
+      "ink": "#111111"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "hidden",
+      "bodyClasses": "flex w-full gap-8 [&>li]:flex-1 [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:py-1 [&>li]:text-center [&>li:last-child]:bg-[var(--poster-ink)] [&>li:last-child]:text-[var(--poster-background)]",
+      "titleRem": 3.1,
+      "bodyRem": 2.3,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleClasses": "whitespace-pre-line font-semibold leading-tight text-[var(--poster-ink)]",
+      "subtitleRem": 2
+    }
+  }
+}
