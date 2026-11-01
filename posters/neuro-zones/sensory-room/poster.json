@@ -1,0 +1,28 @@
+{
+  "id": "sensory-room",
+  "title": "Sensory Room",
+  "subtitle": "A calm place to rest, move, or reset.",
+  "icon": {
+    "name": "Sparkles",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Sensory Room Sign | Printable Wall Art for Sensory-Friendly Spaces",
+    "description": "A soft Sensory Room sign marking a calm space to rest, move, and reset. Printable wall art for home sensory rooms, school sensory spaces, and therapy offices supporting autistic and sensory-sensitive kids and adults.",
+    "keywords": [
+      "sensory room sign printable",
+      "sensory room decor ideas",
+      "sensory room aesthetic",
+      "autism classroom decor",
+      "sensory friendly sign",
+      "sensory space decor",
+      "autism home decor",
+      "sensory room wall art",
+      "neurodivergent decor",
+      "sensory corner sign"
+    ],
+    "board": "Sensory Rooms & Spaces",
+    "altText": "Sensory Room physical poster print with a sparkles icon on a soft lavender background, for sensory-friendly spaces."
+  }
+}

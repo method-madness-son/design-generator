@@ -1,0 +1,71 @@
+{
+  "etsy": {
+    "title": "Git Commit Poster, Friday 4:59 PM wip Joke, Funny Coding Wall Art, Office Humor Print, Gift for Programmers",
+    "description": "A funny git commit poster for every Friday 4:59 PM 'wip' commit, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "git commit poster",
+      "git poster",
+      "git art",
+      "wip commit joke",
+      "friday deploy joke",
+      "coding wall art",
+      "office humor print",
+      "gift for programmers",
+      "version control",
+      "computer humor art",
+      "coworker gift",
+      "developer art print",
+      "dark mode wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "git commit poster",
+    "etsy": {
+      "searchPhrases": [
+        "git commit poster",
+        "git poster",
+        "git art",
+        "developer wall decor",
+        "coding theme"
+      ],
+      "competitorNotes": [
+        "Etsy git posters lean on the 'in case of fire: git commit, git push' sign and mock terminal commit messages.",
+        "Friday-deploy jokes show up on mugs and shirts rather than posters, so the 4:59 PM angle is distinct.",
+        "Framed git prints run about $50-60; cheat sheets are cheap digital downloads."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "in case of fire git commit",
+        "tech room decor",
+        "computer humor art"
+      ],
+      "competitorNotes": [
+        "The one git poster on Amazon is the 'in case of fire' joke as a 13x13 print, sold as tech room decor.",
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/listing/4302292858/funny-git-commit-poster-for-developers",
+      "https://www.etsy.com/market/git_art",
+      "https://www.etsy.com/market/developer_wall_decor",
+      "https://www.etsy.com/market/coding_theme",
+      "https://www.etsy.com/listing/1081368002/programmer-mug-rule-1-never-push",
+      "https://www.amazon.com/Generic-Coding-Poster-Computer-16x16in/dp/B0D9DKWGXR",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "'git commit poster' matches an Etsy listing title and the search; 'git poster' is left for tags so git-stash can lead with it. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
+  }
+}

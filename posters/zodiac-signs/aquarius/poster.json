@@ -1,0 +1,33 @@
+{
+  "id": "aquarius",
+  "title": "Aquarius",
+  "subtitle": "January 20 – February 18",
+  "body": [
+    "Independent",
+    "Visionary",
+    "Unconventional"
+  ],
+  "icon": {
+    "name": "ZodiacAquarius",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Aquarius Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Aquarius poster with the water-bearer symbol, birth date range, and core traits: independent, visionary, unconventional. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "aquarius poster",
+      "aquarius zodiac sign",
+      "aquarius wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "aquarius birthday gift",
+      "minimalist astrology print",
+      "aquarius symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Aquarius zodiac poster with a water-bearer symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

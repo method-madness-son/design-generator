@@ -1,0 +1,28 @@
+{
+  "id": "volume-check",
+  "title": "Volume Check",
+  "subtitle": "Soft voices, please. Keep noise low.",
+  "icon": {
+    "name": "Volume1",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Volume Check Sign | Printable Noise Reminder Wall Art for Classroom & Office",
+    "description": "A simple Volume Check sign reminding visitors to keep their voices soft in shared, low-noise spaces. Printable wall art for classrooms, libraries, offices, and sensory-friendly homes.",
+    "keywords": [
+      "volume check sign",
+      "indoor voice sign printable",
+      "quiet voices sign",
+      "noise level reminder",
+      "classroom noise sign",
+      "library volume sign",
+      "sensory friendly noise sign",
+      "low noise room decor",
+      "office quiet reminder",
+      "soft voices sign"
+    ],
+    "board": "Quiet Spaces & Sensory Corners",
+    "altText": "Volume Check physical poster print with a volume icon on a soft sage green background, for low-noise shared spaces."
+  }
+}

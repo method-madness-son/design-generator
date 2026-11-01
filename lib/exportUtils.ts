@@ -52,7 +52,7 @@ async function nodeToExactPng(node: HTMLElement, widthPx: number, heightPx: numb
 }
 
 // Saves the current preview as this poster's print file for one listing size, into
-// posters/<projectId>/exports/ via the local studio API, and returns the poster's saved sizes.
+// posters/<projectId>/<posterId>/exports/ via the local studio API, and returns the poster's saved sizes.
 // The Etsy copy is not bundled: the poster JSON holds the single listing for every size.
 export async function saveListingExport(
   elementId: string,

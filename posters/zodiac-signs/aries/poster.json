@@ -1,0 +1,33 @@
+{
+  "id": "aries",
+  "title": "Aries",
+  "subtitle": "March 21 – April 19",
+  "body": [
+    "Bold",
+    "Passionate",
+    "Impulsive"
+  ],
+  "icon": {
+    "name": "ZodiacAries",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Aries Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Aries poster with the ram symbol, birth date range, and core traits: bold, passionate, impulsive. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "aries poster",
+      "aries zodiac sign",
+      "aries wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "aries birthday gift",
+      "minimalist astrology print",
+      "aries symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Aries zodiac poster with a ram symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

@@ -82,7 +82,8 @@ export type PosterFile = {
     board: string;
     altText: string;
   };
-  // Copy-paste-ready fields for an Etsy listing (tags: max 13, each max 20 characters).
+  // Copy-paste-ready fields for an Etsy listing (tags: max 13, each max 20 characters). Stored in
+  // the poster's etsy.json beside poster.json and merged in by getPosterFile.
   etsy?: {
     title: string;
     description: string;

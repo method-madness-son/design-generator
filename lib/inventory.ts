@@ -2,8 +2,8 @@
  * Poster inventory for the /inventory page. Every status is derived from what the pipeline already
  * records, so there is nothing to keep in sync by hand:
  *
- *   saved sizes     posters/<projectId>/exports/   (studio "Save for Etsy listing")
- *   listing check   lib/etsyListing.ts             (the poster's etsy block)
+ *   saved sizes     posters/<projectId>/<posterId>/exports/   (studio "Save for Etsy listing")
+ *   listing check   lib/etsyListing.ts on posters/<projectId>/<posterId>/etsy.json
  *   Printify state  printify/state.json            (written by `npm run printify:sync`)
  */
 import { checkListing } from '@/lib/etsyListing';

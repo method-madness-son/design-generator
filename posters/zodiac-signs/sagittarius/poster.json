@@ -1,0 +1,33 @@
+{
+  "id": "sagittarius",
+  "title": "Sagittarius",
+  "subtitle": "November 22 – December 21",
+  "body": [
+    "Adventurous",
+    "Optimistic",
+    "Blunt"
+  ],
+  "icon": {
+    "name": "ZodiacSagittarius",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Sagittarius Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Sagittarius poster with the archer symbol, birth date range, and core traits: adventurous, optimistic, blunt. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "sagittarius poster",
+      "sagittarius zodiac sign",
+      "sagittarius wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "sagittarius birthday gift",
+      "minimalist astrology print",
+      "sagittarius symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Sagittarius zodiac poster with an archer symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

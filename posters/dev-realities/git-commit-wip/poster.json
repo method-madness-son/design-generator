@@ -1,0 +1,33 @@
+{
+  "id": "git-commit-wip",
+  "title": "git commit -m \"wip\"",
+  "subtitle": "Friday. 4:59 PM.",
+  "icon": {
+    "name": "Clock",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3
+    }
+  },
+  "pinterest": {
+    "title": "git commit -m \"wip\" Poster | Funny Dark Mode Git Wall Art",
+    "description": "A dark-mode poster for every Friday-afternoon 'wip' commit. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "git joke poster",
+      "git commit wip poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "git humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading git commit -m \"wip\" with a clock icon in green, for developer office decor."
+  }
+}

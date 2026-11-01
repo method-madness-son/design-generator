@@ -1,0 +1,34 @@
+{
+  "id": "http-status-codes",
+  "title": "200|400|500",
+  "subtitle": "200: OK.\n400: Your fault.\n500: My fault.",
+  "icon": {
+    "name": "ServerCrash",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.5,
+      "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)] whitespace-pre-line"
+    }
+  },
+  "pinterest": {
+    "title": "HTTP Status Codes Poster | Funny Dark Mode Backend Wall Art",
+    "description": "A dark-mode poster explaining HTTP status codes the honest way: 200 OK, 400 your fault, 500 my fault. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "http status code poster",
+      "backend joke poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "api humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading 200 | 400 | 500 with a crashed server icon in green, for developer office decor."
+  }
+}

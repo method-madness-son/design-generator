@@ -61,7 +61,7 @@ const USAGE = `Usage:
   npm run printify:check -- <projectId> [posterId...]
   npm run printify:sync -- <projectId> [posterId...] [--publish] [--dry-run] [--image-base-url <url>]
 
-Print files are saved by the studio to posters/<projectId>/exports/<posterId>-<size>.png.
+Print files are saved by the studio to posters/<projectId>/<posterId>/exports/<posterId>-<size>.png.
 With no poster ids, only posters that have a saved export are synced.`;
 
 const client = () => new PrintifyClient(process.env.PRINTIFY_API_TOKEN ?? '');

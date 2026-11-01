@@ -1,0 +1,34 @@
+{
+  "id": "typeof-nan",
+  "title": "typeof NaN === 'number'",
+  "subtitle": "Welcome to JavaScript. Nothing makes sense.",
+  "icon": {
+    "name": "Zap",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3,
+      "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)]/80 italic"
+    }
+  },
+  "pinterest": {
+    "title": "typeof NaN === 'number' Poster | Funny Dark Mode JavaScript Wall Art",
+    "description": "A dark-mode poster celebrating JavaScript's weirdest quirk: typeof NaN is 'number'. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "javascript joke poster",
+      "typeof nan poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "javascript quirks print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading typeof NaN === 'number' with a lightning bolt icon in red, for developer office decor."
+  }
+}

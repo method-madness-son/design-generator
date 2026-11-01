@@ -1,0 +1,33 @@
+{
+  "id": "from-ubuntu-latest",
+  "title": "FROM ubuntu:latest",
+  "subtitle": "Shipping \"my machine\" to production.",
+  "icon": {
+    "name": "Box",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.25
+    }
+  },
+  "pinterest": {
+    "title": "FROM ubuntu:latest Poster | Funny Dark Mode Docker Wall Art",
+    "description": "A dark-mode poster for every Dockerfile that just ships 'my machine' to prod. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "docker joke poster",
+      "ubuntu latest poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "docker humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading FROM ubuntu:latest with a box icon in blue, for developer office decor."
+  }
+}

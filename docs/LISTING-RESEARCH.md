@@ -1,6 +1,6 @@
 # Etsy listing research agent
 
-`.claude/agents/etsy-listing-researcher.md` is a Claude Code subagent. It researches Etsy and Amazon for a poster, rewrites the poster's `etsy` block, and writes its evidence to a `research` block. A listing it leaves behind passes `npm run listing:check -- --strict`, and the Printify sync (`docs/PRINTIFY-PIPELINE.md`) uploads it as is.
+`.claude/agents/etsy-listing-researcher.md` is a Claude Code subagent. It researches Etsy and Amazon for a poster, rewrites the poster's Etsy listing, and writes its evidence beside it, both in the poster's `etsy.json`. A listing it leaves behind passes `npm run listing:check -- --strict`, and the Printify sync (`docs/PRINTIFY-PIPELINE.md`) uploads it as is.
 
 ## Using it
 
@@ -10,7 +10,7 @@ In Claude Code, from this repo:
 
 > Use the etsy-listing-researcher agent on zodiac-signs sagittarius
 
-If you name no posters, the agent works on the ones `listing:brief --needs-work` lists. Those are posters that fail the check or have no research yet. The agent edits only `etsy` and `research`. It never syncs, commits, or pushes, so review its diff before you run `printify:sync`.
+If you name no posters, the agent works on the ones `listing:brief --needs-work` lists. Those are posters that fail the check or have no research yet. The agent edits only `posters/<project>/<poster>/etsy.json`, never the design in `poster.json` or the `exports/` folder. It never syncs, commits, or pushes, so review its diff before you run `printify:sync`.
 
 ## Which posters it works on
 
@@ -62,7 +62,7 @@ It lives in the poster JSON next to `etsy`, and it is typed as `PosterResearch` 
 - `priceRange` is optional. The agent fills it in only when it saw at least two prices for comparable physical posters.
 - The agent treats Etsy `/market/<phrase>` URLs as search phrases Etsy has indexed. Amazon is used only for buyer vocabulary and positioning.
 
-`posters/dev-realities/vim-wq.json` is a worked example.
+`posters/dev-realities/vim-wq/etsy.json` is a worked example.
 
 ## Network
 

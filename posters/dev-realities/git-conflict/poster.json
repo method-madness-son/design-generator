@@ -1,0 +1,35 @@
+{
+  "id": "git-conflict",
+  "title": "<<<<<<< HEAD\n=======\n>>>>>>> feature",
+  "subtitle": "Choose your fighter.",
+  "icon": {
+    "name": "Swords",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 2,
+      "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-accent)] whitespace-pre-line",
+      "subtitleClasses": "font-semibold leading-[1.05] uppercase tracking-widest text-[var(--poster-ink)]"
+    }
+  },
+  "pinterest": {
+    "title": "Git Merge Conflict Poster | Funny Dark Mode Developer Wall Art",
+    "description": "A dark-mode poster for every merge conflict showdown. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "git joke poster",
+      "merge conflict poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "git humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster showing a git merge conflict marker with crossed swords icon in red, for developer office decor."
+  }
+}

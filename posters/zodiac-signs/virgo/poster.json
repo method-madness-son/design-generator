@@ -1,0 +1,33 @@
+{
+  "id": "virgo",
+  "title": "Virgo",
+  "subtitle": "August 23 – September 22",
+  "body": [
+    "Practical",
+    "Analytical",
+    "Modest"
+  ],
+  "icon": {
+    "name": "ZodiacVirgo",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Virgo Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Virgo poster with the maiden symbol, birth date range, and core traits: practical, analytical, modest. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "virgo poster",
+      "virgo zodiac sign",
+      "virgo wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "virgo birthday gift",
+      "minimalist astrology print",
+      "virgo symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Virgo zodiac poster with a maiden symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

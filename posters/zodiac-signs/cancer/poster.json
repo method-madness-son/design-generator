@@ -1,0 +1,33 @@
+{
+  "id": "cancer",
+  "title": "Cancer",
+  "subtitle": "June 21 – July 22",
+  "body": [
+    "Nurturing",
+    "Intuitive",
+    "Sentimental"
+  ],
+  "icon": {
+    "name": "ZodiacCancer",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Cancer Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Cancer poster with the crab symbol, birth date range, and core traits: nurturing, intuitive, sentimental. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "cancer poster",
+      "cancer zodiac sign",
+      "cancer wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "cancer birthday gift",
+      "minimalist astrology print",
+      "cancer symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Cancer zodiac poster with a crab symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

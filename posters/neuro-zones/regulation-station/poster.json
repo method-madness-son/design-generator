@@ -1,0 +1,28 @@
+{
+  "id": "regulation-station",
+  "title": "Regulation Station",
+  "subtitle": "Pause. Breathe. Return when you’re ready.",
+  "icon": {
+    "name": "Wind",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Regulation Station Sign | Printable Calm Down Corner Wall Art for Classroom & Home",
+    "description": "A gentle Regulation Station sign for calm down corners and emotional regulation spaces. Printable wall art encouraging a pause and a breath before returning — perfect for classrooms, counselor offices, and neurodivergent-friendly homes.",
+    "keywords": [
+      "regulation station sign",
+      "calm down corner sign printable",
+      "zones of regulation poster",
+      "emotional regulation printable",
+      "calm corner classroom",
+      "counselor office decor",
+      "self regulation sign",
+      "classroom calm corner",
+      "sensory regulation printable",
+      "calming corner wall art"
+    ],
+    "board": "Calm Down Corners & Regulation",
+    "altText": "Regulation Station physical poster print with a wind icon on a sage green background, for calm-down corners."
+  }
+}

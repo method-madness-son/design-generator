@@ -1,0 +1,33 @@
+{
+  "id": "capricorn",
+  "title": "Capricorn",
+  "subtitle": "December 22 – January 19",
+  "body": [
+    "Disciplined",
+    "Ambitious",
+    "Patient"
+  ],
+  "icon": {
+    "name": "ZodiacCapricorn",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Capricorn Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Capricorn poster with the sea-goat symbol, birth date range, and core traits: disciplined, ambitious, patient. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "capricorn poster",
+      "capricorn zodiac sign",
+      "capricorn wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "capricorn birthday gift",
+      "minimalist astrology print",
+      "capricorn symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Capricorn zodiac poster with a sea-goat symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

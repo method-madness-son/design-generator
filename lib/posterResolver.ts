@@ -10,6 +10,18 @@ const POSTERS_DIR = path.join(process.cwd(), 'posters');
 const PROJECT_FILE = 'project.json';
 const DEFAULT_PRINT_WIDTH_INCHES = 12;
 
+/**
+ * Every poster is a folder:
+ *
+ *   posters/<projectId>/<posterId>/poster.json   the design
+ *   posters/<projectId>/<posterId>/etsy.json     its Etsy listing: { etsy, research } (null until written)
+ *   posters/<projectId>/<posterId>/exports/      saved print files (lib/posterExports.ts)
+ */
+export const POSTER_FILE = 'poster.json';
+export const LISTING_FILE = 'etsy.json';
+
+export type PosterListing = { etsy: PosterFile['etsy'] | null; research: PosterFile['research'] | null };
+
 // Ids come from the URL, so keep them to plain slugs before touching the filesystem.
 export const isSlug = (value: string) => /^[a-z0-9][a-z0-9-_]*$/i.test(value);
 
@@ -32,21 +44,30 @@ export function getProjects(): ProjectConfig[] {
     .filter((project): project is ProjectConfig => project !== null);
 }
 
+export function posterDir(projectId: string, posterId: string): string {
+  if (!isSlug(projectId) || !isSlug(posterId)) throw new Error(`Bad poster id "${projectId}/${posterId}".`);
+  return path.join(POSTERS_DIR, projectId, posterId);
+}
+
 export function getPosterIds(projectId: string): string[] {
   if (!isSlug(projectId)) return [];
   const dir = path.join(POSTERS_DIR, projectId);
   if (!fs.existsSync(dir)) return [];
   return fs
-    .readdirSync(dir)
-    .filter((file) => file.endsWith('.json') && file !== PROJECT_FILE)
-    .map((file) => file.replace(/\.json$/, ''))
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && isSlug(entry.name) && fs.existsSync(path.join(dir, entry.name, POSTER_FILE)))
+    .map((entry) => entry.name)
     .sort();
 }
 
-// The raw poster JSON (posters/<projectId>/<posterId>.json), or null if it does not exist.
+// The poster's design with its Etsy listing merged in, or null if the poster does not exist.
 export function getPosterFile(projectId: string, posterId: string): PosterFile | null {
   if (!isSlug(projectId) || !isSlug(posterId)) return null;
-  return readJson<PosterFile>(path.join(POSTERS_DIR, projectId, `${posterId}.json`));
+  const dir = posterDir(projectId, posterId);
+  const poster = readJson<PosterFile>(path.join(dir, POSTER_FILE));
+  if (!poster) return null;
+  const listing = readJson<PosterListing>(path.join(dir, LISTING_FILE));
+  return { ...poster, etsy: listing?.etsy ?? undefined, research: listing?.research ?? undefined };
 }
 
 // For CLIs: the named posters (all of the project's when none are named), or a clear error.

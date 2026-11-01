@@ -1,0 +1,35 @@
+{
+  "id": "rm-node-modules",
+  "title": "rm -rf node_modules\nnpm install",
+  "subtitle": "The universal fix for everything.",
+  "icon": {
+    "name": "Trash2",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3,
+      "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-accent)] whitespace-pre-line",
+      "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)] border-l-4 border-[var(--poster-ink)]/30 pl-4"
+    }
+  },
+  "pinterest": {
+    "title": "rm -rf node_modules Poster | Funny Dark Mode npm Wall Art",
+    "description": "A dark-mode poster for the universal fix: delete node_modules and reinstall. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "npm joke poster",
+      "node modules poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "npm humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading rm -rf node_modules, npm install with a trash can icon in yellow, for developer office decor."
+  }
+}

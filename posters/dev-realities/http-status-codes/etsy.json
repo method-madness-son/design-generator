@@ -1,0 +1,67 @@
+{
+  "etsy": {
+    "title": "HTTP Status Codes Poster, 200 400 500 Backend Joke, API Developer Wall Art, Web Dev Coworker Gift",
+    "description": "A funny HTTP status codes poster that explains them the honest way: 200 OK, 400 your fault, 500 my fault.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "http status codes",
+      "http status poster",
+      "status code joke",
+      "backend developer",
+      "api humor print",
+      "web dev gift",
+      "rest api poster",
+      "server error joke",
+      "it support humor",
+      "developer office art",
+      "minimal tech print",
+      "coder humor",
+      "cheat sheet parody"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "http status codes poster",
+    "etsy": {
+      "searchPhrases": [
+        "http status codes poster",
+        "code poster",
+        "code posters",
+        "coding poster",
+        "software engineer wall decor"
+      ],
+      "competitorNotes": [
+        "Etsy HTTP status code posters are serious REST API reference charts sold as digital downloads (about GBP 5-8).",
+        "A 418 teapot shirt is the main joke item; a three-code joke print parodies the reference charts."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny http status code",
+        "coding posters"
+      ],
+      "competitorNotes": [
+        "Amazon has no HTTP status code posters; only a 403 Forbidden novelty shirt surfaced.",
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/code_poster",
+      "https://www.etsy.com/uk/market/code_posters",
+      "https://www.etsy.com/market/coding_poster",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.amazon.com/Funny-HTTP-Status-Code-T-Shirt/dp/B07N4R6LDV",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "'HTTP Status Codes Poster' is the exact phrase competing reference listings use; the snippet did not expose that listing's URL. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
+  }
+}

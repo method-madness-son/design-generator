@@ -1,0 +1,28 @@
+{
+  "id": "decompression-room",
+  "title": "Unwind Zone",
+  "subtitle": "Take a quiet moment. No explanation needed.",
+  "icon": {
+    "name": "Sofa",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Unwind Zone Sign | Printable Calm Room & Decompression Space Wall Art",
+    "description": "A soft, calming Unwind Zone sign for decompression spaces, relaxation corners, and no-pressure retreat rooms. Printable wall art that tells visitors this is a space to rest without explanation — ideal for homes, schools, and therapy offices.",
+    "keywords": [
+      "Unwind Zone sign",
+      "decompression room printable",
+      "calm room decor",
+      "relaxation room sign",
+      "quiet room decor ideas",
+      "no pressure zone printable",
+      "therapy office decor",
+      "neurodivergent calm space",
+      "rest room sign printable",
+      "meditation room decor"
+    ],
+    "board": "Calm Corners & Sensory Spaces",
+    "altText": "Unwind Zone physical poster print with a sofa icon on a soft blue background, for calm and decompression spaces."
+  }
+}

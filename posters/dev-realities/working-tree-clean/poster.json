@@ -1,0 +1,34 @@
+{
+  "id": "working-tree-clean",
+  "title": "working tree clean",
+  "subtitle": "Time to deploy and go home.",
+  "icon": {
+    "name": "CheckCircle2",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3,
+      "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)]/80"
+    }
+  },
+  "pinterest": {
+    "title": "working tree clean Poster | Funny Dark Mode Git Wall Art",
+    "description": "A dark-mode poster for the rare, satisfying moment of a clean working tree. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "git joke poster",
+      "working tree clean poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "git humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading working tree clean with a green checkmark icon, for developer office decor."
+  }
+}

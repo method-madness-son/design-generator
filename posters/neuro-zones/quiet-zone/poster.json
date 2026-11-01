@@ -1,0 +1,28 @@
+{
+  "id": "quiet-zone",
+  "title": "Quiet Zone",
+  "subtitle": "Soft voices. Headphones welcome.",
+  "icon": {
+    "name": "volume-off",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Quiet Zone Sign | Printable Low-Stimulation Wall Art for Home, School & Office",
+    "description": "A calm Quiet Zone sign for low-stimulation spaces where soft voices and headphones are welcome. Printable wall art for libraries, classrooms, offices, and sensory-friendly homes.",
+    "keywords": [
+      "quiet zone sign printable",
+      "library quiet sign",
+      "quiet please sign",
+      "low stimulation decor",
+      "sensory friendly sign",
+      "classroom quiet corner",
+      "office quiet zone",
+      "quiet room decor",
+      "neurodivergent sign printable",
+      "soft voices sign"
+    ],
+    "board": "Quiet Spaces & Sensory Corners",
+    "altText": "Quiet Zone physical poster print with a muted volume icon on a dark slate background, for low-stimulation spaces."
+  }
+}

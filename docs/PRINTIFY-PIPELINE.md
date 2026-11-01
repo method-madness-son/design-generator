@@ -1,6 +1,15 @@
 # Printify → Etsy poster sync
 
-Uploads poster print files to Printify, creates one product per poster (one variant per size), and publishes it to the connected Etsy shop. Listing copy comes from each poster's `etsy` block in `posters/<project>/<poster>.json`.
+Uploads poster print files to Printify, creates one product per poster (one variant per size), and publishes it to the connected Etsy shop. Every poster is a folder:
+
+```
+posters/<project>/<poster>/
+  poster.json    the design (studio layout, colors, fonts, graphic, Pinterest copy)
+  etsy.json      the Etsy listing: { "etsy": {title, description, tags, category}, "research": {...} }
+  exports/       saved print files and manifest.json
+```
+
+Listing copy comes from each poster's `etsy.json`; posters without a listing yet have `"etsy": null`.
 
 | Path | Role |
 |---|---|
@@ -41,16 +50,16 @@ Uploads poster print files to Printify, creates one product per poster (one vari
 In the studio (`npm run dev`), open a poster, customize it as usual (palette, fonts, sizes, alignment, Print Size), and choose **Export Poster → Save for Etsy listing**. The current preview is rendered at exactly print inches × 300 px (2400 × 3000 for 8×10, 3300 × 5100 for 11×17) and saved through `app/api/poster-exports/[projectId]/[posterId]/route.ts` to:
 
 ```
-posters/<projectId>/exports/<posterId>-<size>.png    one file per size; saving again overwrites
-posters/<projectId>/exports/manifest.json             size, pixels, sha256, savedAt, studio selection
+posters/<projectId>/<posterId>/exports/<posterId>-<size>.png   one file per size; saving again overwrites
+posters/<projectId>/<posterId>/exports/manifest.json            size, pixels, sha256, savedAt, studio selection
 ```
 
 - Save each size separately: switch Print Size, then save again. Customization is still per project and per poster. The manifest records the selection that was used for each file.
 - **Eligibility:** a poster with at least one saved size is eligible. The poster page and the project grid show "Eligible · 8x10, 11x17" or "Not saved for listing".
 - **Unnamed runs:** `printify:sync` / `printify:check` with no poster ids process only eligible posters and list the rest as skipped. Unsaved posters are not an error, because not every poster has to be made right away.
-- **One listing per poster:** the Etsy copy stays only in `posters/<projectId>/<posterId>.json`, and it covers every saved size. Exports never bundle a listing file. Only saved sizes become Printify variants, and `check` warns if the description mentions a size that hasn't been saved.
+- **One listing per poster:** the Etsy copy lives only in the poster's `etsy.json`, and it covers every saved size. Exports never bundle a listing file. Only saved sizes become Printify variants, and `check` warns if the description mentions a size that hasn't been saved.
 - The save endpoint writes into the repo, so it only works with the local studio (`npm run dev` / `next start`), not on a read-only host.
-- Files made elsewhere can be dropped into `posters/<projectId>/exports/` with the same names; the PNGs on disk decide what is saved, and the manifest is only metadata.
+- Files made elsewhere can be dropped into the poster's `exports/` folder with the same names; the PNGs on disk decide what is saved, and the manifest is only metadata.
 
 ## Running it
 
@@ -70,7 +79,7 @@ When you leave out poster ids, the whole project is synced. If any poster fails 
 |---|---|---|
 | 1 | `GET /v1/shops.json` | Lists shops. The Etsy shop has `sales_channel: "etsy"`. |
 | 2 | `POST /v1/uploads/images.json` | `{ file_name, contents }` with base64 by default, or `{ file_name, url }` with `--image-base-url https://cdn.example.com/posters`, which resolves to `<base>/<projectId>/<file>`. Printify suggests URL uploads for files over about 5 MB, and the script warns when a file is larger. The response `id` is saved together with the file's SHA-256, so an unchanged file is never uploaded again. |
-| 3 | `POST /v1/shops/{shop_id}/products.json` | `title`, `description`, and `tags` come from the poster's `etsy` block. Also sent: `blueprint_id`, `print_provider_id`, `variants: [{ id, price, is_enabled }]` with price in cents, and one `print_areas` entry per size, each with that size's image at `x: 0.5, y: 0.5, scale: 1, angle: 0`. If `state.json` already holds a product id for the poster, the product is updated with `PUT /v1/shops/{shop_id}/products/{product_id}.json` instead of being created again. |
+| 3 | `POST /v1/shops/{shop_id}/products.json` | `title`, `description`, and `tags` come from the poster's `etsy.json`. Also sent: `blueprint_id`, `print_provider_id`, `variants: [{ id, price, is_enabled }]` with price in cents, and one `print_areas` entry per size, each with that size's image at `x: 0.5, y: 0.5, scale: 1, angle: 0`. If `state.json` already holds a product id for the poster, the product is updated with `PUT /v1/shops/{shop_id}/products/{product_id}.json` instead of being created again. |
 | 4 | `POST /v1/shops/{shop_id}/products/{product_id}/publish.json` | The `publish` flags from the config: `title`, `description`, `images`, `variants`, `tags`, `keyFeatures`, and `shipping_template`, all `true`. **These fields are booleans, not content.** They tell Printify which product fields to push to Etsy. The actual title, description, tags, and mockup images are the ones set in step 3. |
 
 When you edit a poster's copy or art and run `sync` without `--publish`, only the Printify draft changes. Run it again with `--publish` to push the change to Etsy.

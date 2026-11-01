@@ -1,0 +1,33 @@
+{
+  "id": "libra",
+  "title": "Libra",
+  "subtitle": "September 23 – October 22",
+  "body": [
+    "Diplomatic",
+    "Charming",
+    "Indecisive"
+  ],
+  "icon": {
+    "name": "ZodiacLibra",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Libra Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Libra poster with the scales symbol, birth date range, and core traits: diplomatic, charming, indecisive. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "libra poster",
+      "libra zodiac sign",
+      "libra wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "libra birthday gift",
+      "minimalist astrology print",
+      "libra symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Libra zodiac poster with a scales symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "headphones-on",
+  "title": "Headphones On",
+  "subtitle": "Please message or wave to get my attention.",
+  "icon": {
+    "name": "Headphones",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Headphones On Sign | Printable Do Not Disturb Desk & Door Sign",
+    "description": "A gentle focus-mode sign for desks and doors, letting others know headphones are on and deep work is in progress. Printable do-not-disturb wall art for home offices, classrooms, and neurodivergent-friendly workspaces.",
+    "keywords": [
+      "headphones on sign",
+      "do not disturb sign printable",
+      "focus mode sign",
+      "office door sign aesthetic",
+      "desk sign printable",
+      "quiet focus sign",
+      "wfh desk decor",
+      "adhd office sign",
+      "do not disturb desk sign",
+      "aesthetic office door sign"
+    ],
+    "board": "Desk & Office Signage",
+    "altText": "Headphones On physical poster print with a headphones icon on a blush pink background, for focus-mode desks and doors."
+  }
+}

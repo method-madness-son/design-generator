@@ -1,0 +1,33 @@
+{
+  "id": "then-catch-finally",
+  "title": ".then().catch().finally()",
+  "subtitle": "Resolve. Reject. Clean up.",
+  "icon": {
+    "name": "FastForward",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 2.75
+    }
+  },
+  "pinterest": {
+    "title": ".then().catch().finally() Poster | Funny Dark Mode JavaScript Wall Art",
+    "description": "A dark-mode poster for the promise chain every JavaScript developer knows by heart. Printable wall art for developer offices and coding setups.",
+    "keywords": [
+      "javascript joke poster",
+      "promise chain poster",
+      "programmer humor print",
+      "developer wall art",
+      "coding poster dark mode",
+      "software engineer gift",
+      "javascript humor print",
+      "dev office decor",
+      "code quote poster",
+      "tech humor wall art"
+    ],
+    "board": "Developer & Coder Decor",
+    "altText": "Dark mode poster reading .then().catch().finally() with a fast-forward icon in yellow, for developer office decor."
+  }
+}

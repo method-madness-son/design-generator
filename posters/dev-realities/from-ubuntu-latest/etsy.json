@@ -1,0 +1,70 @@
+{
+  "etsy": {
+    "title": "DevOps Poster, FROM ubuntu:latest Container Joke, Works on My Machine Wall Art, Sysadmin Gift, Server Room Decor",
+    "description": "A funny DevOps poster for every container image that just ships 'my machine' to production, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "devops poster",
+      "devops art",
+      "devops engineer gift",
+      "ubuntu latest poster",
+      "container humor",
+      "works on my machine",
+      "sysadmin gift",
+      "server room decor",
+      "it humor poster",
+      "backend dev gift",
+      "software poster",
+      "tech wall art",
+      "dark mode print"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "devops poster",
+    "etsy": {
+      "searchPhrases": [
+        "devops poster",
+        "devops art",
+        "devops engineer",
+        "software poster",
+        "developer wall art"
+      ],
+      "competitorNotes": [
+        "DevOps posters on Etsy are mostly cheat sheets (container, cluster, CLI references) and job-definition prints.",
+        "A framed 'works on my machine' print and 'deploy first, debug later' shirts show the joke sells; framed DevOps prints were roughly $25-57.",
+        "Container humor elsewhere is stickers and shirts, not posters."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "devops programming coding",
+        "coding posters"
+      ],
+      "competitorNotes": [
+        "Amazon container/DevOps results are books and logo T-shirts; no humor posters surfaced.",
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/devops_poster",
+      "https://www.etsy.com/market/devops_art",
+      "https://www.etsy.com/market/devops_engineer?page=5",
+      "https://www.etsy.com/market/docker_funny_gift",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/listing/1399441416/devops-engineer-poster-devops-funny-job",
+      "https://www.amazon.com/Docker-container-devops-programming-T-Shirt/dp/B083HD1FYJ",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "Removed 'Docker' from the title and tags: the poster prints a Dockerfile line but not the Docker name. Ubuntu is printed on the poster, so it stays. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
+  }
+}

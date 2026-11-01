@@ -1,0 +1,33 @@
+{
+  "id": "pisces",
+  "title": "Pisces",
+  "subtitle": "February 19 – March 20",
+  "body": [
+    "Empathetic",
+    "Dreamy",
+    "Intuitive"
+  ],
+  "icon": {
+    "name": "ZodiacPisces",
+    "position": "top",
+    "className": "text-[var(--poster-accent)] stroke-[1.5]"
+  },
+  "pinterest": {
+    "title": "Pisces Zodiac Sign Poster | Minimalist Astrology Wall Art Print",
+    "description": "A minimalist Pisces poster with the fish symbol, birth date range, and core traits: empathetic, dreamy, intuitive. Printable astrology wall art for bedrooms, desks, and gallery walls.",
+    "keywords": [
+      "pisces poster",
+      "pisces zodiac sign",
+      "pisces wall art",
+      "astrology poster printable",
+      "zodiac sign art",
+      "pisces birthday gift",
+      "minimalist astrology print",
+      "pisces symbol print",
+      "star sign poster",
+      "celestial wall art"
+    ],
+    "board": "Zodiac & Astrology Decor",
+    "altText": "Minimalist Pisces zodiac poster with a fish symbol on a deep navy background, listing the sign's dates and traits."
+  }
+}

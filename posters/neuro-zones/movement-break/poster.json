@@ -1,0 +1,28 @@
+{
+  "id": "movement-break",
+  "title": "Movement Break",
+  "subtitle": "Stand, stretch, or pace. Movement is welcome.",
+  "icon": {
+    "name": "Footprints",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Movement Break Sign | Printable Brain Break Wall Art for Classroom & Home",
+    "description": "A simple Movement Break sign inviting stretching, standing, or pacing. Printable wall art for classroom brain-break corners, sensory rooms, and ADHD-friendly homes where movement is always welcome.",
+    "keywords": [
+      "movement break sign",
+      "brain break cards printable",
+      "sensory break sign",
+      "classroom brain break",
+      "movement break classroom",
+      "stretch break printable",
+      "adhd movement printable",
+      "sensory room decor",
+      "brain break poster",
+      "classroom sensory corner"
+    ],
+    "board": "Classroom Brain Breaks & Movement",
+    "altText": "Movement Break physical poster print with a footprints icon on a cream background, for classroom and home movement breaks."
+  }
+}

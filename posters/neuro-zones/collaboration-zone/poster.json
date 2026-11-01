@@ -1,0 +1,28 @@
+{
+  "id": "collaboration-zone",
+  "title": "Teamwork Zone",
+  "subtitle": "Work together. Share ideas. Solve problems.",
+  "icon": {
+    "name": "Handshake",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Teamwork Zone Sign | Printable Collaboration Station Wall Art for Classroom & Office",
+    "description": "A simple Teamwork Zone poster for group work tables, classroom collaboration stations, and shared office spaces. Clear, neurodivergent-friendly signage that marks where talking and building together is welcome. Printable download, ready to frame.",
+    "keywords": [
+      "teamwork zone sign",
+      "collaboration station printable",
+      "classroom group work sign",
+      "team table sign",
+      "group work area decor",
+      "classroom collaboration decor",
+      "office collaboration sign",
+      "neurodivergent classroom decor",
+      "shared table sign",
+      "group project printable"
+    ],
+    "board": "Classroom & Office Signage",
+    "altText": "Teamwork Zone physical poster print with a handshake icon on a warm terracotta background, for classroom and office collaboration spaces."
+  }
+}

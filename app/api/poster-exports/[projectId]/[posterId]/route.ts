@@ -1,4 +1,4 @@
-// Saves a studio-rendered print PNG into posters/<projectId>/exports/ (see lib/posterExports.ts).
+// Saves a studio-rendered print PNG into posters/<projectId>/<posterId>/exports/ (see lib/posterExports.ts).
 // It writes to the repo on disk, so it only works for the local studio (`npm run dev`).
 import { saveExport } from '@/lib/posterExports';
 import { getPosterFile, getProject, getValidSelection } from '@/lib/posterResolver';

@@ -73,7 +73,8 @@ function brief(list: Target[]): void {
     const project = getProject(projectId);
     const brief = {
       poster: key,
-      file: `posters/${key}.json`,
+      // The agent edits only the listing file; the design is poster.json beside it.
+      file: `posters/${key}/etsy.json`,
       project: { title: project?.title, description: project?.description },
       // What a buyer actually sees on the print. Listing claims must match this.
       artwork: { title: poster.title, subtitle: poster.subtitle, body: poster.body, icon: poster.icon?.name, graphic: poster.graphic?.type },

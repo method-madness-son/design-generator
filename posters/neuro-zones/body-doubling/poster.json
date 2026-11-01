@@ -1,0 +1,30 @@
+{
+  "id": "body-doubling",
+  "title": "Body Doubling Zone",
+  "subtitle": "Quiet company while you work.",
+  "icon": {
+    "name": "UsersRound",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]"
+  },
+  "pinterest": {
+    "title": "Body Doubling Printable Sign | ADHD Accountability Wall Art for Home & Office",
+    "description": "A calm body doubling sign for ADHD-friendly coworking spaces, study rooms, and shared desks. Printable wall art that invites quiet, parallel focus — perfect for neurodivergent home offices, classrooms, and accountability corners. Instant download, print at home or order a physical poster.",
+    "keywords": [
+      "body doubling",
+      "body doubling adhd",
+      "adhd accountability partner",
+      "coworking space decor",
+      "study together printable",
+      "neurodivergent office decor",
+      "parallel play adults",
+      "focus room sign",
+      "shared workspace sign",
+      "adhd printable",
+      "quiet coworking sign",
+      "accountability corner"
+    ],
+    "board": "ADHD Printables & Home Office",
+    "altText": "Printable Body Doubling sign with a two-person icon on a soft lavender background, for ADHD-friendly coworking and study spaces."
+  }
+}

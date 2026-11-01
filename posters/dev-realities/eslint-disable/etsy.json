@@ -1,0 +1,72 @@
+{
+  "etsy": {
+    "title": "Programmer Humor Poster, eslint-disable-next-line Linter Joke, Software Engineer Wall Art, Tech Coworker Gift",
+    "description": "A programmer humor poster for the official fix to every lint warning: eslint-disable-next-line, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "programmer humor",
+      "eslint joke poster",
+      "linter joke",
+      "computer jokes",
+      "engineer wall art",
+      "tech coworker gift",
+      "code review humor",
+      "funny coder print",
+      "developer art",
+      "tech office humor",
+      "dark mode decor",
+      "web dev humor",
+      "coding wall decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "programmer humor",
+    "etsy": {
+      "searchPhrases": [
+        "programmer humor",
+        "programmer humor art",
+        "programmer humour",
+        "computer jokes poster",
+        "computer science joke",
+        "software engineer wall art",
+        "developer art"
+      ],
+      "competitorNotes": [
+        "No ESLint or linter humor prints surfaced on Etsy; the niche is open but has no indexed phrase of its own.",
+        "Programmer humor results are dominated by shirts ('not a bug, undocumented feature', 'don't deploy on Friday')."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny programmer wall art",
+        "tech team coworker gift",
+        "computer nerd geek humor"
+      ],
+      "competitorNotes": [
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size.",
+        "No linter-themed posters seen on Amazon either."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/programmer_humor",
+      "https://www.etsy.com/market/programmer_humor_art",
+      "https://www.etsy.com/market/programmer_humour",
+      "https://www.etsy.com/market/computer_jokes_poster",
+      "https://www.etsy.com/market/computer_science_joke",
+      "https://www.etsy.com/market/software_engineer_wall_art",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "No search phrase for ESLint posters was found, so the primary keyword is the broader indexed 'programmer humor', with ESLint (printed on the poster) kept in title and tags. Dropped 'React' from the old title and description: it is not on the poster. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
+  }
+}

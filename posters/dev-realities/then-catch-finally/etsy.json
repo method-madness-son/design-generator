@@ -1,0 +1,66 @@
+{
+  "etsy": {
+    "title": "JavaScript Poster, .then().catch().finally() Promise Chain Print, Coding Wall Art, Frontend Developer Gift",
+    "description": "A minimalist JavaScript poster for the promise chain every developer knows: resolve, reject, clean up.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "javascript poster",
+      "javascript gift",
+      "js promise poster",
+      "async code print",
+      "web developer poster",
+      "frontend dev gift",
+      "programmer posters",
+      "coding wall art",
+      "developer art",
+      "code quote print",
+      "minimalist code art",
+      "office wall decor",
+      "dark mode poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "javascript poster",
+    "etsy": {
+      "searchPhrases": [
+        "javascript poster",
+        "javascript gift",
+        "javascript cheat sheet poster",
+        "programmer posters",
+        "web developer",
+        "developer art"
+      ],
+      "competitorNotes": [
+        "JavaScript posters on Etsy are mostly cheat sheets sold as digital downloads ($2 to $10); joke-led prints are fewer.",
+        "Humorous JS prints use code snippets as the joke (an if/else life loop, a JavaScript 'definition'), the same angle as this poster.",
+        "Several listings stack 'gift for programmer' and 'wall decor for office' in the title."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "coding wall art",
+        "javascript developer frontend engineer",
+        "programmer gift"
+      ],
+      "competitorNotes": [
+        "JavaScript humor on Amazon is overwhelmingly T-shirts and pillows; almost no JS wall art.",
+        "'Frontend engineer' and 'web developer' are the common audience words."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/au/market/javascript_poster",
+      "https://www.etsy.com/market/javascript_gift",
+      "https://www.etsy.com/market/javascript_cheat_sheet_poster",
+      "https://www.etsy.com/market/programmer_posters",
+      "https://www.etsy.com/market/web_developer",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.etsy.com/listing/1401087334/javascript-funny-poster-minimalist",
+      "https://us.amazon.com/coding-wall-art/s?k=coding+wall+art",
+      "https://www.amazon.com/Javascript-Software-Developer-Frontend-Engineer/dp/B0928TZBV1",
+      "https://www.amazon.com/Web-Developer-Funny-JavaScript-T-Shirt/dp/B07XX2YZDL"
+    ],
+    "notes": "Listing pages were not fetched (network allow-list); evidence is from Etsy/Amazon search results only. 'javascript poster' is an Etsy market phrase and the printed code is JavaScript promise syntax. No priceRange: JS results were digital downloads."
+  }
+}

@@ -103,7 +103,7 @@ export function ExportButton({ elementId, filename, poster, label = 'Export', cl
                 {listingSize && savedSizes.includes(listingSize) ? `Re-save ${listingSize} for Etsy listing` : 'Save for Etsy listing'}
               </span>
               <span className="block text-xs text-neutral-500">
-                {pixels ? `${pixels.width}×${pixels.height} PNG → posters/${poster.projectId}/exports/` : 'Pick a Print Size first'}
+                {pixels ? `${pixels.width}×${pixels.height} PNG → posters/${poster.projectId}/${poster.id}/exports/` : 'Pick a Print Size first'}
               </span>
             </button>
 
