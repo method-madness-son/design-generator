@@ -105,19 +105,19 @@ export default function InventoryPage() {
       </ul>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold text-neutral-900">Ready &amp; listed ({stocked.length})</h2>
+        <h2 className="text-lg font-semibold text-neutral-900">Ready &amp; live on Etsy ({stocked.length})</h2>
         {stocked.length > 0 ? (
           <InventoryTable items={stocked} detail="listing" />
         ) : (
           <p className="mt-2 text-sm text-neutral-500">
-            Nothing yet. Open a poster, choose Export Poster → Save for Etsy listing, and make sure its listing passes.
+            Nothing yet. Open a poster, choose Export Poster → Save for Etsy listing, and make sure its Etsy copy passes the check.
           </p>
         )}
       </section>
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-neutral-900">Ideas ({ideas.length})</h2>
-        <p className="mt-1 text-sm text-neutral-500">Not listed yet: saved without a listing, listed copy without a saved export, or untouched.</p>
+        <p className="mt-1 text-sm text-neutral-500">Not on Etsy yet: saved without Etsy copy, Etsy copy written but not saved, or untouched.</p>
         <InventoryTable items={ideas} detail="next" />
       </section>
     </>

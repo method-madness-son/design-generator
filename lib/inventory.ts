@@ -15,11 +15,11 @@ import { loadState } from '@/lib/printify/posters';
 export type InventoryStatus = 'listed' | 'draft' | 'ready' | 'needs-listing' | 'needs-export' | 'idea';
 
 export const STATUS_INFO: Record<InventoryStatus, { label: string; next: string; stocked: boolean }> = {
-  listed: { label: 'Listed', next: 'Live on Etsy. Re-run sync with --publish after edits.', stocked: true },
-  draft: { label: 'Printify draft', next: 'Run printify:sync with --publish.', stocked: true },
-  ready: { label: 'Ready', next: 'Run printify:sync to create the product.', stocked: true },
-  'needs-listing': { label: 'Saved · needs listing', next: 'Run the etsy-listing-researcher agent.', stocked: false },
-  'needs-export': { label: 'Has listing · not saved', next: 'Open it in the studio and Save for Etsy listing.', stocked: false },
+  listed: { label: 'Live on Etsy', next: 'Published. Re-run sync with --publish after edits.', stocked: true },
+  draft: { label: 'Printify draft', next: 'Run printify:sync with --publish to put it on Etsy.', stocked: true },
+  ready: { label: 'Ready to upload', next: 'Run printify:sync to create the product.', stocked: true },
+  'needs-listing': { label: 'Saved · needs Etsy copy', next: 'Run the etsy-listing-researcher agent.', stocked: false },
+  'needs-export': { label: 'Copy written · not saved', next: 'Open it in the studio and Save for Etsy listing.', stocked: false },
   idea: { label: 'Idea', next: 'Design it, save it, then write the listing.', stocked: false },
 };
 

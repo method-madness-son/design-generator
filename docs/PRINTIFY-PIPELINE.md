@@ -99,9 +99,9 @@ These match the mug and tee pipelines:
 
 | Status | Means | Table |
 |---|---|---|
-| Listed | `printify/state.json` has a `publishedAt` for it | Ready & listed |
-| Printify draft | Synced to Printify (has a product id), not published | Ready & listed |
-| Ready | Saved for listing and the listing passes `listing:check` | Ready & listed |
-| Saved · needs listing | Saved, but has no Etsy copy or the copy fails the check | Ideas |
-| Has listing · not saved | Has Etsy copy, but nothing has been saved in the studio yet | Ideas |
+| Live on Etsy | `printify/state.json` has a `publishedAt` for it | Ready & live on Etsy |
+| Printify draft | Synced to Printify (has a product id), not published | Ready & live on Etsy |
+| Ready to upload | Saved for listing and the Etsy copy passes `listing:check` | Ready & live on Etsy |
+| Saved · needs Etsy copy | Saved, but has no Etsy copy or the copy fails the check | Ideas |
+| Copy written · not saved | Has Etsy copy, but nothing has been saved in the studio yet | Ideas |
 | Idea | Neither saved nor listed | Ideas |
