@@ -19,6 +19,24 @@ If you name no posters, the agent works on the ones `listing:brief --needs-work`
 - **Not saved, no `etsy` block:** skipped; it is not for sale yet.
 - **Sizes:** `listing:brief` reports the saved sizes, and the agent keeps the description's size bullets to those.
 
+## Keyword files
+
+`research/keywords/<market>.json` holds researched search phrases for a whole market, shared by every poster in the projects it lists (`"projects": ["rally-pace-notes"]`). `listing:brief` names the matching file in its `keywords` field, and the agent reads it before searching.
+
+Each phrase has:
+- the ready-to-use `tag` (20 characters or fewer);
+- an `intent` (product, gift, decor, style, niche, audience);
+- a `strength`: `indexed` if Etsy has a `/market` page for it, `seen` if it only appears in competitor or Amazon titles;
+- the `evidence` URL.
+
+The file also has an `avoid` list (brands, models, series, events, people, and terms that are ambiguous on their own), market insights, and title patterns.
+
+| File | Covers | Researched |
+|---|---|---|
+| `research/keywords/rally.json` | rally-pace-notes | 2026-11-01, search results only |
+
+Refresh a file every few months, or when the agent reports a strong phrase that isn't in it.
+
 ## Tools it runs
 
 ```bash

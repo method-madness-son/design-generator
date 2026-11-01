@@ -1,0 +1,353 @@
+{
+  "market": "rally",
+  "projects": [
+    "rally-pace-notes"
+  ],
+  "researchedAt": "2026-11-01",
+  "method": "search-results",
+  "howToUse": [
+    "Read this before researching a rally poster. Start from these phrases, then run 1-2 poster-specific searches for its own subject.",
+    "Prefer strength 'indexed' (Etsy has a /market page for the phrase) for the primary keyword and the first tags; 'seen' phrases appear in competitor titles or Amazon wording only.",
+    "Use the 'tag' value as-is: it is already 20 characters or fewer.",
+    "Never use anything in 'avoid'. Our posters show no real cars, teams, events, or people.",
+    "Always pair 'rally' with a car/motorsport word: on its own it matches protest, pep, and biker rallies."
+  ],
+  "phrases": [
+    {
+      "phrase": "rally car poster",
+      "tag": "rally car poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_car_poster",
+      "note": "Best primary keyword for any rally poster."
+    },
+    {
+      "phrase": "rally wall art",
+      "tag": "rally wall art",
+      "intent": "decor",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_wall_art"
+    },
+    {
+      "phrase": "rally posters",
+      "tag": "rally posters",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_posters"
+    },
+    {
+      "phrase": "rally art",
+      "tag": "rally art print",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_art",
+      "note": "Market page is 'rally art'; 'print' added to state the physical product."
+    },
+    {
+      "phrase": "rally motorsport art",
+      "tag": "rally motorsport art",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_motorsport_art",
+      "note": "Adds the motorsport qualifier that removes protest-rally matches."
+    },
+    {
+      "phrase": "vintage rally poster",
+      "tag": "vintage rally poster",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/vintage_rally_poster",
+      "note": "Only for retro-styled posters (e.g. Driveway Rallye 77, Gravel Legend)."
+    },
+    {
+      "phrase": "rally 80s",
+      "tag": "80s rally art",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/uk/market/rally_80s",
+      "note": "UK market page. Fits retro/arcade/neon styles."
+    },
+    {
+      "phrase": "rally gift",
+      "tag": "rally gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/uk/market/rally_gift"
+    },
+    {
+      "phrase": "rally gifts",
+      "tag": "rally gifts",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_gifts"
+    },
+    {
+      "phrase": "rally car gift",
+      "tag": "rally car gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_car_gift"
+    },
+    {
+      "phrase": "rally driver gift",
+      "tag": "rally driver gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/dk-en/market/rally_driver_gift"
+    },
+    {
+      "phrase": "rally driving gifts",
+      "tag": "rally driving gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_driving_gifts"
+    },
+    {
+      "phrase": "rally fan gift",
+      "tag": "rally fan gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/fr/market/rally_fan_gift"
+    },
+    {
+      "phrase": "motorsport gift him",
+      "tag": "motorsport gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/motorsport_gift_him"
+    },
+    {
+      "phrase": "racing gifts for him",
+      "tag": "racing gifts for him",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/racing_gifts_for_him"
+    },
+    {
+      "phrase": "racing gifts for men",
+      "tag": "racing gift for men",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/racing_gifts_for_men"
+    },
+    {
+      "phrase": "garage race decor",
+      "tag": "garage race decor",
+      "intent": "decor",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/garage_race_decor",
+      "note": "Strong room/use angle; Amazon titles also lean on 'garage' and 'man cave'."
+    },
+    {
+      "phrase": "motorsport signs",
+      "tag": "motorsport sign",
+      "intent": "decor",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/motorsport_signs",
+      "note": "Good for sign-style posters (Jump, Time Card)."
+    },
+    {
+      "phrase": "racing man cave",
+      "tag": "racing man cave",
+      "intent": "decor",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/mx/market/racing_man_cave"
+    },
+    {
+      "phrase": "racing pit sign",
+      "tag": "racing pit sign",
+      "intent": "decor",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/racing_pit_sign"
+    },
+    {
+      "phrase": "rally drivers",
+      "tag": "rally drivers",
+      "intent": "audience",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_drivers"
+    },
+    {
+      "phrase": "unique motorsport",
+      "tag": "unique motorsport",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/unique_motorsport"
+    },
+    {
+      "phrase": "pace notes / pacenotes",
+      "tag": "pace notes",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "note": "Only mugs and shirts use it; no pace-notes posters found. Our clearest gap."
+    },
+    {
+      "phrase": "pacenotes",
+      "tag": "pacenotes poster",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "note": "Single-word spelling used by competitors."
+    },
+    {
+      "phrase": "rally driver & co-driver gift",
+      "tag": "co driver gift",
+      "intent": "gift",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "note": "Seen in a shirt title; no co-driver humor posters found (gap)."
+    },
+    {
+      "phrase": "co-driver",
+      "tag": "rally co driver",
+      "intent": "audience",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car"
+    },
+    {
+      "phrase": "gravel rally",
+      "tag": "gravel rally art",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/au/listing/4435657387/subaru-impreza-wrc-s6-rally-car-crychan",
+      "note": "Gravel/forest stage imagery is popular in titles."
+    },
+    {
+      "phrase": "stage rally",
+      "tag": "stage rally poster",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/uk/market/rally_80s",
+      "note": "Used by enthusiasts; not confirmed as an indexed Etsy phrase."
+    },
+    {
+      "phrase": "car enthusiast gift",
+      "tag": "car enthusiast gift",
+      "intent": "gift",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+      "note": "Amazon wording."
+    },
+    {
+      "phrase": "motorsport poster",
+      "tag": "motorsport poster",
+      "intent": "product",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "note": "Amazon wording."
+    },
+    {
+      "phrase": "funny racing poster",
+      "tag": "funny racing poster",
+      "intent": "style",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "note": "Amazon humor listings; rally-specific humor posters are rare (gap)."
+    },
+    {
+      "phrase": "group b rally",
+      "tag": "group b rally",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/group_b_rally",
+      "note": "Era name, not a brand. Use only if the poster is about that era; never pair with car makers."
+    }
+  ],
+  "avoid": {
+    "trademarks_and_series": [
+      "WRC",
+      "World Rally Championship",
+      "FIA",
+      "Rally1",
+      "NASCAR",
+      "Scalextric",
+      "Dakar"
+    ],
+    "car_makers_and_models": [
+      "Audi",
+      "Quattro",
+      "Lancia",
+      "Delta Integrale",
+      "Stratos",
+      "Subaru",
+      "Impreza",
+      "WRX",
+      "Peugeot",
+      "Porsche",
+      "Ford",
+      "RS200",
+      "Toyota",
+      "GR Yaris",
+      "Mitsubishi",
+      "Lancer Evo",
+      "BMW",
+      "MG Metro"
+    ],
+    "events": [
+      "Monte Carlo Rally",
+      "Safari Rally",
+      "Rally Finland",
+      "Col de Turini"
+    ],
+    "people": [
+      "Colin McRae",
+      "Richard Burns",
+      "any named driver or co-driver"
+    ],
+    "ambiguous_alone": [
+      "rally",
+      "rally sign",
+      "rally poster (alone in a tag)",
+      "rally shirt"
+    ],
+    "why": "Competitor rally art is dominated by real cars, events, and drivers. Our designs are generic pace-note humor, so these terms would be inaccurate and risk IP takedowns."
+  },
+  "insights": [
+    "Etsy rally art is mostly real-car illustrations (Group B era, Subaru, Audi, Lancia) and many listings are digital downloads; stating 'physical poster print' differentiates.",
+    "No pace-notes or co-driver humor posters surfaced: lead with 'pace notes' / 'co driver gift' for those designs.",
+    "Gift-intent phrases (rally gift, rally driver gift, racing gifts for him/men) have the most Etsy market pages.",
+    "Room/use angle: garage, man cave, office. 'garage race decor' and 'motorsport sign' are indexed.",
+    "Physical rally prints seen at roughly $15-$50; digital downloads under $10 (snippets, not comparable listings)."
+  ],
+  "titlePatterns": [
+    "<Design phrase> Rally Car Poster, Pace Notes Wall Art, Rally Driver Gift, Garage Decor",
+    "Rally Car Poster, <design phrase> Print, Funny Motorsport Wall Art, Co Driver Gift"
+  ],
+  "sources": [
+    "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+    "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+    "https://www.amazon.com/racing-wall-art/s?k=racing+wall+art",
+    "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+    "https://www.amazon.com/rally-poster/s?k=rally+poster",
+    "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+    "https://www.etsy.com/dk-en/market/rally_driver_gift",
+    "https://www.etsy.com/fr/market/rally_fan_gift",
+    "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car",
+    "https://www.etsy.com/market/garage_race_decor",
+    "https://www.etsy.com/market/group_b_poster",
+    "https://www.etsy.com/market/group_b_rally",
+    "https://www.etsy.com/market/group_b_rally_print",
+    "https://www.etsy.com/market/motorsport_gift_him",
+    "https://www.etsy.com/market/motorsport_signs",
+    "https://www.etsy.com/market/motorsports_sign",
+    "https://www.etsy.com/market/racing_gifts_for_him",
+    "https://www.etsy.com/market/racing_gifts_for_men",
+    "https://www.etsy.com/market/racing_pit_sign",
+    "https://www.etsy.com/market/rally_art",
+    "https://www.etsy.com/market/rally_car_gift",
+    "https://www.etsy.com/market/rally_car_gifts",
+    "https://www.etsy.com/market/rally_car_poster",
+    "https://www.etsy.com/market/rally_drivers",
+    "https://www.etsy.com/market/rally_driving_gifts",
+    "https://www.etsy.com/market/rally_gifts",
+    "https://www.etsy.com/market/rally_motorsport_art",
+    "https://www.etsy.com/market/rally_posters",
+    "https://www.etsy.com/market/rally_wall_art",
+    "https://www.etsy.com/market/unique_motorsport",
+    "https://www.etsy.com/market/vintage_rally_poster",
+    "https://www.etsy.com/mx/market/racing_man_cave",
+    "https://www.etsy.com/uk/market/rally_80s",
+    "https://www.etsy.com/uk/market/rally_gift"
+  ]
+}

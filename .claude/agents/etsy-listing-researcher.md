@@ -17,18 +17,24 @@ A poster becomes eligible for listing once someone saves it in the studio with *
 
 ## Procedure, per poster
 
-1. **Brief.** Run `npm run -s listing:brief -- <projectId> <posterId>`. The `artwork` field is what is printed on the poster. The `product` field is what the buyer receives. Every claim in the listing must be true of both. Read the project's other posters' `etsy` blocks too, so the shop's titles and tags vary instead of all chasing the same phrase.
+1. **Brief.** Run `npm run -s listing:brief -- <projectId> <posterId>`. The `artwork` field is what is printed on the poster. The `product` field is what the buyer receives. Every claim in the listing must be true of both. Read the project's other posters' `etsy.json` files too, so the shop's titles and tags vary instead of all chasing the same phrase.
 
-2. **Etsy research.** Run 3–5 `WebSearch` queries with `allowed_domains: ["etsy.com"]`. Start from the poster's subject and the buyer's intent. For example: `vim poster`, `programmer wall art`, `funny developer gift print`.
+2. **Keyword file.** If the brief's `keywords` field names a file (e.g. `research/keywords/rally.json`), read it first. It holds researched search phrases with ready-made tags (each ≤ 20 characters), their evidence, an `avoid` list, and title patterns.
+   - Prefer its `indexed` phrases for the primary keyword and the first tags, and copy its `evidence` URLs into this poster's `research.sources` when you use them.
+   - Never use anything in its `avoid` list: brands, models, series, events, or people.
+   - It does not replace research for this poster: still run the searches below, but you can run fewer shared searches.
+   - If your searches find a strong phrase the file lacks, mention it in your report so the file can be updated. Don't edit the file yourself.
+
+3. **Etsy research.** Run 3–5 `WebSearch` queries with `allowed_domains: ["etsy.com"]`. Start from the poster's subject and the buyer's intent. For example: `vim poster`, `programmer wall art`, `funny developer gift print`.
    - Etsy `/market/<phrase>` result URLs are search phrases Etsy has indexed. Treat them as strong evidence of what buyers type, and record them as `searchPhrases`.
    - Listing results show competitors' angles, sizes, and prices. Write short notes in your own words.
    - Try `WebFetch` on one or two of the best results. If it fails because of the network, do not retry or try other hosts. Set `method: "search-results"` and work from the search snippets.
 
-3. **Amazon research.** Run 2–3 `WebSearch` queries with `allowed_domains: ["amazon.com"]`, using the same subject. Amazon titles show the plain buyer vocabulary for product type, size, and room, such as "wall decor", "unframed", "office", and "gift for". They also show what is crowded. Use Amazon only for phrasing and positioning. Amazon's rules do not apply to Etsy, and nothing here is listed on Amazon.
+4. **Amazon research.** Run 2–3 `WebSearch` queries with `allowed_domains: ["amazon.com"]`, using the same subject. Amazon titles show the plain buyer vocabulary for product type, size, and room, such as "wall decor", "unframed", "office", and "gift for". They also show what is crowded. Use Amazon only for phrasing and positioning. Amazon's rules do not apply to Etsy, and nothing here is listed on Amazon.
 
-4. **Pick the primary keyword.** This is the one phrase a buyer for *this* poster most likely types. It should be specific enough to win, like "vim poster" rather than "poster". It should appear in your evidence, or be a clear subset of a phrase that does.
+5. **Pick the primary keyword.** This is the one phrase a buyer for *this* poster most likely types. It should be specific enough to win, like "vim poster" rather than "poster". It should appear in your evidence, or be a clear subset of a phrase that does.
 
-5. **Write the `etsy` block.**
+6. **Write the `etsy` block.**
    - **title** (≤ 140 characters, aim for 70–110):
      - Put the primary keyword first, within the first 60 characters.
      - Follow with 2–3 distinct secondary phrases, separated by commas.
@@ -46,7 +52,7 @@ A poster becomes eligible for listing once someone saves it in the studio with *
      - Keep any health, therapy, or education disclaimer that is already there.
    - **category**: leave it as is unless the user asks you to change it.
 
-6. **Write the `research` block**, using the structure that `npm run listing:check` enforces:
+7. **Write the `research` block**, using the structure that `npm run listing:check` enforces:
 
    ```json
    "research": {
@@ -64,7 +70,7 @@ A poster becomes eligible for listing once someone saves it in the studio with *
    - Use the currency you saw. If you only have snippets mixing currencies, leave `priceRange` out.
    - Every phrase and note must trace to a URL in `sources`. Never invent search volumes, sales counts, or rankings. If you lack evidence, say so in `notes` instead.
 
-7. **Gate.** Run `npm run -s listing:check -- <projectId> <posterId> --strict`. Fix every error and warning, then re-run until it passes. If the poster is saved for listing, also run `npm run -s printify:check -- <projectId> <posterId>`. Its config errors are expected until Printify is set up, but it must show no listing errors.
+8. **Gate.** Run `npm run -s listing:check -- <projectId> <posterId> --strict`. Fix every error and warning, then re-run until it passes. If the poster is saved for listing, also run `npm run -s printify:check -- <projectId> <posterId>`. Its config errors are expected until Printify is set up, but it must show no listing errors.
 
 ## Hard rules
 

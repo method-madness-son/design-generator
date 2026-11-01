@@ -7,6 +7,8 @@
  *   npm run listing:brief -- dev-realities vim-wq      # what the poster shows + current listing
  *   npm run listing:brief -- dev-realities --needs-work   # posters that fail or lack research
  */
+import fs from 'node:fs';
+import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { checkListing } from '@/lib/etsyListing';
 import { savedSizesByPoster } from '@/lib/posterExports';
@@ -68,6 +70,17 @@ function needsWork(list: Target[]): void {
   }
 }
 
+// research/keywords/<market>.json files list the projects they cover; the agent reads the matching one.
+const KEYWORDS_DIR = path.join(process.cwd(), 'research', 'keywords');
+function keywordFileFor(projectId: string): string | null {
+  if (!fs.existsSync(KEYWORDS_DIR)) return null;
+  for (const file of fs.readdirSync(KEYWORDS_DIR).filter((name) => name.endsWith('.json')).sort()) {
+    const { projects = [] } = JSON.parse(fs.readFileSync(path.join(KEYWORDS_DIR, file), 'utf8')) as { projects?: string[] };
+    if (projects.includes(projectId)) return `research/keywords/${file}`;
+  }
+  return null;
+}
+
 function brief(list: Target[]): void {
   for (const { key, projectId, poster, sizes } of list) {
     const project = getProject(projectId);
@@ -76,6 +89,8 @@ function brief(list: Target[]): void {
       // The agent edits only the listing file; the design is poster.json beside it.
       file: `posters/${key}/etsy.json`,
       project: { title: project?.title, description: project?.description },
+      // Shared keyword research for this market, if any: read it before searching.
+      keywords: keywordFileFor(projectId),
       // What a buyer actually sees on the print. Listing claims must match this.
       artwork: { title: poster.title, subtitle: poster.subtitle, body: poster.body, icon: poster.icon?.name, graphic: poster.graphic?.type },
       // Only saved sizes are offered; the listing must not promise others.
