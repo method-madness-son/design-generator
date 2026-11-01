@@ -1,0 +1,22 @@
+{
+  "id": "chronically-curious",
+  "title": "CHRONICALLY\nCURIOUS",
+  "subtitle": "est. 2:47 AM",
+  "overrides": {
+    "defaultTypography": {
+      "fontFamily": "var(--font-theme-oswald), sans-serif",
+      "titleFontFamily": "var(--font-theme-graduate), serif",
+      "titleClasses": "whitespace-pre-line leading-[0.95] text-[var(--poster-ink)]",
+      "subtitleClasses": "font-semibold uppercase tracking-[0.25em] text-[var(--poster-accent)]",
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "titleRem": 4.4,
+      "subtitleRem": 1.6,
+      "bodyRem": 2.2
+    },
+    "colorPalette": {
+      "background": "#FFFFFF",
+      "ink": "#111111",
+      "accent": "#2E9C98"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dopamine-menu",
+  "title": "Dopamine\nMenu",
+  "subtitle": "today's specials",
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-0 p-14 text-center shadow-[inset_0_0_0_28px_var(--poster-background),inset_0_0_0_36px_var(--poster-accent),inset_0_0_0_44px_var(--poster-background),inset_0_0_0_47px_var(--poster-accent)]"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-theme-pacifico), cursive",
+      "titleRem": 4.4,
+      "subtitleRem": 2.6,
+      "subtitleClasses": "-mt-1 mb-4 -rotate-3 text-[#2E9C98]",
+      "titleFontFamily": "var(--font-theme-caprasimo), serif",
+      "titleClasses": "whitespace-pre-line leading-[0.95] text-[var(--poster-accent)]",
+      "bodyClasses": "w-[78%] space-y-3 text-[var(--poster-ink)] [&>li]:border-b-[3px] [&>li]:border-dotted [&>li]:border-[var(--poster-accent)] [&>li]:pb-2",
+      "bodyRem": 1.7,
+      "bodyFontFamily": "var(--font-theme-work-sans), sans-serif"
+    },
+    "colorPalette": {
+      "background": "#FFF8EC",
+      "ink": "#111111",
+      "accent": "#E0529A"
+    }
+  },
+  "body": [
+    "a brand new hobby",
+    "one more episode",
+    "snacks, obviously",
+    "rearranging the furniture"
+  ]
+}

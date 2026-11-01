@@ -1,0 +1,34 @@
+{
+  "id": "social-battery",
+  "title": "Leaving early",
+  "subtitle": "99% (quiet exit loading)",
+  "graphic": {
+    "type": "progress-bar",
+    "position": "bottom",
+    "className": "order-2 w-full",
+    "sizeRem": 26
+  },
+  "window": {
+    "title": "Social Battery",
+    "controls": "min-max-close",
+    "barClassName": "text-center",
+    "className": "items-center gap-6 p-8 text-center"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#E0529A",
+      "background": "#FFFFFF",
+      "ink": "#111111"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "order-3 leading-tight text-[var(--poster-ink)]",
+      "titleRem": 2.8,
+      "subtitleRem": 1.9,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleClasses": "whitespace-pre-line font-semibold leading-tight text-[var(--poster-ink)]",
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "bodyRem": 2.2,
+      "titleFontFamily": "var(--font-theme-pixelify-sans), monospace"
+    }
+  }
+}

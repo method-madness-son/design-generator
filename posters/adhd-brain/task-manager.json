@@ -1,0 +1,28 @@
+{
+  "id": "task-manager",
+  "title": "Brain.exe: 100%\nLaundry: not responding\nEmail: suspended\nNew hobby: running",
+  "subtitle": "",
+  "window": {
+    "title": "Task Manager",
+    "controls": "min-max-close",
+    "barClassName": "",
+    "className": "items-start gap-6 p-8 text-left"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#4FB3B0",
+      "background": "#FFFFFF",
+      "ink": "#111111"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "hidden",
+      "titleRem": 2.2,
+      "subtitleRem": 1.9,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleClasses": "whitespace-pre-line font-semibold leading-[1.55] text-[var(--poster-ink)]",
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "bodyRem": 2.2,
+      "titleFontFamily": "var(--font-theme-pixelify-sans), monospace"
+    }
+  }
+}

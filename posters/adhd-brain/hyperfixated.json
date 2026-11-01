@@ -1,0 +1,31 @@
+{
+  "id": "hyperfixated",
+  "title": "HYPERFIXATED",
+  "subtitle": "see you in 6 hours",
+  "graphic": {
+    "type": "squiggles",
+    "position": "bottom",
+    "className": "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[62%] text-[var(--poster-ink)]",
+    "sizeRem": 40
+  },
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "relative items-center justify-center gap-4 p-14 text-center"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-anton), sans-serif",
+      "fontFamily": "var(--font-theme-work-sans), sans-serif",
+      "titleClasses": "leading-none tracking-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "font-light tracking-[0.12em] text-[var(--poster-ink)]",
+      "titleRem": 4.4,
+      "subtitleRem": 2.2,
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "bodyRem": 2.2
+    },
+    "colorPalette": {
+      "background": "#FFFFFF",
+      "ink": "#111111",
+      "accent": "#4FB3B0"
+    }
+  }
+}
