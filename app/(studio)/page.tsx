@@ -10,6 +10,9 @@ export default function Home() {
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-2xl font-semibold">Projects</h1>
         <div className="flex items-center gap-4">
+          <Link href="/inventory" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+            Inventory &rarr;
+          </Link>
           <Link href="/tees" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             Tees &rarr;
           </Link>

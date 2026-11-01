@@ -92,3 +92,16 @@ These match the mug and tee pipelines:
 - Rate limits are handled generically: on a 429 or 5xx, the script honors `Retry-After` or backs off exponentially. Printify's per-endpoint publishing limits are not encoded.
 - The ~5 MB base64 guidance is a recommendation, not a confirmed hard limit.
 - Etsy-side fields (shipping profile, production partner, category) are set in Printify/Etsy, not by this script.
+
+## Inventory
+
+`/inventory` in the studio lists every poster, with a status derived from the pipeline's own records (`lib/inventory.ts`). Nothing is tracked by hand.
+
+| Status | Means | Table |
+|---|---|---|
+| Listed | `printify/state.json` has a `publishedAt` for it | Ready & listed |
+| Printify draft | Synced to Printify (has a product id), not published | Ready & listed |
+| Ready | Saved for listing and the listing passes `listing:check` | Ready & listed |
+| Saved · needs listing | Saved, but has no Etsy copy or the copy fails the check | Ideas |
+| Has listing · not saved | Has Etsy copy, but nothing has been saved in the studio yet | Ideas |
+| Idea | Neither saved nor listed | Ideas |
