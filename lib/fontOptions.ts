@@ -37,6 +37,8 @@ export const GLOBAL_FONTS: Record<string, string> = {
   'Big Shoulders Stencil': THEME_FONT_CSS['Big Shoulders Stencil'],
   'Barlow Condensed': THEME_FONT_CSS['Barlow Condensed'],
   Kalam: THEME_FONT_CSS.Kalam,
+  'Permanent Marker': THEME_FONT_CSS['Permanent Marker'],
+  'Space Mono': THEME_FONT_CSS['Space Mono'],
   Georgia: "Georgia, 'Times New Roman', serif",
   Monospace: "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
 };

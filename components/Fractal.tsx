@@ -1,10 +1,12 @@
 import type { CSSProperties } from 'react';
 
-export type FractalType = 'lorenz' | 'tree' | 'spiral' | 'road-arrow' | 'pen-arrow';
+export type FractalType = 'lorenz' | 'tree' | 'spiral' | 'road-arrow' | 'pen-arrow' | 'loop-arrow' | 'surfaces';
 
 // A path is drawn in the graphic's color (currentColor) unless it names the palette accent.
-// Strokes are the default; `fill` paths are solid shapes such as arrowheads.
-type GraphicPath = { d: string; fill?: boolean; accent?: boolean; width?: number };
+// Strokes are the default; `fill` paths are solid shapes such as arrowheads. `paper` strokes are
+// drawn in the poster background to cut gaps, and `knockout` shapes are filled with a paper
+// outline so overlapping shapes stay separate.
+type GraphicPath = { d: string; fill?: boolean; accent?: boolean; paper?: boolean; knockout?: boolean; width?: number };
 type Graphic = { viewBox: [number, number]; strokeWidth: number; paths: GraphicPath[]; linecap?: 'round' | 'butt' };
 
 const GRAPHICS: Record<FractalType, Graphic> = {
@@ -44,6 +46,35 @@ const GRAPHICS: Record<FractalType, Graphic> = {
       { d: 'M228 12 L304 46 L232 84 Z', fill: true },
     ],
   },
+  // Gravel, snow, and tarmac icons centred in thirds, for a row of labels underneath.
+  surfaces: {
+    viewBox: [300, 90],
+    strokeWidth: 5,
+    paths: [
+      { d: 'M5 74 a15 12 0 1 0 30 0 a15 12 0 1 0 -30 0 Z', knockout: true },
+      { d: 'M30 77 a15 11 0 1 0 30 0 a15 11 0 1 0 -30 0 Z', knockout: true },
+      { d: 'M55 73 a14 12 0 1 0 28 0 a14 12 0 1 0 -28 0 Z', knockout: true },
+      { d: 'M78 78 a10 8 0 1 0 20 0 a10 8 0 1 0 -20 0 Z', knockout: true },
+      { d: 'M16 54 a14 11 0 1 0 28 0 a14 11 0 1 0 -28 0 Z', knockout: true },
+      { d: 'M40 53 a15 13 0 1 0 30 0 a15 13 0 1 0 -30 0 Z', knockout: true },
+      { d: 'M67 58 a11 10 0 1 0 22 0 a11 10 0 1 0 -22 0 Z', knockout: true },
+      { d: 'M28 34 a12 10 0 1 0 24 0 a12 10 0 1 0 -24 0 Z', knockout: true },
+      { d: 'M51 35 a11 10 0 1 0 22 0 a11 10 0 1 0 -22 0 Z', knockout: true },
+      { d: 'M39 16 a11 9 0 1 0 22 0 a11 9 0 1 0 -22 0 Z', knockout: true },
+      { d: 'M150.0 45.0 L150.0 7.0 M150.0 45.0 L117.1 26.0 M150.0 45.0 L117.1 64.0 M150.0 45.0 L150.0 83.0 M150.0 45.0 L182.9 64.0 M150.0 45.0 L182.9 26.0 M150.0 21.0 L157.1 13.9 M150.0 21.0 L142.9 13.9 M150.0 33.0 L154.9 28.1 M150.0 33.0 L145.1 28.1 M129.2 33.0 L126.6 23.3 M129.2 33.0 L119.6 35.6 M139.6 39.0 L137.8 32.2 M139.6 39.0 L132.8 40.8 M129.2 57.0 L119.6 54.4 M129.2 57.0 L126.6 66.7 M139.6 51.0 L132.8 49.2 M139.6 51.0 L137.8 57.8 M150.0 69.0 L142.9 76.1 M150.0 69.0 L157.1 76.1 M150.0 57.0 L145.1 61.9 M150.0 57.0 L154.9 61.9 M170.8 57.0 L173.4 66.7 M170.8 57.0 L180.4 54.4 M160.4 51.0 L162.2 57.8 M160.4 51.0 L167.2 49.2 M170.8 33.0 L180.4 35.6 M170.8 33.0 L173.4 23.3 M160.4 39.0 L167.2 40.8 M160.4 39.0 L162.2 32.2' },
+      { d: 'M208 15 L292 15 L288 23 L294 31 L288 39 L294 47 L288 55 L294 63 L288 71 L292 80 L208 80 L212 71 L206 63 L212 55 L206 47 L212 39 L206 31 L212 23 Z', fill: true },
+      { d: 'M229 15 V80 M250 15 V80 M271 15 V80 M206 33 H294 M206 62 H294', paper: true, width: 3 },
+    ],
+  },
+  // A loop-the-loop arrow, drawn in the accent color.
+  'loop-arrow': {
+    viewBox: [160, 110],
+    strokeWidth: 9,
+    paths: [
+      { d: 'M12 62 C 12 26, 62 18, 72 48 C 80 74, 50 88, 38 68 C 26 48, 72 40, 102 62 L 140 90', accent: true },
+      { d: 'M114 94 L141 91 L135 64', accent: true },
+    ],
+  },
   // A quick pen-drawn arrow, for handwritten notes.
   'pen-arrow': {
     viewBox: [120, 40],
@@ -79,7 +110,7 @@ export function Fractal({
       strokeLinejoin="round"
       aria-hidden
     >
-      {paths.map(({ d, fill, accent, width: pathWidth }) => (
+      {paths.map(({ d, fill, accent, paper, knockout, width: pathWidth }) => (
         <path
           key={d}
           d={d}
@@ -87,6 +118,8 @@ export function Fractal({
           style={{
             ...(fill ? { fill: 'currentColor', stroke: 'none' } : undefined),
             ...(accent ? { stroke: 'var(--poster-accent)' } : undefined),
+            ...(paper ? { stroke: 'var(--poster-background)' } : undefined),
+            ...(knockout ? { fill: 'currentColor', stroke: 'var(--poster-background)', strokeWidth: 2.5 } : undefined),
           }}
         />
       ))}

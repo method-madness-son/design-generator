@@ -1,0 +1,28 @@
+{
+  "id": "gravel-snow-tarmac",
+  "title": "",
+  "subtitle": "",
+  "body": [
+    "GRAVEL",
+    "SNOW",
+    "TARMAC"
+  ],
+  "graphic": {
+    "type": "surfaces",
+    "position": "top",
+    "className": "w-full text-[#3A3A3C]",
+    "sizeRem": 32
+  },
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-4 p-12 text-center"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-montserrat), sans-serif",
+      "titleClasses": "hidden",
+      "subtitleClasses": "hidden",
+      "bodyClasses": "flex w-full font-extrabold tracking-[0.12em] text-[#3A3A3C] [&>li]:flex-1",
+      "bodyRem": 1.9
+    }
+  }
+}

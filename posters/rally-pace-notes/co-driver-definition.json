@@ -1,0 +1,24 @@
+{
+  "id": "co-driver-definition",
+  "title": "co-driver",
+  "subtitle": "(noun)",
+  "body": [
+    "/'kəʊ,draɪ.vər/",
+    "the person who reads the road so the driver doesn't have to."
+  ],
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-3 p-16 text-center"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-crimson-pro), Georgia, serif",
+      "titleFontFamily": "var(--font-crimson-pro), Georgia, serif",
+      "titleClasses": "font-bold leading-none tracking-tight text-[#333333]",
+      "subtitleClasses": "-mt-2 font-semibold leading-none text-[#333333]",
+      "bodyClasses": "mt-4 w-full space-y-6 text-[#333333] [&>li:first-child]:flex [&>li:first-child]:items-center [&>li:first-child]:gap-5 [&>li:first-child]:text-[0.8em] [&>li:first-child]:before:h-px [&>li:first-child]:before:flex-1 [&>li:first-child]:before:bg-current [&>li:first-child]:before:content-[''] [&>li:first-child]:after:h-px [&>li:first-child]:after:flex-1 [&>li:first-child]:after:bg-current [&>li:first-child]:after:content-[''] [&>li:last-child]:mx-auto [&>li:last-child]:max-w-[11.5em] [&>li:last-child]:leading-snug [&>li:last-child]:after:mx-auto [&>li:last-child]:after:mt-8 [&>li:last-child]:after:block [&>li:last-child]:after:h-[3px] [&>li:last-child]:after:w-[5em] [&>li:last-child]:after:bg-[var(--poster-accent)] [&>li:last-child]:after:content-['']",
+      "titleRem": 6,
+      "subtitleRem": 2.6,
+      "bodyRem": 2.4
+    }
+  }
+}
