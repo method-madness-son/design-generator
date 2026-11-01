@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PosterThumbnail } from "@/components/PosterThumbnail";
+import { savedSizes } from "@/lib/posterExports";
 import { getProject, getResolvedPosters, getValidSelection } from "@/lib/posterResolver";
 import { withQuery } from "@/lib/utils";
 
@@ -66,10 +67,22 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
               <p className="mt-3 text-sm font-medium text-neutral-900 group-hover:text-black">
                 {poster.title}
               </p>
+              <ListingBadge sizes={savedSizes(projectId, poster.id)} hasEtsy={!!poster.etsy} />
             </Link>
           </li>
         ))}
       </ul>
     </>
+  );
+}
+
+// Saved exports make a poster eligible for the Printify/Etsy sync; see lib/posterExports.ts.
+function ListingBadge({ sizes, hasEtsy }: { sizes: string[]; hasEtsy: boolean }) {
+  if (sizes.length === 0) return <p className="mt-1 text-xs text-neutral-400">Not saved for listing</p>;
+  return (
+    <p className="mt-1 text-xs text-emerald-700">
+      Eligible · {sizes.join(", ")}
+      {hasEtsy ? "" : <span className="text-amber-700"> · needs Etsy copy</span>}
+    </p>
   );
 }

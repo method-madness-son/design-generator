@@ -28,7 +28,7 @@ Preview at `/tees` while `npm run dev` is running. Print PNGs go to `exports/tee
 
 ## Printify → Etsy poster sync
 
-Uploads poster PNGs from `exports/posters/<project>/<poster>-<size>.png` to Printify, creates a product per poster using its `etsy` copy, and publishes to the connected Etsy shop. Token goes in `.env.local` as `PRINTIFY_API_TOKEN`; shop, blueprint, variants, and prices go in `printify/config.json`. See [docs/PRINTIFY-PIPELINE.md](docs/PRINTIFY-PIPELINE.md).
+In the studio, **Export Poster → Save for Etsy listing** saves the current preview to `posters/<project>/exports/<poster>-<size>.png`; a saved poster is eligible. The sync uploads those PNGs to Printify, creates a product per poster using its `etsy` copy, and publishes to the connected Etsy shop. Token goes in `.env.local` as `PRINTIFY_API_TOKEN`; shop, blueprint, variants, and prices go in `printify/config.json`. See [docs/PRINTIFY-PIPELINE.md](docs/PRINTIFY-PIPELINE.md).
 
 ```bash
 npm run printify:shops

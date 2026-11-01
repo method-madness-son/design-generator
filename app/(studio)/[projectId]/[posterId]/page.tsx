@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { ExportButton } from "@/components/ExportButton";
 import { PosterControlsPanel } from "@/components/PosterControlsPanel";
 import { PosterZoomView } from "@/components/PosterZoomView";
+import { savedSizes } from "@/lib/posterExports";
 import { getProject, getResolvedPoster, getValidSelection } from "@/lib/posterResolver";
+import { POSTER_SIZES, posterSizeFor, posterSizePixels } from "@/lib/posterSizes";
 import { withQuery } from "@/lib/utils";
 
 const CANVAS_ID = "print-canvas";
@@ -55,6 +57,14 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
   const exportFilename = [projectId, posterId, poster.titleFontName, poster.subtitleFontName]
     .filter(Boolean)
     .join("-");
+  const listingSize = posterSizeFor(poster.aspectRatio, poster.printWidthInches);
+  const listing = {
+    size: listingSize,
+    sizeLabel: listingSize ? POSTER_SIZES[listingSize].label : undefined,
+    ...(listingSize ? posterSizePixels(listingSize) : { width: 0, height: 0 }),
+    savedSizes: savedSizes(projectId, posterId),
+    selection: query,
+  };
   return (
     <>
       <div className="lg:flex lg:items-start lg:gap-6">
@@ -79,6 +89,7 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
                   filename={exportFilename}
                   poster={poster}
                   label="Export Poster"
+                  listing={{ ...listing, widthPx: listing.width, heightPx: listing.height }}
                   className="ml-auto"
                 />
               </div>

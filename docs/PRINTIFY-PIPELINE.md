@@ -36,13 +36,21 @@ Uploads poster print files to Printify, creates one product per poster (one vari
 
    Fill in `blueprintId` and `printProviderId`. For each size, set `variantId` to the variant whose placeholder matches that size, and set `priceCents` to the retail price in cents (`2400` is $24.00). A size you remove from `sizes` is not listed.
 
-## Print files
+## Print files and eligibility
 
-`sync` reads `exports/posters/<projectId>/<posterId>-<size>.png`. Sizes are the keys of `lib/posterSizes.ts` (`8x10`, `11x17`). An example is `exports/posters/dev-realities/vim-wq-11x17.png`.
+In the studio (`npm run dev`), open a poster, customize it as usual (palette, fonts, sizes, alignment, Print Size), and choose **Export Poster → Save for Etsy listing**. The current preview is rendered at exactly print inches × 300 px (2400 × 3000 for 8×10, 3300 × 5100 for 11×17) and saved through `app/api/poster-exports/[projectId]/[posterId]/route.ts` to:
 
-The studio's **Download current Etsy item** button saves `<project>-<poster>[-palette]-300dpi.png`. Choose the size with the Print Size picker, export, then rename the file into the layout above. Use `--dir <path>` to read from another folder that uses the same layout.
+```
+posters/<projectId>/exports/<posterId>-<size>.png    one file per size; saving again overwrites
+posters/<projectId>/exports/manifest.json             size, pixels, sha256, savedAt, studio selection
+```
 
-Each file must be exactly print inches × 300 px: 2400 × 3000 for 8×10 and 3300 × 5100 for 11×17. Files under 100 MB are accepted. Before uploading, `sync` also confirms that each variant's `front` placeholder has the same aspect ratio as the file.
+- Save each size separately: switch Print Size, then save again. Customization is still per project and per poster. The manifest records the selection that was used for each file.
+- **Eligibility:** a poster with at least one saved size is eligible. The poster page and the project grid show "Eligible · 8x10, 11x17" or "Not saved for listing".
+- **Unnamed runs:** `printify:sync` / `printify:check` with no poster ids process only eligible posters and list the rest as skipped. Unsaved posters are not an error, because not every poster has to be made right away.
+- **One listing per poster:** the Etsy copy stays only in `posters/<projectId>/<posterId>.json`, and it covers every saved size. Exports never bundle a listing file. Only saved sizes become Printify variants, and `check` warns if the description mentions a size that hasn't been saved.
+- The save endpoint writes into the repo, so it only works with the local studio (`npm run dev` / `next start`), not on a read-only host.
+- `--dir <root>` still reads `<root>/<projectId>/<posterId>-<size>.png` for files made elsewhere.
 
 ## Running it
 
@@ -51,7 +59,7 @@ npm run printify:check -- dev-realities              # offline: config, files, E
 npm run printify:sync -- dev-realities vim-wq --dry-run --publish   # print payloads, send nothing
 npm run printify:sync -- dev-realities vim-wq        # upload + create draft (review in Printify)
 npm run printify:sync -- dev-realities vim-wq --publish   # ...and push to Etsy
-npm run printify:sync -- dev-realities --publish     # every poster in the project
+npm run printify:sync -- dev-realities --publish     # every saved (eligible) poster in the project
 ```
 
 When you leave out poster ids, the whole project is synced. If any poster fails a check, the run stops before anything is sent.

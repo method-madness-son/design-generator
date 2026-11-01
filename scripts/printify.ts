@@ -10,6 +10,7 @@
  *   npm run printify:sync -- dev-realities vim-wq            # 2 + 3. upload images, create draft
  *   npm run printify:sync -- dev-realities --publish         # 2 + 3 + 4 for every poster
  *
+ * Only posters saved with the studio's "Save for Etsy listing" are eligible.
  * The token lives in .env.local as PRINTIFY_API_TOKEN. See docs/PRINTIFY-PIPELINE.md.
  */
 import fs from 'node:fs';
@@ -87,7 +88,8 @@ function usage(): void {
   npm run printify:check -- <projectId> [posterId...]
   npm run printify:sync -- <projectId> [posterId...] [--publish] [--dry-run] [--image-base-url <url>] [--dir <path>]
 
-Print files are read from exports/posters/<projectId>/<posterId>-<size>.png (sizes: 8x10, 11x17).`);
+Print files are saved by the studio to posters/<projectId>/exports/<posterId>-<size>.png (sizes: 8x10, 11x17).
+With no poster ids, only posters that have a saved export are synced.`);
 }
 
 function client(): PrintifyClient {
@@ -141,7 +143,9 @@ function prepare(cli: Cli): { config: PrintifyConfig; shopId: number | null; job
   const shopId = resolveShopId(config);
   const problems = configErrors(config, shopId);
   for (const problem of problems) console.log(`config error: ${problem}`);
-  const jobs = jobsFor(config, projectId, posterIds, cli.exportDir);
+  const { jobs, skipped } = jobsFor(config, projectId, posterIds, cli.exportDir);
+  if (skipped.length > 0) console.log(`Not saved for listing yet (skipped): ${skipped.join(', ')}`);
+  if (jobs.length === 0) console.log(`No posters in ${projectId} are saved for listing yet.`);
   const jobsOk = jobs.map(report).every(Boolean);
   return { config, shopId, jobs, ok: problems.length === 0 && jobsOk };
 }

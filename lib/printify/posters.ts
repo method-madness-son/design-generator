@@ -6,6 +6,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { checkEtsy } from '@/lib/etsyListing';
+import { exportsDir } from '@/lib/posterExports';
 import { getPosterIds, getProject } from '@/lib/posterResolver';
 import { POSTER_SIZES, PRINT_DPI, type PosterSizeName } from '@/lib/posterSizes';
 import type { PosterFile } from '@/types/poster';
@@ -13,8 +14,11 @@ import type { PrintifyConfig, PrintifyProductRequest, PrintifyState, PrintifyVar
 
 export const CONFIG_PATH = path.join(process.cwd(), 'printify', 'config.json');
 export const STATE_PATH = path.join(process.cwd(), 'printify', 'state.json');
-// Print files: exports/posters/<projectId>/<posterId>-<size>.png, e.g. dev-realities/vim-wq-8x10.png
-export const POSTER_EXPORT_DIR = path.join(process.cwd(), 'exports', 'posters');
+// Print files are saved by the studio to posters/<projectId>/exports/<posterId>-<size>.png
+// (lib/posterExports.ts). --dir <root> reads <root>/<projectId>/<posterId>-<size>.png instead.
+function printFileDir(projectId: string, root?: string): string {
+  return root ? path.join(root, projectId) : exportsDir(projectId);
+}
 
 // Printify suggests uploading by URL rather than base64 above roughly this size.
 export const BASE64_SOFT_LIMIT_BYTES = 5 * 1024 * 1024;
@@ -108,16 +112,21 @@ function displayPath(filePath: string): string {
   return relative.startsWith('..') ? filePath : relative;
 }
 
-export function buildJob(config: PrintifyConfig, projectId: string, posterId: string, exportDir = POSTER_EXPORT_DIR): PosterJob {
+export function buildJob(config: PrintifyConfig, projectId: string, posterId: string, root?: string): PosterJob {
   const posterPath = path.join(process.cwd(), 'posters', projectId, `${posterId}.json`);
   const poster = JSON.parse(fs.readFileSync(posterPath, 'utf8')) as PosterFile;
   const job: PosterJob = { key: `${projectId}/${posterId}`, projectId, poster, files: [], errors: listingErrors(poster), warnings: [] };
   for (const size of Object.keys(config.sizes) as PosterSizeName[]) {
     const spec = POSTER_SIZES[size];
     if (!spec) continue;
-    const filePath = path.join(exportDir, projectId, `${posterId}-${size}.png`);
+    const filePath = path.join(printFileDir(projectId, root), `${posterId}-${size}.png`);
     if (!fs.existsSync(filePath)) {
-      job.warnings.push(`No ${size} print file at ${displayPath(filePath)}; that size is left off.`);
+      job.warnings.push(`No ${size} saved at ${displayPath(filePath)}; that size is left off.`);
+      // The listing should not promise a size that will not be offered.
+      const label = `${spec.printWidthInches}×${spec.printHeightInches}`;
+      if (poster.etsy?.description.includes(label)) {
+        job.warnings.push(`etsy.description mentions ${label} but only saved sizes are listed.`);
+      }
       continue;
     }
     const { width, height } = pngSize(filePath);
@@ -129,16 +138,29 @@ export function buildJob(config: PrintifyConfig, projectId: string, posterId: st
     if (bytes > PRINTIFY_PNG_LIMIT_BYTES) job.errors.push(`${size} file is over Printify's 100 MB PNG limit.`);
     job.files.push({ size, filePath, bytes, width, height });
   }
-  if (job.files.length === 0) job.errors.push('No print files found for any configured size.');
+  if (job.files.length === 0) job.errors.push('Not saved for listing yet: use "Save for Etsy listing" in the studio.');
   return job;
 }
 
-export function jobsFor(config: PrintifyConfig, projectId: string, posterIds: string[], exportDir?: string): PosterJob[] {
+// Named posters are always checked. With no names, only posters that have a saved export for a
+// configured size are eligible; the rest are returned in `skipped` and are not an error.
+export function jobsFor(
+  config: PrintifyConfig,
+  projectId: string,
+  posterIds: string[],
+  root?: string,
+): { jobs: PosterJob[]; skipped: string[] } {
   if (!getProject(projectId)) throw new Error(`No poster project "${projectId}" under posters/.`);
   const known = getPosterIds(projectId);
-  const ids = posterIds.length > 0 ? posterIds : known;
-  for (const id of ids) if (!known.includes(id)) throw new Error(`No poster "${id}" in ${projectId}.`);
-  return ids.map((id) => buildJob(config, projectId, id, exportDir));
+  for (const id of posterIds) if (!known.includes(id)) throw new Error(`No poster "${id}" in ${projectId}.`);
+  if (posterIds.length > 0) return { jobs: posterIds.map((id) => buildJob(config, projectId, id, root)), skipped: [] };
+  const dir = printFileDir(projectId, root);
+  const sizes = Object.keys(config.sizes);
+  const eligible = (id: string) => sizes.some((size) => fs.existsSync(path.join(dir, `${id}-${size}.png`)));
+  return {
+    jobs: known.filter(eligible).map((id) => buildJob(config, projectId, id, root)),
+    skipped: known.filter((id) => !eligible(id)),
+  };
 }
 
 // Each catalog variant has its own placeholder size; the art must match its aspect ratio or

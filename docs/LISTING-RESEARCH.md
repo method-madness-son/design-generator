@@ -12,6 +12,13 @@ In Claude Code, from this repo:
 
 If you name no posters, the agent works on the ones `listing:brief --needs-work` lists. Those are posters that fail the check or have no research yet. The agent edits only `etsy` and `research`. It never syncs, commits, or pushes, so review its diff before you run `printify:sync`.
 
+## Which posters it works on
+
+- **Saved and listed:** the poster was saved with **Save for Etsy listing** and has `etsy` copy. It is checked and researched.
+- **Saved, no `etsy` block:** `listing:check` fails with "Saved for listing but has no etsy block". `--needs-work` lists it, and the agent writes its listing from scratch.
+- **Not saved, no `etsy` block:** skipped; it is not for sale yet.
+- **Sizes:** `listing:brief` reports the saved sizes, and the agent keeps the description's size bullets to those.
+
 ## Tools it runs
 
 ```bash

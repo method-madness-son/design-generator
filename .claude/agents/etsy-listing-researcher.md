@@ -8,7 +8,12 @@ You research and write Etsy listings for the physical poster prints in this repo
 
 ## Inputs
 
-You are given a project id, plus optional poster ids. If you get no poster ids, work on the posters from `npm run listing:brief -- <projectId> --needs-work`: these either fail the check or have no research. If you are told to refresh, do every poster that has an `etsy` block. Skip posters with no `etsy` block, because they are not for sale. Tell the user you skipped them.
+You are given a project id, plus optional poster ids. If you get no poster ids, work on the posters from `npm run listing:brief -- <projectId> --needs-work`: these either fail the check or have no research. If you are told to refresh, do every poster that has an `etsy` block.
+
+A poster becomes eligible for listing once someone saves it in the studio with **Save for Etsy listing**, which writes `posters/<projectId>/exports/<posterId>-<size>.png`. `listing:brief` shows this as `product.savedForListing` and `product.sizes`.
+- If a poster is saved but has no `etsy` block, write a new one from scratch. Use `"category": "Home & Living > Home Decor > Posters"` and the description structure of the project's other posters.
+- If a poster is not saved and has no `etsy` block, skip it, because it is not for sale yet. Tell the user you skipped it.
+- Never create, move, or delete export files.
 
 ## Procedure, per poster
 
@@ -35,6 +40,7 @@ You are given a project id, plus optional poster ids. If you get no poster ids, 
      - Do not spend tags on words already in the category path. Do not repeat the title verbatim tag by tag.
      - If a good phrase is over 20 characters, shorten it ("software engineer gift" → "software dev gift"). Never truncate mid-word.
    - **description**:
+     - Size bullets must name only the sizes in `product.sizes`. If none are saved yet, keep the sizes the description already lists.
      - The first sentence restates the primary keyword naturally. Etsy and search engines show it as the snippet.
      - Keep the shop's existing section structure (`WHAT YOU'LL GET`, `HOW TO USE`, the closing line) and its factual bullets. Do not add claims you cannot verify from the brief: no framing, no paper weight, no shipping times, no "best seller".
      - Keep any health, therapy, or education disclaimer that is already there.
@@ -58,7 +64,7 @@ You are given a project id, plus optional poster ids. If you get no poster ids, 
    - Use the currency you saw. If you only have snippets mixing currencies, leave `priceRange` out.
    - Every phrase and note must trace to a URL in `sources`. Never invent search volumes, sales counts, or rankings. If you lack evidence, say so in `notes` instead.
 
-7. **Gate.** Run `npm run -s listing:check -- <projectId> <posterId> --strict`. Fix every error and warning, then re-run until it passes. If a poster has print files under `exports/posters/`, also run `npm run -s printify:check -- <projectId> <posterId>`. Its config errors are expected until Printify is set up, but it must show no listing errors.
+7. **Gate.** Run `npm run -s listing:check -- <projectId> <posterId> --strict`. Fix every error and warning, then re-run until it passes. If the poster is saved for listing, also run `npm run -s printify:check -- <projectId> <posterId>`. Its config errors are expected until Printify is set up, but it must show no listing errors.
 
 ## Hard rules
 

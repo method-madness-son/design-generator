@@ -10,6 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { checkListing } from '@/lib/etsyListing';
+import { savedSizes } from '@/lib/posterExports';
 import { getPosterIds, getProject, getProjects } from '@/lib/posterResolver';
 import { POSTER_SIZES } from '@/lib/posterSizes';
 import type { PosterFile } from '@/types/poster';
@@ -32,19 +33,25 @@ function targets(args: string[], all: boolean): Target[] {
 }
 
 function check(list: Target[], strict: boolean, json: boolean): boolean {
-  // Posters with no etsy block are not for sale yet; only --all skips them silently.
+  // A poster becomes eligible for listing once the studio has saved an export for it. Unsaved
+  // posters without an etsy block are skipped; saved ones must have a valid listing.
   let failed = 0;
   let skipped = 0;
   const results = [];
   for (const target of list) {
-    if (!target.poster.etsy) {
+    const sizes = savedSizes(target.projectId, target.posterId);
+    if (!target.poster.etsy && sizes.length === 0) {
       skipped += 1;
       continue;
     }
     const report = checkListing(target.poster);
+    if (!target.poster.etsy) {
+      report.errors = report.errors.filter((error) => !error.startsWith('Missing "etsy" block'));
+      report.errors.unshift('Saved for listing but has no etsy block; run the etsy-listing-researcher agent.');
+    }
     const ok = report.errors.length === 0 && (!strict || report.warnings.length === 0);
     if (!ok) failed += 1;
-    results.push({ poster: `${target.projectId}/${target.posterId}`, ok, ...report });
+    results.push({ poster: `${target.projectId}/${target.posterId}`, ok, savedSizes: sizes, ...report });
   }
   if (json) {
     console.log(JSON.stringify(results, null, 2));
@@ -55,7 +62,11 @@ function check(list: Target[], strict: boolean, json: boolean): boolean {
       for (const error of result.errors) console.log(`  error: ${error}`);
       for (const warning of result.warnings) console.log(`  warning: ${warning}`);
     }
-    console.log(`\n${results.length - failed}/${results.length} listings pass${strict ? ' (strict)' : ''}; ${skipped} posters have no etsy block.`);
+    const saved = results.filter((result) => result.savedSizes.length > 0).length;
+    console.log(
+      `\n${results.length - failed}/${results.length} listings pass${strict ? ' (strict)' : ''}; ` +
+        `${saved} saved for listing; ${skipped} unsaved posters without an etsy block skipped.`,
+    );
   }
   return failed === 0;
 }
@@ -63,9 +74,13 @@ function check(list: Target[], strict: boolean, json: boolean): boolean {
 function brief(list: Target[], needsWork: boolean): void {
   for (const { projectId, posterId, poster } of list) {
     const report = checkListing(poster);
+    const sizes = savedSizes(projectId, posterId);
     if (needsWork) {
-      if (!poster.etsy || (report.errors.length === 0 && poster.research)) continue;
-      console.log(`${projectId}/${posterId}\t${report.errors.length} errors\t${poster.research ? 'researched' : 'no research'}`);
+      // Saved-but-unlisted posters first need a listing written from scratch.
+      if (!poster.etsy && sizes.length === 0) continue;
+      if (poster.etsy && report.errors.length === 0 && poster.research) continue;
+      const state = !poster.etsy ? 'saved, no etsy block' : `${report.errors.length} errors\t${poster.research ? 'researched' : 'no research'}`;
+      console.log(`${projectId}/${posterId}\t${state}\t${sizes.length > 0 ? `saved ${sizes.join(',')}` : 'not saved'}`);
       continue;
     }
     const project = getProject(projectId);
@@ -85,7 +100,9 @@ function brief(list: Target[], needsWork: boolean): void {
           },
           product: {
             type: 'physical matte poster print via Printify',
-            sizes: Object.values(POSTER_SIZES).map((size) => size.label),
+            // Only saved sizes are offered; the listing must not promise others.
+            sizes: sizes.map((size) => POSTER_SIZES[size].label),
+            savedForListing: sizes.length > 0,
           },
           etsy: poster.etsy ?? null,
           research: poster.research ?? null,

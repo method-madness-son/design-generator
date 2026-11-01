@@ -1,8 +1,9 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { downloadEtsyPack, downloadPinterestPack } from '@/lib/exportUtils';
-import { formatEtsyListing, formatPinterestListing } from '@/lib/listingText';
+import { downloadPinterestPack, saveListingExport } from '@/lib/exportUtils';
+import { formatPinterestListing } from '@/lib/listingText';
 import { cn } from '@/lib/utils';
 import type { ResolvedPoster } from '@/types/poster';
 
@@ -14,12 +15,26 @@ type Props = {
   // Text on the dropdown trigger.
   label?: string;
   className?: string;
+  // Where "Save for Etsy listing" writes. size is null when the current layout is not a
+  // sellable print size (pick one with the Print Size control first).
+  listing: {
+    size: string | null;
+    sizeLabel?: string;
+    widthPx: number;
+    heightPx: number;
+    savedSizes: string[];
+    selection: Record<string, string>;
+  };
 };
 
 const triggerClasses = 'rounded-md px-4 py-2 disabled:opacity-50';
 
-export function ExportButton({ elementId, filename, poster, label = 'Export', className }: Props) {
+export function ExportButton({ elementId, filename, poster, label = 'Export', className, listing }: Props) {
+  const router = useRouter();
   const [status, setStatus] = useState<'idle' | 'exporting' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [savedSizes, setSavedSizes] = useState(listing.savedSizes);
+  const isSaved = listing.size !== null && savedSizes.includes(listing.size);
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const fullFilename = [filename, poster.paletteName].filter(Boolean).join('-');
@@ -41,11 +56,13 @@ export function ExportButton({ elementId, filename, poster, label = 'Export', cl
   async function run(task: () => Promise<void>) {
     setOpen(false);
     setStatus('exporting');
+    setErrorMessage('');
     try {
       await task();
       setStatus('idle');
     } catch (error) {
       console.error(error);
+      setErrorMessage(error instanceof Error ? error.message : String(error));
       setStatus('error');
     }
   }
@@ -79,20 +96,27 @@ export function ExportButton({ elementId, filename, poster, label = 'Export', cl
             <button
               type="button"
               onClick={() =>
-                run(() =>
-                  downloadEtsyPack(
+                run(async () => {
+                  if (!listing.size) return;
+                  const result = await saveListingExport(
                     elementId,
-                    fullFilename,
-                    poster.printWidthInches,
-                    poster.etsy ? formatEtsyListing(poster.etsy) : undefined,
-                  ),
-                )
+                    { projectId: poster.projectId, posterId: poster.id, size: listing.size, widthPx: listing.widthPx, heightPx: listing.heightPx },
+                    listing.selection,
+                  );
+                  setSavedSizes(result.sizes);
+                  router.refresh();
+                })
               }
-              className="block w-full px-3 py-2 text-left text-sm hover:bg-neutral-100"
+              disabled={!listing.size}
+              className="block w-full px-3 py-2 text-left text-sm hover:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
             >
-              <span className="block font-medium text-neutral-900">Download current Etsy item</span>
+              <span className="block font-medium text-neutral-900">
+                {isSaved ? `Re-save ${listing.size} for Etsy listing` : 'Save for Etsy listing'}
+              </span>
               <span className="block text-xs text-neutral-500">
-                Current preview PNG{poster.etsy ? ' + listing copy' : ''}
+                {listing.size
+                  ? `${listing.widthPx}×${listing.heightPx} PNG → posters/${poster.projectId}/exports/`
+                  : 'Pick a Print Size first'}
               </span>
             </button>
 
@@ -119,7 +143,20 @@ export function ExportButton({ elementId, filename, poster, label = 'Export', cl
         )}
       </div>
 
-      {status === 'error' && <p className="text-sm text-red-600">Export failed. See the console for details.</p>}
+      <p className="text-xs text-neutral-500" data-listing-status>
+        {savedSizes.length > 0 ? (
+          <>
+            <span className="font-medium text-emerald-700">Eligible for listing</span> · saved {savedSizes.join(', ')}
+            {poster.etsy ? '' : ' · needs Etsy copy'}
+          </>
+        ) : (
+          'Not saved yet · not listed'
+        )}
+      </p>
+
+      {status === 'error' && (
+        <p className="text-sm text-red-600">Export failed{errorMessage ? `: ${errorMessage}` : '. See the console for details.'}</p>
+      )}
     </div>
   );
 }
