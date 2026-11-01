@@ -1,0 +1,11 @@
+{
+  "id": "beer-league-legend",
+  "title": "BEER LEAGUE\nLEGEND",
+  "subtitle": "Est. 10:45 PM ice time",
+  "graphic": {
+    "type": "crossed-sticks",
+    "position": "top",
+    "className": "mb-2 text-[var(--poster-ink)]",
+    "sizeRem": 13
+  }
+}

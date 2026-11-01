@@ -1,0 +1,29 @@
+{
+  "id": "scoreboard-still-had-fun",
+  "title": "PERIOD 3",
+  "subtitle": "still had fun",
+  "body": [
+    "HOME\n01",
+    "AWAY\n09"
+  ],
+  "overrides": {
+    "colorPalette": {
+      "background": "#0B2545",
+      "ink": "#F5F7FA",
+      "accent": "#FF4D5E"
+    },
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-8 p-12 text-center"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-doto), monospace",
+      "titleFontFamily": "var(--font-doto), monospace",
+      "titleClasses": "font-black tracking-[0.2em] text-[var(--poster-ink)]",
+      "subtitleClasses": "order-last font-black lowercase tracking-[0.12em] text-[#8ECAE6]",
+      "bodyClasses": "flex w-full gap-8 font-black [&>li]:flex-1 [&>li]:whitespace-pre-line [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:py-5 [&>li]:leading-none [&>li]:text-[var(--poster-accent)] [&>li::first-line]:text-[0.32em] [&>li::first-line]:leading-[2] [&>li::first-line]:tracking-[0.2em] [&>li::first-line]:text-[var(--poster-ink)]",
+      "titleRem": 2.2,
+      "subtitleRem": 2.6,
+      "bodyRem": 7
+    }
+  }
+}

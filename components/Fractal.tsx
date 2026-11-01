@@ -13,7 +13,8 @@ export type FractalType =
   | 'spoon-battery'
   | 'spoon-badge'
   | 'side-quest-fork'
-  | 'squiggles';
+  | 'squiggles'
+  | 'crossed-sticks';
 
 // A path is drawn in the graphic's color (currentColor) unless it names the palette accent.
 // Strokes are the default; `fill` paths are solid shapes such as arrowheads. `paper` strokes are
@@ -256,6 +257,24 @@ const GRAPHICS: Record<FractalType, Graphic> = {
       { d: 'M572 150 Q576.5 160 581 150 Q585.5 140 590 150 Q594.5 160 599 150 Q603.5 140 608 150 Q612.5 160 617 150 Q621.5 140 626 150', accent: true },
       { d: 'M565 202 Q558.8 192.9 556.1 203.6 Q553.4 214.2 547.3 205.1 Q541.1 196.1 538.4 206.7 Q535.7 217.3 529.5 208.3 Q523.4 199.2 520.7 209.8 Q518 220.4 511.8 211.4' },
       { d: 'M570 248 Q577.9 240.4 566.9 239.5 Q556 238.7 563.8 231.1 Q571.7 223.4 560.8 222.6 Q549.8 221.8 557.7 214.2 Q565.5 206.5 554.6 205.7 Q543.7 204.9 551.5 197.3' },
+    ],
+  },
+  // Two crossed hockey sticks with accent tape, over a puck.
+  'crossed-sticks': {
+    viewBox: [160, 172],
+    strokeWidth: 9,
+    linecap: 'butt',
+    paths: [
+      { d: 'M30 6 L114 132' },
+      { d: 'M110 128 Q118 152 154 150', width: 12 },
+      { d: 'M130 6 L46 132' },
+      { d: 'M50 128 Q42 152 6 150', width: 12 },
+      { d: 'M34 12 L44 27', accent: true, width: 11 },
+      { d: 'M126 12 L116 27', accent: true, width: 11 },
+      { d: 'M124 147 L140 150', accent: true, width: 13 },
+      { d: 'M36 147 L20 150', accent: true, width: 13 },
+      { d: 'M60 156 V164 A20 7 0 0 0 100 164 V156 Z', fill: true },
+      { d: 'M60 156 a20 7 0 1 0 40 0 a20 7 0 1 0 -40 0 Z', knockout: true },
     ],
   },
   // A quick pen-drawn arrow, for handwritten notes.
