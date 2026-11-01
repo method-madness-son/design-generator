@@ -37,8 +37,9 @@ npm run listing:check -- --all --json                 # machine-readable
 | Title is 1–140 characters, with no stray or double spaces | error |
 | 1–13 tags; each tag 1–20 characters of letters, numbers, spaces, `'` and `-`; tags unique ignoring case | error |
 | Description and category are not empty | error |
-| `research` matches the structure below, has at least one source URL, and has a YYYY-MM-DD date | error |
-| Fewer than 13 tags; `%` `:` `&` used more than once in the title; more than 3 all-caps words; a word repeated 3+ times | warning |
+| `research` has a YYYY-MM-DD date, a primary keyword, and at least one source URL | error |
+| A saved poster has no `etsy` block | error |
+| Fewer than 13 tags; `%` `:` `&` used more than once in the title; a word repeated 3+ times; the description mentions a size that has not been saved | warning |
 | Primary keyword missing from the first 60 title characters; no `research`; research older than 180 days | warning |
 
 ## The `research` block

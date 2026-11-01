@@ -11,7 +11,7 @@ const PROJECT_FILE = 'project.json';
 const DEFAULT_PRINT_WIDTH_INCHES = 12;
 
 // Ids come from the URL, so keep them to plain slugs before touching the filesystem.
-const isSlug = (value: string) => /^[a-z0-9][a-z0-9-_]*$/i.test(value);
+export const isSlug = (value: string) => /^[a-z0-9][a-z0-9-_]*$/i.test(value);
 
 function readJson<T>(filePath: string): T | null {
   if (!fs.existsSync(filePath)) return null;
@@ -41,6 +41,20 @@ export function getPosterIds(projectId: string): string[] {
     .filter((file) => file.endsWith('.json') && file !== PROJECT_FILE)
     .map((file) => file.replace(/\.json$/, ''))
     .sort();
+}
+
+// The raw poster JSON (posters/<projectId>/<posterId>.json), or null if it does not exist.
+export function getPosterFile(projectId: string, posterId: string): PosterFile | null {
+  if (!isSlug(projectId) || !isSlug(posterId)) return null;
+  return readJson<PosterFile>(path.join(POSTERS_DIR, projectId, `${posterId}.json`));
+}
+
+// For CLIs: the named posters (all of the project's when none are named), or a clear error.
+export function resolvePosterIds(projectId: string, posterIds: string[] = []): string[] {
+  if (!getProject(projectId)) throw new Error(`No poster project "${projectId}" under posters/.`);
+  const known = getPosterIds(projectId);
+  for (const id of posterIds) if (!known.includes(id)) throw new Error(`No poster "${id}" in ${projectId}.`);
+  return posterIds.length > 0 ? posterIds : known;
 }
 
 export type VariantSelection = {
@@ -135,7 +149,7 @@ export function getResolvedPoster(
   if (!isSlug(posterId)) return null;
   const project = getProject(projectId);
   if (!project) return null;
-  const poster = readJson<PosterFile>(path.join(POSTERS_DIR, projectId, `${posterId}.json`));
+  const poster = getPosterFile(projectId, posterId);
   if (!poster) return null;
 
   const { overrides } = poster;

@@ -50,7 +50,7 @@ posters/<projectId>/exports/manifest.json             size, pixels, sha256, save
 - **Unnamed runs:** `printify:sync` / `printify:check` with no poster ids process only eligible posters and list the rest as skipped. Unsaved posters are not an error, because not every poster has to be made right away.
 - **One listing per poster:** the Etsy copy stays only in `posters/<projectId>/<posterId>.json`, and it covers every saved size. Exports never bundle a listing file. Only saved sizes become Printify variants, and `check` warns if the description mentions a size that hasn't been saved.
 - The save endpoint writes into the repo, so it only works with the local studio (`npm run dev` / `next start`), not on a read-only host.
-- `--dir <root>` still reads `<root>/<projectId>/<posterId>-<size>.png` for files made elsewhere.
+- Files made elsewhere can be dropped into `posters/<projectId>/exports/` with the same names; the PNGs on disk decide what is saved, and the manifest is only metadata.
 
 ## Running it
 

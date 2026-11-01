@@ -34,9 +34,9 @@ export type PrintifyState = {
       posters: Record<
         string,
         {
-          images: Partial<Record<PosterSizeName, { sha256: string; imageId: string; uploadedAt: string }>>;
+          images: Partial<Record<PosterSizeName, { sha256: string; imageId: string }>>;
           productId?: string;
-          productUpdatedAt?: string;
+          // Set when a publish to Etsy was requested; the inventory shows these as Listed.
           publishedAt?: string;
         }
       >;
@@ -48,16 +48,7 @@ export type PrintifyShop = { id: number; title: string; sales_channel: string };
 
 export type PrintifyUploadRequest = { file_name: string; url: string } | { file_name: string; contents: string };
 
-export type PrintifyUploadedImage = {
-  id: string;
-  file_name: string;
-  height: number;
-  width: number;
-  size: number;
-  mime_type: string;
-  preview_url: string;
-  upload_time: string;
-};
+export type PrintifyUploadedImage = { id: string; width: number; height: number };
 
 export type PrintifyProductRequest = {
   title: string;
@@ -82,6 +73,5 @@ export type PrintifyProvider = { id: number; title: string };
 export type PrintifyVariant = {
   id: number;
   title: string;
-  options: Record<string, string>;
   placeholders: { position: string; width: number; height: number }[];
 };

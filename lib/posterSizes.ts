@@ -30,3 +30,17 @@ export function posterSizePixels(size: PosterSizeName): { width: number; height:
 }
 
 export const isPosterSizeName = (value: string): value is PosterSizeName => value in POSTER_SIZES;
+
+// Printify's PNG upload limit (help.printify.com: 100 MB for JPEG/PNG).
+export const PRINT_PNG_LIMIT_BYTES = 100 * 1024 * 1024;
+
+// The one check for a print file, used when the studio saves it and again before upload.
+export function printFileErrors(size: PosterSizeName, file: { width: number; height: number; bytes: number }): string[] {
+  const expected = posterSizePixels(size);
+  const errors: string[] = [];
+  if (file.width !== expected.width || file.height !== expected.height) {
+    errors.push(`${size} must be ${expected.width}×${expected.height}px at 300 DPI; got ${file.width}×${file.height}.`);
+  }
+  if (file.bytes > PRINT_PNG_LIMIT_BYTES) errors.push(`${size} PNG is over Printify's 100 MB limit.`);
+  return errors;
+}

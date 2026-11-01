@@ -40,7 +40,9 @@ export class PrintifyClient {
     this.base = base.replace(/\/$/, '');
   }
 
-  private async request<T>(method: string, route: string, body?: unknown): Promise<T> {
+  private async request<T>(method: string, route: string, payload?: unknown): Promise<T> {
+    // Built once: base64 uploads can be tens of MB and are the requests most likely to be retried.
+    const body = payload === undefined ? undefined : JSON.stringify(payload);
     for (let attempt = 1; ; attempt += 1) {
       const response = await fetch(`${this.base}${route}`, {
         method,
@@ -49,7 +51,7 @@ export class PrintifyClient {
           'Content-Type': 'application/json;charset=utf-8',
           'User-Agent': 'printify-pipeline',
         },
-        body: body === undefined ? undefined : JSON.stringify(body),
+        body,
       });
       const text = await response.text();
       const parsed: unknown = text ? safeJson(text) : null;
