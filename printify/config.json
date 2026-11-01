@@ -1,0 +1,19 @@
+{
+  "shopId": null,
+  "blueprintId": null,
+  "printProviderId": null,
+  "placeholderPosition": "front",
+  "sizes": {
+    "8x10": { "variantId": null, "priceCents": null },
+    "11x17": { "variantId": null, "priceCents": null }
+  },
+  "publish": {
+    "title": true,
+    "description": true,
+    "images": true,
+    "variants": true,
+    "tags": true,
+    "keyFeatures": true,
+    "shipping_template": true
+  }
+}

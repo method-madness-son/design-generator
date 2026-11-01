@@ -18,7 +18,11 @@
     "lc:preview": "tsx scripts/lowcontent.ts preview",
     "mug:check": "tsx scripts/mug-export.ts --check",
     "mug-art": "tsx scripts/mug-export.ts --art",
-    "mug-preview": "tsx scripts/mug-export.ts --preview"
+    "mug-preview": "tsx scripts/mug-export.ts --preview",
+    "printify:shops": "tsx scripts/printify.ts shops",
+    "printify:catalog": "tsx scripts/printify.ts catalog",
+    "printify:check": "tsx scripts/printify.ts check",
+    "printify:sync": "tsx scripts/printify.ts sync"
   },
   "dependencies": {
     "clsx": "^2.1.1",

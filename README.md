@@ -26,6 +26,18 @@ npm run tee-preview -- brain-tabs --shirt Black
 
 Preview at `/tees` while `npm run dev` is running. Print PNGs go to `exports/tees/`. Wireframes go to `exports/tees/previews/`.
 
+## Printify → Etsy poster sync
+
+Uploads poster PNGs from `exports/posters/<project>/<poster>-<size>.png` to Printify, creates a product per poster using its `etsy` copy, and publishes to the connected Etsy shop. Token goes in `.env.local` as `PRINTIFY_API_TOKEN`; shop, blueprint, variants, and prices go in `printify/config.json`. See [docs/PRINTIFY-PIPELINE.md](docs/PRINTIFY-PIPELINE.md).
+
+```bash
+npm run printify:shops
+npm run printify:catalog -- --search poster
+npm run printify:check -- dev-realities
+npm run printify:sync -- dev-realities vim-wq --dry-run
+npm run printify:sync -- dev-realities vim-wq --publish
+```
+
 ## Getting Started
 
 First, run the development server:
