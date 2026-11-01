@@ -1,0 +1,25 @@
+{
+  "id": "time-card",
+  "title": "TIME CARD",
+  "subtitle": "crew copy · do not lose",
+  "body": [
+    "STAGE SS5",
+    "DISTANCE 14.2KM",
+    "SURFACE GRAVEL",
+    "WEATHER YES",
+    "DRIVER CALM",
+    "CO-DRIVER LYING"
+  ],
+  "overrides": {
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-russo-one), sans-serif",
+      "fontFamily": "var(--font-theme-vt323), monospace",
+      "titleClasses": "tracking-[0.08em] text-[var(--poster-ink)]",
+      "subtitleClasses": "-mt-3 uppercase tracking-[0.2em] text-[var(--poster-accent)]",
+      "bodyClasses": "w-[86%] border-[5px] border-[var(--poster-ink)] px-7 py-4 text-[var(--poster-ink)] [&>li]:[text-align-last:justify] [&>li]:border-b-2 [&>li]:border-dashed [&>li]:border-[var(--poster-ink)] [&>li]:py-2 [&>li:last-child]:border-b-0 [&>li:last-child]:text-[var(--poster-accent)]",
+      "titleRem": 4,
+      "subtitleRem": 1.8,
+      "bodyRem": 2.6
+    }
+  }
+}

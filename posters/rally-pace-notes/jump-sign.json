@@ -1,0 +1,15 @@
+{
+  "id": "jump-sign",
+  "title": "JUMP",
+  "subtitle": "co-driver said \"maybe\"",
+  "overrides": {
+    "defaultTypography": {
+      "fontFamily": "var(--font-overpass), sans-serif",
+      "titleClasses": "relative isolate my-20 grid size-[15rem] place-items-center font-black tracking-tight text-[var(--poster-ink)] before:absolute before:inset-0 before:-z-10 before:rotate-45 before:rounded-[1.6rem] before:border-[12px] before:border-[var(--poster-ink)] before:bg-[#F5C400] before:shadow-[0_0_0_8px_#F5C400] before:content-['']",
+      "subtitleClasses": "italic font-semibold text-[var(--poster-ink)]",
+      "titleRem": 4.6,
+      "subtitleRem": 2.1,
+      "titleFontFamily": "var(--font-overpass), sans-serif"
+    }
+  }
+}

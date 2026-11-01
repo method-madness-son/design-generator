@@ -1,0 +1,25 @@
+{
+  "id": "driveway-rallye-77",
+  "title": "77",
+  "subtitle": "DRIVEWAY RALLYE",
+  "body": [
+    "est. 1987 · no points awarded"
+  ],
+  "overrides": {
+    "colorPalette": {
+      "background": "#DA5A2A",
+      "ink": "#111111",
+      "accent": "#FAF8F3"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-alfa-slab-one), serif",
+      "fontFamily": "var(--font-theme-righteous), sans-serif",
+      "titleClasses": "mb-4 grid size-[19rem] place-items-center rounded-full border-[12px] border-[var(--poster-ink)] bg-[var(--poster-accent)] leading-none text-[var(--poster-ink)] shadow-[0_0_0_10px_var(--poster-accent)]",
+      "subtitleClasses": "tracking-[0.22em] text-[var(--poster-ink)]",
+      "bodyClasses": "text-[var(--poster-accent)] tracking-[0.12em]",
+      "titleRem": 9,
+      "subtitleRem": 2.1,
+      "bodyRem": 1.4
+    }
+  }
+}

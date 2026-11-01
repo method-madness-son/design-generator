@@ -1,0 +1,21 @@
+{
+  "id": "sideways-is-faster",
+  "title": "SIDEWAYS\nIS FASTER",
+  "subtitle": "(citation needed)",
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-start justify-start gap-4 p-16 pt-24 text-left"
+    },
+    "defaultBackground": {
+      "className": "bg-[var(--poster-background)] bg-[linear-gradient(118deg,transparent_60%,#DA5A2A_60%,#DA5A2A_67%,transparent_67%,transparent_70%,#F5C842_70%,#F5C842_75%,transparent_75%,transparent_78%,#111111_78%,#111111_82%,transparent_82%)]"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-racing-sans-one), sans-serif",
+      "fontFamily": "var(--font-theme-work-sans), sans-serif",
+      "titleClasses": "whitespace-pre-line -skew-x-6 leading-[0.9] text-[var(--poster-ink)]",
+      "subtitleClasses": "ml-2 italic text-[var(--poster-accent)]",
+      "titleRem": 6,
+      "subtitleRem": 2
+    }
+  }
+}

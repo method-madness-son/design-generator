@@ -1,0 +1,28 @@
+{
+  "id": "continue-stage",
+  "title": "CONTINUE?",
+  "subtitle": "service park in 30 min",
+  "body": [
+    "9"
+  ],
+  "overrides": {
+    "colorPalette": {
+      "background": "#101830",
+      "ink": "#F5F0E1",
+      "accent": "#F5C842"
+    },
+    "defaultBackground": {
+      "className": "bg-[var(--poster-background)] bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.05)_0_2px,transparent_2px_7px)]"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-press-start-2p), monospace",
+      "titleClasses": "leading-none text-[var(--poster-ink)]",
+      "subtitleClasses": "order-last leading-relaxed text-[#FF7A3D]",
+      "bodyClasses": "my-4 leading-none text-[var(--poster-accent)] [text-shadow:6px_6px_0_#DA5A2A]",
+      "titleRem": 2.8,
+      "subtitleRem": 1.1,
+      "bodyRem": 11,
+      "titleFontFamily": "var(--font-press-start-2p), monospace"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "night-stage",
+  "title": "NIGHT\nSTAGE",
+  "subtitle": "headlights on. brain off.",
+  "overrides": {
+    "colorPalette": {
+      "background": "#0E0B16",
+      "ink": "#FFE8D6",
+      "accent": "#FF7A3D"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-monoton), cursive",
+      "fontFamily": "var(--font-theme-righteous), sans-serif",
+      "titleClasses": "whitespace-pre-line leading-[1.05] text-[var(--poster-accent)] [text-shadow:0_0_6px_var(--poster-accent),0_0_22px_var(--poster-accent),0_0_48px_#FF4D00]",
+      "subtitleClasses": "mt-4 tracking-[0.12em] text-[var(--poster-ink)] [text-shadow:0_0_10px_rgba(255,232,214,0.5)]",
+      "titleRem": 6,
+      "subtitleRem": 2
+    }
+  }
+}
