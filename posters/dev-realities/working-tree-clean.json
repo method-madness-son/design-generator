@@ -32,23 +32,65 @@
     "altText": "Dark mode poster reading working tree clean with a green checkmark icon, for developer office decor."
   },
   "etsy": {
-    "title": "working tree clean Poster, Funny Git Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for the rare, satisfying moment of a clean working tree.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "Git Art Print, working tree clean Poster, Version Control Humor, Software Developer Office Decor",
+    "description": "A git art print for the rare, satisfying moment git status says working tree clean, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "git joke poster",
-      "working tree clean",
-      "programmer humor",
-      "developer wall art",
-      "coding poster",
-      "software engineer gift",
+      "git art",
+      "git poster",
       "git humor print",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
-      "dark mode poster"
+      "working tree clean",
+      "git status joke",
+      "version control art",
+      "poster for developer",
+      "developer wall decor",
+      "devops gift",
+      "deploy joke print",
+      "software dev decor",
+      "coder office decor",
+      "dark mode wall art"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "git art",
+    "etsy": {
+      "searchPhrases": [
+        "git art",
+        "github poster",
+        "poster for developer",
+        "developer wall decor",
+        "software engineer wall decor"
+      ],
+      "competitorNotes": [
+        "Funny git prints on Etsy center on commit messages ('I have no idea what I'm doing', 'in case of fire: git commit, git push'); a clean-tree celebration did not appear.",
+        "Many git listings are command cheat sheets sold as digital downloads.",
+        "Developer wall decor listings pair a code line with a short witty caption, the same format as this poster."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "coding wall art",
+        "programmer poster",
+        "tech office decor"
+      ],
+      "competitorNotes": [
+        "No git-specific posters surfaced on Amazon; git shows up only inside developer-skills T-shirts.",
+        "Amazon titles add room and use words: 'office', 'home workspaces', 'unframed'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/git_art",
+      "https://www.etsy.com/market/github_poster",
+      "https://www.etsy.com/nz/market/poster_for_developer",
+      "https://www.etsy.com/market/developer_wall_decor",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/nz/listing/4302292858/funny-git-commit-poster-for-developers",
+      "https://us.amazon.com/coding-wall-art/s?k=coding+wall+art",
+      "https://www.amazon.com/Javascript-Software-Developer-Frontend-Engineer/dp/B0928TZBV1",
+      "https://www.amazon.com/Gifts-Software-Developers-Programming-Programmers/dp/B0FN3CBZRL"
+    ],
+    "notes": "Listing pages were not fetched (network allow-list); evidence is from Etsy/Amazon search results only. 'git art' (an Etsy market phrase) leads instead of 'git poster' so this listing does not compete head-on with the project's other git posters; 'git poster' is kept as a tag. GitHub is not printed, so it is kept out. No priceRange: no comparable physical prices seen."
   }
 }

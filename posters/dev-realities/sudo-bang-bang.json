@@ -31,23 +31,76 @@
     "altText": "Dark mode poster reading sudo !! with a key icon in red, for developer office decor."
   },
   "etsy": {
-    "title": "sudo !! Poster, Funny Terminal Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for every forgotten sudo rerun.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "sudo Poster, sudo !! Terminal Humor Print, Sysadmin Gift, Command Line Wall Art for Tech Office",
+    "description": "A funny sudo poster for every command you forgot to run as root, rerun with sudo !!, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "terminal joke poster",
       "sudo poster",
-      "programmer humor",
-      "developer wall art",
-      "coding poster",
-      "software engineer gift",
-      "linux humor print",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
-      "dark mode poster"
+      "sudo joke print",
+      "terminal humor art",
+      "command line poster",
+      "sys admin gift",
+      "sysadmin wall art",
+      "programmer poster",
+      "programmer art",
+      "computer code art",
+      "funny tech posters",
+      "home office wall art",
+      "tech office decor",
+      "dark mode print"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "sudo poster",
+    "etsy": {
+      "searchPhrases": [
+        "sudo tshirt",
+        "sudo make me a sandwich",
+        "linux poster",
+        "linux wall art",
+        "linux commands poster",
+        "sys admin",
+        "programmer art",
+        "computer code wall art",
+        "funny tech posters"
+      ],
+      "competitorNotes": [
+        "Sudo humor on Etsy is mostly 'sudo make me a sandwich' terminal mockups and 'root access dad' prints; 'sudo !!' itself did not appear as a poster.",
+        "Linux/terminal poster results are dominated by command cheat sheets, often digital downloads.",
+        "Printed sudo and Linux joke posters were shown at roughly $15 to $38; digital versions $1 to $7."
+      ],
+      "priceRange": {
+        "min": 15,
+        "max": 38,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "linux poster",
+        "linux commands cheat sheet poster",
+        "wall art for office"
+      ],
+      "competitorNotes": [
+        "Amazon's terminal-themed wall art is almost all command cheat-sheet canvases (8x12 to 16x24, unframed) and tin signs, not jokes.",
+        "Titles name rooms explicitly: 'living room', 'bedroom', 'office'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/sudo_tshirt",
+      "https://www.etsy.com/market/sudo_make_me_a_sandwich",
+      "https://www.etsy.com/market/linux_poster",
+      "https://www.etsy.com/market/linux_wall_art",
+      "https://www.etsy.com/market/linux_commands_poster",
+      "https://www.etsy.com/market/sys_admin",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/computer_code_wall_art",
+      "https://www.etsy.com/market/funny_tech_posters",
+      "https://www.amazon.com/linux-poster/s?k=linux+poster",
+      "https://www.amazon.com/Knowledge-Decoration-Aesthetic-16x24inch-Unframe-style/dp/B0DQWHGRJ1"
+    ],
+    "notes": "Listing pages were not fetched (network allow-list); evidence is from Etsy/Amazon search results only. 'linux poster' has the strongest Etsy evidence, but Linux is not printed on the poster, so it is kept out of the title and tags; 'sudo' is indexed by Etsy (sudo tshirt, sudo make me a sandwich). priceRange is from search snippets for printed sudo/Linux posters."
   }
 }

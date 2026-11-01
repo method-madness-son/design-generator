@@ -31,23 +31,65 @@
     "altText": "Dark mode poster showing a regex pattern with a brackets icon in blue, for developer office decor."
   },
   "etsy": {
-    "title": "Now You Have Two Problems Poster, Funny Regex Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for the classic regex joke: now you have two problems.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "Regex Poster, Now You Have Two Problems Programmer Joke, Coding Quote Wall Art, Gift for Developer",
+    "description": "A funny regex poster for the classic programmer joke: now you have two problems.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "regex joke poster",
-      "two problems poster",
-      "programmer humor",
-      "developer wall art",
-      "coding poster",
-      "software engineer gift",
-      "regex humor print",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
+      "regex poster",
+      "regex joke print",
+      "regular expression",
+      "two problems joke",
+      "regex humor art",
+      "wall art programmer",
+      "programmer jokes",
+      "programmer quote",
+      "nerd humor print",
+      "gift for developer",
+      "coding humor decor",
+      "tech office wall art",
       "dark mode poster"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "regex poster",
+    "etsy": {
+      "searchPhrases": [
+        "regex",
+        "programmer poster",
+        "computer jokes poster",
+        "wall art programmer",
+        "programmer humor art"
+      ],
+      "competitorNotes": [
+        "Regex on Etsy is mostly cheat-sheet posters and desk mats; the only joke print seen was a framed 'write once, read never' design.",
+        "A physical matte regex cheat sheet was listed at $24.99 and the framed joke print at $37; digital PDFs from about $2.",
+        "Programmer joke posters ('50 worst programmer jokes', 'not a bug, a feature') lead with the joke plus 'software developer wall art'."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "coding posters",
+        "programmer poster",
+        "gifts for software developers"
+      ],
+      "competitorNotes": [
+        "No regex wall art surfaced on Amazon; regex appears only as a word in developer-skills T-shirts.",
+        "Amazon humor posters lead with 'Gifts for Software Developers' and name 'tech offices'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/regex",
+      "https://www.etsy.com/market/programmer_poster",
+      "https://www.etsy.com/market/computer_jokes_poster",
+      "https://www.etsy.com/market/wall_art_programmer",
+      "https://www.etsy.com/market/programmer_humor_art",
+      "https://www.etsy.com/listing/1797696924/programmer-jokes-poster-funny-software",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Gifts-Software-Developers-Programming-Programmers/dp/B0FN3CBZRL",
+      "https://www.amazon.com/Javascript-Software-Developer-Frontend-Engineer/dp/B0BQQVLFWY"
+    ],
+    "notes": "Listing pages were not fetched (network allow-list); evidence is from Etsy/Amazon search results only. Etsy indexes 'regex' as a market phrase; 'regex poster' is its product-specific form. No priceRange: the two physical prices seen were a cheat sheet and a framed print, not comparable unframed joke posters."
   }
 }
