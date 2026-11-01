@@ -1,0 +1,28 @@
+{
+  "id": "side-quests-only",
+  "title": "SIDE QUESTS\nONLY",
+  "subtitle": "main quest: pending",
+  "graphic": {
+    "type": "side-quest-fork",
+    "position": "top",
+    "className": "mb-2 text-[var(--poster-ink)] [--graphic-font:var(--font-theme-oswald)]",
+    "sizeRem": 20
+  },
+  "overrides": {
+    "defaultTypography": {
+      "fontFamily": "var(--font-theme-oswald), sans-serif",
+      "titleFontFamily": "var(--font-theme-graduate), serif",
+      "titleClasses": "whitespace-pre-line leading-[0.95] text-[var(--poster-ink)]",
+      "subtitleClasses": "font-semibold uppercase tracking-[0.25em] text-[var(--poster-accent)]",
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "titleRem": 4.4,
+      "subtitleRem": 1.6,
+      "bodyRem": 2.2
+    },
+    "colorPalette": {
+      "background": "#FFFFFF",
+      "ink": "#111111",
+      "accent": "#7B5CC4"
+    }
+  }
+}

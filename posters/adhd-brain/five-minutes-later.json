@@ -1,0 +1,28 @@
+{
+  "id": "five-minutes-later",
+  "title": "I'LL DO IT IN\n5 MINUTES",
+  "subtitle": "3 days later",
+  "body": [
+    "00:05"
+  ],
+  "overrides": {
+    "colorPalette": {
+      "background": "#111111",
+      "ink": "#FFFFFF",
+      "accent": "#F5C842"
+    },
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-8 p-12 text-center"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-doto), monospace",
+      "titleFontFamily": "var(--font-doto), monospace",
+      "titleClasses": "whitespace-pre-line font-black leading-snug tracking-[0.15em] text-[var(--poster-ink)]",
+      "subtitleClasses": "order-last font-black lowercase tracking-[0.12em] text-[#E0529A]",
+      "bodyClasses": "w-full font-black [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:px-4 [&>li]:py-6 [&>li]:leading-none [&>li]:text-[var(--poster-accent)] [&>li]:line-through [&>li]:decoration-[#E0529A] [&>li]:decoration-[length:0.09em]",
+      "titleRem": 2.3,
+      "subtitleRem": 2.6,
+      "bodyRem": 6.5
+    }
+  }
+}

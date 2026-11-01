@@ -1,0 +1,31 @@
+{
+  "id": "spoons-not-found",
+  "title": "Spoons not found.\nTry again tomorrow.",
+  "subtitle": "",
+  "body": [
+    "OK"
+  ],
+  "window": {
+    "title": "Error",
+    "controls": "close-box",
+    "shadow": "#E0529A",
+    "className": "items-start gap-8 p-8 text-left"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#4FB3B0",
+      "background": "#FFFFFF",
+      "ink": "#111111"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "hidden",
+      "bodyClasses": "flex w-full gap-8 [&>li]:flex-1 [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:py-1 [&>li]:text-center [&>li:last-child]:bg-[var(--poster-accent)] justify-center [&>li]:flex-none [&>li]:px-16",
+      "titleRem": 2.7,
+      "bodyRem": 2.3,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleClasses": "whitespace-pre-line font-semibold leading-tight text-[var(--poster-ink)]",
+      "subtitleRem": 2,
+      "titleFontFamily": "var(--font-theme-pixelify-sans), monospace"
+    }
+  }
+}
