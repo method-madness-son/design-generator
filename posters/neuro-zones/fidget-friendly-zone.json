@@ -26,23 +26,70 @@
     "altText": "Fidget Friendly Zone physical poster print with a puzzle piece icon on a soft blue-grey background, for stimming-welcome spaces."
   },
   "etsy": {
-    "title": "Fidget Friendly Zone Sign, Stimming Welcome Printable, Autism Classroom Decor, Sensory Friendly Wall Art",
-    "description": "A welcoming Fidget Friendly Zone sign letting visitors know fidget tools, stimming, and movement are okay here.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang near a fidget bin, sensory corner, or classroom shelf to signal stimming and fidget tools are welcome.\n\nThis listing is a physical poster print, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
+    "title": "Stim Poster, Fidget Friendly Zone Sign, Stimming Welcome Classroom Decor, Neurodiversity Wall Art",
+    "description": "A welcoming stim poster for a Fidget Friendly Zone, letting visitors know fidget tools, stimming, and movement are okay here.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang near a fidget bin, sensory corner, or classroom shelf to signal stimming and fidget tools are welcome.\n\nThis listing is a physical poster print, not a substitute for professional medical, therapy, or educational advice. Thank you for supporting a small, neurodivergent-run shop!",
     "tags": [
-      "fidget friendly sign",
+      "stim poster",
+      "stimming art",
       "stimming welcome",
-      "fidget toy decor",
-      "autism classroom art",
-      "adhd fidget sign",
-      "sensory friendly sign",
-      "stim welcome printable",
-      "neurodivergent decor",
+      "fidget friendly sign",
       "fidget zone sign",
-      "self regulation art",
-      "poster wall art",
-      "poster print",
-      "classroom sensory sign"
+      "autism stim",
+      "stim friendly decor",
+      "neurodiversity decor",
+      "sen classroom decor",
+      "adhd fidget sign",
+      "inclusive classroom",
+      "therapy room poster",
+      "special ed decor"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "stim poster",
+    "etsy": {
+      "searchPhrases": [
+        "stim poster",
+        "stimming art",
+        "funny stimming",
+        "autism stim",
+        "neurodiversity decor",
+        "neurodiversity posters"
+      ],
+      "competitorNotes": [
+        "Stimming posters on Etsy are mostly humorous digital downloads or 'everybody stims' lists; 'Stimming welcome here' wording exists as framed prints.",
+        "Listings target SEN/autism-friendly classrooms, calm corners and therapy offices.",
+        "Most shared-project results (sensory room, calm corner, neurodiversity decor) are digital printables; stating 'physical poster print' separates this listing."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "stimming",
+        "stim chart poster"
+      ],
+      "competitorNotes": [
+        "Amazon results are mostly fidget toys; one unframed 16x24 'Stim Chart' neurodiversity affirmation poster for classrooms or homes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/stim_poster",
+      "https://www.etsy.com/market/stimming_art",
+      "https://www.etsy.com/market/funny_stimming",
+      "https://www.etsy.com/market/autism_stim",
+      "https://www.etsy.com/market/neurodiversity_decor",
+      "https://www.etsy.com/market/neurodiversity_posters",
+      "https://www.etsy.com/listing/4305217146/funny-stimming-welcome-poster",
+      "https://www.amazon.com/stimming/s?k=stimming",
+      "https://www.amazon.com/Stim-Chart-Autism-Awareness-Poster/dp/B0GJLSBK4J",
+      "https://www.etsy.com/market/sensory_room_sign",
+      "https://www.etsy.com/market/calm_corner_poster",
+      "https://www.etsy.com/market/neurodiversity_classroom_decor",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.amazon.com/calming-corner-classroom/s?k=calming+corner+for+classroom",
+      "https://www.amazon.com/sensory-posters/s?k=sensory+posters"
+    ],
+    "notes": "'fidget friendly sign' had no indexed evidence; 'stim poster' is an Etsy /market phrase and matches the printed 'stim freely'. Listing pages were not reachable from this environment (WebFetch blocked); evidence is from search results only. No priceRange: snippets mixed digital downloads with physical signs and did not separate physical poster prices."
   }
 }
