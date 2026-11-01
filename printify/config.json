@@ -1,11 +1,10 @@
 {
-  "shopId": null,
-  "blueprintId": null,
-  "printProviderId": null,
+  "shopId": 29566612,
+  "blueprintId": 282,
+  "printProviderId": 2,
   "placeholderPosition": "front",
   "sizes": {
-    "8x10": { "variantId": null, "priceCents": null },
-    "11x17": { "variantId": null, "priceCents": null }
+    "11x17": { "variantId": 101125, "priceCents": 2400 }
   },
   "publish": {
     "title": true,

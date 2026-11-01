@@ -1,0 +1,30 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 750591,
+      "sha256": "008b9400c5a10f2c8ab24cf88d24cdfdc163c9d5bd802942790a6d1b359454ae",
+      "savedAt": "2026-11-01T16:47:04.903Z",
+      "selection": {
+        "iconRem": "14.5",
+        "titleRem": "4.5",
+        "subtitleRem": "4",
+        "printSize": "11x17"
+      }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 385035,
+      "sha256": "d6ccbed33b3d367dacb18a8a7d58899c5f929ca1ed137eefc678f609252d031a",
+      "savedAt": "2026-11-01T22:08:55.039Z",
+      "selection": {
+        "iconRem": "7.5",
+        "titleRem": "4.25",
+        "subtitleRem": "4",
+        "bodyRem": "3.75"
+      }
+    }
+  }
+}

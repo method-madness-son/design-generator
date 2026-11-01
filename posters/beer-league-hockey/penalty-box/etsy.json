@@ -1,4 +1,62 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Funny Hockey Poster, Penalty Box 2:00 for Being Too Good Print, Beer League Wall Art, Hockey Player Gift, Garage Decor",
+    "description": "A funny hockey poster for anyone who has done 2:00 in the penalty box for being too good, in a retro computer window with two choices: Serve or Argue.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, game room, home bar, or basement.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "funny hockey poster",
+      "hockey poster funny",
+      "penalty box poster",
+      "penalty box",
+      "beer league hockey",
+      "beer league gift",
+      "hockey player gift",
+      "hockey wall art",
+      "funny hockey sign",
+      "hockey dad gift",
+      "hockey garage decor",
+      "hockey man cave",
+      "hockey room decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "funny hockey poster",
+    "etsy": {
+      "searchPhrases": [
+        "hockey poster funny",
+        "beer league hockey",
+        "penalty box",
+        "funny hockey signs",
+        "hockey signs funny"
+      ],
+      "competitorNotes": [
+        "Penalty box jokes are mostly metal signs and digital files; retro and spa-themed penalty posters were shown at about $19.99.",
+        "One retro Penalty Box print is sold at 11 x 17 in on cardstock."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey posters for walls",
+        "hockey art posters",
+        "man cave poster"
+      ],
+      "competitorNotes": [
+        "Amazon hockey posters are mostly straight sports art for man caves and garages; funny ones are mostly metal signs."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hockey_poster_funny?page=3",
+      "https://www.etsy.com/market/beer_league_hockey",
+      "https://www.etsy.com/market/penalty_box",
+      "https://www.etsy.com/market/funny_hockey_signs",
+      "https://www.etsy.com/market/hockey_signs_funny",
+      "https://www.etsy.com/listing/4411537712/penalty-box-print-retro-hockey-poster",
+      "https://www.amazon.com/hockey-posters-walls/s?k=hockey+posters+for+walls",
+      "https://www.amazon.com/Hockey-Art-Posters/s?k=Hockey+Art+Posters",
+      "https://www.amazon.com/Man-Cave-Poster/s?k=Man+Cave+Poster"
+    ],
+    "notes": "No hockey keyword file exists yet, so this rests on one Etsy and one Amazon search. Prices were mixed across signs and posters, so no priceRange is recorded."
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 1239578,
+      "sha256": "c47b122a21c2a88da2ef5f2644d6442cb34cba2b65290a5771eefcb5dc52b63f",
+      "savedAt": "2026-11-01T21:47:35.456Z",
+      "selection": {
+        "titleFont": "Doto",
+        "titleColor": "White",
+        "subtitleColor": "Night Owl",
+        "iconColor": "Night Owl",
+        "backgroundColor": "Night Owl",
+        "iconRem": "19.25",
+        "titleRem": "4",
+        "subtitleRem": "4",
+        "printSize": "11x17",
+        "align": "left"
+      }
+    }
+  }
+}

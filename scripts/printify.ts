@@ -28,6 +28,7 @@ import {
   posterState,
   resolveShopId,
   saveState,
+  withAllCatalogVariants,
   type PosterJob,
 } from '@/lib/printify/posters';
 import type { PosterSizeName } from '@/lib/posterSizes';
@@ -164,7 +165,8 @@ async function sync(): Promise<boolean> {
   }
   const api = client();
   // Fail before uploading anything if the variants cannot hold this art.
-  const problems = placeholderErrors(config, await api.getVariants(config.blueprintId!, config.printProviderId!));
+  const variants = await api.getVariants(config.blueprintId!, config.printProviderId!);
+  const problems = placeholderErrors(config, variants);
   for (const problem of problems) console.log(`catalog error: ${problem}`);
   if (problems.length > 0) return false;
 
@@ -175,7 +177,7 @@ async function sync(): Promise<boolean> {
     const saved = posterState(state, shopId, job.key);
     try {
       const product = buildProductRequest(config, job, await uploadImages(api, job, saved, state));
-      if (saved.productId) await api.updateProduct(shopId, saved.productId, product);
+      if (saved.productId) await api.updateProduct(shopId, saved.productId, withAllCatalogVariants(product, variants));
       else saved.productId = (await api.createProduct(shopId, product)).id;
       saveState(state);
       console.log(`  product ${saved.productId} saved as a Printify draft`);

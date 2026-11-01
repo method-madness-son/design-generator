@@ -1,4 +1,67 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Out of Spoons Poster, Spoonie Art Print, Recharging Battery Wall Art, Chronic Illness Gift, Neurodivergent Decor",
+    "description": "A spoonie art print for the days you are out of spoons and recharging, with a row of spoons standing in as the battery.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a bedroom, home office, or anywhere you rest.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "spoonie art",
+      "spoonie gift",
+      "out of spoons",
+      "spoon theory poster",
+      "spoon theory print",
+      "chronic illness art",
+      "low battery poster",
+      "neurodivergent art",
+      "neurodivergent print",
+      "disability art",
+      "recharging poster",
+      "bedroom wall art",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "spoonie art",
+    "etsy": {
+      "searchPhrases": [
+        "funny adhd posters",
+        "adhd funny poster",
+        "adhd wall art",
+        "neurodivergent wall art",
+        "spoonie art"
+      ],
+      "competitorNotes": [
+        "ADHD results are mostly digital downloads; a physical poster print is a clear differentiator.",
+        "Definition prints and funny quote prints are the most common ADHD humor formats in the results."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd decor",
+        "neurodiversity poster",
+        "adhd wall art"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters lean clinical (iceberg charts, therapy office prints); few are jokes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/adhd_poster",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.etsy.com/market/adhd_gifts",
+      "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+      "https://www.etsy.com/market/spoonie_art",
+      "https://www.etsy.com/market/spoon_theory_poster",
+      "https://www.etsy.com/market/spoon_theory_print"
+    ],
+    "notes": "Based on research/keywords/neurodivergent.json plus shared ADHD searches, not separate searches for this one design."
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "chronically-curious",
   "title": "CHRONICALLY\nCURIOUS",
-  "subtitle": "est. 2:47 AM",
+  "subtitle": "just one more rabbit hole",
   "overrides": {
     "defaultTypography": {
       "fontFamily": "var(--font-theme-oswald), sans-serif",

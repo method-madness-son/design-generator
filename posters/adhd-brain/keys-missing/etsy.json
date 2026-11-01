@@ -1,4 +1,65 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Funny ADHD Gift, Lost Keys Retro Window Poster, Keys Moved to Another Dimension, Neurodivergent Wall Art, Entryway Decor",
+    "description": "A funny ADHD gift for anyone whose keys have moved to another dimension, in a retro computer window with two choices: Search or Buy new.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang by the front door, in an entryway, or in a home office.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "funny adhd gift",
+      "adhd gifts",
+      "adhd friend gift",
+      "lost keys poster",
+      "funny adhd poster",
+      "adhd wall art",
+      "neurodivergent art",
+      "adhd humor",
+      "retro computer art",
+      "entryway wall art",
+      "forgetful gift",
+      "adhd decor",
+      "gift for adhd adult"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "funny adhd gift",
+    "etsy": {
+      "searchPhrases": [
+        "funny adhd posters",
+        "adhd funny poster",
+        "adhd wall art",
+        "neurodivergent wall art",
+        "funny adhd gift"
+      ],
+      "competitorNotes": [
+        "ADHD results are mostly digital downloads; a physical poster print is a clear differentiator.",
+        "Definition prints and funny quote prints are the most common ADHD humor formats in the results."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd decor",
+        "neurodiversity poster",
+        "adhd wall art"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters lean clinical (iceberg charts, therapy office prints); few are jokes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/adhd_poster",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.etsy.com/market/adhd_gifts",
+      "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+      "https://www.etsy.com/market/funny_adhd_gifts"
+    ],
+    "notes": "Based on research/keywords/neurodivergent.json plus shared ADHD searches, not separate searches for this one design."
+  }
 }

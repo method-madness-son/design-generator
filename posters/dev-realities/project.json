@@ -7,6 +7,13 @@
     "ink": "#2B2B2E",
     "accent": "#4A90C4"
   },
+  "defaultLook": {
+    "titleFont": "Doto",
+    "titleColor": "White",
+    "subtitleColor": "Night Owl",
+    "iconColor": "Night Owl",
+    "backgroundColor": "Night Owl"
+  },
   "defaultLayout": {
     "aspectRatio": "4/5",
     "printWidthInches": 8,
@@ -20,10 +27,10 @@
     "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-accent)]",
     "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)]",
     "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
-    "titleRem": 3.5,
-    "subtitleRem": 1.75
+    "titleRem": 4.5,
+    "subtitleRem": 3.25
   },
-  "iconRem": 6,
+  "iconRem": 14.5,
   "sizeScale": {
     "icon": [
       0.25,

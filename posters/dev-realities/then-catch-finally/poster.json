@@ -1,16 +1,11 @@
 {
   "id": "then-catch-finally",
-  "title": ".then().catch().finally()",
+  "title": ".then()\n.catch()\n.finally()",
   "subtitle": "Resolve. Reject. Clean up.",
   "icon": {
     "name": "FastForward",
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
-  },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 2.75
-    }
   },
   "pinterest": {
     "title": ".then().catch().finally() Poster | Funny Dark Mode JavaScript Wall Art",
@@ -29,5 +24,10 @@
     ],
     "board": "Developer & Coder Decor",
     "altText": "Dark mode poster reading .then().catch().finally() with a fast-forward icon in yellow, for developer office decor."
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-accent)] whitespace-pre-line"
+    }
   }
 }

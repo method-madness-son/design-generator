@@ -9,7 +9,6 @@
   },
   "overrides": {
     "defaultTypography": {
-      "titleRem": 3.5,
       "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)] whitespace-pre-line"
     }
   },

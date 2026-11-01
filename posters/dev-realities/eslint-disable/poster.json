@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 2.5
-    }
-  },
   "pinterest": {
     "title": "eslint-disable-next-line Poster | Funny Dark Mode React Wall Art",
     "description": "A dark-mode poster for the official solution to every React warning: disable the lint rule. Printable wall art for developer offices and coding setups.",

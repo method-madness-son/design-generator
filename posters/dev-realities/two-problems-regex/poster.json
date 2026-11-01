@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 2.25
-    }
-  },
   "pinterest": {
     "title": "Now You Have Two Problems Poster | Funny Dark Mode Regex Wall Art",
     "description": "A dark-mode poster for the classic regex joke: now you have two problems. Printable wall art for developer offices and coding setups.",
@@ -29,5 +24,10 @@
     ],
     "board": "Developer & Coder Decor",
     "altText": "Dark mode poster showing a regex pattern with a brackets icon in blue, for developer office decor."
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 2.25
+    }
   }
 }

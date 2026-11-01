@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 3.5
-    }
-  },
   "pinterest": {
     "title": "const self = this Poster | Funny Dark Mode JavaScript Wall Art",
     "description": "A dark-mode poster for every developer who's lost track of 'this' inside a callback. Printable wall art for developer offices and coding setups.",

@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 5
-    }
-  },
   "pinterest": {
     "title": ":wq! Poster | Funny Dark Mode Vim Wall Art",
     "description": "A dark-mode poster for every desperate escape from Vim. Printable wall art for developer offices and coding setups.",

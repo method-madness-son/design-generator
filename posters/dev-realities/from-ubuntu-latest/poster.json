@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 3.25
-    }
-  },
   "pinterest": {
     "title": "FROM ubuntu:latest Poster | Funny Dark Mode Docker Wall Art",
     "description": "A dark-mode poster for every Dockerfile that just ships 'my machine' to prod. Printable wall art for developer offices and coding setups.",
@@ -29,5 +24,10 @@
     ],
     "board": "Developer & Coder Decor",
     "altText": "Dark mode poster reading FROM ubuntu:latest with a box icon in blue, for developer office decor."
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.75
+    }
   }
 }

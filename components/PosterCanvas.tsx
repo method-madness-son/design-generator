@@ -61,7 +61,7 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
           style={{ fontFamily: poster.bodyFont, fontSize: `${poster.bodyRem}rem`, color: poster.bodyColor }}
         >
           {poster.body.map((line) => (
-            <li key={line} className="break-words">
+            <li key={line} className="whitespace-pre-line break-words">
               {line}
             </li>
           ))}

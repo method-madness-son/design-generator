@@ -9,7 +9,7 @@
   },
   "overrides": {
     "defaultTypography": {
-      "titleRem": 2,
+      "titleRem": 4.25,
       "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-accent)] whitespace-pre-line",
       "subtitleClasses": "font-semibold leading-[1.05] uppercase tracking-widest text-[var(--poster-ink)]"
     }

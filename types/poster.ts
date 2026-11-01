@@ -13,6 +13,8 @@ export type ProjectConfig = {
   sizeScale?: { icon: number[]; title: number[]; subtitle: number[]; body?: number[] };
   // Default icon size in rem; a poster's icon.sizeRem overrides it.
   iconRem: number;
+  // Named fonts and colors for every poster in the project; a poster's own field overrides them.
+  defaultLook?: Pick<PosterFile, 'titleFont' | 'subtitleFont' | 'titleColor' | 'subtitleColor' | 'iconColor' | 'backgroundColor'>;
   defaultLayout: {
     aspectRatio: AspectRatioOption;
     containerClasses: string;

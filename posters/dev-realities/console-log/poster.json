@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 3.5
-    }
-  },
   "pinterest": {
     "title": "console.log('here') Poster | Funny Dark Mode Developer Wall Art",
     "description": "A dark-mode poster for every developer who debugs with console.log. Printable wall art for home offices, dev dens, and coding setups.",

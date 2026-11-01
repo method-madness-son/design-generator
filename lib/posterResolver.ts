@@ -155,7 +155,7 @@ export function getValidSelection(project: ProjectConfig, selection: VariantSele
     iconRem: validRem(iconRem, project.sizeScale?.icon),
     titleRem: validRem(titleRem, project.sizeScale?.title),
     subtitleRem: validRem(subtitleRem, project.sizeScale?.subtitle),
-    bodyRem: validRem(bodyRem, project.sizeScale?.body),
+    bodyRem: validRem(bodyRem, project.sizeScale?.body ?? project.sizeScale?.subtitle),
     printSize: printSize && POSTER_SIZES[printSize as PosterSizeName] ? printSize : '',
     align: align && isAlignOption(align) ? align : '',
   };
@@ -180,14 +180,16 @@ export function getResolvedPoster(
   const activePalette = selected.palette || poster.palette;
 
   const typography = { ...project.defaultTypography, ...overrides?.defaultTypography };
-  const titleFontName = selected.titleFont || poster.titleFont;
-  const subtitleFontName = selected.subtitleFont || poster.subtitleFont;
+  // The project's default look, unless the poster sets its own.
+  const look = { ...project.defaultLook, ...poster };
+  const titleFontName = selected.titleFont || look.titleFont;
+  const subtitleFontName = selected.subtitleFont || look.subtitleFont;
   const bodyFontName = selected.bodyFont;
-  const titleColorName = selected.titleColor || poster.titleColor;
-  const subtitleColorName = selected.subtitleColor || poster.subtitleColor;
-  const iconColorName = selected.iconColor || poster.iconColor;
+  const titleColorName = selected.titleColor || look.titleColor;
+  const subtitleColorName = selected.subtitleColor || look.subtitleColor;
+  const iconColorName = selected.iconColor || look.iconColor;
   const bodyColorName = selected.bodyColor;
-  const backgroundColorName = selected.backgroundColor || poster.backgroundColor;
+  const backgroundColorName = selected.backgroundColor || look.backgroundColor;
   const sizeOverride = selected.printSize ? POSTER_SIZES[selected.printSize as PosterSizeName] : undefined;
   // text-xl (1.25rem) is the baked-in default body size when the project doesn't override it,
   // so SizeStepper's "Default" lines up with what's actually on screen.

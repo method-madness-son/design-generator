@@ -45,6 +45,8 @@ Listing copy comes from each poster's `etsy.json`; posters without a listing yet
 
    Fill in `blueprintId` and `printProviderId`. For each size, set `variantId` to the variant whose placeholder matches that size, and set `priceCents` to the retail price in cents (`2400` is $24.00). A size you remove from `sizes` is not listed.
 
+   8×10 is left out for now, so only 11×17 is uploaded. To add it back, put `"8x10": { "variantId": 114557, "priceCents": <price> }` in `sizes` (blueprint 282, provider 2), and change the listings' size line back to `Available in 8×10 in or 11×17 in`.
+
 ## Print files and eligibility
 
 In the studio (`npm run dev`), open a poster, customize it as usual (palette, fonts, sizes, alignment, Print Size), and choose **Export Poster → Save for Etsy listing**. The current preview is rendered at exactly print inches × 300 px (2400 × 3000 for 8×10, 3300 × 5100 for 11×17) and saved through `app/api/poster-exports/[projectId]/[posterId]/route.ts` to:

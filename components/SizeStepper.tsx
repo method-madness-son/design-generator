@@ -43,7 +43,7 @@ export function SizeStepper({ label, param, options, value, defaultValue }: Prop
           <path d="M5 12h14" />
         </StepButton>
         <span className="w-12 select-none text-center text-xs text-neutral-700">
-          {value ? `${value}rem` : 'Default'}
+          {value ? `${value}rem` : `${defaultValue}rem`}
         </span>
         <StepButton label="Increase" onClick={() => step(1)} disabled={atMax}>
           <path d="M12 5v14M5 12h14" />

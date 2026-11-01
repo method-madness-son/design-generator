@@ -9,7 +9,7 @@
   },
   "overrides": {
     "defaultTypography": {
-      "titleRem": 3,
+      "titleRem": 4,
       "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-ink)]/80 italic"
     }
   },

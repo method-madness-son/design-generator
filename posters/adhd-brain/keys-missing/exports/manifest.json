@@ -1,0 +1,18 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 500456,
+      "sha256": "d5cd9749f160a4edf276991e5836d36468deca66f5669edf326b0ad83a688d9a",
+      "savedAt": "2026-11-01T22:02:11.885Z",
+      "selection": {
+        "titleFont": "Archivo Black",
+        "iconRem": "27.25",
+        "titleRem": "3.5",
+        "subtitleRem": "2.75",
+        "printSize": "11x17"
+      }
+    }
+  }
+}

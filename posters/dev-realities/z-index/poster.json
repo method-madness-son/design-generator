@@ -7,11 +7,6 @@
     "position": "top",
     "className": "text-[var(--poster-accent)] drop-shadow-[0_0_6px_var(--poster-accent)]/50"
   },
-  "overrides": {
-    "defaultTypography": {
-      "titleRem": 3.25
-    }
-  },
   "pinterest": {
     "title": "z-index: 99999 Poster | Funny Dark Mode CSS Wall Art",
     "description": "A dark-mode poster for every z-index war ever fought. Printable wall art for developer offices and coding setups.",

@@ -1,23 +1,25 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import type { FontGroup } from '@/lib/fontOptions';
 import { useQueryParam } from '@/lib/useQueryParam';
 import { cn } from '@/lib/utils';
 
 type Props = {
   label?: string;
   param: string;
-  // Font name -> CSS font-family value, e.g. { Cinzel: 'var(--font-cinzel), serif' }.
-  fonts: Record<string, string>;
+  groups: FontGroup[];
+  // Flat lookup so the trigger button can show the selected font in its own family.
+  allFonts: Record<string, string>;
   // Currently selected font name; empty means the poster's own default.
   value: string;
 };
 
-export function FontPicker({ label, param, fonts, value }: Props) {
+export function FontPicker({ label, param, groups, allFonts, value }: Props) {
   const setParam = useQueryParam(param);
   const [expanded, setExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const selectedFamily = value ? fonts[value] : undefined;
+  const selectedFamily = value ? allFonts[value] : undefined;
 
   useEffect(() => {
     if (!expanded) return;
@@ -64,8 +66,15 @@ export function FontPicker({ label, param, fonts, value }: Props) {
       {expanded && (
         <div className="absolute top-full left-0 z-40 mt-1.5 max-h-60 w-48 overflow-y-auto rounded-md border border-neutral-200 bg-white shadow-xl">
           <Option name="Default" selected={value === ''} onClick={() => choose('Default')} />
-          {Object.entries(fonts).map(([name, family]) => (
-            <Option key={name} name={name} family={family} selected={value === name} onClick={() => choose(name)} />
+          {groups.map((group) => (
+            <div key={group.label}>
+              <div className="sticky top-0 bg-neutral-50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-neutral-400">
+                {group.label}
+              </div>
+              {Object.entries(group.fonts).map(([name, family]) => (
+                <Option key={name} name={name} family={family} selected={value === name} onClick={() => choose(name)} />
+              ))}
+            </div>
           ))}
         </div>
       )}

@@ -15,12 +15,14 @@ type Props = {
   colors: Record<string, string>;
   // Currently selected color name; empty means the poster's own default.
   value: string;
+  // Hex color shown in the trigger swatch when nothing is selected (the poster's own default).
+  defaultColor?: string;
   // 'hue' (default) groups same-ish hues together; 'lightness' lists darkest to lightest,
   // ignoring hue — used for the background picker.
   sortBy?: 'hue' | 'lightness';
 };
 
-export function ColorWheelPicker({ label, param, colors, value, sortBy = 'hue' }: Props) {
+export function ColorWheelPicker({ label, param, colors, value, defaultColor, sortBy = 'hue' }: Props) {
   const setParam = useQueryParams(Array.isArray(param) ? param : [param]);
   const [expanded, setExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,6 +41,7 @@ export function ColorWheelPicker({ label, param, colors, value, sortBy = 'hue' }
   const deduped = Object.fromEntries(dedupeSimilarColors(Object.entries(colors)));
   const allColors = sortBy === 'lightness' ? sortColorEntriesByLightness(deduped) : sortColorEntries(deduped);
   const selectedColor = allColors.find(([name]) => name === value)?.[1];
+  const displayColor = selectedColor ?? defaultColor;
 
   return (
     <div className="relative flex flex-col gap-1" ref={containerRef}>
@@ -50,7 +53,7 @@ export function ColorWheelPicker({ label, param, colors, value, sortBy = 'hue' }
         aria-expanded={expanded}
         className="flex h-7 items-center gap-1.5 rounded-md border border-neutral-300 bg-white px-2 text-xs shadow-sm transition-colors hover:border-neutral-400"
       >
-        <Swatch color={selectedColor} size="dot" />
+        <Swatch color={displayColor} size="dot" />
         <span className="flex-1 truncate text-left text-neutral-700">{value || 'Default'}</span>
         <svg
           className={cn('size-3 shrink-0 text-neutral-400 transition-transform', expanded && 'rotate-180')}
@@ -68,7 +71,7 @@ export function ColorWheelPicker({ label, param, colors, value, sortBy = 'hue' }
       {expanded && (
         <div className="absolute top-full left-0 z-40 mt-1.5 w-40 rounded-xl border border-neutral-200 bg-white p-2.5 shadow-xl">
           <div className="grid grid-cols-5 gap-1.5">
-            {[['Default', ''], ...allColors].map(([name, color]) => {
+            {[['Default', defaultColor ?? ''], ...allColors].map(([name, color]) => {
               const selected = value === name || (name === 'Default' && value === '');
               return (
                 <button

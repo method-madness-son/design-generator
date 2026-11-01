@@ -1,0 +1,15 @@
+{
+  "sizes": {
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 206581,
+      "sha256": "3a49f5c9f306f27cc502ad5aedcc82f9809309170525d933d7a813ffb613864b",
+      "savedAt": "2026-11-01T22:16:52.471Z",
+      "selection": {
+        "titleRem": "4.25",
+        "subtitleRem": "2.25"
+      }
+    }
+  }
+}

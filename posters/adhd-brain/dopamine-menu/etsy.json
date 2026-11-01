@@ -1,4 +1,66 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Dopamine Menu Poster, Funny ADHD Wall Art, Today's Specials Print, Neurodivergent Gift, Home Office Decor",
+    "description": "A dopamine menu poster listing today's specials: a brand new hobby, one more episode, snacks, and rearranging the furniture. This one is a joke for your wall, not a planner.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a kitchen, living room, or home office.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "dopamine menu",
+      "dopamine menu adhd",
+      "funny adhd poster",
+      "adhd wall art",
+      "adhd humor",
+      "neurodivergent print",
+      "neurodiversity art",
+      "funny adhd gift",
+      "adhd friend gift",
+      "diner menu poster",
+      "pink kitchen decor",
+      "adhd decor",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "dopamine menu",
+    "etsy": {
+      "searchPhrases": [
+        "funny adhd posters",
+        "adhd funny poster",
+        "adhd wall art",
+        "neurodivergent wall art",
+        "dopamine menu"
+      ],
+      "competitorNotes": [
+        "ADHD results are mostly digital downloads; a physical poster print is a clear differentiator.",
+        "Definition prints and funny quote prints are the most common ADHD humor formats in the results."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd decor",
+        "neurodiversity poster",
+        "adhd wall art"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters lean clinical (iceberg charts, therapy office prints); few are jokes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/adhd_poster",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.etsy.com/market/adhd_gifts",
+      "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+      "https://www.etsy.com/market/dopamine_menu",
+      "https://www.etsy.com/market/dopamine_menu_adhd"
+    ],
+    "notes": "Based on research/keywords/neurodivergent.json plus shared ADHD searches, not separate searches for this one design."
+  }
 }

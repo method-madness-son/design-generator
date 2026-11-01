@@ -7,7 +7,7 @@ import { ResetVariantsButton } from '@/components/ResetVariantsButton';
 import { SizeStepper } from '@/components/SizeStepper';
 import { BACKGROUND_COLORS } from '@/lib/backgroundColors';
 import { getColorOptions } from '@/lib/colorOptions';
-import { GLOBAL_FONTS } from '@/lib/fontOptions';
+import { FONT_GROUPS, GLOBAL_FONTS } from '@/lib/fontOptions';
 import type { ProjectConfig, ResolvedPoster } from '@/types/poster';
 
 type Props = {
@@ -41,6 +41,9 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
   // every color from every project, so the picker stays short and relevant to this poster.
   const colorOptions = getColorOptions(project);
   const sizeScale = project.sizeScale;
+  const bodyScale = sizeScale?.body ?? sizeScale?.subtitle;
+  const defaultInk = poster.colorPalette.ink;
+  const defaultBg = poster.colorPalette.background;
 
   if (compact) {
     return (
@@ -67,6 +70,7 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             param="backgroundColor"
             colors={BACKGROUND_COLORS}
             value={query.backgroundColor}
+            defaultColor={defaultBg}
             sortBy="lightness"
           />
         </div>
@@ -83,6 +87,7 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
               param="iconColor"
               colors={colorOptions}
               value={query.iconColor}
+              defaultColor={defaultInk}
             />
             {sizeScale && sizeScale.icon.length > 0 && (
               <SizeStepper param="iconRem" options={sizeScale.icon} value={query.iconRem} defaultValue={poster.iconDefaultRem} />
@@ -102,8 +107,9 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
               param="titleColor"
               colors={colorOptions}
               value={query.titleColor}
+              defaultColor={defaultInk}
             />
-            <FontPicker param="titleFont" fonts={GLOBAL_FONTS} value={query.titleFont} />
+            <FontPicker param="titleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.titleFont} />
             {sizeScale && sizeScale.title.length > 0 && (
               <SizeStepper param="titleRem" options={sizeScale.title} value={query.titleRem} defaultValue={poster.titleDefaultRem} />
             )}
@@ -122,8 +128,9 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
               param="subtitleColor"
               colors={colorOptions}
               value={query.subtitleColor}
+              defaultColor={defaultInk}
             />
-            <FontPicker param="subtitleFont" fonts={GLOBAL_FONTS} value={query.subtitleFont} />
+            <FontPicker param="subtitleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.subtitleFont} />
             {sizeScale && sizeScale.subtitle.length > 0 && (
               <SizeStepper param="subtitleRem" options={sizeScale.subtitle} value={query.subtitleRem} defaultValue={poster.subtitleDefaultRem} />
             )}
@@ -143,10 +150,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
                   param="bodyColor"
                   colors={colorOptions}
                   value={query.bodyColor}
+                  defaultColor={defaultInk}
                 />
-                <FontPicker param="bodyFont" fonts={GLOBAL_FONTS} value={query.bodyFont} />
-                {sizeScale?.body && sizeScale.body.length > 0 && (
-                  <SizeStepper param="bodyRem" options={sizeScale.body} value={query.bodyRem} defaultValue={poster.bodyDefaultRem} />
+                <FontPicker param="bodyFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.bodyFont} />
+                {bodyScale && bodyScale.length > 0 && (
+                  <SizeStepper param="bodyRem" options={bodyScale} value={query.bodyRem} defaultValue={poster.bodyDefaultRem} />
                 )}
               </div>
             </div>
@@ -178,6 +186,7 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             param="backgroundColor"
             colors={BACKGROUND_COLORS}
             value={query.backgroundColor}
+            defaultColor={defaultBg}
             sortBy="lightness"
           />
         </CollapsibleSection>
@@ -188,6 +197,7 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             param="iconColor"
             colors={colorOptions}
             value={query.iconColor}
+            defaultColor={defaultInk}
           />
           {sizeScale && sizeScale.icon.length > 0 && (
             <SizeStepper label="Size" param="iconRem" options={sizeScale.icon} value={query.iconRem} defaultValue={poster.iconDefaultRem} />
@@ -200,8 +210,9 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             param="titleColor"
             colors={colorOptions}
             value={query.titleColor}
+            defaultColor={defaultInk}
           />
-          <FontPicker label="Font" param="titleFont" fonts={GLOBAL_FONTS} value={query.titleFont} />
+          <FontPicker label="Font" param="titleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.titleFont} />
           {sizeScale && sizeScale.title.length > 0 && (
             <SizeStepper label="Size" param="titleRem" options={sizeScale.title} value={query.titleRem} defaultValue={poster.titleDefaultRem} />
           )}
@@ -213,8 +224,9 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             param="subtitleColor"
             colors={colorOptions}
             value={query.subtitleColor}
+            defaultColor={defaultInk}
           />
-          <FontPicker label="Font" param="subtitleFont" fonts={GLOBAL_FONTS} value={query.subtitleFont} />
+          <FontPicker label="Font" param="subtitleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.subtitleFont} />
           {sizeScale && sizeScale.subtitle.length > 0 && (
             <SizeStepper label="Size" param="subtitleRem" options={sizeScale.subtitle} value={query.subtitleRem} defaultValue={poster.subtitleDefaultRem} />
           )}
@@ -227,10 +239,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
               param="bodyColor"
               colors={colorOptions}
               value={query.bodyColor}
+              defaultColor={defaultInk}
             />
-            <FontPicker label="Font" param="bodyFont" fonts={GLOBAL_FONTS} value={query.bodyFont} />
-            {sizeScale?.body && sizeScale.body.length > 0 && (
-              <SizeStepper label="Size" param="bodyRem" options={sizeScale.body} value={query.bodyRem} defaultValue={poster.bodyDefaultRem} />
+            <FontPicker label="Font" param="bodyFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.bodyFont} />
+            {bodyScale && bodyScale.length > 0 && (
+              <SizeStepper label="Size" param="bodyRem" options={bodyScale} value={query.bodyRem} defaultValue={poster.bodyDefaultRem} />
             )}
           </CollapsibleSection>
         )}

@@ -1,4 +1,66 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Too Many Tabs Poster, 42 Tabs Open Retro Window Print, Funny ADHD Wall Art, Neurodivergent Office Decor, Geek Gift",
+    "description": "A too many tabs poster in a retro warning window: 42 tabs open, close some? Yes or Nope.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang above a desk, in a home office, or in a tech workspace.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "too many tabs",
+      "tabs open poster",
+      "brain tabs poster",
+      "funny adhd poster",
+      "adhd wall art",
+      "adhd humor",
+      "neurodivergent art",
+      "retro computer art",
+      "funny office poster",
+      "geek office decor",
+      "adhd gifts",
+      "gift for adhd adult",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "too many tabs",
+    "etsy": {
+      "searchPhrases": [
+        "funny adhd posters",
+        "adhd funny poster",
+        "adhd wall art",
+        "neurodivergent wall art",
+        "too many tabs"
+      ],
+      "competitorNotes": [
+        "ADHD results are mostly digital downloads; a physical poster print is a clear differentiator.",
+        "Definition prints and funny quote prints are the most common ADHD humor formats in the results."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd decor",
+        "neurodiversity poster",
+        "adhd wall art"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters lean clinical (iceberg charts, therapy office prints); few are jokes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/adhd_poster",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.etsy.com/market/adhd_gifts",
+      "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+      "https://www.etsy.com/market/too_many_tabs",
+      "https://www.etsy.com/listing/4327356036/funny-adhd-brain-poster-too-many-tabs"
+    ],
+    "notes": "Based on research/keywords/neurodivergent.json plus shared ADHD searches, not separate searches for this one design."
+  }
 }

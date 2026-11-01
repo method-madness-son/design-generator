@@ -76,19 +76,20 @@ function buildJob(config: PrintifyConfig, projectId: string, posterId: string, s
   const poster = getPosterFile(projectId, posterId)!;
   const sizes = saved.filter((size) => size in config.sizes);
   const files = sizes.map((size) => readPrintFile(projectId, posterId, size));
-  const { errors, warnings } = checkListing(poster, saved);
+  // Checked against what will be uploaded, so the copy can't promise a size left out of the config.
+  const { errors, warnings } = checkListing(poster, sizes);
   for (const file of files) errors.push(...printFileErrors(file.size, file));
-  if (files.length === 0) errors.push('Not saved for listing yet: use "Save for Etsy listing" in the studio.');
+  if (files.length === 0) errors.push(`Not saved at an upload size (${Object.keys(config.sizes).join(', ')}): use "Save for Etsy listing" in the studio.`);
   for (const size of Object.keys(config.sizes)) if (!sizes.includes(size as PosterSizeName)) warnings.push(`${size} not saved; that size is left off.`);
   return { key: `${projectId}/${posterId}`, projectId, poster, files, errors, warnings };
 }
 
-// Named posters are always checked. With no names, only posters with a saved export are eligible;
-// the rest are returned in `skipped` and are not an error.
+// Named posters are always checked. With no names, only posters saved at a size in the config are
+// eligible; the rest are returned in `skipped` and are not an error.
 export function jobsFor(config: PrintifyConfig, projectId: string, posterIds: string[]): { jobs: PosterJob[]; skipped: string[] } {
   const saved = savedSizesByPoster(projectId);
   const ids = resolvePosterIds(projectId, posterIds);
-  const eligible = posterIds.length > 0 ? ids : ids.filter((id) => saved.has(id));
+  const eligible = posterIds.length > 0 ? ids : ids.filter((id) => saved.get(id)?.some((size) => size in config.sizes));
   return {
     jobs: eligible.map((id) => buildJob(config, projectId, id, saved.get(id) ?? [])),
     skipped: ids.filter((id) => !eligible.includes(id)),
@@ -121,6 +122,15 @@ export function placeholderErrors(config: PrintifyConfig, variants: PrintifyVari
     }
   }
   return errors;
+}
+
+// Printify fills in the rest of the catalog on create, but an update must list every catalog variant
+// in print_areas. The extras stay disabled because only the sizes in `variants` are enabled.
+export function withAllCatalogVariants(product: PrintifyProductRequest, variants: PrintifyVariant[]): PrintifyProductRequest {
+  const listed = new Set(product.print_areas.flatMap((area) => area.variant_ids));
+  const missing = variants.map((variant) => variant.id).filter((id) => !listed.has(id));
+  const [first, ...rest] = product.print_areas;
+  return { ...product, print_areas: [{ ...first, variant_ids: [...first.variant_ids, ...missing] }, ...rest] };
 }
 
 export function buildProductRequest(
