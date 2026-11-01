@@ -38,6 +38,15 @@ npm run printify:sync -- dev-realities vim-wq --dry-run
 npm run printify:sync -- dev-realities vim-wq --publish
 ```
 
+## Etsy listing research
+
+A Claude Code subagent (`.claude/agents/etsy-listing-researcher.md`) researches Etsy and Amazon for a poster, rewrites its `etsy` block, and records the evidence in `research`. `listing:check` enforces the structure the Printify upload expects. See [docs/LISTING-RESEARCH.md](docs/LISTING-RESEARCH.md).
+
+```bash
+npm run listing:check -- --all
+npm run listing:brief -- dev-realities --needs-work
+```
+
 ## Getting Started
 
 First, run the development server:

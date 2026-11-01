@@ -31,23 +31,73 @@
     "altText": "Dark mode poster reading :wq! with a keyboard icon in purple, for developer office decor."
   },
   "etsy": {
-    "title": ":wq! Poster, Funny Vim Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for every desperate escape from Vim.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "Vim Poster, :wq! Funny Programmer Wall Art, Developer Wall Decor, Coding Humor Print, Software Developer Gift",
+    "description": "A funny Vim poster for every desperate :wq! escape from the editor, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "vim joke poster",
-      "wq poster",
-      "programmer humor",
-      "developer wall art",
+      "vim poster",
+      "vim joke print",
+      "programmer poster",
+      "programmer wall art",
+      "programmer humor art",
+      "developer wall decor",
+      "software dev gift",
+      "funny tech poster",
       "coding poster",
-      "software engineer gift",
+      "tech office decor",
       "terminal humor print",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
-      "dark mode poster"
+      "dark mode poster",
+      "gift for programmer"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "vim poster",
+    "etsy": {
+      "searchPhrases": [
+        "vim poster",
+        "programmer poster",
+        "programmer posters",
+        "programmer wall art",
+        "programmer humor art",
+        "developer wall decor",
+        "software developer posters",
+        "funny tech posters",
+        "poster coding"
+      ],
+      "competitorNotes": [
+        "Vim results are mostly cheat sheets (digital downloads, coasters, stickers); few joke-led Vim prints, so the :wq! gag is a differentiator.",
+        "Top programmer-humor listings lead with the joke plus 'programmer gift' / 'developer gift' and 'wall art' in the title.",
+        "Many competing listings are digital downloads; stating 'physical poster print' separates this listing."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "programmer wall poster",
+        "programming decor",
+        "tech office decor",
+        "programmer gift wall art print"
+      ],
+      "competitorNotes": [
+        "Vim on Amazon appears as an 8x12 metal cheat-sheet tin sign, not a humor print.",
+        "Amazon titles name the room ('office', 'home decor') and 'unframed'; debugging jokes dominate the humor niche."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/vim_poster",
+      "https://www.etsy.com/market/programmer_poster",
+      "https://www.etsy.com/market/programmer_posters",
+      "https://www.etsy.com/market/programmer_wall_art",
+      "https://www.etsy.com/market/programmer_humor_art",
+      "https://www.etsy.com/market/developer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/funny_tech_posters",
+      "https://www.etsy.com/market/poster_coding",
+      "https://www.amazon.com/Vim-Cheat-Sheet-Metal-Sign/dp/B0FQ2HDWST",
+      "https://www.amazon.com/Debugging-Wall-Art-Poster-Office/dp/B0HGZQLRVB",
+      "https://www.amazon.com/programming-decor/s?k=programming+decor"
+    ],
+    "notes": "Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets did not separate physical prints from digital downloads."
   }
 }

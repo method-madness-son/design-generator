@@ -86,6 +86,28 @@ export type PosterFile = {
     tags: string[];
     category: string;
   };
+  // Evidence behind the etsy block, written by the etsy-listing-researcher agent. Not uploaded;
+  // checked by `npm run listing:check` (lib/etsyListing.ts).
+  research?: PosterResearch;
+};
+
+export type MarketResearch = {
+  // Phrases buyers search or the marketplace indexes, e.g. Etsy /market/<phrase> pages.
+  searchPhrases: string[];
+  // Short observations about competing listings: angle, sizes, gaps. Never copied copy.
+  competitorNotes: string[];
+  priceRange?: { min: number; max: number; currency: string };
+};
+
+export type PosterResearch = {
+  researchedAt: string; // YYYY-MM-DD
+  // "pages" when listing pages were read directly; "search-results" when only search snippets were.
+  method: 'pages' | 'search-results';
+  primaryKeyword: string;
+  etsy: MarketResearch;
+  amazon: MarketResearch;
+  sources: string[];
+  notes?: string;
 };
 
 export type ResolvedPoster = {

@@ -22,7 +22,9 @@
     "printify:shops": "tsx scripts/printify.ts shops",
     "printify:catalog": "tsx scripts/printify.ts catalog",
     "printify:check": "tsx scripts/printify.ts check",
-    "printify:sync": "tsx scripts/printify.ts sync"
+    "printify:sync": "tsx scripts/printify.ts sync",
+    "listing:check": "tsx scripts/listing.ts check",
+    "listing:brief": "tsx scripts/listing.ts brief"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -5,6 +5,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import { checkEtsy } from '@/lib/etsyListing';
 import { getPosterIds, getProject } from '@/lib/posterResolver';
 import { POSTER_SIZES, PRINT_DPI, type PosterSizeName } from '@/lib/posterSizes';
 import type { PosterFile } from '@/types/poster';
@@ -15,9 +16,6 @@ export const STATE_PATH = path.join(process.cwd(), 'printify', 'state.json');
 // Print files: exports/posters/<projectId>/<posterId>-<size>.png, e.g. dev-realities/vim-wq-8x10.png
 export const POSTER_EXPORT_DIR = path.join(process.cwd(), 'exports', 'posters');
 
-const ETSY_TAG_LIMIT = 13;
-const ETSY_TAG_LENGTH = 20;
-const ETSY_TITLE_LENGTH = 140;
 // Printify suggests uploading by URL rather than base64 above roughly this size.
 export const BASE64_SOFT_LIMIT_BYTES = 5 * 1024 * 1024;
 export const PRINTIFY_PNG_LIMIT_BYTES = 100 * 1024 * 1024;
@@ -100,21 +98,9 @@ export function sha256(filePath: string): string {
 }
 
 export function listingErrors(poster: PosterFile): string[] {
-  const errors: string[] = [];
-  const etsy = poster.etsy;
-  if (!etsy) return ['No "etsy" block. Add title, description, and tags before syncing.'];
-  if (!etsy.title?.trim()) errors.push('Etsy title is empty.');
-  if (etsy.title && etsy.title.length > ETSY_TITLE_LENGTH) {
-    errors.push(`Etsy title is ${etsy.title.length} characters. The limit is ${ETSY_TITLE_LENGTH}.`);
-  }
-  if (!etsy.description?.trim()) errors.push('Etsy description is empty.');
-  const tags = etsy.tags ?? [];
-  if (tags.length === 0 || tags.length > ETSY_TAG_LIMIT) errors.push(`Etsy allows 1–${ETSY_TAG_LIMIT} tags. This poster has ${tags.length}.`);
-  for (const tag of tags) {
-    if (tag.length === 0 || tag.length > ETSY_TAG_LENGTH) errors.push(`Etsy tag "${tag}" must be 1–${ETSY_TAG_LENGTH} characters.`);
-  }
-  if (new Set(tags.map((tag) => tag.toLowerCase())).size !== tags.length) errors.push('Etsy tags must be unique.');
-  return errors;
+  const report = { errors: [] as string[], warnings: [] as string[] };
+  checkEtsy(poster.etsy, report);
+  return report.errors;
 }
 
 function displayPath(filePath: string): string {
@@ -189,6 +175,7 @@ export function buildProductRequest(
   imageIds: Partial<Record<PosterSizeName, string>>,
 ): PrintifyProductRequest {
   const etsy = job.poster.etsy!;
+  // research and category stay local: Printify's product API has no field for them.
   const sized = job.files.map((file) => {
     const entry = config.sizes[file.size]!;
     const imageId = imageIds[file.size];
