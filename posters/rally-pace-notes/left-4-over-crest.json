@@ -1,0 +1,11 @@
+{
+  "id": "left-4-over-crest",
+  "title": "LEFT 4\nOVER CREST",
+  "subtitle": "DON'T CUT",
+  "graphic": {
+    "type": "road-arrow",
+    "position": "bottom",
+    "className": "mt-6 text-[var(--poster-ink)]",
+    "sizeRem": 20
+  }
+}

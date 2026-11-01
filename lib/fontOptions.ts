@@ -1,3 +1,5 @@
+import { THEME_FONT_CSS } from '@/lib/themeFontFaces';
+
 // Every font available to the Title/Subtitle font pickers, keyed by its real name (never a
 // made-up theme name) so the control always tells you exactly what you're picking.
 export const GLOBAL_FONTS: Record<string, string> = {
@@ -31,6 +33,10 @@ export const GLOBAL_FONTS: Record<string, string> = {
   Galada: 'var(--font-galada), cursive',
   Sarina: 'var(--font-sarina), cursive',
   Doto: 'var(--font-doto), sans-serif',
+  // Theme faces already loaded on the root layout (app/themeFonts.ts), offered for posters too.
+  'Big Shoulders Stencil': THEME_FONT_CSS['Big Shoulders Stencil'],
+  'Barlow Condensed': THEME_FONT_CSS['Barlow Condensed'],
+  Kalam: THEME_FONT_CSS.Kalam,
   Georgia: "Georgia, 'Times New Roman', serif",
   Monospace: "ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', monospace",
 };

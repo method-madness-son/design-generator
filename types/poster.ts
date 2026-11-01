@@ -63,7 +63,7 @@ export type PosterFile = {
   };
   // Renders a built-in generative graphic (components/Fractal.tsx) instead of a lucide icon.
   graphic?: {
-    type: 'lorenz' | 'tree' | 'spiral';
+    type: 'lorenz' | 'tree' | 'spiral' | 'road-arrow' | 'pen-arrow';
     position: 'top' | 'bottom';
     className?: string;
     sizeRem?: number;
