@@ -32,23 +32,70 @@
     "altText": "Dark mode poster reading git stash with an archive box icon in blue, for developer office decor."
   },
   "etsy": {
-    "title": "git stash Poster, Funny Git Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for every stash you swear you'll come back to.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "Git Stash Poster, I'll Look at This Later Coding Joke, Programmer Procrastination Art, Funny Gift for Devs",
+    "description": "A funny git stash poster for all the code you'll definitely look at later, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "git joke poster",
       "git stash poster",
-      "programmer humor",
-      "developer wall art",
-      "coding poster",
-      "software engineer gift",
-      "git humor print",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
-      "dark mode poster"
+      "git stash",
+      "git humor",
+      "version control joke",
+      "procrastination art",
+      "coding joke poster",
+      "software humor",
+      "developer gift",
+      "home office art",
+      "nerd wall art",
+      "geek humor print",
+      "dark theme print",
+      "programmer poster"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "git poster",
+    "etsy": {
+      "searchPhrases": [
+        "git poster",
+        "git art",
+        "programmer poster",
+        "poster for developer",
+        "developer wall decor"
+      ],
+      "competitorNotes": [
+        "Git-stash humor is nearly absent: the only hit was a 'stash and relax' shirt; 'stash' searches drift to stash jars.",
+        "Git posters on Etsy are cheat sheets plus a few commit-message jokes, so a stash joke has little direct competition."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "computer nerd geek humor",
+        "coding posters"
+      ],
+      "competitorNotes": [
+        "Amazon git humor is limited to the 'in case of fire' print.",
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/git_art",
+      "https://www.etsy.com/market/programmer_poster",
+      "https://www.etsy.com/nz/market/poster_for_developer",
+      "https://www.etsy.com/market/funny_stash",
+      "https://www.etsy.com/es/listing/1095295591/git-poster-in-case-of-fire-git-commit",
+      "https://www.amazon.com/Generic-Coding-Poster-Computer-16x16in/dp/B0D9DKWGXR",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "Primary 'git poster' (Etsy listing titles use it); 'git stash' leads the title for specificity. Avoided 'stash' alone in tags because Etsy reads it as stash jars. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
   }
 }

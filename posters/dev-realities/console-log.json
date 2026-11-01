@@ -31,23 +31,78 @@
     "altText": "Dark mode poster reading console.log('here'); with a terminal icon in yellow, for developer office decor."
   },
   "etsy": {
-    "title": "console.log Poster, Funny Programmer Wall Art, Dark Mode Coding Print, Developer Gift",
-    "description": "A dark-mode poster for every developer who debugs with console.log.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "title": "Debugging Poster, console.log Joke Print, JavaScript Humor Wall Art, Gift for Coders, Dark Mode Office Decor",
+    "description": "A funny debugging poster for every developer whose favorite tool is console.log('here'), in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
     "tags": [
-      "console log poster",
-      "programmer humor",
-      "developer wall art",
-      "coding poster",
-      "javascript joke",
-      "software engineer gift",
       "debugging poster",
-      "dev office decor",
-      "code quote print",
-      "tech humor art",
-      "poster wall art",
-      "poster print",
-      "dark mode poster"
+      "console log poster",
+      "debugging javascript",
+      "debugging joke print",
+      "javascript gift",
+      "programmer art",
+      "programmer print",
+      "coder gift",
+      "tech room decor",
+      "software wall art",
+      "computer joke poster",
+      "dark mode poster",
+      "gift for developer"
     ],
     "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "debugging poster",
+    "etsy": {
+      "searchPhrases": [
+        "debugging javascript",
+        "javascript gift",
+        "javascript humor",
+        "programmer art",
+        "programmer print",
+        "software wall art",
+        "computer jokes poster",
+        "developer wall art"
+      ],
+      "competitorNotes": [
+        "Etsy has a framed 'print debugging' wall print and several console.log('here') shirts, so the joke has buyers but few unframed posters.",
+        "Debugging results are mostly how-to step posters and rubber-duck prints; a single one-line joke print stands apart.",
+        "Most JavaScript humor results are instant digital downloads; 'physical poster print' differentiates."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "debugging poster",
+        "programmer debugging room decor",
+        "funny programmer wall art",
+        "coding office decor"
+      ],
+      "competitorNotes": [
+        "Debugging humor on Amazon is crowded with the detective/murderer quote, 'stages of debugging' and bug-free-until-run metal signs.",
+        "Amazon programmer prints lead with the joke, then stack 'wall art', 'office decor', 'developer gift' and state 'unframed' plus size."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/debugging_javascript",
+      "https://www.etsy.com/market/javascript_t_shirt",
+      "https://www.etsy.com/market/javascript_gift",
+      "https://www.etsy.com/market/javascript_humor",
+      "https://www.etsy.com/market/programmer_print",
+      "https://www.etsy.com/market/computer_jokes_poster",
+      "https://www.amazon.com/Gifts-Software-Developers-Programming-Programmers/dp/B0FN3CBZRL",
+      "https://www.amazon.com/LAQII-Programmer-Debugging-Poster-Novelty/dp/B08Y5HZM46",
+      "https://www.etsy.com/market/developer_wall_art",
+      "https://www.etsy.com/market/programmer_art",
+      "https://www.etsy.com/market/software_wall_art",
+      "https://www.etsy.com/market/software_engineer_wall_decor",
+      "https://www.etsy.com/market/software_developer_posters",
+      "https://www.etsy.com/market/software_poster",
+      "https://www.etsy.com/market/developer_art",
+      "https://www.amazon.com/coding-posters/s?k=coding+posters",
+      "https://www.amazon.com/Posterizer-Software-Definition-Programmer-Developer/dp/B0HBPJ8R8N",
+      "https://www.amazon.com/Debugging-Funny-Computer-Programmer-Awesome/dp/B08NGRPKZ1"
+    ],
+    "notes": "Picked 'debugging poster' over 'console log poster': it appears in Amazon titles and Etsy results, while no indexed console.log poster phrase was found. 'JavaScript' is named because the printed line is JavaScript code. Listing pages were not reachable from this environment; evidence is from search results only. No priceRange: snippets mixed digital downloads with framed prints, and no unframed physical prints with prices were comparable."
   }
 }
