@@ -1,0 +1,453 @@
+{
+  "market": "neurodivergent",
+  "projects": [
+    "adhd-brain",
+    "neuro-zones"
+  ],
+  "researchedAt": "2026-11-01",
+  "method": "search-results",
+  "howToUse": [
+    "Read this before researching an ADHD Brain or Neuro Zones poster, then run 1-2 searches for the poster's own subject.",
+    "ADHD Brain is humor and gifting for adults: lead with funny adhd poster / neurodivergent wall art phrases plus the design's own in-joke, and fill tags from 'gift' phrases.",
+    "Neuro Zones are signs for spaces: lead with the sign phrase (sensory room sign, quiet corner sign, calming corner) and keep the existing disclaimer.",
+    "Prefer strength 'indexed' (Etsy has a /market page) for the primary keyword and first tags. Use each 'tag' as written (20 characters or fewer).",
+    "Respect 'avoid' and 'language' exactly. This community notices careless wording, and medical claims are not allowed on Etsy."
+  ],
+  "phrases": [
+    {
+      "phrase": "funny adhd posters",
+      "tag": "funny adhd poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/funny_adhd_posters",
+      "note": "Best primary keyword base for ADHD Brain humor posters."
+    },
+    {
+      "phrase": "adhd funny poster",
+      "tag": "adhd funny poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_funny_poster"
+    },
+    {
+      "phrase": "adhd wall art canvas",
+      "tag": "adhd wall art",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_wall_art_canvas",
+      "note": "Market page is 'adhd wall art canvas'; the shorter tag fits a poster."
+    },
+    {
+      "phrase": "poster quote adhd",
+      "tag": "adhd quote poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/poster_quote_adhd"
+    },
+    {
+      "phrase": "neurodivergent wall art",
+      "tag": "neurodivergent art",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/neurodivergent_wall_art",
+      "note": "Full phrase is 23 characters: use it in titles, the short form as a tag."
+    },
+    {
+      "phrase": "neurodivergent artwork",
+      "tag": "neurodivergent print",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/neurodivergent_artwork"
+    },
+    {
+      "phrase": "neurodiversity art",
+      "tag": "neurodiversity art",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/neurodiversity_art"
+    },
+    {
+      "phrase": "neurodiversity posters",
+      "tag": "neurodiversity print",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/neurodiversity_posters",
+      "note": "Full phrase is 22 characters; titles only."
+    },
+    {
+      "phrase": "autistic wall art",
+      "tag": "autistic wall art",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/autistic_wall_art",
+      "note": "Only for designs about autism; identity-first wording is widely preferred."
+    },
+    {
+      "phrase": "adhd humor",
+      "tag": "adhd humor",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_humor"
+    },
+    {
+      "phrase": "too many tabs",
+      "tag": "too many tabs",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/too_many_tabs",
+      "note": "Mostly stickers and pins on Etsy; physical posters are a gap."
+    },
+    {
+      "phrase": "adhd gifts",
+      "tag": "adhd gifts",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_gifts"
+    },
+    {
+      "phrase": "adhd gift",
+      "tag": "adhd gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_gift"
+    },
+    {
+      "phrase": "funny adhd gifts",
+      "tag": "funny adhd gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/funny_adhd_gifts"
+    },
+    {
+      "phrase": "adhd adult gift",
+      "tag": "adhd adult gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/adhd_adult_gift"
+    },
+    {
+      "phrase": "gifts for adhd adults",
+      "tag": "gift for adhd adult",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/gifts_for_adhd_adults"
+    },
+    {
+      "phrase": "gifts for people with adhd",
+      "tag": "gift for adhd",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/gifts_for_people_with_adhd"
+    },
+    {
+      "phrase": "gifts for an adhd friend",
+      "tag": "adhd friend gift",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/gifts_for_an_adhd_friend"
+    },
+    {
+      "phrase": "gifts for men with adhd",
+      "tag": "adhd gift for men",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/gifts_for_men_with_adhd"
+    },
+    {
+      "phrase": "spoon theory print",
+      "tag": "spoon theory print",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/spoon_theory_print",
+      "note": "Use descriptively only; see avoid.spoon_theory."
+    },
+    {
+      "phrase": "spoon theory poster",
+      "tag": "spoon theory poster",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/spoon_theory_poster"
+    },
+    {
+      "phrase": "spoonie art",
+      "tag": "spoonie art",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/spoonie_art",
+      "note": "'Spoonie' is the chronic-illness community's own word; fine for spoon designs."
+    },
+    {
+      "phrase": "spoonie gift",
+      "tag": "spoonie gift",
+      "intent": "gift",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/640102050/spoon-theory-spoonies-spoony-spoonie"
+    },
+    {
+      "phrase": "dopamine menu",
+      "tag": "dopamine menu",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/dopamine_menu",
+      "note": "Mostly printable templates; a framed menu poster is decor, not a planner."
+    },
+    {
+      "phrase": "dopamine menu adhd",
+      "tag": "dopamine menu adhd",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/dopamine_menu_adhd"
+    },
+    {
+      "phrase": "hyperfocus definition print",
+      "tag": "hyperfocus print",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/4323816771/hyperfocus-definition-print-funny-adhd"
+    },
+    {
+      "phrase": "adhd definition poster",
+      "tag": "adhd definition",
+      "intent": "style",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/4323805821/funny-adhd-definition-poster",
+      "note": "Definition-style prints are a proven format (doom pile, neuro-spiced)."
+    },
+    {
+      "phrase": "executive dysfunction",
+      "tag": "exec dysfunction",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/1205091340/my-brain-has-too-many-tabs-open-pastel",
+      "note": "Full phrase is 21 characters; the tag is shortened."
+    },
+    {
+      "phrase": "social battery",
+      "tag": "social battery",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/market/neurodivergent_wall_art",
+      "note": "'Social Battery 1%' prints seen in neurodivergent wall art results."
+    },
+    {
+      "phrase": "brain is buffering",
+      "tag": "brain buffering",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster"
+    },
+    {
+      "phrase": "neurodivergent home office decor",
+      "tag": "home office decor",
+      "intent": "decor",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster"
+    },
+    {
+      "phrase": "therapy office decor",
+      "tag": "therapy office decor",
+      "intent": "decor",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/Neurodiversity-Therapy-Counseling-Picture-20x30inch/dp/B0D294ZP35",
+      "note": "Room only; never imply the poster is therapeutic."
+    },
+    {
+      "phrase": "we all think differently",
+      "tag": "think differently",
+      "intent": "style",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+      "note": "Amazon affirmation wording."
+    },
+    {
+      "phrase": "adhd poster",
+      "tag": "adhd poster",
+      "intent": "product",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "note": "Amazon search wording."
+    },
+    {
+      "phrase": "adhd decor",
+      "tag": "adhd decor",
+      "intent": "decor",
+      "strength": "seen",
+      "evidence": "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+      "note": "Amazon search wording."
+    },
+    {
+      "phrase": "sensory room poster",
+      "tag": "sensory room poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/sensory_room_poster",
+      "note": "Neuro Zones signs."
+    },
+    {
+      "phrase": "sensory room signs",
+      "tag": "sensory room signs",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/sensory_room_signs"
+    },
+    {
+      "phrase": "sensory room sign",
+      "tag": "sensory room sign",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/sensory_room_sign"
+    },
+    {
+      "phrase": "quiet corner sign",
+      "tag": "quiet corner sign",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/quiet_corner_sign"
+    },
+    {
+      "phrase": "calming corner visuals",
+      "tag": "calming corner",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/calming_corner_visuals"
+    },
+    {
+      "phrase": "calming corner banner",
+      "tag": "calm corner sign",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/calming_corner_banner"
+    },
+    {
+      "phrase": "cozy corner classroom sign",
+      "tag": "cozy corner sign",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/cozy_corner_classroom_sign"
+    }
+  ],
+  "avoid": {
+    "medical_claims": [
+      "treats",
+      "cures",
+      "therapy tool",
+      "therapeutic",
+      "reduces anxiety",
+      "helps ADHD",
+      "calms meltdowns",
+      "clinically proven",
+      "evidence-based",
+      "for diagnosis"
+    ],
+    "drug_brands": [
+      "Adderall",
+      "Ritalin",
+      "Vyvanse",
+      "Concerta",
+      "Strattera"
+    ],
+    "programs_and_trademarks": [
+      "Zones of Regulation",
+      "What Zone Are You In?"
+    ],
+    "characters_and_memes": [
+      "This Is Fine",
+      "Bluey",
+      "Inside Out",
+      "Disney",
+      "Pixar",
+      "any cartoon character"
+    ],
+    "spoon_theory": "Spoon Theory was coined by Christine Miserandino ('But You Don't Look Sick'). Trademark status was NOT verified in this research. Use 'spoon theory' only descriptively in lowercase, never her name or site name, and prefer 'spoonie' / 'out of spoons' in titles.",
+    "ambiguous_alone": [
+      "dopamine (fitness and supplement listings)",
+      "spoon / spoons (cutlery)",
+      "tabs (browser and sewing)",
+      "zones",
+      "sensory (toys)"
+    ],
+    "why": "Posters here are humor and signage for neurodivergent people and spaces. They are not medical products, and community trust depends on respectful wording."
+  },
+  "language": {
+    "prefer": [
+      "neurodivergent",
+      "ADHD brain",
+      "autistic (identity-first) or 'autism' as a topic",
+      "acceptance",
+      "sensory-friendly",
+      "disabled"
+    ],
+    "use_with_care": [
+      "autism awareness (still searched; many autistic people prefer 'acceptance')",
+      "special education (fine as a classroom term)",
+      "mental health (decor context only)"
+    ],
+    "never": [
+      "suffers from",
+      "afflicted",
+      "high-functioning / low-functioning",
+      "special needs as a euphemism",
+      "puzzle piece imagery or wording",
+      "crazy / insane"
+    ]
+  },
+  "insights": [
+    "Humor and dictionary-definition prints are the most common ADHD formats; ours fit both (windows, definitions, handwritten notes).",
+    "Most competitors are digital downloads ($1-$10). Physical prints are roughly $10-$20 framed, canvases $45-$96 (snippets). 'Physical poster print' differentiates.",
+    "'Too many tabs' and 'dopamine menu' are mostly stickers and printable templates: physical posters of these jokes are a gap.",
+    "Gift intent is strong: 9 indexed ADHD gift pages, including adults, friends, and men.",
+    "Audience and rooms: adults (often millennial women in titles), home office, dorm, therapy office, classroom. Neuro Zones buyers are teachers, therapists, and parents setting up spaces.",
+    "Amazon titles stack 'neurodiversity poster', 'ADHD wall art', 'therapy office decor', 'classroom', 'unframed', and a size."
+  ],
+  "titlePatterns": [
+    "<Design phrase> Funny ADHD Poster, Neurodivergent Wall Art, ADHD Gift for Adults, Home Office Decor",
+    "<Sign name> Sensory Room Sign, Calming Corner Poster, Neurodivergent Classroom Decor"
+  ],
+  "sources": [
+    "https://www.amazon.com/Neurodiversity-Therapy-Counseling-Picture-20x30inch/dp/B0D294ZP35",
+    "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751",
+    "https://www.amazon.com/adhd-decor/s?k=adhd+decor",
+    "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+    "https://www.amazon.com/neurodiversity-poster/s?k=neurodiversity+poster",
+    "https://www.butyoudontlooksick.com/?p=1600",
+    "https://www.etsy.com/listing/1205091340/my-brain-has-too-many-tabs-open-pastel",
+    "https://www.etsy.com/listing/1868221494/autism-acceptance-posters-inclusion",
+    "https://www.etsy.com/listing/4322043885/adhd-dopamine-menu-printable-executive",
+    "https://www.etsy.com/listing/4323805821/funny-adhd-definition-poster",
+    "https://www.etsy.com/listing/4323816771/hyperfocus-definition-print-funny-adhd",
+    "https://www.etsy.com/listing/4327356036/funny-adhd-brain-poster-too-many-tabs",
+    "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+    "https://www.etsy.com/listing/640102050/spoon-theory-spoonies-spoony-spoonie",
+    "https://www.etsy.com/market/adhd_adult_gift",
+    "https://www.etsy.com/market/adhd_funny_poster",
+    "https://www.etsy.com/market/adhd_gift",
+    "https://www.etsy.com/market/adhd_gifts",
+    "https://www.etsy.com/market/adhd_humor",
+    "https://www.etsy.com/market/adhd_wall_art_canvas",
+    "https://www.etsy.com/market/autistic_wall_art",
+    "https://www.etsy.com/market/calming_corner_banner",
+    "https://www.etsy.com/market/calming_corner_visuals",
+    "https://www.etsy.com/market/cozy_corner_classroom_sign",
+    "https://www.etsy.com/market/dopamine_menu",
+    "https://www.etsy.com/market/dopamine_menu_adhd",
+    "https://www.etsy.com/market/funny_adhd_gifts",
+    "https://www.etsy.com/market/funny_adhd_posters",
+    "https://www.etsy.com/market/gifts_for_adhd_adults",
+    "https://www.etsy.com/market/gifts_for_an_adhd_friend",
+    "https://www.etsy.com/market/gifts_for_men_with_adhd",
+    "https://www.etsy.com/market/gifts_for_people_with_adhd",
+    "https://www.etsy.com/market/neurodivergent_artwork",
+    "https://www.etsy.com/market/neurodivergent_wall_art",
+    "https://www.etsy.com/market/neurodiversity_art",
+    "https://www.etsy.com/market/neurodiversity_posters",
+    "https://www.etsy.com/market/poster_quote_adhd",
+    "https://www.etsy.com/market/quiet_corner_sign",
+    "https://www.etsy.com/market/sensory_room_poster",
+    "https://www.etsy.com/market/sensory_room_sign",
+    "https://www.etsy.com/market/sensory_room_signs",
+    "https://www.etsy.com/market/spoon_theory_poster",
+    "https://www.etsy.com/market/spoon_theory_print",
+    "https://www.etsy.com/market/spoonie_art",
+    "https://www.etsy.com/market/too_many_tabs"
+  ]
+}

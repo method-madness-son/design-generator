@@ -21,7 +21,8 @@ A poster becomes eligible for listing once someone saves it in the studio with *
 
 2. **Keyword file.** If the brief's `keywords` field names a file (e.g. `research/keywords/rally.json`), read it first. It holds researched search phrases with ready-made tags (each ≤ 20 characters), their evidence, an `avoid` list, and title patterns.
    - Prefer its `indexed` phrases for the primary keyword and the first tags, and copy its `evidence` URLs into this poster's `research.sources` when you use them.
-   - Never use anything in its `avoid` list: brands, models, series, events, or people.
+   - Never use anything in its `avoid` list: brands, models, series, events, people, medical claims, or programs.
+   - If it has a `language` section, follow it in the title, tags, and description: use the `prefer` wording, handle `use_with_care` terms as noted, and never use anything under `never`.
    - It does not replace research for this poster: still run the searches below, but you can run fewer shared searches.
    - If your searches find a strong phrase the file lacks, mention it in your report so the file can be updated. Don't edit the file yourself.
 

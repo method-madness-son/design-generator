@@ -34,6 +34,7 @@ The file also has an `avoid` list (brands, models, series, events, people, and t
 | File | Covers | Researched |
 |---|---|---|
 | `research/keywords/rally.json` | rally-pace-notes | 2026-11-01, search results only |
+| `research/keywords/neurodivergent.json` | adhd-brain, neuro-zones | 2026-11-01, search results only; adds a `language` section (preferred and never-use wording) |
 
 Refresh a file every few months, or when the agent reports a strong phrase that isn't in it.
 
