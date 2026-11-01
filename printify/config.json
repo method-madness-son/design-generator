@@ -1,1 +1,19 @@
-{"shopId":111,"blueprintId":5,"printProviderId":6,"placeholderPosition":"front","sizes":{"8x10":{"variantId":10,"priceCents":2400},"11x17":{"variantId":11,"priceCents":3400}},"publish":{"title":true,"description":true,"images":true,"variants":true,"tags":true,"keyFeatures":true,"shipping_template":true}}
+{
+  "shopId": null,
+  "blueprintId": null,
+  "printProviderId": null,
+  "placeholderPosition": "front",
+  "sizes": {
+    "8x10": { "variantId": null, "priceCents": null },
+    "11x17": { "variantId": null, "priceCents": null }
+  },
+  "publish": {
+    "title": true,
+    "description": true,
+    "images": true,
+    "variants": true,
+    "tags": true,
+    "keyFeatures": true,
+    "shipping_template": true
+  }
+}
