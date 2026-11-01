@@ -1,4 +1,79 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Co-Driver Definition Print, Funny Rally Wall Art, Rally Navigator Gift, Motorsport Office Decor",
+    "description": "A co-driver definition print in dictionary style: co-driver (noun), the person who reads the road so the driver doesn't have to.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall. It makes a thoughtful gift for the navigator in the passenger seat.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "co driver gift",
+      "rally co driver",
+      "co driver definition",
+      "definition print",
+      "funny racing poster",
+      "rally driver gift",
+      "rally gift",
+      "pace notes",
+      "navigator gift",
+      "rally motorsport art",
+      "motorsport gift",
+      "racing man cave",
+      "unique motorsport"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "co-driver definition print",
+    "etsy": {
+      "searchPhrases": [
+        "rally drivers",
+        "rally driver gift",
+        "rally driver presents",
+        "rally car gift",
+        "rally gifts",
+        "rally gift",
+        "rally car print",
+        "rally motorsport art",
+        "motorsport gift him",
+        "racing man cave",
+        "unique motorsport"
+      ],
+      "competitorNotes": [
+        "Definition-style rally prints exist, but they define the rally driver and mention the co-driver only as a side joke. Many are digital downloads at a few pounds or dollars.",
+        "Co-driver-specific gifts are mostly name stickers, a metal sign, a 'CO-DRIVER NAVIGATOR' hoodie, and one vintage night-rally poster, so a co-driver definition poster is an open angle.",
+        "Named-driver prints are common in the same results; this design names no one."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny rally driver gift",
+        "rally pace notes co driver",
+        "funny rally driving gift"
+      ],
+      "competitorNotes": [
+        "On Amazon, only a pace-notes sweatshirt names the co-driver role. Other rally humour is slogan shirts and totes ('Trust me I'm a rally driver')."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/rally_driver_gift",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/uk/market/rally_driver_presents",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/uk/market/rally_gifts",
+      "https://www.etsy.com/uk/market/rally_gift",
+      "https://www.etsy.com/uk/market/rally_car_print",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car",
+      "https://www.etsy.com/listing/739466166/2x-20cm-stickers-printed-rally-sticker",
+      "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "https://www.amazon.com/Rally-Driver-Car-Motorsport-Sweatshirt/dp/B0H28HS65R",
+      "https://www.amazon.com/Funny-Rally-Driver-Gift-Okayest/dp/B0D7BRBNJ3",
+      "https://www.amazon.com/Funny-Classic-Trust-Rally-Driver/dp/B0D464CQHW",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). 'co-driver definition print' pairs the design with the seen 'co driver gift' angle; it has no indexed page of its own. 'navigator gift' and 'definition print' come from competitor snippets, not market pages. No priceRange: the co-driver prices seen mixed USD and GBP and included digital files."
+  }
 }

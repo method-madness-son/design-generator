@@ -1,4 +1,76 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Vintage Rally Poster, Driveway Rallye 77 Door Number Art, Retro Motorsport Print, Rally Car Gift",
+    "description": "A vintage rally poster built around a retro door-number roundel: 77, DRIVEWAY RALLYE, est. 1987, no points awarded.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, office, or on a rally fan's wall.\n\nNo team, series, or manufacturer marks: just generic rally humor.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "vintage rally poster",
+      "80s rally art",
+      "race car roundel",
+      "rally numbers",
+      "retro racing number",
+      "driveway rallye 77",
+      "rally art print",
+      "rally driver gift",
+      "motorsport gift",
+      "racing gift for men",
+      "garage race decor",
+      "racing man cave",
+      "retro motorsport art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "vintage rally poster",
+    "etsy": {
+      "searchPhrases": [
+        "vintage rally poster",
+        "rally 80s",
+        "rally art",
+        "race car roundel",
+        "rally numbers",
+        "retro racing number decals",
+        "rally car door",
+        "rally driver gift",
+        "motorsport gift him",
+        "racing gifts for men",
+        "garage race decor",
+        "racing man cave"
+      ],
+      "competitorNotes": [
+        "Door-number roundel results are almost all decals and stickers (custom numbers, sets of two or three); roundel-style posters are scarce.",
+        "Vintage rally posters on Etsy mostly depict real cars and events; a generic, fictional-event roundel is a differentiator."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "retro rally car wall art poster unframed garage",
+        "funny racing sign poster man cave garage"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are mostly watercolor real-car paintings sold unframed in 8x10 to 16x20, pitched for garage and man cave walls and as a gift for car enthusiasts.",
+        "Funny racing wall decor on Amazon is dominated by 8x12 metal tin signs (speed-limit and parking jokes); no co-driver or pace-note jokes surfaced."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/vintage_rally_poster",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/uk/market/race_car_roundel",
+      "https://www.etsy.com/market/rally_numbers",
+      "https://www.etsy.com/market/retro_racing_number_decals",
+      "https://www.etsy.com/market/rally_car_door",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/market/racing_gifts_for_men",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.amazon.com/clp/B0DSF9G6CG",
+      "https://www.amazon.com/clp/B08CC2HYS9",
+      "https://www.amazon.com/ALREAR-Garage-Signs-Posters-Vintage/dp/B0GFSVW2WT",
+      "https://www.amazon.com/Decor-Posters-Bedroom-Garage-Accessories/dp/B09Y9D6D26"
+    ],
+    "notes": "Only one of these five leads with a keyword-file phrase unchanged; 'vintage rally poster' fits this retro roundel design per the keyword file. 'race car roundel' and 'rally numbers' are indexed but serve decal buyers, so they sit later in the tags. 'retro motorsport art' is not confirmed as indexed. No priceRange: roundel prices seen were for decals."
+  }
 }

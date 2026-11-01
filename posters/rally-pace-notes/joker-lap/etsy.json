@@ -1,4 +1,76 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Joker Lap Rallycross Poster, Funny Motorsport Wall Art, Racing Gifts for Him, Racing Man Cave Decor",
+    "description": "A joker lap rallycross poster for anyone who always takes the long way round: JOKER LAP in bold type, 'it's a lifestyle', and a looping arrow.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "joker lap",
+      "rallycross",
+      "rallycross poster",
+      "funny racing poster",
+      "motorsport poster",
+      "racing gifts for him",
+      "racing man cave",
+      "rally wall art",
+      "rally car gift",
+      "motorsport gift",
+      "racing pit sign",
+      "unique motorsport",
+      "car enthusiast gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "joker lap rallycross poster",
+    "etsy": {
+      "searchPhrases": [
+        "rallycross",
+        "poster rallycross",
+        "rally gifts",
+        "rally wall art",
+        "rally car gift",
+        "racing gifts for him",
+        "racing man cave",
+        "motorsport gift him",
+        "racing pit sign",
+        "unique motorsport"
+      ],
+      "competitorNotes": [
+        "Etsy has indexed 'rallycross' and 'poster rallycross' pages, but a joker lap search returned no joker-lap rally items, only unrelated Joker character gifts.",
+        "Because 'joker' alone pulls in the comic villain, every joker tag or title phrase is paired with 'lap' or 'rallycross'."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally poster",
+        "motorsport poster",
+        "autocross rally laminated poster",
+        "funny rally car joke"
+      ],
+      "competitorNotes": [
+        "Amazon motorsport posters are photos and paintings sold by size (laminated, canvas, unframed); none use rallycross lingo.",
+        "Rally humour on Amazon is slogan apparel ('funny rally car joke'), not wall art."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rallycross",
+      "https://www.etsy.com/market/poster_rallycross",
+      "https://www.etsy.com/market/rally_gifts",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/market/racing_pit_sign",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/Motorsport-Autocross-Laminated-Imagery-Fits-Attractive/dp/B08MDGBMLS",
+      "https://www.amazon.com/Funny-Rally-Car-Vintage-Racing/dp/B08PCJF34M",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). I led with 'rallycross' (indexed, and new to the keyword file) because the joker lap is rallycross terminology, so the phrase is accurate and stays clear of the shop's other rally leads. 'joker lap' has no search evidence of its own. The generic discipline 'rallycross' is used, never a named rallycross series. No priceRange: no comparable physical prices were seen."
+  }
 }

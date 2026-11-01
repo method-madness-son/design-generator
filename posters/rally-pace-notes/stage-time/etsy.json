@@ -1,4 +1,77 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Stage Rally Poster, SS4 Gravel Split Time Print, Funny Motorsport Wall Art, Racing Gift for Men",
+    "description": "A stage rally poster styled like a timing board: SS4, gravel, stage 04, split +0.3, and the verdict \"not bad for a tuesday\".\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, home office, or on a rally fan's wall.\n\nGeneric rally design: no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "stage rally poster",
+      "gravel rally art",
+      "split time print",
+      "rally motorsport art",
+      "rally driving gift",
+      "racing gift for men",
+      "rally gifts",
+      "funny racing poster",
+      "motorsport poster",
+      "rally car gift",
+      "rally fan gift",
+      "garage race decor",
+      "unique motorsport"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "stage rally poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally posters",
+        "rally motorsport art",
+        "rally driving gifts",
+        "racing gifts for men",
+        "rally gifts",
+        "rally car gift",
+        "garage race decor"
+      ],
+      "competitorNotes": [
+        "No split-time or timing-board rally posters surfaced; the nearest are a video-game poster with lap timers and an event poster listing stage data.",
+        "Stage-based rally prints name real events; this design uses a generic stage number only."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "unframed poster",
+        "garage wall decor",
+        "gift for car enthusiast",
+        "man cave"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are real-car watercolors and paintings sold unframed in 8x10, 11x14, A3, and A2, pitched at garages and man caves.",
+        "Amazon titles stack plain words: \"wall art\", \"unframed\", \"gift for car enthusiast\"; no pace-note or co-driver humor prints seen."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_posters",
+      "https://www.etsy.com/market/rally_poster_design",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/rally_driving_gifts",
+      "https://www.etsy.com/market/racing_gifts_for_men",
+      "https://www.etsy.com/market/rally_gifts",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/fr/market/rally_fan_gift",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.etsy.com/au/listing/4435657387/subaru-impreza-wrc-s6-rally-car-crychan",
+      "https://www.etsy.com/listing/4402066165/old-school-rally-poster-19x13-video-game",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/eXperimental-Generations-Inspired-Car-Poster/dp/B09MK88XX7",
+      "https://www.amazon.com/clp/B084RMNT57",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "\"stage rally poster\" is a \"seen\" phrase in the keyword file, not confirmed indexed; chosen because STAGE/SS4 is the printed subject and it keeps this listing off the shared \"rally car poster\" lead. \"split time print\" is my own descriptive phrase without search evidence. Listing pages were not reachable (WebFetch blocked); evidence is from search results and research/keywords/rally.json only. No priceRange: snippets did not reliably separate physical prints from digital downloads."
+  }
 }

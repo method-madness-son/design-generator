@@ -1,4 +1,78 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Sideways Is Faster Funny Rally Poster, Citation Needed Motorsport Humor, Rally Driver Gift, Garage Art",
+    "description": "A funny rally poster with a tongue-in-cheek claim: SIDEWAYS IS FASTER, followed by a firm (citation needed). It is a joke, not driving advice.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, home office, or on a rally fan's wall.\n\nGeneric rally design: no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "funny rally poster",
+      "sideways is faster",
+      "citation needed",
+      "funny racing poster",
+      "rally driver gift",
+      "rally drivers",
+      "rally gift",
+      "car enthusiast gift",
+      "racing gift for men",
+      "motorsport poster",
+      "racing man cave",
+      "garage race decor",
+      "rally car poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "funny rally poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car gifts",
+        "rally driver gift",
+        "rally gift",
+        "rally drivers",
+        "racing gifts for men",
+        "racing man cave",
+        "garage race decor"
+      ],
+      "competitorNotes": [
+        "Etsy humor in rally is mostly dictionary-definition prints joking that rally drivers corner sideways; a two-line slogan with a \"citation needed\" punchline is a different take.",
+        "A bare \"sideways poster\" search on Etsy returns a 2004 film's posters, so \"sideways\" is always paired with rally or racing words here."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "unframed poster",
+        "garage wall decor",
+        "gift for car enthusiast",
+        "man cave",
+        "drift poster"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are real-car watercolors and paintings sold unframed in 8x10, 11x14, A3, and A2, pitched at garages and man caves.",
+        "Amazon titles stack plain words: \"wall art\", \"unframed\", \"gift for car enthusiast\"; no pace-note or co-driver humor prints seen.",
+        "Amazon drift and sideways-slide posters are serious photo or neon art; no explicit sideways joke prints seen."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_gifts",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/uk/market/rally_gift",
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/racing_gifts_for_men",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/sideways_movie_poster",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/drift-poster/s?k=drift+poster",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/eXperimental-Generations-Inspired-Car-Poster/dp/B09MK88XX7",
+      "https://www.amazon.com/clp/B084RMNT57",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "\"funny rally poster\" is not an indexed Etsy phrase; it combines indexed \"rally posters\" with the \"funny racing poster\" wording seen on Amazon and the funny rally prints in Etsy results. Chosen because the joke is the selling point. Listing pages were not reachable (WebFetch blocked); evidence is from search results and research/keywords/rally.json only. No priceRange: snippets did not reliably separate physical prints from digital downloads."
+  }
 }

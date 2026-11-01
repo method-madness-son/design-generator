@@ -1,4 +1,74 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Square Left Don't Cut Rally Wall Art, Pace Notes Print, Co Driver Gift, Garage Race Decor",
+    "description": "Square left, don't cut: this rally wall art turns a stencil-style pace note call into a poster, with \"Lift\" and \"Flat out\" call-outs for anyone who has sat in the right seat.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, home office, or on a rally fan's wall.\n\nGeneric rally design: no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "pace notes",
+      "pacenotes poster",
+      "rally wall art",
+      "square left",
+      "rally co driver",
+      "co driver gift",
+      "rally fan gift",
+      "rally car gift",
+      "motorsport sign",
+      "rally motorsport art",
+      "garage race decor",
+      "racing man cave",
+      "unique motorsport"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "square left rally wall art",
+    "etsy": {
+      "searchPhrases": [
+        "rally wall art",
+        "pacenotes",
+        "rally driver gift",
+        "rally fan gift",
+        "motorsport signs",
+        "garage race decor",
+        "racing man cave"
+      ],
+      "competitorNotes": [
+        "Pace notes appear on Etsy only on mugs, a pace-note notebook, and hoodies; no pace-note wall prints surfaced, so a call-out poster fills a gap.",
+        "Rally wall art results are dominated by real-car illustrations; text-only call-out designs are rare."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "unframed poster",
+        "garage wall decor",
+        "gift for car enthusiast",
+        "man cave"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are real-car watercolors and paintings sold unframed in 8x10, 11x14, A3, and A2, pitched at garages and man caves.",
+        "Amazon titles stack plain words: \"wall art\", \"unframed\", \"gift for car enthusiast\"; no pace-note or co-driver humor prints seen."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/fr/market/rally_fan_gift",
+      "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/motorsport_signs",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/eXperimental-Generations-Inspired-Car-Poster/dp/B09MK88XX7",
+      "https://www.amazon.com/clp/B084RMNT57",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "Lead built from the printed call \"Square left\" plus indexed \"rally wall art\", leaving \"pace notes poster\" and \"rally car poster\" for sibling listings. Listing pages were not reachable (WebFetch blocked); evidence is from search results and research/keywords/rally.json only. No priceRange: snippets did not reliably separate physical prints from digital downloads."
+  }
 }

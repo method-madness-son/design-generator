@@ -1,4 +1,78 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Gravel Legend Rally Art Print, Vintage Style Motorsport Poster, Hairpin Road Arrow, Rally Car Gift",
+    "description": "Gravel Legend, est. first hairpin: a rally art print with a retro road-arrow graphic for the driver who peaked on the loose stuff.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, home office, or on a rally fan's wall.\n\nGeneric rally design: no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "gravel rally art",
+      "gravel legend",
+      "vintage rally poster",
+      "rally art print",
+      "80s rally art",
+      "retro racing art",
+      "rally car gift",
+      "racing gifts for him",
+      "car enthusiast gift",
+      "motorsport gift",
+      "rally wall art",
+      "garage race decor",
+      "rally motorsport art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "gravel legend rally art print",
+    "etsy": {
+      "searchPhrases": [
+        "rally art",
+        "vintage rally poster",
+        "rally 80s",
+        "rally car gift",
+        "racing gifts for him",
+        "motorsport gift him",
+        "rally wall art",
+        "garage race decor",
+        "poster rallycross"
+      ],
+      "competitorNotes": [
+        "Etsy \"gravel\" art searches are mostly gravel cycling prints; pairing gravel with rally keeps this listing in the motorsport results.",
+        "Gravel-stage rally prints shown are real-car paintings and a typographic gravel stage racing poster; none use a humorous \"legend\" angle."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "unframed poster",
+        "garage wall decor",
+        "gift for car enthusiast",
+        "man cave"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are real-car watercolors and paintings sold unframed in 8x10, 11x14, A3, and A2, pitched at garages and man caves.",
+        "Amazon titles stack plain words: \"wall art\", \"unframed\", \"gift for car enthusiast\"; no pace-note or co-driver humor prints seen."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/market/vintage_rally_poster",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/poster_rallycross",
+      "https://www.etsy.com/market/retro_gravel_art",
+      "https://www.etsy.com/au/listing/4435657387/subaru-impreza-wrc-s6-rally-car-crychan",
+      "https://www.etsy.com/listing/4576943128/muscle-car-rally-print-retro-racing-wall?lang_mismatch=1",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/eXperimental-Generations-Inspired-Car-Poster/dp/B09MK88XX7",
+      "https://www.amazon.com/clp/B084RMNT57",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "Lead pairs the printed \"Gravel Legend\" with indexed \"rally art\"; \"vintage rally poster\" kept second because a sibling (Driveway Rallye 77) is the more obviously retro design. Listing pages were not reachable (WebFetch blocked); evidence is from search results and research/keywords/rally.json only. No priceRange: snippets did not reliably separate physical prints from digital downloads."
+  }
 }

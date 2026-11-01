@@ -1,4 +1,75 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Flat Out Rally Car Poster, Until the Next Crest Pace Note Print, Rally Driver Gift, Racing Man Cave Art",
+    "description": "A flat out rally car poster in bold stencil type: FLAT OUT, until the next crest, the pace note every driver hopes to hear.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, home office, or on a rally fan's wall.\n\nGeneric rally design: no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally car poster",
+      "flat out poster",
+      "until the next crest",
+      "pace note print",
+      "rally driver gift",
+      "rally drivers",
+      "rally driving gift",
+      "racing gifts for him",
+      "motorsport gift",
+      "racing man cave",
+      "motorsport poster",
+      "funny racing poster",
+      "rally art print"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "flat out rally car poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car poster",
+        "rally drivers",
+        "rally driving gifts",
+        "racing gifts for him",
+        "motorsport gift him",
+        "racing man cave",
+        "rally art",
+        "rallying poster"
+      ],
+      "competitorNotes": [
+        "\"Flat out\" on Etsy is tied to a named driver's quote and a 1970s movie quote poster; this listing avoids both and uses only the poster's own words.",
+        "A flat-out movie quote typography design appears as a cheap printable; stating a physical print sets this apart."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "unframed poster",
+        "garage wall decor",
+        "gift for car enthusiast",
+        "man cave"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are real-car watercolors and paintings sold unframed in 8x10, 11x14, A3, and A2, pitched at garages and man caves.",
+        "Amazon titles stack plain words: \"wall art\", \"unframed\", \"gift for car enthusiast\"; no pace-note or co-driver humor prints seen."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rallying_poster",
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/rally_driving_gifts",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/eXperimental-Generations-Inspired-Car-Poster/dp/B09MK88XX7",
+      "https://www.amazon.com/clp/B084RMNT57",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "The only one of my five posters leading with \"rally car poster\", qualified by the printed words \"Flat Out\". Avoided the phrase \"if in doubt, flat out\" because Etsy ties it to a named driver. Listing pages were not reachable (WebFetch blocked); evidence is from search results and research/keywords/rally.json only. No priceRange: snippets did not reliably separate physical prints from digital downloads."
+  }
 }

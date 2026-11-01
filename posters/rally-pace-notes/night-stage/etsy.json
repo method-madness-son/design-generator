@@ -1,4 +1,76 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Night Stage Rally Art Print, Neon 80s Motorsport Poster, Headlights On Humor, Rally Driver Gift",
+    "description": "A neon night stage rally art print for anyone who has driven a forest stage on headlights alone: NIGHT STAGE, headlights on, brain off.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, office, or on a rally fan's wall.\n\nNo team, series, or manufacturer marks: just generic rally humor.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "night stage rally",
+      "rally art print",
+      "80s rally art",
+      "synthwave car poster",
+      "rally wall art",
+      "rally motorsport art",
+      "rally driver gift",
+      "rally fan gift",
+      "racing gifts for him",
+      "garage race decor",
+      "racing man cave",
+      "stage rally poster",
+      "funny racing poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "night stage rally art",
+    "etsy": {
+      "searchPhrases": [
+        "rally art",
+        "rally 80s",
+        "rally wall art",
+        "rally motorsport art",
+        "synthwave car poster",
+        "synthwave car",
+        "rally driver gift",
+        "rally fan gift",
+        "racing gifts for him",
+        "garage race decor",
+        "racing man cave"
+      ],
+      "competitorNotes": [
+        "Night rally prints found are real-car, real-event illustrations (snowy mountain night stages with headlights); none pair a night stage with neon styling or a joke.",
+        "Neon/synthwave car posters are a busy indexed niche (sunsets, palms, wet roads, purple-pink palettes) but show sports cars, not rally stages, and many are digital downloads."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "retro rally car wall art poster unframed garage",
+        "funny racing sign poster man cave garage"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are mostly watercolor real-car paintings sold unframed in 8x10 to 16x20, pitched for garage and man cave walls and as a gift for car enthusiasts.",
+        "Funny racing wall decor on Amazon is dominated by 8x12 metal tin signs (speed-limit and parking jokes); no co-driver or pace-note jokes surfaced."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/synthwave_car_poster",
+      "https://www.etsy.com/market/synthwave_car",
+      "https://www.etsy.com/listing/4475950596/monte-carlo-rally-group-b-night-race",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/fr/market/rally_fan_gift",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/clp/B0DSF9G6CG",
+      "https://www.amazon.com/clp/B08CC2HYS9",
+      "https://www.amazon.com/ALREAR-Garage-Signs-Posters-Vintage/dp/B0GFSVW2WT",
+      "https://www.amazon.com/Decor-Posters-Bedroom-Garage-Accessories/dp/B09Y9D6D26"
+    ],
+    "notes": "Primary keyword combines the printed phrase 'night stage' with the indexed 'rally art'; leads with a distinct phrase so the shop's rally listings don't all chase 'rally car poster'. 'stage rally poster' and 'funny racing poster' are 'seen' phrases from the keyword file, not indexed. No priceRange: snippets did not give comparable physical-print prices."
+  }
 }

@@ -1,4 +1,75 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Rally Jump Poster, Funny Motorsport Sign, Co Driver Humor Wall Art, Racing Pit Sign Garage Decor",
+    "description": "A funny rally jump poster styled as a stage warning sign: JUMP, and the co-driver said \"maybe\".\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a garage, man cave, office, or on a rally fan's wall.\n\nNo team, series, or manufacturer marks: just generic rally humor.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally jump poster",
+      "motorsport sign",
+      "racing pit sign",
+      "co driver humor",
+      "rally car gift",
+      "rally posters",
+      "unique motorsport",
+      "motorsport gift",
+      "racing man cave",
+      "rally driving gift",
+      "gravel rally art",
+      "rally art print",
+      "car enthusiast gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "rally jump poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car poster",
+        "rally posters",
+        "rallying poster",
+        "vintage rally poster",
+        "motorsport signs",
+        "racing pit sign",
+        "rally car gift",
+        "unique motorsport",
+        "motorsport gift him",
+        "rally driving gifts"
+      ],
+      "competitorNotes": [
+        "'Rally jump' posters exist but are real-car illustrations of cars airborne over crests; none are sign-style or joke-led.",
+        "Physical jump prints in snippets were roughly $18 to $31 USD, but mixed with framed and digital versions, so not used as a price range."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "retro rally car wall art poster unframed garage",
+        "funny racing sign poster man cave garage"
+      ],
+      "competitorNotes": [
+        "Amazon rally prints are mostly watercolor real-car paintings sold unframed in 8x10 to 16x20, pitched for garage and man cave walls and as a gift for car enthusiasts.",
+        "Funny racing wall decor on Amazon is dominated by 8x12 metal tin signs (speed-limit and parking jokes); no co-driver or pace-note jokes surfaced."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_posters",
+      "https://www.etsy.com/market/rallying_poster",
+      "https://www.etsy.com/market/vintage_rally_poster",
+      "https://www.etsy.com/market/motorsport_signs",
+      "https://www.etsy.com/market/racing_pit_sign",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/market/rally_driving_gifts",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/au/listing/4435657387/subaru-impreza-wrc-s6-rally-car-crychan",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+      "https://www.amazon.com/clp/B0DSF9G6CG",
+      "https://www.amazon.com/clp/B08CC2HYS9",
+      "https://www.amazon.com/ALREAR-Garage-Signs-Posters-Vintage/dp/B0GFSVW2WT",
+      "https://www.amazon.com/Decor-Posters-Bedroom-Garage-Accessories/dp/B09Y9D6D26"
+    ],
+    "notes": "Primary keyword uses the printed word 'jump' with the indexed 'rally posters' family; 'motorsport sign' (indexed) is the secondary angle for the sign layout. 'rally sign' avoided per keyword file. No priceRange: snippet prices mixed framed, digital, and real-car prints."
+  }
 }

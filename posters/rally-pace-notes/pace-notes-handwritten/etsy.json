@@ -1,4 +1,76 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Handwritten Pace Notes Print, Rally Co-Driver Wall Art, Motorsport Gift for Him, Garage Race Decor",
+    "description": "A handwritten pace notes print that looks like a co-driver's notebook page: L4 over crest, don't cut, caution, flat out, with pen-drawn arrows.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "pace notes",
+      "pacenotes poster",
+      "rally co driver",
+      "co driver gift",
+      "rally motorsport art",
+      "motorsport gift",
+      "garage race decor",
+      "rally art print",
+      "rally drivers",
+      "unique motorsport",
+      "rally gifts",
+      "car enthusiast gift",
+      "stage rally poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "handwritten pace notes print",
+    "etsy": {
+      "searchPhrases": [
+        "rally drivers",
+        "rally driver gift",
+        "rally posters",
+        "rally car poster",
+        "rally motorsport art",
+        "rally art",
+        "rally gifts",
+        "motorsport gift him",
+        "garage race decor",
+        "unique motorsport"
+      ],
+      "competitorNotes": [
+        "A search for pace-notes posters found no ready-made print. Pace notes appear only on a metal sign, a licence-plate sign, mugs, and t-shirts.",
+        "Co-driver gifts that do exist are stickers, a metal sign, and apparel, so a notebook-style pace-notes print fills a gap.",
+        "Some rally prints in the same results are digital-download sets; stating 'physical poster print' sets this listing apart."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally pace notes co driver",
+        "funny rally driving gift",
+        "car enthusiast gift"
+      ],
+      "competitorNotes": [
+        "On Amazon, 'Rally Pace Notes Co Driver' appears only on sweatshirts, tumblers, and tees; no posters.",
+        "Rally humour on Amazon is mostly slogan shirts and totes, worded as 'funny rally driver gift'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/rally_driver_gift",
+      "https://www.etsy.com/market/rally_posters",
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/market/rally_gifts",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.amazon.com/Rally-Driver-Car-Motorsport-Sweatshirt/dp/B0H28HS65R",
+      "https://www.amazon.com/Funny-Rally-Driver-Gift-Okayest/dp/B0D7BRBNJ3",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). 'pace notes' and 'pacenotes' are seen phrases (mugs and shirts), not indexed Etsy market pages. I chose them anyway because no pace-notes poster competes, and 'handwritten' separates this design from the stencil pace-note posters. 'handwritten pace notes print' itself has no direct search evidence. No priceRange: no comparable physical prices were seen."
+  }
 }

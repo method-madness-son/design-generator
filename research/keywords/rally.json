@@ -252,6 +252,90 @@
       "strength": "indexed",
       "evidence": "https://www.etsy.com/market/group_b_rally",
       "note": "Era name, not a brand. Use only if the poster is about that era; never pair with car makers."
+    },
+    {
+      "phrase": "rallycross",
+      "tag": "rallycross",
+      "intent": "niche",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rallycross",
+      "note": "Rallycross designs only (e.g. Joker Lap). Pair 'joker' with 'lap' or 'rallycross': alone it matches the comic character."
+    },
+    {
+      "phrase": "poster rallycross",
+      "tag": "rallycross poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/poster_rallycross"
+    },
+    {
+      "phrase": "rallying poster",
+      "tag": "rallying poster",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rallying_poster"
+    },
+    {
+      "phrase": "rally car print",
+      "tag": "rally car print",
+      "intent": "product",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/uk/market/rally_car_print",
+      "note": "UK market page."
+    },
+    {
+      "phrase": "rally driver presents",
+      "tag": "rally driver present",
+      "intent": "gift",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/uk/market/rally_driver_presents",
+      "note": "UK wording for gifts."
+    },
+    {
+      "phrase": "synthwave car poster",
+      "tag": "synthwave car poster",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/synthwave_car_poster",
+      "note": "Neon / 80s styles (Night Stage)."
+    },
+    {
+      "phrase": "retro arcade racing",
+      "tag": "retro arcade racing",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/retro_arcade_racing",
+      "note": "Arcade styles (Continue?). Never name games or publishers."
+    },
+    {
+      "phrase": "arcade poster print",
+      "tag": "arcade poster print",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/arcade_poster_print"
+    },
+    {
+      "phrase": "race car roundel",
+      "tag": "race car roundel",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/uk/market/race_car_roundel",
+      "note": "Door-number designs; buyers are often after decals, so use later in the tags."
+    },
+    {
+      "phrase": "rally numbers",
+      "tag": "rally numbers",
+      "intent": "style",
+      "strength": "indexed",
+      "evidence": "https://www.etsy.com/market/rally_numbers"
+    },
+    {
+      "phrase": "rally jump",
+      "tag": "rally jump poster",
+      "intent": "niche",
+      "strength": "seen",
+      "evidence": "https://www.etsy.com/market/rally_car_poster",
+      "note": "Seen in competitor titles (real-car jump prints)."
     }
   ],
   "avoid": {
@@ -299,16 +383,24 @@
       "rally",
       "rally sign",
       "rally poster (alone in a tag)",
-      "rally shirt"
+      "rally shirt",
+      "gravel (matches gravel cycling)",
+      "joker (matches the comic character)"
     ],
-    "why": "Competitor rally art is dominated by real cars, events, and drivers. Our designs are generic pace-note humor, so these terms would be inaccurate and risk IP takedowns."
+    "why": "Competitor rally art is dominated by real cars, events, and drivers. Our designs are generic pace-note humor, so these terms would be inaccurate and risk IP takedowns.",
+    "quotes": [
+      "if in doubt, flat out",
+      "sideways (alone, film title)"
+    ]
   },
   "insights": [
     "Etsy rally art is mostly real-car illustrations (Group B era, Subaru, Audi, Lancia) and many listings are digital downloads; stating 'physical poster print' differentiates.",
     "No pace-notes or co-driver humor posters surfaced: lead with 'pace notes' / 'co driver gift' for those designs.",
     "Gift-intent phrases (rally gift, rally driver gift, racing gifts for him/men) have the most Etsy market pages.",
     "Room/use angle: garage, man cave, office. 'garage race decor' and 'motorsport sign' are indexed.",
-    "Physical rally prints seen at roughly $15-$50; digital downloads under $10 (snippets, not comparable listings)."
+    "Physical rally prints seen at roughly $15-$50; digital downloads under $10 (snippets, not comparable listings).",
+    "The rally_posters market page is dominated by protest signs; it is still indexed, but never rely on it alone.",
+    "Added 2026-11-01 from the first listing run: indexed phrases found by the agent (rallycross, synthwave, arcade, roundel)."
   ],
   "titlePatterns": [
     "<Design phrase> Rally Car Poster, Pace Notes Wall Art, Rally Driver Gift, Garage Decor",
@@ -324,6 +416,7 @@
     "https://www.etsy.com/dk-en/market/rally_driver_gift",
     "https://www.etsy.com/fr/market/rally_fan_gift",
     "https://www.etsy.com/listing/1016518603/driver-co-driver-name-stickers-car",
+    "https://www.etsy.com/market/arcade_poster_print",
     "https://www.etsy.com/market/garage_race_decor",
     "https://www.etsy.com/market/group_b_poster",
     "https://www.etsy.com/market/group_b_rally",
@@ -331,6 +424,7 @@
     "https://www.etsy.com/market/motorsport_gift_him",
     "https://www.etsy.com/market/motorsport_signs",
     "https://www.etsy.com/market/motorsports_sign",
+    "https://www.etsy.com/market/poster_rallycross",
     "https://www.etsy.com/market/racing_gifts_for_him",
     "https://www.etsy.com/market/racing_gifts_for_men",
     "https://www.etsy.com/market/racing_pit_sign",
@@ -342,12 +436,20 @@
     "https://www.etsy.com/market/rally_driving_gifts",
     "https://www.etsy.com/market/rally_gifts",
     "https://www.etsy.com/market/rally_motorsport_art",
+    "https://www.etsy.com/market/rally_numbers",
     "https://www.etsy.com/market/rally_posters",
     "https://www.etsy.com/market/rally_wall_art",
+    "https://www.etsy.com/market/rallycross",
+    "https://www.etsy.com/market/rallying_poster",
+    "https://www.etsy.com/market/retro_arcade_racing",
+    "https://www.etsy.com/market/synthwave_car_poster",
     "https://www.etsy.com/market/unique_motorsport",
     "https://www.etsy.com/market/vintage_rally_poster",
     "https://www.etsy.com/mx/market/racing_man_cave",
+    "https://www.etsy.com/uk/market/race_car_roundel",
     "https://www.etsy.com/uk/market/rally_80s",
+    "https://www.etsy.com/uk/market/rally_car_print",
+    "https://www.etsy.com/uk/market/rally_driver_presents",
     "https://www.etsy.com/uk/market/rally_gift"
   ]
 }

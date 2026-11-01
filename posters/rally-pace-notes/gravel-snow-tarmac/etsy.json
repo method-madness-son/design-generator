@@ -1,4 +1,80 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Gravel Snow Tarmac Rally Art Print, Motorsport Wall Art, Rally Driving Gift, Garage Race Decor",
+    "description": "A gravel snow tarmac rally art print with the three rally surfaces stacked as bold words alongside a surfaces graphic.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "gravel snow tarmac",
+      "rally art print",
+      "gravel rally art",
+      "rally motorsport art",
+      "rally wall art",
+      "rally car gift",
+      "rally driving gift",
+      "rally fan gift",
+      "garage race decor",
+      "motorsport poster",
+      "racing gift for men",
+      "stage rally poster",
+      "rally drivers"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "gravel snow tarmac rally art",
+    "etsy": {
+      "searchPhrases": [
+        "rally art",
+        "rally motorsport art",
+        "rally wall art",
+        "rally racing wall canvas",
+        "rally car gift",
+        "rally driving gifts",
+        "rally fan gift",
+        "garage race decor",
+        "racing gifts for men",
+        "rally drivers",
+        "rally gifts"
+      ],
+      "competitorNotes": [
+        "Other listings use 'gravel, snow, tarmac' as copy (a retro game poster, a vintage sticker), but they sell real cars or events; none make the surfaces the subject.",
+        "Snow rally prints are dominated by one famous event, and gravel scenes by named cars. A surfaces-only design avoids both.",
+        "Snippet prices for rally posters and prints ran from about EUR 20 to USD 80, mixed currencies and formats, so no range is recorded."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally poster",
+        "motorsport poster",
+        "rally racing painting unframed poster",
+        "car enthusiast gift"
+      ],
+      "competitorNotes": [
+        "Amazon rally decor lists size and format first (11x14 unframed, 18x24 canvas, laminated) and names the room: office, garage, living room."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_racing_wall_canvas",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/rally_driving_gifts",
+      "https://www.etsy.com/fr/market/rally_fan_gift",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/racing_gifts_for_men",
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/rally_gifts",
+      "https://www.etsy.com/listing/4402066165/old-school-rally-poster-19x13-video-game",
+      "https://www.etsy.com/listing/4453103181/world-rally-championship-vintage",
+      "https://www.etsy.com/au/listing/4435657387/subaru-impreza-wrc-s6-rally-car-crychan",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). Primary = the design's three words + indexed 'rally art'. 'gravel snow tarmac' appears in competitor copy but is not an indexed phrase. 'gravel rally art' and 'stage rally poster' are seen, not indexed. No priceRange: snippets mixed currencies and formats."
+  }
 }

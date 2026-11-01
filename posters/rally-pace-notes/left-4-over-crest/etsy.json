@@ -1,4 +1,85 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Left 4 Over Crest Rally Car Poster, Pace Notes Wall Art, Rally Driver Gift, Garage Race Decor",
+    "description": "A rally car poster that prints one pace-note call in bold stencil type: LEFT 4, OVER CREST, DON'T CUT, with a road arrow.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in or 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally car poster",
+      "left 4 over crest",
+      "pace notes",
+      "rally wall art",
+      "rally driver gift",
+      "garage race decor",
+      "rally motorsport art",
+      "stage rally poster",
+      "racing man cave",
+      "rally fan gift",
+      "motorsport sign",
+      "racing gifts for him",
+      "funny racing poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-01",
+    "method": "search-results",
+    "primaryKeyword": "over crest rally car poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car poster",
+        "rally wall art",
+        "rally posters",
+        "rally motorsport art",
+        "rally driver gift",
+        "rally fan gift",
+        "garage race decor",
+        "racing man cave",
+        "motorsport signs",
+        "racing gifts for him",
+        "rallying poster"
+      ],
+      "competitorNotes": [
+        "Crest and jump rally prints on Etsy almost all show a named real car mid-air; none use the pace-note call itself as the artwork.",
+        "A pace-note t-shirt uses lines such as 'flat over crest', which confirms the call is recognised by fans, but no poster version surfaced.",
+        "Physical rally jump prints in the results were about $18 to $20 USD; jump-themed clipart bundles are digital and much cheaper."
+      ],
+      "priceRange": {
+        "min": 18,
+        "max": 20,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "motorsport poster",
+        "rally racing painting unframed poster",
+        "car enthusiast gift"
+      ],
+      "competitorNotes": [
+        "Amazon rally wall art is photo or painting style, sold as canvas sets or unframed prints by size, pitched at car enthusiasts for offices and garages.",
+        "No typographic pace-note posters appeared."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_posters",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.etsy.com/fr/market/rally_fan_gift",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/motorsport_signs",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/market/rallying_poster",
+      "https://www.etsy.com/fr/market/rally_poster",
+      "https://www.etsy.com/uk/market/rally_80s",
+      "https://www.etsy.com/ca/listing/1513717172/rally-pacenotes-mug",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/Sports-Racing-Painting-Framed-Poster/dp/B0DSFG49W6",
+      "https://www.amazon.com/rally-poster/s?k=rally+poster"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). This is the only one of my five rally posters that leads with 'rally car poster' (the strongest indexed phrase); 'over crest' from the design keeps it distinct. 'left 4 over crest' is the printed text, not an evidenced search phrase. 'stage rally poster' is a seen phrase, not confirmed indexed. The price range comes from two crest/jump print snippets, not from pages."
+  }
 }
