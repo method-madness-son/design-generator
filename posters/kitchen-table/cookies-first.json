@@ -1,0 +1,30 @@
+{
+  "id": "cookies-first",
+  "title": "COOKIES\nFIRST",
+  "subtitle": "dinner can wait",
+  "graphic": {
+    "type": "loop-arrow",
+    "position": "bottom",
+    "className": "absolute right-[7%] top-[50%]",
+    "sizeRem": 5.5
+  },
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "relative items-center justify-center gap-6 p-16 text-center"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-permanent-marker), cursive",
+      "fontFamily": "var(--font-theme-space-mono), monospace",
+      "titleClasses": "whitespace-pre-line leading-[0.9] -rotate-2 text-[var(--poster-ink)] [&::first-line]:text-[1.08em]",
+      "subtitleClasses": "font-bold leading-none tracking-[0.12em] text-[var(--poster-ink)] underline decoration-[length:0.14em] underline-offset-[0.6em]",
+      "titleRem": 5.6,
+      "subtitleRem": 1.6,
+      "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]"
+    },
+    "colorPalette": {
+      "background": "#FBF5E6",
+      "ink": "#2B2B2B",
+      "accent": "#D64933"
+    }
+  }
+}

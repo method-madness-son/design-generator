@@ -1,0 +1,29 @@
+{
+  "id": "mise-en-place",
+  "title": "mise en place",
+  "subtitle": "(noun)",
+  "body": [
+    "/meez-ahn-plahs/",
+    "everything in its place. for about five minutes."
+  ],
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-3 p-16 text-center"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-crimson-pro), Georgia, serif",
+      "titleFontFamily": "var(--font-crimson-pro), Georgia, serif",
+      "titleClasses": "font-bold leading-none tracking-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "-mt-2 font-semibold leading-none text-[var(--poster-ink)]",
+      "bodyClasses": "mt-4 w-full space-y-6 text-[var(--poster-ink)] [&>li:first-child]:flex [&>li:first-child]:items-center [&>li:first-child]:gap-5 [&>li:first-child]:text-[0.8em] [&>li:first-child]:before:h-px [&>li:first-child]:before:flex-1 [&>li:first-child]:before:bg-current [&>li:first-child]:before:content-[''] [&>li:first-child]:after:h-px [&>li:first-child]:after:flex-1 [&>li:first-child]:after:bg-current [&>li:first-child]:after:content-[''] [&>li:last-child]:mx-auto [&>li:last-child]:max-w-[11.5em] [&>li:last-child]:leading-snug [&>li:last-child]:after:mx-auto [&>li:last-child]:after:mt-8 [&>li:last-child]:after:block [&>li:last-child]:after:h-[3px] [&>li:last-child]:after:w-[5em] [&>li:last-child]:after:bg-[var(--poster-accent)] [&>li:last-child]:after:content-['']",
+      "titleRem": 5,
+      "subtitleRem": 2.6,
+      "bodyRem": 2.4
+    },
+    "colorPalette": {
+      "background": "#FBF5E6",
+      "ink": "#2B2B2B",
+      "accent": "#D64933"
+    }
+  }
+}

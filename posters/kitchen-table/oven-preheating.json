@@ -1,0 +1,34 @@
+{
+  "id": "oven-preheating",
+  "title": "Oven preheating",
+  "subtitle": "349° (almost there)",
+  "graphic": {
+    "type": "progress-bar",
+    "position": "bottom",
+    "className": "order-2 w-full",
+    "sizeRem": 26
+  },
+  "window": {
+    "title": "Preheating...",
+    "controls": "min-max-close",
+    "barClassName": "text-center",
+    "className": "items-center gap-6 p-8 text-center"
+  },
+  "overrides": {
+    "colorPalette": {
+      "accent": "#D64933",
+      "background": "#FBF5E6",
+      "ink": "#2B2B2B"
+    },
+    "defaultTypography": {
+      "subtitleClasses": "order-3 leading-tight text-[var(--poster-ink)]",
+      "titleRem": 2.8,
+      "subtitleRem": 1.9,
+      "fontFamily": "var(--font-theme-pixelify-sans), monospace",
+      "titleClasses": "whitespace-pre-line font-semibold leading-tight text-[var(--poster-ink)]",
+      "bodyClasses": "text-[var(--poster-ink)]",
+      "bodyRem": 2.2,
+      "titleFontFamily": "var(--font-theme-pixelify-sans), monospace"
+    }
+  }
+}

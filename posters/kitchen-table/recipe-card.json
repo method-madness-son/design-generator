@@ -1,0 +1,35 @@
+{
+  "id": "recipe-card",
+  "title": "↗ 2 cups flour",
+  "subtitle": "→ don't overmix",
+  "body": [
+    "→ bake at 350°",
+    "lick the spoon"
+  ],
+  "graphic": {
+    "type": "pen-arrow",
+    "position": "bottom",
+    "className": "ml-44 -mt-4 text-[var(--poster-ink)]",
+    "sizeRem": 7
+  },
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-start justify-center gap-5 p-20 pl-24 text-left"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-theme-kalam), cursive",
+      "titleFontFamily": "var(--font-theme-kalam), cursive",
+      "titleClasses": "font-normal leading-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "font-normal leading-tight text-[var(--poster-ink)] underline decoration-[#DA5A2A99] decoration-[length:0.34em] underline-offset-[-0.3em] [text-decoration-skip-ink:none]",
+      "bodyClasses": "space-y-5 leading-tight text-[var(--poster-ink)] [&>li:first-child]:underline [&>li:first-child]:decoration-[length:0.05em] [&>li:first-child]:underline-offset-[0.25em] [&>li:last-child]:pl-12",
+      "titleRem": 3.75,
+      "subtitleRem": 3.75,
+      "bodyRem": 3.75
+    },
+    "colorPalette": {
+      "background": "#FBF5E6",
+      "ink": "#2B2B2B",
+      "accent": "#D64933"
+    }
+  }
+}

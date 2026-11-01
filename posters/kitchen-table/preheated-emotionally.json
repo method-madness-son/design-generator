@@ -1,0 +1,16 @@
+{
+  "id": "preheated-emotionally",
+  "title": "Preheated",
+  "subtitle": "emotionally",
+  "overrides": {
+    "defaultLayout": {
+      "containerClasses": "items-center justify-center gap-0 p-14 text-center shadow-[inset_0_0_0_28px_var(--poster-background),inset_0_0_0_36px_var(--poster-accent),inset_0_0_0_44px_var(--poster-background),inset_0_0_0_47px_var(--poster-accent)]"
+    },
+    "defaultTypography": {
+      "fontFamily": "var(--font-theme-pacifico), cursive",
+      "titleRem": 4.9,
+      "subtitleRem": 4,
+      "subtitleClasses": "-mt-4 -rotate-6 text-[#4F7942]"
+    }
+  }
+}
