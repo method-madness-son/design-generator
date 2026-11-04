@@ -1,0 +1,20 @@
+{
+  "cut": "panel",
+  "iconRem": 31,
+  "bodyRem": 1.75,
+  "layouts": {
+    "rectangle": {
+      "titleRem": 7.75,
+      "subtitleRem": 2.5,
+      "bodyRem": 1.75,
+      "iconRem": 30
+    },
+    "bumper": {
+      "titleRem": 5,
+      "subtitleRem": 1.5,
+      "bodyRem": 1.5,
+      "iconRem": 26.25
+    }
+  },
+  "type": "kiss-cut"
+}

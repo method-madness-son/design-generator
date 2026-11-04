@@ -5,6 +5,24 @@
   "icon": {
     "name": "Gavel",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 10
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#F5C400",
+      "ink": "#111111",
+      "accent": "#111111"
+    },
+    "defaultLayout": {
+      "containerClasses": "relative items-center justify-center gap-4 border-[14px] border-[#111111] p-12 text-center"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-anton), sans-serif",
+      "titleClasses": "font-bold leading-[1] tracking-wide text-[var(--poster-ink)]",
+      "subtitleClasses": "font-medium leading-tight text-[var(--poster-ink)]",
+      "titleRem": 5.5,
+      "subtitleRem": 1.6
+    }
   }
 }

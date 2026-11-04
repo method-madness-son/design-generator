@@ -18,6 +18,8 @@ const VARIANT_PARAMS = [
   'bodyRem',
   'printSize',
   'align',
+  // Sticker pages only.
+  'type',
 ];
 
 export function ResetVariantsButton() {

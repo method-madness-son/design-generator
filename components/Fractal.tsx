@@ -14,7 +14,19 @@ export type FractalType =
   | 'spoon-badge'
   | 'side-quest-fork'
   | 'squiggles'
-  | 'crossed-sticks';
+  | 'crossed-sticks'
+  | 'goal-holes'
+  | 'three-hats'
+  | 'headstone'
+  | 'three-cautions'
+  | 'tulip'
+  | 'left-right-oops'
+  | 'crest-jump-landing'
+  | 'hairpin-square-flat'
+  | 'recce-rally-repair'
+  | 'card-fan'
+  | 'd20-life'
+  | 'tap-card';
 
 // A path is drawn in the graphic's color (currentColor) unless it names the palette accent.
 // Strokes are the default; `fill` paths are solid shapes such as arrowheads. `paper` strokes are
@@ -277,11 +289,200 @@ const GRAPHICS: Record<FractalType, Graphic> = {
       { d: 'M60 156 a20 7 0 1 0 40 0 a20 7 0 1 0 -40 0 Z', knockout: true },
     ],
   },
+  // A goalie in the net, with the shooter's five holes numbered.
+  'goal-holes': {
+    viewBox: [300, 210],
+    strokeWidth: 9,
+    paths: [
+      { d: 'M60 20 V205 M100 20 V205 M200 20 V205 M240 20 V205 M20 60 H280 M20 100 H280 M20 140 H280', dash: '2 8', width: 2 },
+      { d: 'M20 205 V20 H280 V205' },
+      { d: 'M118 82 L92 100 M182 82 L212 100', width: 10 },
+      { d: 'M132 50 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z', fill: true },
+      { d: 'M118 72 H182 L192 125 H108 Z', fill: true },
+      { d: 'M106 129 H132 L122 205 H86 Z', fill: true },
+      { d: 'M168 129 H194 L214 205 H178 Z', fill: true },
+      { d: 'M80 88 H102 V114 H80 Z', fill: true },
+      { d: 'M198 100 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0 Z', fill: true },
+      { d: 'M35 54 a17 17 0 1 0 34 0 a17 17 0 1 0 -34 0 Z', sign: true, width: 3 },
+      { d: 'M231 54 a17 17 0 1 0 34 0 a17 17 0 1 0 -34 0 Z', sign: true, width: 3 },
+      { d: 'M35 160 a17 17 0 1 0 34 0 a17 17 0 1 0 -34 0 Z', sign: true, width: 3 },
+      { d: 'M231 160 a17 17 0 1 0 34 0 a17 17 0 1 0 -34 0 Z', sign: true, width: 3 },
+      { d: 'M130 172 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0 Z', sign: true, accent: true, width: 5 },
+    ],
+    texts: [
+      { text: '1', size: 24, x: 52, y: 62 },
+      { text: '2', size: 24, x: 248, y: 62 },
+      { text: '3', size: 24, x: 52, y: 168 },
+      { text: '4', size: 24, x: 248, y: 168 },
+      { text: '5', size: 28, x: 150, y: 182 },
+    ],
+  },
+  // Three top hats: the trick, taken literally.
+  'three-hats': {
+    viewBox: [320, 100],
+    strokeWidth: 8,
+    linecap: 'butt',
+    paths: [
+      { d: 'M22 8 H78 V80 H22 Z', fill: true },
+      { d: 'M2 80 H98 V94 H2 Z', fill: true },
+      { d: 'M22 58 H78 V70 H22 Z', accent: true, fill: true },
+      { d: 'M132 8 H188 V80 H132 Z', fill: true },
+      { d: 'M112 80 H208 V94 H112 Z', fill: true },
+      { d: 'M132 58 H188 V70 H132 Z', accent: true, fill: true },
+      { d: 'M242 8 H298 V80 H242 Z', fill: true },
+      { d: 'M222 80 H318 V94 H222 Z', fill: true },
+      { d: 'M242 58 H298 V70 H242 Z', accent: true, fill: true },
+    ],
+  },
+  // A small headstone on a line of grass.
+  headstone: {
+    viewBox: [140, 170],
+    strokeWidth: 8,
+    paths: [
+      { d: 'M20 165 V70 a50 50 0 0 1 100 0 V165 Z', sign: true },
+      { d: 'M2 165 H138' },
+      { d: 'M28 163 L24 150 M36 163 L38 148 M104 163 L102 148 M112 163 L116 150', accent: true, width: 4 },
+    ],
+    texts: [{ text: 'RIP', size: 34, x: 70, y: 100 }],
+  },
+  // Three warning triangles in a row, the last in the accent color.
+  'three-cautions': {
+    viewBox: [320, 100],
+    strokeWidth: 8,
+    paths: [
+      { d: 'M50 10 L95 90 H5 Z' },
+      { d: 'M50 38 V62' },
+      { d: 'M50 75 V76' },
+      { d: 'M160 10 L205 90 H115 Z' },
+      { d: 'M160 38 V62' },
+      { d: 'M160 75 V76' },
+      { d: 'M270 10 L315 90 H225 Z', accent: true },
+      { d: 'M270 38 V62', accent: true },
+      { d: 'M270 75 V76', accent: true },
+    ],
+  },
+  // A roadbook tulip: start ball, the route in bold, and the other roads in thin lines.
+  tulip: {
+    viewBox: [200, 240],
+    strokeWidth: 14,
+    linecap: 'butt',
+    paths: [
+      { d: 'M100 95 V20 M100 95 H24', width: 5 },
+      { d: 'M100 205 V95 H160' },
+      { d: 'M158 68 L198 95 L158 122 Z', fill: true },
+      { d: 'M84 205 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0 Z', accent: true, fill: true },
+    ],
+  },
+  // Three pictograms in thirds, for a row of labels underneath, like 'surfaces'.
+  'left-right-oops': {
+    viewBox: [300, 90],
+    strokeWidth: 12,
+    linecap: 'butt',
+    paths: [
+      { d: 'M62 86 V40 Q62 25 47 25 H30' },
+      { d: 'M138 86 V40 Q138 25 153 25 H170' },
+      { d: 'M236 86 C 200 40, 292 40, 266 62 C 244 80, 222 34, 250 20 C 262 14, 272 16, 280 24' },
+      { d: 'M32 7 L8 25 L32 43 Z', fill: true },
+      { d: 'M168 7 L192 25 L168 43 Z', fill: true },
+      { d: 'M272 34 L296 40 L288 12 Z', fill: true },
+    ],
+  },
+  'crest-jump-landing': {
+    viewBox: [300, 90],
+    strokeWidth: 7,
+    paths: [
+      { d: 'M6 84 Q50 28 94 84' },
+      { d: 'M108 84 L136 66' },
+      { d: 'M172 84 H194' },
+      { d: 'M208 84 H294' },
+      { d: 'M27.2 47.0 L27.2 38.5 L37.6 36.5 L43.4 28.0 L58.5 28.0 L64.3 36.5 L72.8 39.4 L72.8 47.0 Z', fill: true },
+      { d: 'M31.9 48 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M56.7 48 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M130.9 41.5 L128.8 33.2 L138.5 28.8 L142.0 19.2 L156.7 15.5 L164.3 22.4 L173.3 23.1 L175.1 30.5 Z', fill: true },
+      { d: 'M135.5 39.9 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M159.5 33.9 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M231.2 56.7 L234.6 48.9 L245.0 51.4 L253.7 45.9 L267.5 52.1 L269.3 62.2 L275.9 68.3 L272.8 75.3 Z', fill: true },
+      { d: 'M234.6 61.8 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M257.2 71.9 a5.7 5.7 0 1 0 11.4 0 a5.7 5.7 0 1 0 -11.4 0 Z', fill: true },
+      { d: 'M278 66 L290 58', width: 4 },
+      { d: 'M282 76 L296 74', width: 4 },
+      { d: 'M272 54 L278 44', width: 4 },
+    ],
+  },
+  'hairpin-square-flat': {
+    viewBox: [300, 90],
+    strokeWidth: 13,
+    linecap: 'butt',
+    paths: [
+      { d: 'M30 88 V36 a20 20 0 0 1 40 0 V64' },
+      { d: 'M132 88 V26 H164' },
+      { d: 'M250 88 V30' },
+      { d: 'M56 62 L84 62 L70 88 Z', fill: true },
+      { d: 'M162 7 L190 26 L162 45 Z', fill: true },
+      { d: 'M231 32 L250 3 L269 32 Z', fill: true },
+    ],
+  },
+  'recce-rally-repair': {
+    viewBox: [300, 90],
+    strokeWidth: 7,
+    paths: [
+      { d: 'M24 8 H76 V84 H24 Z', fill: true },
+      { d: 'M34 26 H66 M34 40 H66 M34 54 H66 M34 68 H52', paper: true, width: 5 },
+      { d: 'M117.4 70.3 L115.8 55.0 L134.1 49.7 L142.6 33.4 L169.7 30.6 L181.4 44.7 L197.2 48.2 L198.6 61.7 Z', fill: true },
+      { d: 'M126.0 70 a10.2 10.2 0 1 0 20.4 0 a10.2 10.2 0 1 0 -20.4 0 Z', fill: true },
+      { d: 'M170.0 65.4 a10.2 10.2 0 1 0 20.4 0 a10.2 10.2 0 1 0 -20.4 0 Z', fill: true },
+      { d: 'M96 74 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0 Z', fill: true },
+      { d: 'M104 56 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 Z', fill: true },
+      { d: 'M92 58 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 Z', fill: true },
+      { d: 'M224 80 L262 36', width: 15 },
+      { d: 'M252 26 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0 Z', fill: true },
+      { d: 'M272 26 L296 2', paper: true, width: 15 },
+    ],
+  },
   // A quick pen-drawn arrow, for handwritten notes.
   'pen-arrow': {
     viewBox: [120, 40],
     strokeWidth: 3,
     paths: [{ d: 'M6 28 C 30 34, 70 32, 108 22' }, { d: 'M92 12 L109 22 L94 34' }],
+  },
+  // Three playing cards fanned out.
+  'card-fan': {
+    viewBox: [280, 200],
+    strokeWidth: 5,
+    linecap: 'butt',
+    paths: [
+      { d: 'M42 32 L110 14 L128 160 L60 178 Z', sign: true },
+      { d: 'M170 14 L238 32 L220 178 L152 160 Z', sign: true },
+      { d: 'M100 8 L180 8 L180 190 L100 190 Z', sign: true },
+      { d: 'M112 22 H168 V44 H112 Z', fill: true },
+      { d: 'M126 80 H154 V108 H126 Z', accent: true, fill: true },
+    ],
+  },
+  // A d20 die face showing the number 20.
+  'd20-life': {
+    viewBox: [160, 180],
+    strokeWidth: 5,
+    paths: [
+      { d: 'M80 8 L150 165 L10 165 Z' },
+      { d: 'M80 8 L46 100 L114 100 Z', width: 3 },
+      { d: 'M46 100 L10 165', width: 3 },
+      { d: 'M114 100 L150 165', width: 3 },
+      { d: 'M46 100 L114 100', accent: true, width: 3 },
+    ],
+    texts: [{ text: '20', size: 44, x: 80, y: 152 }],
+  },
+  // A card rotated 90° (tapped) with a curved rotation arrow.
+  'tap-card': {
+    viewBox: [200, 160],
+    strokeWidth: 5,
+    linecap: 'butt',
+    paths: [
+      { d: 'M18 28 H182 V132 H18 Z', sign: true },
+      { d: 'M30 40 H82 V58 H30 Z', fill: true },
+      { d: 'M80 78 H120 V98 H80 Z', accent: true, fill: true },
+      { d: 'M166 10 A54 54 0 0 1 194 52', accent: true, width: 4 },
+      { d: 'M186 36 L196 56 L174 54', accent: true, fill: true },
+    ],
   },
 };
 

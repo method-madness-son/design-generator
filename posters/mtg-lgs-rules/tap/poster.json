@@ -1,0 +1,17 @@
+{
+  "id": "tap",
+  "title": "TAP",
+  "subtitle": "The most powerful action in Magic.",
+  "graphic": {
+    "type": "tap-card",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 16
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 6,
+      "subtitleRem": 1.5
+    }
+  }
+}

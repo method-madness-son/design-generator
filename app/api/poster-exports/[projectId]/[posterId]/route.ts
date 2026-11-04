@@ -1,10 +1,16 @@
 // Saves a studio-rendered print PNG into posters/<projectId>/<posterId>/exports/ (see lib/posterExports.ts).
 // It writes to the repo on disk, so it only works for the local studio (`npm run dev`).
+import { deleteItem, deleteResponse } from '@/lib/itemDelete';
 import { saveExport } from '@/lib/posterExports';
 import { getPosterFile, getProject, getValidSelection } from '@/lib/posterResolver';
 import { isPosterSizeName } from '@/lib/posterSizes';
 
 const fail = (error: string, status = 400) => Response.json({ error }, { status });
+
+export async function DELETE(request: Request, { params }: { params: Promise<{ projectId: string; posterId: string }> }) {
+  const { projectId, posterId } = await params;
+  return deleteResponse(deleteItem('poster', projectId, posterId, new URL(request.url).searchParams.has('force')));
+}
 
 export async function POST(request: Request, { params }: { params: Promise<{ projectId: string; posterId: string }> }) {
   const { projectId, posterId } = await params;

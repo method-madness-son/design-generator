@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PosterThumbnail } from "@/components/PosterThumbnail";
 import { getPosterIds, getProjects, getResolvedPoster } from "@/lib/posterResolver";
 
@@ -7,26 +8,30 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="text-2xl font-semibold">Projects</h1>
-        <div className="flex items-center gap-4">
+      <Breadcrumbs items={[{ label: "Posters" }]} />
+      <div className="mt-2 flex items-center justify-between gap-4">
+        <h1 className="text-2xl font-semibold">Posters</h1>
+        <div className="flex flex-wrap items-center gap-4">
           <Link href="/inventory" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            Inventory &rarr;
+            Inventory
           </Link>
           <Link href="/tees" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            Tees &rarr;
+            Tees
           </Link>
           <Link href="/mugs" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            Mugs &rarr;
+            Mugs
+          </Link>
+          <Link href="/stickers" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+            Stickers
           </Link>
           <Link href="/kdp" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            KDP wireframes &rarr;
+            KDP
           </Link>
           <Link href="/lowcontent" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            Low-content books &rarr;
+            Low-content
           </Link>
-          <Link href="/typography" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
-            Typography &rarr;
+          <Link href="/design" className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
+            Design
           </Link>
         </div>
       </div>

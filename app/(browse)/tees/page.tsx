@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TeeWireframe } from "@/components/tees/TeeWireframe";
 import { defaultPreviewShirt, getTeeProjects, loadAllResolvedTees } from "@/lib/teeDesigns";
 import { resolveShirt } from "@/lib/theme";
@@ -14,9 +15,7 @@ export default function TeeIndexPage() {
 
   return (
     <>
-      <Link href="/" className="text-sm text-neutral-500 hover:text-neutral-900">
-        ← Projects
-      </Link>
+      <Breadcrumbs items={[{ label: "Tees" }]} />
       <h1 className="mt-2 text-2xl font-semibold">Tee designs</h1>
       <p className="mt-1 max-w-2xl text-neutral-600">
         Front prints for a unisex tee. Artwork is a transparent PNG at the Printify full-chest canvas. The wireframe

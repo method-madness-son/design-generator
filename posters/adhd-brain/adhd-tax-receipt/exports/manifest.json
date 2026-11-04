@@ -1,0 +1,19 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 792382,
+      "sha256": "cbfa430fc77d5d17918c933e818bc4bde6238ca757e180999872654b53c5aca9",
+      "savedAt": "2026-11-03T23:55:33.997Z",
+      "selection": {
+        "titleFont": "Lexend",
+        "iconRem": "22.25",
+        "titleRem": "7.25",
+        "subtitleRem": "3.25",
+        "bodyRem": "2",
+        "printSize": "11x17"
+      }
+    }
+  }
+}

@@ -43,6 +43,12 @@ function readManifest(projectId: string, posterId: string): Manifest {
   return fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, 'utf8')) as Manifest) : { sizes: {} };
 }
 
+// The studio choices behind the poster's saved art: the largest saved size's, or none.
+export function savedSelection(projectId: string, posterId: string): Record<string, string> {
+  const { sizes } = readManifest(projectId, posterId);
+  return (sizes['11x17'] ?? sizes['8x10'])?.selection ?? {};
+}
+
 export function savedSizes(projectId: string, posterId: string): PosterSizeName[] {
   const dir = exportsDir(projectId, posterId);
   if (!fs.existsSync(dir)) return [];

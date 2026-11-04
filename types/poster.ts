@@ -1,5 +1,5 @@
 import type { FractalType } from '@/components/Fractal';
-export type AspectRatioOption = '2/3' | '3/2' | '3/4' | '4/3' | '4/5' | '5/4' | '1/1' | '11/17';
+export type AspectRatioOption = '2/3' | '3/2' | '3/4' | '4/3' | '4/5' | '5/4' | '1/1' | '11/17' | '2321/1196' | '3371/971';
 
 export type ProjectConfig = {
   id: string;
@@ -168,6 +168,10 @@ export type ResolvedPoster = {
   icon?: PosterFile['icon'];
   graphic?: PosterFile['graphic'];
   window?: PosterFile['window'];
+  // Sets the content on a solid rounded panel, so a kiss-cut follows the panel's shape.
+  panel?: boolean;
+  panelColor?: string;
+  panelClass?: string;
   pinterest?: PosterFile['pinterest'];
   etsy?: PosterFile['etsy'];
 };

@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PosterThumbnail } from "@/components/PosterThumbnail";
 import { ListingBadge } from "@/components/ListingBadge";
 import { savedSizesByPoster } from "@/lib/posterExports";
 import { getProject, getResolvedPosters, getValidSelection } from "@/lib/posterResolver";
+import { loadState } from "@/lib/printify/posters";
 import { withQuery } from "@/lib/utils";
 
 export default async function ProjectPage({ params, searchParams }: PageProps<"/[projectId]">) {
@@ -47,12 +49,13 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
   });
   const posters = getResolvedPosters(projectId, query);
   const saved = savedSizesByPoster(projectId);
+  const state = loadState();
+  const staged = state.staged ?? {};
+  const printify = Object.assign({}, ...Object.values(state.shops).map((shop) => shop.posters));
 
   return (
     <>
-      <Link href="/" className="text-sm text-neutral-500 hover:text-neutral-900">
-        ← Projects
-      </Link>
+      <Breadcrumbs items={[{ label: "Posters", href: "/" }, { label: project.title }]} />
       <h1 className="mt-2 text-2xl font-semibold">{project.title}</h1>
       <p className="mt-1 text-neutral-600">{project.description}</p>
 
@@ -70,7 +73,16 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
                 {poster.title}
               </p>
               <div className="mt-1">
-                <ListingBadge sizes={saved.get(poster.id) ?? []} hasEtsy={!!poster.etsy} />
+                <ListingBadge
+                  sizes={saved.get(poster.id) ?? []}
+                  hasEtsy={!!poster.etsy}
+                  status={
+                    (printify[`${projectId}/${poster.id}`] as { publishedAt?: string } | undefined)?.publishedAt ? 'listed'
+                    : (printify[`${projectId}/${poster.id}`] as { productId?: string } | undefined)?.productId ? 'draft'
+                    : staged[`${projectId}/${poster.id}`] ? 'staged'
+                    : undefined
+                  }
+                />
               </div>
             </Link>
           </li>

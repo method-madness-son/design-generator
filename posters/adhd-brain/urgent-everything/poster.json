@@ -1,0 +1,15 @@
+{
+  "id": "urgent-everything",
+  "title": "URGENT",
+  "subtitle": "everything.",
+  "overrides": {
+    "defaultTypography": {
+      "fontFamily": "var(--font-overpass), sans-serif",
+      "titleFontFamily": "var(--font-overpass), sans-serif",
+      "titleClasses": "relative isolate my-20 grid size-[25rem] place-items-center font-black tracking-tight text-[var(--poster-ink)] before:absolute before:inset-0 before:-z-10 before:rotate-45 before:rounded-[2.4rem] before:border-[16px] before:border-[var(--poster-ink)] before:bg-[#F5C400] before:shadow-[0_0_0_12px_#F5C400] before:content-['']",
+      "subtitleClasses": "italic font-semibold text-[var(--poster-ink)]",
+      "titleRem": 4,
+      "subtitleRem": 2.1
+    }
+  }
+}

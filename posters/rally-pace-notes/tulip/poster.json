@@ -1,0 +1,19 @@
+{
+  "id": "tulip",
+  "title": "TULIP",
+  "subtitle": "(not the flower)",
+  "graphic": {
+    "type": "tulip",
+    "position": "top",
+    "className": "mb-2 text-[var(--poster-ink)]",
+    "sizeRem": 13
+  },
+  "overrides": {
+    "defaultTypography": {
+      "subtitleClasses": "font-medium leading-tight tracking-[0.08em] text-[var(--poster-accent)]",
+      "titleRem": 7,
+      "subtitleRem": 2.4,
+      "titleClasses": "whitespace-pre-line font-bold uppercase leading-[1.02] tracking-[0.04em] text-[var(--poster-ink)]"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "only-a-bit-bent",
+  "title": "IT'S ONLY\nA BIT BENT",
+  "subtitle": "8 minutes of service left",
+  "icon": {
+    "name": "wrench",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]",
+    "sizeRem": 11
+  },
+  "overrides": {
+    "defaultTypography": {
+      "subtitleClasses": "font-semibold uppercase leading-tight tracking-[0.1em] text-[var(--poster-ink)]",
+      "titleRem": 5.5,
+      "subtitleRem": 1.9,
+      "titleClasses": "whitespace-pre-line font-bold uppercase leading-[1.02] tracking-[0.04em] text-[var(--poster-ink)]"
+    }
+  }
+}

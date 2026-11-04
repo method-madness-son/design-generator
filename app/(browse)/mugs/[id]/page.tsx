@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MugWireframe } from "@/components/mugs/MugWireframe";
 import { getMugDesignIds, loadResolvedMug } from "@/lib/mugDesigns";
 import { MUG_CANVASES, isMugSize } from "@/lib/mugSizes";
@@ -37,9 +38,7 @@ export default async function MugDetailPage({
   return (
     <>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <Link href="/mugs" className="text-sm text-neutral-500 hover:text-neutral-900">
-          ← Mugs
-        </Link>
+        <Breadcrumbs items={[{ label: "Mugs", href: "/mugs" }, { label: phrase || id }]} />
         <div className="flex gap-3 text-sm">
           {mug.sizes.map((option) => (
             <Link

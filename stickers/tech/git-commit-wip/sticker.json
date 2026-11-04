@@ -1,0 +1,25 @@
+{
+  "titleRem": 4.75,
+  "subtitleRem": 3.25,
+  "iconRem": 8.5,
+  "layouts": {
+    "rectangle": {
+      "titleRem": 3.5,
+      "subtitleRem": 2.75,
+      "bodyRem": 1.25,
+      "iconRem": 8
+    },
+    "bumper": {
+      "titleRem": 3,
+      "subtitleRem": 2.25,
+      "bodyRem": 0.75,
+      "iconRem": 7.5
+    }
+  },
+  "type": "kiss-cut",
+  "titleFont": "Doto",
+  "titleColor": "White",
+  "subtitleColor": "Night Owl",
+  "iconColor": "Night Owl",
+  "backgroundColor": "Night Owl"
+}

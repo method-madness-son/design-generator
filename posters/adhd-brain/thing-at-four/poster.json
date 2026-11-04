@@ -1,0 +1,20 @@
+{
+  "id": "thing-at-four",
+  "title": "I have a thing\nat 4:00.",
+  "subtitle": "so today is cancelled.",
+  "overrides": {
+    "colorPalette": {
+      "background": "#F5C842",
+      "ink": "#111111",
+      "accent": "#111111"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-archivo-black), sans-serif",
+      "fontFamily": "var(--font-theme-kalam), cursive",
+      "titleClasses": "whitespace-pre-line leading-[1.05] text-[var(--poster-ink)]",
+      "subtitleClasses": "mt-2 leading-tight text-[var(--poster-ink)]",
+      "titleRem": 3.9,
+      "subtitleRem": 3
+    }
+  }
+}

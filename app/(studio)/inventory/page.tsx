@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { getInventory, STATUS_INFO, type InventoryItem, type InventoryStatus } from "@/lib/inventory";
+import { StagedToggle } from "@/components/StagedToggle";
 import { cn } from "@/lib/utils";
 
 export const metadata = {
@@ -10,11 +12,12 @@ export const metadata = {
 // Read from disk on every visit so saves and syncs show up without a rebuild.
 export const dynamic = "force-dynamic";
 
-const ORDER: InventoryStatus[] = ["listed", "draft", "ready", "needs-listing", "needs-export", "idea"];
+const ORDER: InventoryStatus[] = ["listed", "draft", "staged", "ready", "needs-listing", "needs-export", "idea"];
 
 const STATUS_STYLE: Record<InventoryStatus, string> = {
   listed: "bg-emerald-100 text-emerald-800",
   draft: "bg-sky-100 text-sky-800",
+  staged: "bg-violet-200 text-violet-900",
   ready: "bg-violet-100 text-violet-800",
   "needs-listing": "bg-amber-100 text-amber-800",
   "needs-export": "bg-amber-50 text-amber-700",
@@ -51,13 +54,23 @@ function InventoryTable({ items, detail }: { items: InventoryItem[]; detail: "li
           {items.map((item) => (
             <tr key={`${item.projectId}/${item.posterId}`} className="align-top">
               <td className="px-4 py-2">
-                <Link href={`/${item.projectId}/${item.posterId}`} className="font-medium text-neutral-900 hover:underline">
-                  {item.posterTitle}
-                </Link>
+                {item.etsyUrl ? (
+                  <a href={item.etsyUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">
+                    {item.posterTitle} ↗
+                  </a>
+                ) : (
+                  <Link href={`/${item.projectId}/${item.posterId}`} className="font-medium text-neutral-900 hover:underline">
+                    {item.posterTitle}
+                  </Link>
+                )}
               </td>
               <td className="px-4 py-2 text-neutral-600">{item.projectTitle}</td>
               <td className="px-4 py-2">
-                <StatusPill status={item.status} />
+                {item.status === "ready" || item.status === "staged" ? (
+                  <StagedToggle itemKey={`${item.projectId}/${item.posterId}`} staged={item.status === "staged"} />
+                ) : (
+                  <StatusPill status={item.status} />
+                )}
               </td>
               <td className="px-4 py-2 whitespace-nowrap text-neutral-600">{item.sizes.join(", ") || "—"}</td>
               <td className="px-4 py-2 text-neutral-600">
@@ -88,9 +101,7 @@ export default function InventoryPage() {
 
   return (
     <>
-      <Link href="/" className="text-sm text-neutral-500 hover:text-neutral-900">
-        ← Projects
-      </Link>
+      <Breadcrumbs items={[{ label: "Posters", href: "/" }, { label: "Inventory" }]} />
       <h1 className="mt-2 text-2xl font-semibold">Inventory</h1>
       <p className="mt-1 max-w-2xl text-neutral-600">
         Every status comes from the pipeline: saved exports, the Etsy listing check, and Printify sync state. Save a

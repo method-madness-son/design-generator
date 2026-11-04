@@ -1,0 +1,23 @@
+{
+  "titleRem": 1.75,
+  "layouts": {
+    "rectangle": {
+      "titleRem": 1.75,
+      "subtitleRem": 2,
+      "bodyRem": 2.5,
+      "iconRem": 13.75
+    },
+    "bumper": {
+      "titleRem": 1,
+      "subtitleRem": 1,
+      "bodyRem": 1,
+      "iconRem": 9
+    }
+  },
+  "type": "kiss-cut",
+  "titleFont": "Press Start 2P",
+  "subtitleFont": "Archivo Black",
+  "subtitleRem": 2,
+  "bodyRem": 2,
+  "iconRem": 13.75
+}

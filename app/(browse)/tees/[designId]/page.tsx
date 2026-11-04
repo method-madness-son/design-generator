@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TeeWireframe } from "@/components/tees/TeeWireframe";
 import { getTeeDesignIds, loadResolvedTee, shirtSlug } from "@/lib/teeDesigns";
 import { PREVIEW_SHIRT_NAMES, listShirts, resolveShirt } from "@/lib/theme";
@@ -46,9 +47,7 @@ export default async function TeeDesignPage({
   return (
     <>
       <div className="flex flex-wrap items-center gap-4">
-        <Link href="/tees" className="text-sm text-neutral-500 hover:text-neutral-900">
-          ← Tee designs
-        </Link>
+        <Breadcrumbs items={[{ label: "Tees", href: "/tees" }, { label: tee.lines.map((line) => line.text).join(" ") }]} />
         <Link
           href={`/tees/${tee.id}/art?ink=${inkSet === "on_dark_shirt" ? "on-dark" : "on-light"}`}
           className="text-sm font-medium text-neutral-600 hover:text-neutral-900"

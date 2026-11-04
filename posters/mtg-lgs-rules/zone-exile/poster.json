@@ -6,5 +6,16 @@
     "name": "Ban",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#18181E",
+      "ink": "#F0EDE6",
+      "accent": "#A8A098"
+    },
+    "defaultTypography": {
+      "titleRem": 5,
+      "subtitleRem": 1.6
+    }
   }
 }

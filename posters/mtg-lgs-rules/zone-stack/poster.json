@@ -6,5 +6,16 @@
     "name": "Layers",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#0A1628",
+      "ink": "#D0E0F0",
+      "accent": "#5A9FD4"
+    },
+    "defaultTypography": {
+      "titleRem": 4.5,
+      "subtitleRem": 1.6
+    }
   }
 }

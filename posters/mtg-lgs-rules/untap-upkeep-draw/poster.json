@@ -1,0 +1,19 @@
+{
+  "id": "untap-upkeep-draw",
+  "title": "UNTAP\nUPKEEP\nDRAW",
+  "subtitle": "Every turn. Every time. No shortcuts.",
+  "icon": {
+    "name": "RefreshCw",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]",
+    "sizeRem": 8
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-anton), sans-serif",
+      "titleClasses": "font-bold leading-[0.95] tracking-wide text-[var(--poster-ink)]",
+      "titleRem": 4.5,
+      "subtitleRem": 1.4
+    }
+  }
+}

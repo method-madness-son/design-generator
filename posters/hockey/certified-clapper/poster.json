@@ -1,0 +1,11 @@
+{
+  "id": "certified-clapper",
+  "title": "CERTIFIED\nCLAPPER",
+  "subtitle": "No apologies.",
+  "graphic": {
+    "type": "crossed-sticks",
+    "position": "top",
+    "className": "mb-2 text-[var(--poster-ink)]",
+    "sizeRem": 13
+  }
+}

@@ -12,6 +12,20 @@
   "icon": {
     "name": "Swords",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-accent)]",
+    "sizeRem": 8
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#1A0A0A",
+      "ink": "#F0DDD0",
+      "accent": "#C84040"
+    },
+    "defaultTypography": {
+      "titleRem": 3.75,
+      "subtitleRem": 1.4,
+      "bodyRem": 1.4,
+      "bodyClasses": "w-full space-y-3 text-left text-[var(--poster-ink)] font-medium"
+    }
   }
 }

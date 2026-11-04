@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { loadProjects } from '@/lib/lowcontent/books';
 import { formatInches } from '@/lib/lowcontent/specs';
 
@@ -12,9 +13,7 @@ export default function LowContentIndexPage() {
 
   return (
     <>
-      <Link href="/" className="text-sm text-neutral-500 hover:text-neutral-900">
-        ← Projects
-      </Link>
+      <Breadcrumbs items={[{ label: "Low-content" }]} />
       <h1 className="mt-2 text-2xl font-semibold">Low-content books</h1>
       <p className="mt-1 max-w-2xl text-neutral-600">
         Journals, planners, logbooks, and trackers. Each book is a manifest under <code className="text-sm">lowcontent/</code>.

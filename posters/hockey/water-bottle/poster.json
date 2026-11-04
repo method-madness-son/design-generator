@@ -1,0 +1,36 @@
+{
+  "id": "water-bottle",
+  "title": "DO NOT TOUCH\nTHE GOALIE'S\nWATER BOTTLE",
+  "subtitle": "",
+  "body": [
+    "It goes on top of the net.",
+    "Always.",
+    "No exceptions."
+  ],
+  "icon": {
+    "name": "triangle-alert",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 13
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#F7C600",
+      "ink": "#111111",
+      "accent": "#111111",
+      "blue": "#111111"
+    },
+    "defaultLayout": {
+      "containerClasses": "relative items-center justify-center gap-4 border-[14px] border-[#111111] p-12 text-center"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-anton), sans-serif",
+      "titleClasses": "whitespace-pre-line font-black leading-[1.05] tracking-wide text-[var(--poster-ink)]",
+      "subtitleClasses": "hidden",
+      "bodyClasses": "mt-2 space-y-1 font-medium text-[var(--poster-ink)]",
+      "titleRem": 5,
+      "subtitleRem": 2.8,
+      "bodyRem": 1.6
+    }
+  }
+}

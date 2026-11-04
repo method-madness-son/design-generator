@@ -6,5 +6,16 @@
     "name": "ArrowRightLeft",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#0A1A12",
+      "ink": "#D8E8D0",
+      "accent": "#5AAD6A"
+    },
+    "defaultTypography": {
+      "titleRem": 4,
+      "subtitleRem": 1.5
+    }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "id": "mulligan",
+  "title": "Mulligan",
+  "subtitle": "Shuffle it back. Draw one fewer. Keep or regret.",
+  "icon": {
+    "name": "RotateCcw",
+    "position": "top",
+    "className": "text-[var(--poster-accent)]",
+    "sizeRem": 10
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#1A0808",
+      "ink": "#F0DDD0",
+      "accent": "#D4483B"
+    },
+    "defaultTypography": {
+      "titleRem": 5,
+      "subtitleRem": 1.4
+    }
+  }
+}

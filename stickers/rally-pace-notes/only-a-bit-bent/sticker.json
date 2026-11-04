@@ -1,0 +1,20 @@
+{
+  "layouts": {
+    "rectangle": {
+      "titleRem": 5.5,
+      "subtitleRem": 2,
+      "bodyRem": 1.5,
+      "iconRem": 11.5
+    },
+    "bumper": {
+      "titleRem": 3.5,
+      "subtitleRem": 1.25,
+      "bodyRem": 0.5,
+      "iconRem": 7.75
+    }
+  },
+  "type": "kiss-cut",
+  "titleFont": "Oswald",
+  "subtitleRem": 2.5,
+  "iconRem": 12.25
+}

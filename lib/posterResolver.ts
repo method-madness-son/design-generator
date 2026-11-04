@@ -106,7 +106,7 @@ const isAlignOption = (value: string): value is AlignOption =>
 
 // Rewrites containerClasses to reflect a chosen horizontal alignment: swaps any existing
 // items-{start|center|end} and text-{left|center|right} tokens, appending defaults if absent.
-function applyAlign(containerClasses: string, align: AlignOption): string {
+export function applyAlign(containerClasses: string, align: AlignOption): string {
   const itemsClass = align === 'left' ? 'items-start' : align === 'right' ? 'items-end' : 'items-center';
   const textClass = `text-${align}`;
   const withoutItems = containerClasses.replace(/\bitems-(?:start|center|end)\b/g, '').trim();

@@ -1,0 +1,16 @@
+{
+  "layouts": {
+    "rectangle": {
+      "titleRem": 4.25,
+      "subtitleRem": 2,
+      "bodyRem": 1.5,
+      "iconRem": 17.75
+    },
+    "bumper": {
+      "titleRem": 2.25,
+      "subtitleRem": 1,
+      "bodyRem": 0.5,
+      "iconRem": 10
+    }
+  }
+}

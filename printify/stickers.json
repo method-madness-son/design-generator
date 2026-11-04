@@ -1,0 +1,66 @@
+{
+  "kiss-cut": {
+    "blueprintId": 400,
+    "printProviderId": 99,
+    "placeholderPosition": "front",
+    "sizes": {
+      "3x3": {
+        "variantId": 45750,
+        "priceCents": 450,
+        "placeholderWidth": 832,
+        "placeholderHeight": 832
+      },
+      "4x4": {
+        "variantId": 45752,
+        "priceCents": 550,
+        "placeholderWidth": 1113,
+        "placeholderHeight": 1113
+      }
+    }
+  },
+  "square": {
+    "blueprintId": 384,
+    "printProviderId": 99,
+    "placeholderPosition": "front",
+    "sizes": {
+      "3x3": {
+        "variantId": 45742,
+        "priceCents": 450,
+        "placeholderWidth": 832,
+        "placeholderHeight": 832
+      },
+      "4x4": {
+        "variantId": 45744,
+        "priceCents": 550,
+        "placeholderWidth": 1113,
+        "placeholderHeight": 1113
+      }
+    }
+  },
+  "rectangle": {
+    "blueprintId": 598,
+    "printProviderId": 99,
+    "placeholderPosition": "front",
+    "sizes": {
+      "7.5x3.75": {
+        "variantId": 71929,
+        "priceCents": 900,
+        "placeholderWidth": 2321,
+        "placeholderHeight": 1196
+      }
+    }
+  },
+  "bumper": {
+    "blueprintId": 598,
+    "printProviderId": 99,
+    "placeholderPosition": "front",
+    "sizes": {
+      "11x3": {
+        "variantId": 71930,
+        "priceCents": 1100,
+        "placeholderWidth": 3371,
+        "placeholderHeight": 971
+      }
+    }
+  }
+}

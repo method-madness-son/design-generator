@@ -1,0 +1,19 @@
+{
+  "titleFont": "Archivo Black",
+  "type": "kiss-cut",
+  "layouts": {
+    "rectangle": {
+      "titleRem": 3.25,
+      "subtitleRem": 2.25,
+      "bodyRem": 2.75,
+      "iconRem": 23
+    },
+    "bumper": {
+      "titleRem": 1,
+      "subtitleRem": 0.75,
+      "bodyRem": 1,
+      "iconRem": 8.5
+    }
+  },
+  "titleRem": 2.5
+}

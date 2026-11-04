@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BookSheet, pageCountLabel } from "@/components/kdp/BookSheet";
 import { getBookIds, loadBook } from "@/lib/kdpBooks";
 import { formatInches, type BookGeometry } from "@/lib/kdpSizes";
@@ -29,9 +30,7 @@ export default async function KdpBookPage({ params }: { params: Promise<{ bookId
   return (
     <>
       <div className="flex flex-wrap items-center gap-4">
-        <Link href="/kdp" className="text-sm text-neutral-500 hover:text-neutral-900">
-          ← KDP wireframes
-        </Link>
+        <Breadcrumbs items={[{ label: "KDP", href: "/kdp" }, { label: book.manifest?.kdp.title ?? book.id }]} />
         {geometry && book.manifest ? (
           <Link href={`/kdp/${book.id}/print`} className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
             Open print sheets →

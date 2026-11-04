@@ -1,0 +1,18 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 532506,
+      "sha256": "850757c2f28177a69be2b56e5218c84b87642c8c49d9b0af02e7d78ad7d575c7",
+      "savedAt": "2026-11-03T23:44:31.232Z",
+      "selection": {
+        "iconRem": "18",
+        "titleRem": "6.25",
+        "subtitleRem": "3.25",
+        "bodyRem": "3",
+        "printSize": "11x17"
+      }
+    }
+  }
+}

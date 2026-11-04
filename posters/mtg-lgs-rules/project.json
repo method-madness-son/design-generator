@@ -3,23 +3,24 @@
   "title": "MTG LGS Rules",
   "description": "Dark-mode rules-reference posters for zones, formats, deckbuilding, and events at the local game store.",
   "colorPalette": {
-    "background": "#D6EAF8",
-    "ink": "#2B2B2E",
-    "accent": "#4A90C4"
+    "background": "#1A1424",
+    "ink": "#E8DCC8",
+    "accent": "#C9A84C"
   },
   "defaultLayout": {
     "aspectRatio": "4/5",
     "printWidthInches": 8,
-    "containerClasses": "items-center justify-center gap-6 p-18 text-center"
+    "containerClasses": "relative items-center justify-center gap-6 p-18 text-center before:pointer-events-none before:absolute before:inset-5 before:border-[2px] before:border-[var(--poster-accent)] before:content-['']"
   },
   "defaultBackground": {
     "className": "bg-[var(--poster-background)]"
   },
   "defaultTypography": {
     "fontFamily": "var(--font-lexend), sans-serif",
+    "titleFontFamily": "var(--font-theme-dm-serif-display), Georgia, serif",
     "titleClasses": "font-bold leading-[1.05] tracking-tight text-[var(--poster-ink)]",
-    "subtitleClasses": "font-semibold leading-[1.05] text-[var(--poster-accent)]",
-    "bodyClasses": "space-y-2 text-xl text-[var(--poster-ink)]",
+    "subtitleClasses": "font-medium leading-[1.2] text-[var(--poster-accent)]",
+    "bodyClasses": "space-y-2 text-[var(--poster-ink)]",
     "titleRem": 3.25,
     "subtitleRem": 1.5,
     "bodyRem": 1.25

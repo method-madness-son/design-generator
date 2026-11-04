@@ -1,0 +1,26 @@
+{
+  "id": "i-said-left",
+  "title": "I said left.",
+  "subtitle": "",
+  "body": [
+    "Left",
+    "Other left"
+  ],
+  "window": {
+    "title": "Intercom",
+    "controls": "close",
+    "shadow": "#DA5A2A",
+    "className": "items-start gap-8 p-8 text-left"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "fontFamily": "var(--font-jetbrains-mono), monospace",
+      "titleFontFamily": "var(--font-jetbrains-mono), monospace",
+      "titleClasses": "font-bold leading-tight text-[var(--poster-ink)]",
+      "subtitleClasses": "hidden",
+      "bodyClasses": "flex w-full gap-8 [&>li]:flex-1 [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:py-1 [&>li]:text-center [&>li:last-child]:bg-[var(--poster-ink)] [&>li:last-child]:text-[var(--poster-background)]",
+      "titleRem": 3.6,
+      "bodyRem": 1.8
+    }
+  }
+}

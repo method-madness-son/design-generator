@@ -1,0 +1,29 @@
+{
+  "id": "adhd-tax-receipt",
+  "title": "ADHD TAX",
+  "subtitle": "You will lose this receipt.",
+  "body": [
+    "Late fee .......... 35.00",
+    "Forgotten trial ... 14.99",
+    "Second charger .... 22.00",
+    "Sad vegetables .... 18.40",
+    "TOTAL ............. AGAIN"
+  ],
+  "overrides": {
+    "colorPalette": {
+      "background": "#FAF8F2",
+      "ink": "#111111",
+      "accent": "#111111"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-jetbrains-mono), monospace",
+      "fontFamily": "var(--font-jetbrains-mono), monospace",
+      "titleClasses": "font-bold leading-[0.95] tracking-[0.1em] text-[var(--poster-ink)]",
+      "subtitleClasses": "order-last leading-tight text-[var(--poster-ink)]",
+      "bodyClasses": "w-full space-y-3 border-y-4 border-dashed border-[var(--poster-ink)] py-6 text-left text-[var(--poster-ink)] [&>li:last-child]:font-bold",
+      "titleRem": 4.5,
+      "subtitleRem": 1.6,
+      "bodyRem": 1.75
+    }
+  }
+}

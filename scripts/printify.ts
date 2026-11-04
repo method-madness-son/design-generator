@@ -184,8 +184,10 @@ async function sync(): Promise<boolean> {
       if (flags.publish) {
         await api.publishProduct(shopId, saved.productId, config.publish);
         saved.publishedAt = new Date().toISOString();
+        const published = await api.getProduct(shopId, saved.productId);
+        if (published.external?.handle) saved.etsyUrl = published.external.handle;
         saveState(state);
-        console.log('  publish requested; check Etsy Shop Manager');
+        console.log(`  publish requested${saved.etsyUrl ? ` → ${saved.etsyUrl}` : '; check Etsy Shop Manager'}`);
       }
     } catch (error) {
       allOk = false;

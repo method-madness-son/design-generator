@@ -31,9 +31,10 @@ type Props = {
     align: string;
   };
   exportFilename: string;
+  layoutControls?: ReactNode;
 };
 
-export function PosterControlsPanel({ nav, project, poster, query, exportFilename }: Props) {
+export function PosterControlsPanel({ nav, project, poster, query, exportFilename, layoutControls }: Props) {
   const [isOpen, setIsOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<'controls' | 'pinterest' | 'etsy'>('controls');
 
@@ -141,7 +142,7 @@ export function PosterControlsPanel({ nav, project, poster, query, exportFilenam
       </div>
       {isOpen && (
         <div className="mt-2 rounded-lg border border-neutral-200 bg-white px-3.5 py-2 shadow-sm">
-          {activeTab === 'controls' && <PosterVariantSelects project={project} poster={poster} query={query} compact />}
+          {activeTab === 'controls' && <PosterVariantSelects project={project} poster={poster} query={query} compact layoutControls={layoutControls} />}
           {activeTab === 'pinterest' && poster.pinterest && (
             <PinterestPromoContent poster={poster} pinterest={poster.pinterest} filename={exportFilename} />
           )}

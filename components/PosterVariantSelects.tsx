@@ -8,9 +8,12 @@ import { SizeStepper } from '@/components/SizeStepper';
 import { BACKGROUND_COLORS } from '@/lib/backgroundColors';
 import { getColorOptions } from '@/lib/colorOptions';
 import { FONT_GROUPS, GLOBAL_FONTS } from '@/lib/fontOptions';
+import type { ReactNode } from 'react';
 import type { ProjectConfig, ResolvedPoster } from '@/types/poster';
 
 type Props = {
+  // Replaces the print size picker, for products that don't come in poster sizes.
+  layoutControls?: ReactNode;
   project: ProjectConfig;
   // The poster's actually-resolved sizes, so each SizeStepper's "Default" sits at its real
   // position in the scale instead of always being the floor.
@@ -36,7 +39,7 @@ type Props = {
   compact?: boolean;
 };
 
-export function PosterVariantSelects({ project, poster, query, compact = false }: Props) {
+export function PosterVariantSelects({ project, poster, query, compact = false, layoutControls }: Props) {
   // This project's own colors only (ink, accent, and each named palette's accent) rather than
   // every color from every project, so the picker stays short and relevant to this poster.
   const colorOptions = getColorOptions(project);
@@ -54,7 +57,7 @@ export function PosterVariantSelects({ project, poster, query, compact = false }
             Layout
           </span>
           <div className="flex items-center gap-1.5">
-            <PrintSizePicker param="printSize" value={query.printSize} />
+            {layoutControls ?? <PrintSizePicker param="printSize" value={query.printSize} />}
             <AlignmentPicker param="align" value={query.align} />
           </div>
         </div>

@@ -28,16 +28,23 @@ export type PrintifyPublishFlags = {
 
 // printify/state.json: what has already been sent, so re-runs update instead of duplicating.
 export type PrintifyState = {
+  // Manual "staged" flag: keys are "<projectId>/<posterId>" or "stickers/<projectId>/<id>".
+  staged?: Record<string, true>;
   shops: Record<
     string,
     {
       posters: Record<
         string,
         {
-          images: Partial<Record<PosterSizeName, { sha256: string; imageId: string }>>;
+          // Keyed by poster size, or "master" for a sticker's single print file.
+          images: Partial<Record<PosterSizeName | 'master', { sha256: string; imageId: string }>>;
           productId?: string;
+          // A sticker's type when its product was created. Printify can't move a product to another blueprint.
+          stickerType?: string;
           // Set when a publish to Etsy was requested; the inventory shows these as Listed.
           publishedAt?: string;
+          // The Etsy listing URL, fetched from Printify's external field after publishing.
+          etsyUrl?: string;
         }
       >;
     }
@@ -66,7 +73,7 @@ export type PrintifyProductRequest = {
   }[];
 };
 
-export type PrintifyProduct = { id: string; title: string };
+export type PrintifyProduct = { id: string; title: string; external?: { id?: string; handle?: string } };
 
 export type PrintifyBlueprint = { id: number; title: string; brand: string; model: string };
 export type PrintifyProvider = { id: number; title: string };

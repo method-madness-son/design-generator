@@ -6,5 +6,16 @@
     "name": "Skull",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#12081A",
+      "ink": "#E0D0E8",
+      "accent": "#9B6DB8"
+    },
+    "defaultTypography": {
+      "titleRem": 4.5,
+      "subtitleRem": 1.6
+    }
   }
 }

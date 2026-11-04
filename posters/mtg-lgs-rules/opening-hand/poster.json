@@ -1,0 +1,17 @@
+{
+  "id": "opening-hand",
+  "title": "Opening Hand",
+  "subtitle": "Seven cards. The game starts before the first land drop.",
+  "graphic": {
+    "type": "card-fan",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 16
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 4.5,
+      "subtitleRem": 1.4
+    }
+  }
+}

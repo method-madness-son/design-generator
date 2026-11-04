@@ -11,6 +11,15 @@
   "icon": {
     "name": "Layers",
     "position": "top",
-    "className": "text-[var(--poster-accent)]"
+    "className": "text-[var(--poster-accent)]",
+    "sizeRem": 8
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 3.5,
+      "subtitleRem": 1.4,
+      "bodyRem": 1.4,
+      "bodyClasses": "w-full space-y-3 border-t-2 border-[var(--poster-accent)] pt-5 text-center text-[var(--poster-ink)] font-medium"
+    }
   }
 }

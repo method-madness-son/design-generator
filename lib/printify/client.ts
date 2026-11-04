@@ -93,6 +93,22 @@ export class PrintifyClient {
     return this.request<unknown>('POST', `/shops/${shopId}/products/${productId}/publish.json`, flags);
   }
 
+  // Fetch a single product's details (includes the external Etsy URL after publishing).
+  getProduct(shopId: number, productId: string) {
+    return this.request<PrintifyProduct>('GET', `/shops/${shopId}/products/${productId}.json`);
+  }
+
+  // All products in a shop, paginated. Printify caps at 50 per page.
+  async getProducts(shopId: number): Promise<PrintifyProduct[]> {
+    const all: PrintifyProduct[] = [];
+    for (let page = 1; ; page++) {
+      const batch = await this.request<{ data: PrintifyProduct[] }>('GET', `/shops/${shopId}/products.json?limit=50&page=${page}`);
+      all.push(...batch.data);
+      if (batch.data.length < 50) break;
+    }
+    return all;
+  }
+
   // Catalog lookups for filling in printify/config.json.
   getBlueprints() {
     return this.request<PrintifyBlueprint[]>('GET', '/catalog/blueprints.json');

@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { DeleteItemButton } from "@/components/DeleteItemButton";
 import { ExportButton } from "@/components/ExportButton";
+import { ListingBadge } from "@/components/ListingBadge";
 import { PosterControlsPanel } from "@/components/PosterControlsPanel";
 import { PosterZoomView } from "@/components/PosterZoomView";
 import { savedSizes } from "@/lib/posterExports";
 import { getProject, getResolvedPoster, getValidSelection } from "@/lib/posterResolver";
+import { loadState } from "@/lib/printify/posters";
 import { posterSizeFor } from "@/lib/posterSizes";
 import { withQuery } from "@/lib/utils";
 
@@ -52,6 +56,11 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
   const poster = getResolvedPoster(projectId, posterId, query);
   if (!poster) notFound();
 
+  const state = loadState();
+  const staged = state.staged ?? {};
+  const synced = Object.values(state.shops).map((shop) => shop.posters[`${projectId}/${posterId}`]).find(Boolean);
+  const posterStatus = synced?.publishedAt ? 'listed' as const : synced?.productId ? 'draft' as const : staged[`${projectId}/${posterId}`] ? 'staged' as const : undefined;
+  const posterSizes = savedSizes(projectId, posterId);
   const [ratioWidth, ratioHeight] = poster.aspectRatio.split("/").map(Number);
   const printHeightInches = (poster.printWidthInches * ratioHeight) / ratioWidth;
   const exportFilename = [projectId, posterId, poster.titleFontName, poster.subtitleFontName]
@@ -64,11 +73,14 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
           <PosterControlsPanel
             nav={
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <Link href={withQuery(`/${projectId}`, query)} className="text-xs font-medium text-neutral-500 hover:text-neutral-900">
-                  {project.title}
-                </Link>
-                <span className="text-neutral-300">/</span>
-                <h1 className="text-lg font-bold tracking-tight text-neutral-900">{poster.title}</h1>
+                <Breadcrumbs
+                  items={[
+                    { label: "Posters", href: "/" },
+                    { label: project.title, href: withQuery(`/${projectId}`, query) },
+                    { label: poster.title },
+                  ]}
+                />
+                <ListingBadge sizes={posterSizes} hasEtsy={!!poster.etsy} status={posterStatus} />
                 <div className="flex items-center gap-2 text-xs text-neutral-500">
                   <span className="font-semibold text-neutral-700">{poster.aspectRatio.replace("/", ":")}</span>
                   <span className="text-neutral-300">·</span>
@@ -86,6 +98,7 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
                   selection={query}
                   className="ml-auto"
                 />
+                <DeleteItemButton url={`/api/poster-exports/${projectId}/${posterId}`} name={`poster "${posterId}"`} afterHref={`/${projectId}`} />
               </div>
             }
             project={project}

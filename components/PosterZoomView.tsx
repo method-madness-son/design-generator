@@ -10,7 +10,8 @@ import type { ResolvedPoster } from '@/types/poster';
 const ZOOM_STEPS = [0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3];
 const DEFAULT_ZOOM_INDEX = 2; // 1x
 
-export function PosterZoomView({ poster, id }: { poster: ResolvedPoster; id: string }) {
+// children replaces the plain canvas, for a product that draws something around it.
+export function PosterZoomView({ poster, id, children }: { poster: ResolvedPoster; id: string; children?: ReactNode }) {
   const [zoomIndex, setZoomIndex] = useState(DEFAULT_ZOOM_INDEX);
   const zoom = ZOOM_STEPS[zoomIndex];
   const atMin = zoomIndex === 0;
@@ -20,7 +21,7 @@ export function PosterZoomView({ poster, id }: { poster: ResolvedPoster; id: str
     <div className="relative min-h-[50vh] overflow-hidden rounded-xl bg-neutral-100 lg:min-h-[70vh]">
       <div className="flex h-full items-center justify-center overflow-auto p-4 sm:p-6">
         <div style={{ transform: `scale(${zoom})`, transformOrigin: 'center' }}>
-          <PosterCanvas poster={poster} id={id} />
+          {children ?? <PosterCanvas poster={poster} id={id} />}
         </div>
       </div>
 

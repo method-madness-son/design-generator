@@ -1,6 +1,7 @@
 import { toBlob, toCanvas } from 'html-to-image';
 import JSZip from 'jszip';
 import { posterSizePixels, type PosterSizeName } from '@/lib/posterSizes';
+import { STICKER_TYPES, type StickerType } from '@/lib/stickerSizes';
 
 // Pinterest's recommended Pin width in px; height follows from the element's own 2:3 aspect ratio.
 const PINTEREST_PIN_WIDTH = 1000;
@@ -69,6 +70,23 @@ export async function saveListingExport(
   const result = (await response.json()) as { sizes?: string[]; error?: string };
   if (!response.ok) throw new Error(result.error ?? `Save failed (${response.status})`);
   return result.sizes ?? [];
+}
+
+export async function downloadStickerPng(elementId: string, id: string, type: StickerType) {
+  const { widthPx, heightPx } = STICKER_TYPES[type];
+  triggerDownload(await nodeToExactPng(getNode(elementId), widthPx, heightPx), `${id}-sticker.png`);
+}
+
+// Saves the current sticker preview and the choices behind it via the local studio API.
+export async function saveStickerExport(elementId: string, projectId: string, id: string, type: StickerType, selection: Record<string, string>): Promise<void> {
+  const { widthPx, heightPx } = STICKER_TYPES[type];
+  const form = new FormData();
+  form.append('type', type);
+  form.append('selection', JSON.stringify(selection));
+  form.append('file', await nodeToExactPng(getNode(elementId), widthPx, heightPx), `${id}.png`);
+  const response = await fetch(`/api/sticker-exports/${projectId}/${id}`, { method: 'POST', body: form });
+  const result = (await response.json()) as { error?: string };
+  if (!response.ok) throw new Error(result.error ?? `Save failed (${response.status})`);
 }
 
 // The Pinterest pin image, zipped with the Pinterest listing copy when the poster has one.

@@ -19,6 +19,10 @@
     "mug:check": "tsx scripts/mug-export.ts --check",
     "mug-art": "tsx scripts/mug-export.ts --art",
     "mug-preview": "tsx scripts/mug-export.ts --preview",
+    "sticker:check": "tsx scripts/stickers.ts check",
+    "sticker-art": "tsx scripts/stickers.ts art",
+    "sticker:fit": "tsx scripts/stickers.ts fit",
+    "sticker:sync": "tsx scripts/stickers.ts sync",
     "printify:shops": "tsx scripts/printify.ts shops",
     "printify:catalog": "tsx scripts/printify.ts catalog",
     "printify:check": "tsx scripts/printify.ts check",
@@ -27,6 +31,7 @@
     "listing:brief": "tsx scripts/listing.ts brief"
   },
   "dependencies": {
+    "@quiverai/sdk": "^0.9.6",
     "clsx": "^2.1.1",
     "html-to-image": "^1.11.13",
     "jszip": "^3.10.2",

@@ -1,0 +1,21 @@
+{
+  "sizes": {
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 1009425,
+      "sha256": "aec68f75ed433d2698591531c16fe23ed59ad83279e557833d11261b9296f9c3",
+      "savedAt": "2026-11-04T00:05:06.401Z",
+      "selection": {
+        "titleColor": "White",
+        "subtitleColor": "Night Owl",
+        "iconColor": "Night Owl",
+        "backgroundColor": "Solarized Dark",
+        "iconRem": "19.75",
+        "titleRem": "4.75",
+        "subtitleRem": "3.25",
+        "printSize": "11x17"
+      }
+    }
+  }
+}

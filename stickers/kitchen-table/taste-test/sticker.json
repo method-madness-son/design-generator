@@ -1,0 +1,17 @@
+{
+  "layouts": {
+    "rectangle": {
+      "titleRem": 1.75,
+      "subtitleRem": 1.5,
+      "bodyRem": 1.75,
+      "iconRem": 21.5
+    },
+    "bumper": {
+      "titleRem": 0.5,
+      "subtitleRem": 0.5,
+      "bodyRem": 0.5,
+      "iconRem": 6.5
+    }
+  },
+  "type": "kiss-cut"
+}

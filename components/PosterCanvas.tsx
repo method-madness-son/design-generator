@@ -86,7 +86,15 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
         } as CSSProperties
       }
     >
-      {poster.window ? <PosterWindow config={poster.window}>{content}</PosterWindow> : content}
+      {poster.window ? (
+        <PosterWindow config={poster.window}>{content}</PosterWindow>
+      ) : poster.panel ? (
+        <div className={cn('relative flex w-full flex-col items-center justify-center gap-4 rounded-[1.75rem] p-7', poster.panelClass)} style={{ backgroundColor: poster.panelColor ?? 'var(--poster-background)' }}>
+          {content}
+        </div>
+      ) : (
+        content
+      )}
     </div>
   );
 }

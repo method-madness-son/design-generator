@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CoverSheet } from '@/components/lowcontent/CoverSheet';
 import { coverConceptFor } from '@/components/lowcontent/NdCover';
 import { InteriorSheet } from '@/components/lowcontent/InteriorSheet';
@@ -27,9 +28,7 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
   return (
     <>
       <div className="flex flex-wrap items-center gap-4">
-        <Link href="/lowcontent" className="text-sm text-neutral-500 hover:text-neutral-900">
-          ← Low-content books
-        </Link>
+        <Breadcrumbs items={[{ label: "Low-content", href: "/lowcontent" }, { label: manifest?.title ?? book.id }]} />
         {manifest ? (
           <>
             <Link href={`/lowcontent/${book.id}/print`} className="text-sm font-medium text-neutral-600 hover:text-neutral-900">

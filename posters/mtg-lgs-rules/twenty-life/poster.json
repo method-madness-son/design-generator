@@ -1,0 +1,17 @@
+{
+  "id": "twenty-life",
+  "title": "20 Life",
+  "subtitle": "Starting total. Spend it wisely.",
+  "graphic": {
+    "type": "d20-life",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 14
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 5.5,
+      "subtitleRem": 1.6
+    }
+  }
+}

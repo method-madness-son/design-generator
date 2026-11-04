@@ -6,5 +6,11 @@
     "name": "Layers",
     "position": "top",
     "className": "text-[var(--poster-accent)]"
+  },
+  "overrides": {
+    "defaultTypography": {
+      "titleRem": 4.5,
+      "subtitleRem": 1.5
+    }
   }
 }
