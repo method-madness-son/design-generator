@@ -1,4 +1,62 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Hockey Goalie Butterfly Definition Poster, Funny Goalie Print, Hockey Wall Art, Gift for Goalies",
+    "description": "A funny hockey goalie poster that defines the butterfly as what it really is: a desperate floor dive dressed as technique.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a locker room, garage, game room, or goalie's bedroom.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "hockey goalie poster",
+      "goalie butterfly art",
+      "funny goalie gift",
+      "hockey wall art",
+      "goalie wall art",
+      "hockey humor poster",
+      "ice hockey goalie",
+      "hockey room decor",
+      "goalie humor print",
+      "hockey player gift",
+      "hockey slang print",
+      "rec league hockey",
+      "hockey garage decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "hockey goalie poster",
+    "etsy": {
+      "searchPhrases": [
+        "hockey goalie prints",
+        "goalie poster",
+        "goalie wall art",
+        "hockey goalie minimalist poster",
+        "hockey slang"
+      ],
+      "competitorNotes": [
+        "Hockey goalie prints on Etsy are mostly personalized watercolor or silhouette art; few use slang definitions.",
+        "A t-shirt listing uses the phrase 'It's Butterfly Season' for goalies but no poster equivalent exists.",
+        "A graphic design uses 'Drop like a butterfly, block like a beast' on merchandise."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey goalie poster",
+        "hockey goalie gift wall art",
+        "goalie wall decor"
+      ],
+      "competitorNotes": [
+        "Amazon goalie posters are mostly motivational quotes, personalized name prints, and pro player art.",
+        "A vintage 1948 patent print of an ice hockey goalkeeper is available for a retro look."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hockey_goalie_prints",
+      "https://www.etsy.com/market/goalie_poster",
+      "https://www.etsy.com/market/goalie_wall_art",
+      "https://www.etsy.com/market/hockey_goalie_minimalist_poster",
+      "https://www.etsy.com/market/hockey_slang",
+      "https://www.amazon.com/hockey-goalie-poster/s?k=hockey+goalie+poster",
+      "https://www.amazon.com/MBARE-Watercolor-Personalized-Goalkeeper-Customize/dp/B0CGXSJCWQ"
+    ],
+    "notes": "The butterfly is iconic goalie technique but no competing definition-humor poster exists. This fills a gap for goalie-specific funny wall art."
+  }
 }

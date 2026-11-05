@@ -1,4 +1,64 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "ADHD Quote Poster, URGENT Everything Print, Neurodivergent Wall Art, Funny Office Decor, ADHD Gift",
+    "description": "An ADHD quote poster that says what every notification, deadline, and thought already screams: URGENT everything.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a home office or above a desk, where everything was already urgent anyway.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "adhd quote poster",
+      "urgent everything",
+      "funny adhd poster",
+      "adhd wall art",
+      "neurodivergent art",
+      "adhd humor",
+      "neurodiversity art",
+      "adhd gift",
+      "adhd friend gift",
+      "exec dysfunction",
+      "adhd gift for men",
+      "funny office poster",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "adhd quote poster",
+    "etsy": {
+      "searchPhrases": [
+        "adhd posters",
+        "adhd funny poster",
+        "adhd wall art",
+        "executive function poster",
+        "decision paralysis",
+        "adhd quote poster"
+      ],
+      "competitorNotes": [
+        "No 'urgent everything' or urgency-themed ADHD posters found on Etsy; the angle is unique.",
+        "Task paralysis and executive dysfunction posters exist but are clinical/educational, not humor.",
+        "ADHD quote posters are a proven format (indexed market page) but none use the urgent angle."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd wall art",
+        "neurodivergent office decor"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters are mostly clinical (iceberg charts, diagnosis guides, therapy office art).",
+        "No urgency or priority-themed humor prints found on Amazon."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/adhd_posters",
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/executive_function_poster",
+      "https://www.etsy.com/market/decision_paralysis",
+      "https://www.etsy.com/market/poster_quote_adhd",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751"
+    ],
+    "notes": "ADHD quote poster is indexed on Etsy (poster_quote_adhd market page). No urgency-themed ADHD humor posters were found in any search, making this a unique angle. Executive dysfunction posters exist but are clinical, not humorous."
+  }
 }

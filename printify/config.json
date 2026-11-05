@@ -4,6 +4,7 @@
   "printProviderId": 2,
   "placeholderPosition": "front",
   "sizes": {
+    "8x10": { "variantId": 114557, "priceCents": 1800 },
     "11x17": { "variantId": 101125, "priceCents": 2400 }
   },
   "publish": {

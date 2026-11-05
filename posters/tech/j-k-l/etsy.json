@@ -1,4 +1,66 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Video Editor Poster, J K L Keyboard Shortcut Print, Filmmaker Gift, Editing Humor Wall Art",
+    "description": "A video editor poster for the three keys every editor knows by heart: J to rewind, K to pause, L to fast forward, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, editing suite, or post-production studio.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "video editor poster",
+      "jkl shortcut print",
+      "filmmaker gift",
+      "editing humor",
+      "content creator gift",
+      "video production art",
+      "post production",
+      "dark mode poster",
+      "videographer gift",
+      "nerdy office decor",
+      "editor wall art",
+      "film editor gift",
+      "creative studio art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "video editor poster",
+    "etsy": {
+      "searchPhrases": [
+        "video editor poster",
+        "gifts for video editor",
+        "keyboard shortcut poster",
+        "video production decor",
+        "art for filmmakers",
+        "filmmaker posters"
+      ],
+      "competitorNotes": [
+        "JKL-specific art does not exist on Etsy; a Premiere Pro shortcut guide mentions J/K/L under its playback section, but it is a reference sheet, not a humor print.",
+        "Video editor posters on Etsy are mostly dictionary-style definition prints and NLE keyboard shortcut sheets sold as digital downloads.",
+        "Gifts for video editors include definition prints ($5 to $35), Premiere shortcut posters, and personalized name prints.",
+        "Final Cut Pro and DaVinci Resolve shortcut sheets also appear; JKL is universal across all major editors."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "video editor gift wall art",
+        "keyboard shortcut poster",
+        "content creator gift"
+      ],
+      "competitorNotes": [
+        "Amazon video editor wall art is limited to personalized name posters and motivational quotes; no editing-shortcut humor prints found.",
+        "A general keyboard shortcut poster is sold as a 13x19 unframed print for office decor.",
+        "Amazon titles for video-related gifts use 'videographer', 'filmmaker', and 'content creator' as audience words."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/video_editor_poster",
+      "https://www.etsy.com/market/gifts_for_video_editor",
+      "https://www.etsy.com/market/keyboard_shortcut_poster",
+      "https://www.etsy.com/market/video_production_decor",
+      "https://www.etsy.com/listing/1239826332/premiere-keyboard-shortcuts-poster",
+      "https://www.etsy.com/uk/market/premiere_pro_shortcuts",
+      "https://www.amazon.com/Keyboard-Shortcut-Starter-Map-Poster/dp/B0H7FJLKKT",
+      "https://www.amazon.com/Personalized-Assistant-Inspirational-Motivation-Positive/dp/B0DTHJ5RDD"
+    ],
+    "notes": "'video editor poster' chosen because it is an Etsy market phrase and the JKL shortcut is specific to video editing (standard in Premiere Pro, Avid, DaVinci Resolve, and Final Cut). No JKL-specific art exists on either platform, making this a clear niche gap. Brand names of editing software are kept out of the title and tags because the poster does not depict any specific application. No priceRange: no comparable physical poster was found."
+  }
 }

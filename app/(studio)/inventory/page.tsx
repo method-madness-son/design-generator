@@ -46,7 +46,7 @@ function InventoryTable({ items, detail }: { items: InventoryItem[]; detail: "li
             <th className="px-4 py-2 font-medium">Poster</th>
             <th className="px-4 py-2 font-medium">Project</th>
             <th className="px-4 py-2 font-medium">Status</th>
-            <th className="px-4 py-2 font-medium">Saved sizes</th>
+            <th className="px-4 py-2 font-medium">Sizes</th>
             <th className="px-4 py-2 font-medium">{detail === "listing" ? "Etsy title" : "Next step"}</th>
           </tr>
         </thead>
@@ -72,7 +72,22 @@ function InventoryTable({ items, detail }: { items: InventoryItem[]; detail: "li
                   <StatusPill status={item.status} />
                 )}
               </td>
-              <td className="px-4 py-2 whitespace-nowrap text-neutral-600">{item.sizes.join(", ") || "—"}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-neutral-600">
+                {item.sizes.length === 0 ? "—" : item.sizes.map((size) => {
+                  const onPrintify = item.listedSizes.includes(size);
+                  if (item.status === "listed" || item.status === "draft") {
+                    return (
+                      <span key={size} className={cn("mr-1", onPrintify ? "" : "text-amber-700")}>
+                        {size}{!onPrintify && " ✱"}
+                      </span>
+                    );
+                  }
+                  return <span key={size} className="mr-1">{size}</span>;
+                })}
+                {(item.status === "listed" || item.status === "draft") && item.sizes.some((s) => !item.listedSizes.includes(s)) && (
+                  <span className="block text-xs text-amber-600">✱ not on Printify</span>
+                )}
+              </td>
               <td className="px-4 py-2 text-neutral-600">
                 {detail === "listing" ? (
                   <span className="line-clamp-2">{item.etsyTitle}</span>

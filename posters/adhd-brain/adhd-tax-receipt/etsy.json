@@ -1,4 +1,64 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "ADHD Tax Receipt Poster, Funny Neurodivergent Wall Art, Sad Vegetables Print, ADHD Humor Gift for Adults",
+    "description": "A funny ADHD tax receipt poster that tallies up the hidden costs: late fees, forgotten trials, a second charger, and sad vegetables. Total: AGAIN.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a home office, by a desk, or wherever the bank account weeps.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "adhd tax",
+      "adhd tax poster",
+      "receipt poster",
+      "funny adhd poster",
+      "adhd wall art",
+      "neurodivergent print",
+      "adhd humor",
+      "funny adhd gift",
+      "gift for adhd adult",
+      "sad vegetables",
+      "adhd money humor",
+      "adhd quote poster",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "adhd tax",
+    "etsy": {
+      "searchPhrases": [
+        "adhd tax",
+        "funny adhd posters",
+        "adhd wall art",
+        "mental health receipt",
+        "funny receipt",
+        "adhd memes"
+      ],
+      "competitorNotes": [
+        "ADHD tax is mostly stickers on Etsy; no physical posters found with this theme.",
+        "A mental health receipt printable exists (self-care themed, digital download) but is not about ADHD tax costs.",
+        "Receipt-style humor is a recognized format on Etsy (funny_receipt market page), but no one combines it with ADHD."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "funny adhd wall art",
+        "neurodivergent wall decor"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters lean clinical (iceberg charts, therapy office decor); no receipt or cost-themed ADHD prints found.",
+        "Most Amazon ADHD wall art is 8x12 metal signs or unframed canvas prints."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/adhd_tax",
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/funny_receipt",
+      "https://www.etsy.com/market/adhd_memes",
+      "https://www.etsy.com/listing/4323266590/mental-health-receipt-printable-adhd",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/ZGOBMZ-Neurodiversity-Differently-Unframe-12x18inch/dp/B0D1P6Y751"
+    ],
+    "notes": "ADHD tax is indexed on Etsy with a /market page, mainly stickers. Physical poster prints are a clear gap. Receipt-style ADHD humor is unique in the poster category."
+  }
 }

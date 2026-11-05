@@ -1,0 +1,23 @@
+{
+  "id": "dev-icons",
+  "title": "Dev Icons",
+  "source": { "kind": "standalone" },
+  "sizes": ["30x36", "30x72", "30x180"],
+  "tile": {
+    "widthIn": 6,
+    "heightIn": 6
+  },
+  "colors": {
+    "background": "#011627",
+    "foreground": "#7FDBCA",
+    "accent": "#7FDBCA"
+  },
+  "icons": [
+    "SquareTerminal", "Braces", "Code", "CodeXml", "Terminal",
+    "Bug", "GitBranch", "GitCommitHorizontal", "GitMerge", "GitPullRequest",
+    "Database", "Server", "Cpu", "Wifi", "Binary",
+    "Hash", "FileCode", "FolderCode", "Brackets", "Variable",
+    "Regex", "Command", "Keyboard", "Monitor", "Zap",
+    "Layers", "Box", "Package", "CircuitBoard", "Cable"
+  ]
+}

@@ -37,10 +37,10 @@ export function PosterWindow({ config, children }: { config: PosterWindowConfig;
     </svg>
   );
   return (
-    <div className="relative w-full">
+    <div className="relative flex w-full flex-1 flex-col">
       {shadow && <div aria-hidden className="absolute inset-0 translate-x-[14px] translate-y-[14px]" style={{ background: shadow, clipPath: PIXEL_CORNERS }} />}
       <div
-        className="relative border-[6px] border-[var(--poster-ink)] bg-[var(--poster-background)] text-[var(--poster-ink)]"
+        className="relative flex flex-1 flex-col border-[6px] border-[var(--poster-ink)] bg-[var(--poster-background)] text-[var(--poster-ink)]"
         style={{ clipPath: PIXEL_CORNERS } as CSSProperties}
       >
         <div
@@ -54,7 +54,7 @@ export function PosterWindow({ config, children }: { config: PosterWindowConfig;
           <span className="flex-1 text-left [.text-center>&]:text-center">{title}</span>
           <Control kind={controls} />
         </div>
-        <div className={cn('flex flex-col', className)}>{children}</div>
+        <div className={cn('flex flex-1 flex-col justify-center', className)}>{children}</div>
       </div>
     </div>
   );

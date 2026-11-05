@@ -1,4 +1,64 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Certified Clapper Hockey Poster, Funny Slapshot Print, Man Cave Wall Art, Player Gift",
+    "description": "A certified clapper hockey poster for anyone who rips slapshots with no apologies, featuring crossed sticks and bold typography.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a man cave, garage, game room, or hockey bar.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "clapper poster",
+      "certified clapper",
+      "funny hockey poster",
+      "slapshot poster",
+      "hockey man cave",
+      "hockey wall art",
+      "hockey player gift",
+      "rec league hockey",
+      "hockey bar decor",
+      "hockey humor print",
+      "beer league hockey",
+      "hockey game room",
+      "hockey slang poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "hockey clapper poster",
+    "etsy": {
+      "searchPhrases": [
+        "hockey slapshot",
+        "hockey slang",
+        "hockey man cave",
+        "man cave hockey",
+        "beer league hockey",
+        "hockey mancave"
+      ],
+      "competitorNotes": [
+        "Clapper hockey products on Etsy are mostly moisture-wicking tees and stickers; no poster prints found.",
+        "Hockey man cave products are mostly custom wood signs, metal signs, and LED neon lights.",
+        "Beer league hockey listings include vintage pond hockey prints and parody art."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey man cave poster",
+        "hockey wall art funny",
+        "hockey slapshot poster"
+      ],
+      "competitorNotes": [
+        "Amazon hockey man cave items are mostly tin signs at 8x12 inches around $14.99.",
+        "Slapshot-themed posters on Amazon are mostly action photography or motivational quotes."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hockey_slapshot",
+      "https://www.etsy.com/market/hockey_slang",
+      "https://www.etsy.com/market/hockey_man_cave",
+      "https://www.etsy.com/market/man_cave_hockey",
+      "https://www.etsy.com/market/beer_league_hockey",
+      "https://www.etsy.com/market/hockey_mancave",
+      "https://www.etsy.com/ca/listing/1403064972/clapper-hockey-unisex-moisture-wicking",
+      "https://www.amazon.com/Hockey-Signs/s?k=Hockey+Signs"
+    ],
+    "notes": "Clapper is well-known hockey slang for slapshot. No competing poster prints use this term on Etsy, making it an open niche."
+  }
 }

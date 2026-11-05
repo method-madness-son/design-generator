@@ -23,7 +23,12 @@
     "sticker-art": "tsx scripts/stickers.ts art",
     "sticker:fit": "tsx scripts/stickers.ts fit",
     "sticker:sync": "tsx scripts/stickers.ts sync",
+    "wrap:check": "tsx scripts/wrapping.ts check",
+    "wrap:catalog": "tsx scripts/wrapping.ts catalog",
+    "wrap-art": "tsx scripts/wrapping.ts art",
+    "wrap:sync": "tsx scripts/wrapping.ts sync",
     "printify:shops": "tsx scripts/printify.ts shops",
+    "printify:pull": "tsx scripts/printify.ts pull",
     "printify:catalog": "tsx scripts/printify.ts catalog",
     "printify:check": "tsx scripts/printify.ts check",
     "printify:sync": "tsx scripts/printify.ts sync",
@@ -31,7 +36,7 @@
     "listing:brief": "tsx scripts/listing.ts brief"
   },
   "dependencies": {
-    "@quiverai/sdk": "^0.9.6",
+    "@salamivg/core": "^1.3.0",
     "clsx": "^2.1.1",
     "html-to-image": "^1.11.13",
     "jszip": "^3.10.2",

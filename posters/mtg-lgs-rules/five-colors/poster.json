@@ -1,0 +1,25 @@
+{
+  "id": "five-colors",
+  "title": "The Five Colors",
+  "subtitle": "White. Blue. Black. Red. Green.",
+  "graphic": {
+    "type": "mana-wheel",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 16
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#121018",
+      "ink": "#E8E0D4",
+      "accent": "#C9A84C"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-dm-serif-display), Georgia, serif",
+      "titleClasses": "font-bold leading-[1] tracking-wider uppercase text-[var(--poster-ink)]",
+      "subtitleClasses": "font-medium tracking-[0.25em] uppercase leading-[1.8] text-[var(--poster-accent)]",
+      "titleRem": 3.25,
+      "subtitleRem": 1.3
+    }
+  }
+}

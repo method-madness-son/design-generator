@@ -1,4 +1,72 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Mise en Place Poster, Funny Kitchen Definition Print, Retro Cooking Wall Art, Gift for Home Cook, Diner Style Decor",
+    "description": "A mise en place definition poster for the cook who gets everything in its place... for about five minutes. Retro diner-style typography in a format that belongs on any kitchen wall.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a kitchen, dining room, or pantry.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "mise en place",
+      "mise en place poster",
+      "kitchen definition",
+      "funny cooking poster",
+      "retro kitchen print",
+      "gift for home cook",
+      "chef wall art",
+      "kitchen humor print",
+      "cooking wall decor",
+      "foodie gift",
+      "diner style poster",
+      "kitchen quote art",
+      "baker gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "mise en place poster",
+    "etsy": {
+      "searchPhrases": [
+        "mise en place",
+        "mise en place wall art",
+        "mise en place sign",
+        "funny kitchen wall art",
+        "funny retro kitchen wall art",
+        "funny kitchen poster",
+        "funny kitchen wall decor",
+        "kitchen retro prints"
+      ],
+      "competitorNotes": [
+        "Etsy mise en place results are dominated by metal signs and wooden signs; definition-style posters are less common.",
+        "Most definition prints are digital downloads; a physical poster print stands out.",
+        "Retro kitchen humor prints are a strong category on Etsy, with 50s housewife imagery being the most common style."
+      ],
+      "priceRange": {
+        "min": 17,
+        "max": 58,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "mise en place poster",
+        "kitchen posters",
+        "culinary arts posters",
+        "cooking wall artwork"
+      ],
+      "competitorNotes": [
+        "Amazon has a 13x19 glossy mise en place poster with chalkboard-style illustrations and a 16x4 rustic metal sign.",
+        "Most Amazon kitchen posters are unframed, sold in 8x10 to 16x24 sizes, with retro and minimalist styles dominating."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/mise_en_place",
+      "https://www.etsy.com/market/mise_en_place_wall_art",
+      "https://www.etsy.com/market/mise_en_place_sign",
+      "https://www.etsy.com/market/funny_kitchen_wall_art",
+      "https://www.etsy.com/market/funny_retro_kitchen_wall_art",
+      "https://www.etsy.com/market/funny_kitchen_poster",
+      "https://www.amazon.com/Mise-Place-Crew-Poster-Organized/dp/B0H9FFWZ48",
+      "https://www.amazon.com/Place-Metal-Rustic-Kitchen-Station/dp/B0GTZ9K36M"
+    ],
+    "notes": "Picked 'mise en place poster' because it is the exact subject of this print and Etsy has indexed 'mise en place' and 'mise en place wall art' as search phrases. Few competitors offer a humorous definition-style poster in this niche."
+  }
 }

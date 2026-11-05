@@ -1,4 +1,72 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Cookies Are Done Poster, Funny Baking Print, Retro Kitchen Wall Art, Cookie Lover Gift, Share Some Diner Decor",
+    "description": "A funny baking poster that asks the real question: Cookies are done. Share some? The answer buttons say it all. Retro diner-style design for any kitchen wall.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a kitchen, bakery corner, or dining room.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "funny baking poster",
+      "cookie poster",
+      "cookies are done",
+      "baking wall art",
+      "gift for baker",
+      "retro kitchen print",
+      "kitchen humor decor",
+      "cookie lover gift",
+      "baking joke print",
+      "diner style art",
+      "funny kitchen sign",
+      "foodie wall decor",
+      "home baker gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "funny baking poster",
+    "etsy": {
+      "searchPhrases": [
+        "funny baking poster",
+        "baking poster",
+        "funny baking sign",
+        "baking wall art",
+        "bakery posters",
+        "funny baking cooking poster",
+        "cute baking art",
+        "cookie poster"
+      ],
+      "competitorNotes": [
+        "Most baking humor on Etsy uses dark humor like 'baking because murder is wrong'; a playful share-cookies angle is lighter and different.",
+        "Cookie-themed posters are mostly illustration-based or dictionary definitions; a dialog-box style is uncommon.",
+        "Physical baking posters on Etsy are priced around $14-$35; most humor prints are digital downloads."
+      ],
+      "priceRange": {
+        "min": 14,
+        "max": 35,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "baking poster",
+        "baking wall decor",
+        "funny baking sign",
+        "gift for baker"
+      ],
+      "competitorNotes": [
+        "Amazon baking decor is dominated by tin signs and wooden plaques; unframed poster prints are less common.",
+        "Popular phrases include 'I Bake Because Punching People Is Frowned Upon' and cat-baker puns like 'Kitty Biscuits'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_baking_poster",
+      "https://www.etsy.com/market/baking_poster",
+      "https://www.etsy.com/market/funny_baking_sign",
+      "https://www.etsy.com/market/baking_wall_art",
+      "https://www.etsy.com/market/bakery_posters",
+      "https://www.etsy.com/market/cute_baking_art",
+      "https://www.amazon.com/baking-poster/s?k=baking+poster",
+      "https://www.amazon.com/baking-wall-decor/s?k=baking+wall+decor"
+    ],
+    "notes": "Picked 'funny baking poster' because Etsy has indexed it as a market phrase and it matches the humor angle of this design. 'Cookie poster' alone is too generic and dominated by illustration prints."
+  }
 }

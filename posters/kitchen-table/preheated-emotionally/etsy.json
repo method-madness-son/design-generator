@@ -1,4 +1,66 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Preheated Emotionally Poster, Funny Kitchen Print, Retro Baking Humor Wall Art, Gift for Home Baker, Cooking Decor",
+    "description": "A funny kitchen poster for anyone who is preheated... emotionally. Retro diner-style typography that captures the feeling before the oven is even ready.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a kitchen, dining room, or home office.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "funny kitchen poster",
+      "preheated emotional",
+      "baking humor print",
+      "retro kitchen art",
+      "gift for home baker",
+      "cooking joke poster",
+      "kitchen wall decor",
+      "funny cooking print",
+      "diner style poster",
+      "kitchen quote print",
+      "baker humor gift",
+      "retro baking art",
+      "foodie wall art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "funny kitchen poster",
+    "etsy": {
+      "searchPhrases": [
+        "funny kitchen poster",
+        "funny kitchen wall art",
+        "funny retro kitchen wall art",
+        "funny kitchen wall decor",
+        "funny wall quote kitchen",
+        "kitchen retro prints",
+        "retro kitchen print"
+      ],
+      "competitorNotes": [
+        "Funny kitchen posters on Etsy are dominated by 50s housewife 'I'm Fine' fire scenes; a simple two-word pun stands apart.",
+        "Most retro kitchen prints are digital downloads at $3-$6; physical prints are differentiated.",
+        "Emotional/preheat wordplay is not present in competitor listings, making this a unique angle."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny kitchen poster",
+        "kitchen humor wall decor",
+        "funny kitchen art",
+        "retro kitchen print"
+      ],
+      "competitorNotes": [
+        "Amazon funny kitchen posters lean heavily on retro housewife imagery and sarcastic metal tin signs.",
+        "Wordplay-based kitchen humor is rare on Amazon; most titles lead with 'Funny Kitchen' and 'Wall Art' or 'Wall Decor'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_kitchen_poster",
+      "https://www.etsy.com/market/funny_kitchen_wall_art",
+      "https://www.etsy.com/market/funny_retro_kitchen_wall_art",
+      "https://www.etsy.com/market/funny_kitchen_wall_decor",
+      "https://www.etsy.com/market/funny_wall_quote_kitchen",
+      "https://www.etsy.com/market/kitchen_retro_prints",
+      "https://www.amazon.com/kitchen-humor-wall-decor/s?k=kitchen+humor+wall+decor",
+      "https://www.amazon.com/funny-kitchen-art/s?k=funny+kitchen+art"
+    ],
+    "notes": "Picked 'funny kitchen poster' because Etsy has it as an indexed market phrase and it is the broadest high-intent term for this product. 'Preheated emotionally' is unique wordplay unlikely to be searched directly, so it works as a secondary hook in the title rather than the primary keyword."
+  }
 }

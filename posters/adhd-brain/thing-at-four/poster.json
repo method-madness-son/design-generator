@@ -1,6 +1,6 @@
 {
   "id": "thing-at-four",
-  "title": "I have a thing\nat 4:00.",
+  "title": "I have a 4:00 thing\n",
   "subtitle": "so today is cancelled.",
   "overrides": {
     "colorPalette": {

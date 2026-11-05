@@ -5,6 +5,7 @@
  *   npm run printify:catalog -- --search poster                #    pick a blueprint
  *   npm run printify:catalog -- --blueprint 282                #    pick a print provider
  *   npm run printify:catalog -- --blueprint 282 --provider 99  #    variant ids per size
+ *   npm run printify:pull                                      # sync state.json from Printify & Etsy
  *   npm run printify:check -- dev-realities                    # offline: config, files, Etsy copy
  *   npm run printify:sync -- dev-realities vim-wq --dry-run    # print payloads, call nothing
  *   npm run printify:sync -- dev-realities vim-wq              # 2 + 3. upload images, create draft
@@ -58,6 +59,7 @@ const imageBaseUrl = flags['image-base-url']?.replace(/\/$/, '');
 
 const USAGE = `Usage:
   npm run printify:shops
+  npm run printify:pull
   npm run printify:catalog -- [--search poster] [--blueprint <id> [--provider <id>]]
   npm run printify:check -- <projectId> [posterId...]
   npm run printify:sync -- <projectId> [posterId...] [--publish] [--dry-run] [--image-base-url <url>]
@@ -73,6 +75,53 @@ async function shops(): Promise<void> {
   const etsy = list.filter((shop) => shop.sales_channel === 'etsy');
   if (etsy.length === 1) console.log(`\nSet "shopId": ${etsy[0].id} in printify/config.json (or PRINTIFY_SHOP_ID).`);
   else if (etsy.length === 0) console.log('No Etsy shop is connected. Connect it in Printify → Manage my stores.');
+}
+
+async function pull(): Promise<boolean> {
+  const config = loadConfig();
+  const shopId = resolveShopId(config);
+  if (!shopId) {
+    console.log('shopId is not set in printify/config.json.');
+    return false;
+  }
+  const api = client();
+  console.log(`Fetching products from Printify shop ${shopId}...`);
+  const products = await api.getProducts(shopId);
+  const map = new Map(products.map((p) => [p.id, p]));
+  console.log(`Found ${products.length} products in Printify.`);
+
+  const state = loadState();
+  const shop = state.shops[String(shopId)];
+  if (!shop) {
+    console.log(`Shop ${shopId} not found in state.json`);
+    return false;
+  }
+
+  let cleared = 0;
+  let updated = 0;
+  for (const [key, item] of Object.entries(shop.posters)) {
+    if (!item.productId) continue;
+    const remote = map.get(item.productId);
+    if (!remote) {
+      console.log(`  deleted remotely: ${key} (was ${item.productId})`);
+      delete item.productId;
+      delete item.publishedAt;
+      delete item.etsyUrl;
+      cleared++;
+    } else if (remote.external?.handle && item.etsyUrl !== remote.external.handle) {
+      item.etsyUrl = remote.external.handle;
+      if (!item.publishedAt) item.publishedAt = new Date().toISOString();
+      updated++;
+    } else if (!remote.external?.handle && item.etsyUrl) {
+      delete item.etsyUrl;
+      delete item.publishedAt;
+      updated++;
+    }
+  }
+
+  saveState(state);
+  console.log(`Updated printify/state.json: ${cleared} cleared, ${updated} Etsy URLs updated.`);
+  return true;
 }
 
 async function catalog(): Promise<void> {
@@ -199,6 +248,7 @@ async function sync(): Promise<boolean> {
 
 async function main(): Promise<void> {
   if (command === 'shops') await shops();
+  else if (command === 'pull') process.exitCode = (await pull()) ? 0 : 1;
   else if (command === 'catalog') await catalog();
   else if (command === 'check') process.exitCode = prepare().ok ? 0 : 1;
   else if (command === 'sync') process.exitCode = (await sync()) ? 0 : 1;
@@ -208,7 +258,7 @@ async function main(): Promise<void> {
   }
 }
 
-main().catch((error: unknown) => {
+main().catch(error => {
   console.error(error instanceof Error ? error.message : error);
   process.exitCode = 1;
 });

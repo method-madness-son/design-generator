@@ -12,6 +12,21 @@
         "subtitleRem": "3.75",
         "printSize": "11x17"
       }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 280061,
+      "sha256": "55fc414028da044e29bbbd3cb4529c71eccfd0c486089f38dbc7168203feb341",
+      "savedAt": "2026-11-05T03:53:33.687Z",
+      "selection": {
+        "titleFont": "JetBrains Mono",
+        "iconRem": "22",
+        "titleRem": "5.5",
+        "subtitleRem": "4.25",
+        "bodyRem": "4.25",
+        "printSize": "8x10"
+      }
     }
   }
 }

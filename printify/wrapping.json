@@ -1,0 +1,16 @@
+{
+  "blueprintId": 1367,
+  "printProviderId": 99,
+  "placeholderPosition": "front",
+  "placeholderWidth": 9075,
+  "placeholderHeight": 10800,
+  "variants": {
+    "30x36-glossy": { "variantId": 102987, "priceCents": null, "sizeId": "30x36", "finish": "glossy" },
+    "30x36-matte":  { "variantId": 102988, "priceCents": null, "sizeId": "30x36", "finish": "matte" },
+    "30x72-glossy": { "variantId": 102989, "priceCents": null, "sizeId": "30x72", "finish": "glossy" },
+    "30x72-matte":  { "variantId": 102990, "priceCents": null, "sizeId": "30x72", "finish": "matte" },
+    "30x180-glossy":{ "variantId": 102991, "priceCents": null, "sizeId": "30x180", "finish": "glossy" },
+    "30x180-matte": { "variantId": 102992, "priceCents": null, "sizeId": "30x180", "finish": "matte" }
+  },
+  "_pricing": "Set priceCents for each variant. Check Printify's production cost once you create the first draft."
+}

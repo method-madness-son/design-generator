@@ -26,7 +26,10 @@ export type FractalType =
   | 'recce-rally-repair'
   | 'card-fan'
   | 'd20-life'
-  | 'tap-card';
+  | 'tap-card'
+  | 'mana-shield'
+  | 'mana-wheel'
+  | 'lightning-bolt';
 
 // A path is drawn in the graphic's color (currentColor) unless it names the palette accent.
 // Strokes are the default; `fill` paths are solid shapes such as arrowheads. `paper` strokes are
@@ -482,6 +485,51 @@ const GRAPHICS: Record<FractalType, Graphic> = {
       { d: 'M80 78 H120 V98 H80 Z', accent: true, fill: true },
       { d: 'M166 10 A54 54 0 0 1 194 52', accent: true, width: 4 },
       { d: 'M186 36 L196 56 L174 54', accent: true, fill: true },
+    ],
+  },
+  // A pointed shield with inner border detail and a center gem.
+  'mana-shield': {
+    viewBox: [160, 200],
+    strokeWidth: 5,
+    paths: [
+      { d: 'M80 8 L148 54 L128 176 L80 196 L32 176 L12 54 Z' },
+      { d: 'M80 28 L132 64 L116 166 L80 182 L44 166 L28 64 Z', width: 2.5 },
+      { d: 'M38 80 H122', accent: true, width: 2.5 },
+      { d: 'M80 98 L96 118 L80 138 L64 118 Z', accent: true, fill: true },
+      { d: 'M80 46 V72', width: 2 },
+      { d: 'M80 156 V176', width: 2 },
+      { d: 'M52 56 L62 66', width: 2 },
+      { d: 'M108 56 L98 66', width: 2 },
+    ],
+  },
+  // Five circles at pentagon vertices connected by a star, evoking the five mana colors.
+  'mana-wheel': {
+    viewBox: [200, 200],
+    strokeWidth: 3,
+    paths: [
+      { d: 'M100 25 L171 77 L144 161 L56 161 L29 77 Z', width: 2 },
+      { d: 'M100 25 L144 161 M144 161 L29 77 M29 77 L171 77 M171 77 L56 161 M56 161 L100 25', accent: true, width: 1.5 },
+      { d: 'M88 25 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z', sign: true },
+      { d: 'M159 77 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z', sign: true },
+      { d: 'M132 161 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z', sign: true },
+      { d: 'M44 161 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z', sign: true },
+      { d: 'M17 77 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0 Z', sign: true },
+      { d: 'M90 100 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0 Z', accent: true, fill: true },
+    ],
+  },
+  // A jagged lightning bolt with accent energy sparks.
+  'lightning-bolt': {
+    viewBox: [120, 200],
+    strokeWidth: 4,
+    linecap: 'butt',
+    paths: [
+      { d: 'M72 2 L38 82 L60 82 L26 198 L92 110 L70 110 L100 2 Z', fill: true },
+      { d: 'M16 62 L28 70', accent: true },
+      { d: 'M98 130 L110 122', accent: true },
+      { d: 'M12 104 L24 100', accent: true },
+      { d: 'M100 72 L112 68', accent: true },
+      { d: 'M8 82 L18 84', accent: true },
+      { d: 'M106 96 L116 92', accent: true },
     ],
   },
 };

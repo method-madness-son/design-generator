@@ -1,10 +1,17 @@
 {
   "id": "54321-method",
   "title": "The 5-4-3-2-1 Method",
-  "subtitle": "5 see. 4 feel. 3 hear. 2 smell. 1 taste.",
+  "subtitle": "Ground yourself in your senses.",
   "icon": {
     "name": "Hand",
     "position": "top",
     "className": "text-[var(--poster-accent)] stroke-[1.5]"
-  }
+  },
+  "body": [
+    "5 things you see",
+    "4 things you feel",
+    "3 things you hear",
+    "2 things you smell",
+    "1 thing you taste"
+  ]
 }

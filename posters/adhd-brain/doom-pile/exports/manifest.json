@@ -3,15 +3,28 @@
     "11x17": {
       "width": 3300,
       "height": 5100,
-      "bytes": 648063,
-      "sha256": "f0884dea5594c2d1effafd87eb34e8669506487fe09d39a7ecc543ed1129f7c3",
-      "savedAt": "2026-11-01T21:59:47.248Z",
+      "bytes": 707878,
+      "sha256": "fb3db3d4a21471520f26fb115244c677ca6832d5b28d33ad3242402ef03893bb",
+      "savedAt": "2026-11-05T03:49:12.334Z",
       "selection": {
-        "iconRem": "7.5",
-        "titleRem": "6.75",
+        "iconRem": "13.75",
+        "titleRem": "7.75",
         "subtitleRem": "3.25",
-        "bodyRem": "3.75",
+        "bodyRem": "4.5",
         "printSize": "11x17"
+      }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 376723,
+      "sha256": "c27a00299d4d24fe4ee156dd627011f015ad68d8270d01e8d62e024830e0e1da",
+      "savedAt": "2026-11-05T03:49:06.044Z",
+      "selection": {
+        "iconRem": "13.75",
+        "titleRem": "7.75",
+        "subtitleRem": "3.25",
+        "bodyRem": "4.5"
       }
     }
   }

@@ -73,16 +73,22 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
                 {poster.title}
               </p>
               <div className="mt-1">
-                <ListingBadge
-                  sizes={saved.get(poster.id) ?? []}
-                  hasEtsy={!!poster.etsy}
-                  status={
-                    (printify[`${projectId}/${poster.id}`] as { publishedAt?: string } | undefined)?.publishedAt ? 'listed'
-                    : (printify[`${projectId}/${poster.id}`] as { productId?: string } | undefined)?.productId ? 'draft'
-                    : staged[`${projectId}/${poster.id}`] ? 'staged'
-                    : undefined
-                  }
-                />
+                {(() => {
+                  const synced = printify[`${projectId}/${poster.id}`] as { publishedAt?: string; productId?: string; images?: Record<string, unknown> } | undefined;
+                  return (
+                    <ListingBadge
+                      sizes={saved.get(poster.id) ?? []}
+                      hasEtsy={!!poster.etsy}
+                      status={
+                        synced?.publishedAt ? 'listed'
+                        : synced?.productId ? 'draft'
+                        : staged[`${projectId}/${poster.id}`] ? 'staged'
+                        : undefined
+                      }
+                      listedSizes={synced?.images ? Object.keys(synced.images) : undefined}
+                    />
+                  );
+                })()}
               </div>
             </Link>
           </li>

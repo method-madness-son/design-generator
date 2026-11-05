@@ -16,14 +16,13 @@
     "8x10": {
       "width": 2400,
       "height": 3000,
-      "bytes": 385035,
-      "sha256": "d6ccbed33b3d367dacb18a8a7d58899c5f929ca1ed137eefc678f609252d031a",
-      "savedAt": "2026-11-01T22:08:55.039Z",
+      "bytes": 395515,
+      "sha256": "e85c8b98dc95cf30d826442964e22a877bce63f2f66cf7f07c846aeca4522e81",
+      "savedAt": "2026-11-05T03:58:04.588Z",
       "selection": {
-        "iconRem": "7.5",
-        "titleRem": "4.25",
+        "titleRem": "4.5",
         "subtitleRem": "4",
-        "bodyRem": "3.75"
+        "bodyRem": "4"
       }
     }
   }

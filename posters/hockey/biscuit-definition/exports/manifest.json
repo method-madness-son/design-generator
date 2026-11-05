@@ -3,13 +3,26 @@
     "8x10": {
       "width": 2400,
       "height": 3000,
-      "bytes": 334085,
-      "sha256": "c138509cbe04e185be840c0e1f108537920c68c06242630f2c64e3730abdad9d",
-      "savedAt": "2026-11-01T22:05:28.435Z",
+      "bytes": 326715,
+      "sha256": "786d3d322e3fb68d47e881f4c406ac6b9fa268846592f8b5b34bb5f900fe93a6",
+      "savedAt": "2026-11-05T03:54:22.648Z",
       "selection": {
-        "titleRem": "9.25",
-        "subtitleRem": "3.75",
+        "titleRem": "9.75",
         "bodyRem": "3.25"
+      }
+    },
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 655685,
+      "sha256": "ad64c1a765be91ce3dc793d930e6a9b23bd130e05f51fcd3a98c5a1c3e8fb4d5",
+      "savedAt": "2026-11-05T04:02:01.452Z",
+      "selection": {
+        "iconRem": "14.25",
+        "titleRem": "10.75",
+        "subtitleRem": "3",
+        "bodyRem": "3.25",
+        "printSize": "11x17"
       }
     }
   }

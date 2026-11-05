@@ -1,4 +1,68 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Frame Rate Poster, 24fps Film 30fps TV 60fps Gaming Print, Cinematography Gift, Dark Mode Wall Art",
+    "description": "A frame rate poster for the three speeds every filmmaker knows: 24fps for film, 30fps for TV, 60fps for gaming and slow-mo, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, editing suite, or screening room.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "frame rate poster",
+      "fps poster",
+      "filmmaker gift",
+      "video editor gift",
+      "cinema wall art",
+      "videography poster",
+      "gaming poster",
+      "dark mode print",
+      "film nerd art",
+      "content creator gift",
+      "nerdy tech poster",
+      "video production",
+      "cinematography art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "frame rate poster",
+    "etsy": {
+      "searchPhrases": [
+        "filmmaker posters",
+        "filmmaker art",
+        "art for filmmakers",
+        "video production decor",
+        "gifts for cinematographers and filmmakers",
+        "video editor poster",
+        "filmmaker decor"
+      ],
+      "competitorNotes": [
+        "No frame-rate or fps-specific poster was found on Etsy; results for 'frame rate' return movie-frame barcode art and framed movie posters instead.",
+        "Filmmaker posters on Etsy are dominated by vintage patent-art prints of cameras and projectors, and Cinematography Knowledge infographics.",
+        "A Film Formats hand-drawn cinema print is listed around $34.95; filmmaker definition prints run $5 to $35 depending on format.",
+        "Digital downloads crowd the filmmaker poster results; physical prints are less common."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "filmmaker gift poster",
+        "video production wall art",
+        "cinema wall decor"
+      ],
+      "competitorNotes": [
+        "No fps or frame-rate poster exists on Amazon; film-themed results are patent-art prints and movie-reel canvas sets.",
+        "A Film Animation patent poster is available in sizes up to 24x36 at various background styles.",
+        "Amazon titles for film decor use 'filmmaker gift', 'home theater art', 'cinema wall art', and 'director gift'."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/filmmaker_posters",
+      "https://www.etsy.com/market/filmmaker_art",
+      "https://www.etsy.com/market/art_for_filmmakers",
+      "https://www.etsy.com/market/video_production_decor",
+      "https://www.etsy.com/market/gifts_for_cinematographers_and_filmmakers",
+      "https://www.etsy.com/market/video_editor_poster",
+      "https://www.etsy.com/uk/market/filmmaker_decor",
+      "https://www.amazon.com/Animation-Poster-Director-Filmmaker-Chalkboard/dp/B0DQBJ5NFX",
+      "https://www.amazon.com/Videographer-Wall-Art-Poster-Print/dp/B0GVPDJFN1"
+    ],
+    "notes": "'frame rate poster' chosen because the artwork's subject is literally frame rates (24fps, 30fps, 60fps) and no competing poster exists on either platform. The niche is wide open. Broader filmmaker and video-editor phrases are used in tags and title to capture adjacent searches. 'Gaming poster' included because 60fps appeals to the gaming audience. No priceRange: no comparable physical poster was found."
+  }
 }

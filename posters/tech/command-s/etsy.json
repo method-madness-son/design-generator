@@ -1,4 +1,73 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Command S Poster, Save Your Work Tech Humor Print, Funny Office Gift, Dark Mode Wall Art",
+    "description": "A funny Command S poster for every creative who saves compulsively, because it will crash and it is not a matter of if but when, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, dev den, or coding setup.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "command s poster",
+      "save your work",
+      "tech humor poster",
+      "funny office print",
+      "programmer humor",
+      "coder gift",
+      "keyboard shortcut",
+      "dark mode poster",
+      "nerdy wall art",
+      "software dev gift",
+      "computer humor print",
+      "creative office art",
+      "designer gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "Command S poster",
+    "etsy": {
+      "searchPhrases": [
+        "ctrl s",
+        "ctrl print",
+        "funny tech posters",
+        "programmer humor poster",
+        "keyboard shortcuts poster",
+        "computer shortcuts posters",
+        "programmer poster",
+        "sarcastic office posters",
+        "programming poster print"
+      ],
+      "competitorNotes": [
+        "Etsy has a market page for 'ctrl_s' confirming buyers search for the save shortcut; results are mostly stickers and keycap art, not posters.",
+        "The dominant Ctrl-key poster is 'Everything Is Under Ctrl', a pun on control, sold as digital downloads ($4) and framed prints (up to $40).",
+        "A 'CTRL + S Save The Day' cartoon floppy-disk poster was listed at $71 framed, showing high-end pricing for keyboard humor.",
+        "Most tech humor posters on Etsy are digital downloads; physical prints are less common and command higher prices."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "ctrl alt delete decor",
+        "coding decor",
+        "keyboard shortcut poster"
+      ],
+      "competitorNotes": [
+        "Amazon keyboard humor is dominated by Ctrl Alt Del signs and banners, not Ctrl/Command S specifically.",
+        "A keyboard shortcut reference chart is sold as an unframed 12x18 poster for office decor.",
+        "Amazon titles use 'office decor', 'motivational', and 'computer lab' as audience words."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/ctrl_s",
+      "https://www.etsy.com/market/ctrl_print",
+      "https://www.etsy.com/market/funny_tech_posters",
+      "https://www.etsy.com/market/programmer_humor_poster",
+      "https://www.etsy.com/market/keyboard_shortcuts_poster",
+      "https://www.etsy.com/market/computer_shortcuts_posters",
+      "https://www.etsy.com/market/programmer_poster",
+      "https://www.etsy.com/market/sarcastic_office_posters",
+      "https://www.etsy.com/market/programming_poster_print",
+      "https://www.amazon.com/ctrl-alt-delete/s?k=ctrl+alt+delete",
+      "https://www.amazon.com/Computer-Shortcuts-Classroom-Technology-Counselor/dp/B0DPS41JNC",
+      "https://www.amazon.com/coding-decor/s?k=coding+decor"
+    ],
+    "notes": "'Command S poster' chosen because the printed artwork reads 'Command + S' (the Mac save shortcut). Etsy indexes 'ctrl_s' as a market phrase, validating buyer interest in the save shortcut concept. The poster is broadly relatable beyond programmers to designers, writers, and anyone who has lost work to a crash. No priceRange: comparable physical posters were not found at consistent prices."
+  }
 }

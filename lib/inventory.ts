@@ -31,6 +31,7 @@ export type InventoryItem = {
   posterTitle: string;
   etsyTitle?: string;
   sizes: PosterSizeName[];
+  listedSizes: string[];
   listingErrors: string[];
   status: InventoryStatus;
   productId?: string;
@@ -64,6 +65,7 @@ export function getInventory(): InventoryItem[] {
         posterTitle: poster.title,
         etsyTitle: poster.etsy?.title,
         sizes,
+        listedSizes: synced?.images ? Object.keys(synced.images) as string[] : [],
         listingErrors: poster.etsy || sizes.length > 0 ? checkListing(poster, sizes).errors : [],
         productId: synced?.productId,
         publishedAt: synced?.publishedAt,

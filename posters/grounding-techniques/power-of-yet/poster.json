@@ -4,7 +4,7 @@
   "subtitle": "\"I can't... yet.\"",
   "icon": {
     "name": "Sprout",
-    "position": "top",
+    "position": "bottom",
     "className": "text-[var(--poster-accent)] stroke-[1.5]"
   }
 }

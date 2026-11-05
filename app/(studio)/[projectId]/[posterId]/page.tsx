@@ -80,7 +80,7 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
                     { label: poster.title },
                   ]}
                 />
-                <ListingBadge sizes={posterSizes} hasEtsy={!!poster.etsy} status={posterStatus} />
+                <ListingBadge sizes={posterSizes} hasEtsy={!!poster.etsy} status={posterStatus} listedSizes={synced ? Object.keys(synced.images) : undefined} />
                 <div className="flex items-center gap-2 text-xs text-neutral-500">
                   <span className="font-semibold text-neutral-700">{poster.aspectRatio.replace("/", ":")}</span>
                   <span className="text-neutral-300">·</span>

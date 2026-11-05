@@ -1,0 +1,25 @@
+{
+  "id": "lightning-bolt",
+  "title": "Lightning Bolt",
+  "subtitle": "3 damage. 1 mana. The measuring stick.",
+  "graphic": {
+    "type": "lightning-bolt",
+    "position": "top",
+    "className": "text-[var(--poster-ink)]",
+    "sizeRem": 10
+  },
+  "overrides": {
+    "colorPalette": {
+      "background": "#1A0808",
+      "ink": "#F0DDD0",
+      "accent": "#D44030"
+    },
+    "defaultTypography": {
+      "titleFontFamily": "var(--font-theme-anton), sans-serif",
+      "titleClasses": "font-bold leading-[0.95] tracking-wide uppercase text-[var(--poster-ink)]",
+      "subtitleClasses": "font-medium leading-[1.2] text-[var(--poster-accent)]",
+      "titleRem": 4.5,
+      "subtitleRem": 1.4
+    }
+  }
+}

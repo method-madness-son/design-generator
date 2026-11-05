@@ -1,4 +1,63 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Hockey Biscuit Definition Poster, Funny Slang Print, Ice Rink Wall Art, Player Gift",
+    "description": "A funny hockey biscuit definition poster that defines the puck the way every player knows it: best served top shelf.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 8×10 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a locker room, garage, game room, or anywhere hockey lives.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "hockey biscuit print",
+      "hockey slang poster",
+      "funny hockey print",
+      "hockey slang art",
+      "hockey wall art",
+      "hockey player gift",
+      "ice hockey poster",
+      "hockey room decor",
+      "hockey humor print",
+      "hockey dad gift",
+      "rec league hockey",
+      "hockey locker room",
+      "hockey puck poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "hockey biscuit poster",
+    "etsy": {
+      "searchPhrases": [
+        "hockey slang",
+        "hockey biscuit",
+        "funny hockey prints",
+        "hockey poster funny",
+        "hockey puns"
+      ],
+      "competitorNotes": [
+        "A six-piece funny hockey definitions set defines terms like rink, goalie, coach, and overtime in a minimalist style.",
+        "Hockey slang merch on Etsy is mostly apparel (hoodies, shirts); definition-style physical poster prints are uncommon.",
+        "Hockey biscuit products are mostly shirts and stickers; few poster prints use the term."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey slang definition poster",
+        "hockey definition print",
+        "funny hockey poster"
+      ],
+      "competitorNotes": [
+        "Amazon has Hockey Player Funny Definition Poster in boho typography style for office and dorm decor.",
+        "Most Amazon hockey definition prints use the general word hockey rather than specific slang terms like biscuit."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hockey_slang",
+      "https://www.etsy.com/market/hockey_biscuit",
+      "https://www.etsy.com/market/funny_hockey_prints",
+      "https://www.etsy.com/market/hockey_poster_funny",
+      "https://www.etsy.com/market/hockey_puns",
+      "https://www.etsy.com/listing/1614842639/funny-hockey-definitions-set-of-six",
+      "https://www.amazon.com/Hockey-Definition-Typography-Classroom-Bedroom/dp/B0CP2LCZQ4",
+      "https://www.amazon.com/Hockey-Definition-Dictionary-Poster-Player/dp/B0D3J2RN4R"
+    ],
+    "notes": "Biscuit is well-known hockey slang but underserved on Etsy as a poster. Most hockey slang merch is apparel. This listing targets the niche of hockey slang definition wall art."
+  }
 }

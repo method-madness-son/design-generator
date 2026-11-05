@@ -3,15 +3,31 @@
     "11x17": {
       "width": 3300,
       "height": 5100,
-      "bytes": 457525,
-      "sha256": "3135ce5821b9c1e336c5c0b805f74de025d2585009b835d3e5f31e4fe84b100d",
-      "savedAt": "2026-11-01T22:02:00.916Z",
+      "bytes": 545854,
+      "sha256": "73010454d92877d0f1d48d863562d7c468399b47e95125c2e4ec3edb200ca823",
+      "savedAt": "2026-11-05T03:08:23.544Z",
       "selection": {
-        "titleFont": "Archivo Black",
-        "iconRem": "27.25",
-        "titleRem": "3.5",
-        "subtitleRem": "2.75",
+        "titleFont": "JetBrains Mono",
+        "subtitleFont": "Space Mono",
+        "iconRem": "26.75",
+        "titleRem": "4.5",
+        "subtitleRem": "2.25",
         "printSize": "11x17"
+      }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 223925,
+      "sha256": "67f4548b0b65a79aecda2e28ef80f89448cee8dc99816f291469211277463480",
+      "savedAt": "2026-11-05T03:50:47.011Z",
+      "selection": {
+        "titleFont": "JetBrains Mono",
+        "iconRem": "13.75",
+        "titleRem": "4.5",
+        "subtitleRem": "2.5",
+        "bodyRem": "6.75",
+        "printSize": "8x10"
       }
     }
   }

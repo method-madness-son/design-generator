@@ -1,7 +1,7 @@
 {
   "id": "warning-42-tabs",
-  "title": "42 tabs open.\nClose some?",
-  "subtitle": "",
+  "title": "42",
+  "subtitle": "tabs open.\nClose some?",
   "body": [
     "Yes",
     "Nope"
@@ -17,7 +17,7 @@
       "accent": "#F5C842"
     },
     "defaultTypography": {
-      "subtitleClasses": "hidden",
+      "subtitleClasses": "",
       "bodyClasses": "flex w-full gap-8 [&>li]:flex-1 [&>li]:border-[5px] [&>li]:border-[var(--poster-ink)] [&>li]:py-1 [&>li]:text-center [&>li:last-child]:bg-[var(--poster-accent)]",
       "titleRem": 3.1,
       "bodyRem": 2.3

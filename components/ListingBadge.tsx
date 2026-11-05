@@ -20,12 +20,36 @@ const LABEL: Record<Status, string> = {
   'not-saved': 'Not saved for listing',
 };
 
-export function ListingBadge({ sizes, hasEtsy, status }: { sizes: string[]; hasEtsy: boolean; status?: Status }) {
+export function ListingBadge({
+  sizes,
+  hasEtsy,
+  status,
+  listedSizes,
+}: {
+  sizes: string[];
+  hasEtsy: boolean;
+  status?: Status;
+  listedSizes?: string[];
+}) {
   const resolved: Status = status ?? (sizes.length === 0 ? 'not-saved' : hasEtsy ? 'ready' : 'needs-listing');
   if (resolved === 'not-saved') return <p className="text-xs text-neutral-400">{LABEL[resolved]}</p>;
+
+  const showSizes = listedSizes && (resolved === 'listed' || resolved === 'draft');
+  const missingSizes = showSizes ? sizes.filter((s) => !listedSizes.includes(s)) : [];
+
   return (
-    <span className={cn('inline-block rounded-full px-2 py-0.5 text-xs font-medium', STYLE[resolved])}>
-      {LABEL[resolved]}
+    <span className="inline-flex items-center gap-1.5">
+      <span className={cn('inline-block rounded-full px-2 py-0.5 text-xs font-medium', STYLE[resolved])}>
+        {LABEL[resolved]}
+        {showSizes && listedSizes.length > 0 && (
+          <span className="ml-1 opacity-70">· {listedSizes.join(', ')}</span>
+        )}
+      </span>
+      {missingSizes.length > 0 && (
+        <span className="inline-block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800">
+          missing {missingSizes.join(', ')}
+        </span>
+      )}
     </span>
   );
 }

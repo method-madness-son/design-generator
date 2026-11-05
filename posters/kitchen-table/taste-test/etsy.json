@@ -1,4 +1,66 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Funny Kitchen Print, Clean Spoons Left Poster, Taste Wisely Baking Wall Art, Retro Cooking Humor, Gift for Cook",
+    "description": "A funny kitchen poster for serial taste-testers: Clean spoons left: 1. Taste wisely. Retro diner-style art for the cook who has already used every spoon in the drawer.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a kitchen, dining room, or bakery nook.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "funny kitchen print",
+      "taste test poster",
+      "baking humor art",
+      "retro cooking poster",
+      "gift for cook",
+      "kitchen wall art",
+      "spoon joke poster",
+      "cooking humor decor",
+      "diner style print",
+      "home cook gift",
+      "baking wall decor",
+      "kitchen quote poster",
+      "funny cook gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "funny kitchen print",
+    "etsy": {
+      "searchPhrases": [
+        "funny kitchen wall art",
+        "funny kitchen poster",
+        "funny kitchen wall decor",
+        "spoon poster",
+        "funny baking poster",
+        "kitchen retro prints",
+        "poster print kitchen"
+      ],
+      "competitorNotes": [
+        "Kitchen spoon-count humor is not present in competitor listings; this is a unique angle.",
+        "Most funny kitchen prints focus on fire/chaos or dark-humor baking quotes; a spoon-counting gag stands out.",
+        "Retro diner-style prints are a proven format on Etsy with strong buyer interest."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny kitchen poster",
+        "kitchen humor wall decor",
+        "cooking wall artwork",
+        "funny cooking poster"
+      ],
+      "competitorNotes": [
+        "Amazon kitchen humor is crowded with retro housewife imagery and sarcastic tin signs.",
+        "Spoon-themed humor is absent from Amazon results, leaving room for differentiation."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/funny_kitchen_wall_art",
+      "https://www.etsy.com/market/funny_kitchen_poster",
+      "https://www.etsy.com/market/funny_kitchen_wall_decor",
+      "https://www.etsy.com/market/spoon_poster",
+      "https://www.etsy.com/market/poster_print_kitchen",
+      "https://www.etsy.com/market/funny_baking_poster",
+      "https://www.amazon.com/kitchen-humor-wall-decor/s?k=kitchen+humor+wall+decor",
+      "https://www.amazon.com/funny-kitchen-art/s?k=funny+kitchen+art"
+    ],
+    "notes": "Picked 'funny kitchen print' because it is broad, high-intent, and indexed on Etsy. 'Clean spoons left' and 'taste wisely' are unique phrases unlikely to be searched directly. Using 'funny kitchen print' instead of 'funny kitchen poster' (used by preheated-emotionally) avoids competing with ourselves for the same primary keyword."
+  }
 }

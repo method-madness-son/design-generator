@@ -12,6 +12,19 @@
         "subtitleRem": "4",
         "printSize": "11x17"
       }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 420535,
+      "sha256": "59536014014cd87cd2d8b8cb9688328b92a5e5b19bb362ea49cbab686377547e",
+      "savedAt": "2026-11-05T03:48:33.492Z",
+      "selection": {
+        "iconRem": "13.75",
+        "titleRem": "6",
+        "subtitleRem": "4",
+        "bodyRem": "4.5"
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
   "subtitle": "Recharge before you're empty.",
   "icon": {
     "name": "BatteryMedium",
-    "position": "top",
+    "position": "bottom",
     "className": "text-[var(--poster-accent)] stroke-[1.5]"
   }
 }

@@ -1,4 +1,61 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Hockey Legend Poster, Certified Puck Slapper Print, Funny Wall Art, Ice Rink Gift",
+    "description": "A hockey legend poster for the self-proclaimed certified puck slapper, featuring crossed sticks and bold typography.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a man cave, garage, game room, or office.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "hockey legend poster",
+      "funny hockey print",
+      "hockey wall art",
+      "hockey player gift",
+      "ice hockey poster",
+      "hockey man cave",
+      "hockey room decor",
+      "hockey humor gift",
+      "beer league hockey",
+      "hockey dad gift",
+      "rec league poster",
+      "hockey garage decor",
+      "hockey gift for him"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "hockey legend poster",
+    "etsy": {
+      "searchPhrases": [
+        "hockey poster",
+        "hockey art poster",
+        "large hockey poster",
+        "custom hockey poster",
+        "hockey poster funny"
+      ],
+      "competitorNotes": [
+        "Hockey legend-themed products on Etsy are mostly team-specific or player-specific; generic legend prints are rare.",
+        "Most physical hockey posters on Etsy are personalized jersey prints or vintage rink art."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey legend poster",
+        "hockey wall art gift",
+        "funny hockey wall decor"
+      ],
+      "competitorNotes": [
+        "Amazon hockey legend products are mostly about specific pro players; generic legend wall art is uncommon.",
+        "Funny hockey wall decor on Amazon is mostly small tin signs and metal signs."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hockey_poster",
+      "https://www.etsy.com/market/hockey_art_poster",
+      "https://www.etsy.com/market/large_hockey_poster",
+      "https://www.etsy.com/market/custom_hockey_poster",
+      "https://www.etsy.com/market/hockey_poster_funny",
+      "https://www.amazon.com/Ice-Hockey-Posters/s?k=Ice+Hockey+Posters",
+      "https://www.amazon.com/Hockey-Signs/s?k=Hockey+Signs"
+    ],
+    "notes": "Hockey legend as a phrase is mostly associated with specific pro players. This poster uses it humorously for rec-league self-identification, which is an underserved angle."
+  }
 }

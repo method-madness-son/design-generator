@@ -1,4 +1,62 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Hat Trick Hockey Poster, Three Goals Hats Optional Print, Funny Wall Art, Player Gift",
+    "description": "A hat trick hockey poster celebrating three goals with hats optional, featuring a playful three-hat graphic and bold lettering.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a game room, garage, man cave, or hockey locker room.\n\nThis listing is a physical poster print. Generic design: no league, team, or club marks. Thank you for supporting a small shop!",
+    "tags": [
+      "hat trick poster",
+      "hat trick hockey",
+      "funny hockey poster",
+      "hockey wall art",
+      "hockey player gift",
+      "hockey room decor",
+      "ice hockey print",
+      "hockey game room",
+      "hockey humor poster",
+      "hockey dad gift",
+      "hockey garage decor",
+      "rec league hockey",
+      "hockey slang print"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "hat trick hockey poster",
+    "etsy": {
+      "searchPhrases": [
+        "hat trick hockey",
+        "hockey poster",
+        "hockey poster funny",
+        "hockey artwork",
+        "sport poster hockey"
+      ],
+      "competitorNotes": [
+        "Etsy has a 'Hat Trick!' poster with hats raining onto ice, and a cat-themed 'Hairball Hat Trick' parody at $19.99.",
+        "A vinyl wall decal set includes Hat Trick, Slap Shot, and Power Play text.",
+        "Most hockey wall art on Etsy is personalized jerseys or digital downloads."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "hockey poster wall art",
+        "funny hockey poster",
+        "ice hockey posters"
+      ],
+      "competitorNotes": [
+        "Amazon hockey posters are heavily personalized or motivational; few are humor-based.",
+        "Ice hockey poster prices on Amazon range from about $14.99 for tin signs to $47.99 for large canvas."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/hat_trick_hockey",
+      "https://www.etsy.com/market/hockey_poster",
+      "https://www.etsy.com/market/hockey_poster_funny",
+      "https://www.etsy.com/market/hockey_artwork",
+      "https://www.etsy.com/market/sport_poster_hockey",
+      "https://www.etsy.com/listing/466158955/hockey-vinyl-wall-decal-slap-shot-hat",
+      "https://www.amazon.com/Ice-Hockey-Posters/s?k=Ice+Hockey+Posters"
+    ],
+    "notes": "Hat trick is among the most recognized hockey terms. Few funny physical poster prints use it on Etsy, where the space is dominated by custom jersey art and digital downloads."
+  }
 }

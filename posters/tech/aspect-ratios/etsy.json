@@ -1,4 +1,73 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Aspect Ratio Poster, YouTube Reels & Cinema Format Print, Filmmaker Gift, Video Editor Wall Art",
+    "description": "An aspect ratio poster for the three formats every creator knows: 16:9 for YouTube, 9:16 for Reels, 2.35:1 for Cinema, in dark-mode colors.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in and 8×10 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang for a home office, editing suite, or creative studio.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "aspect ratio poster",
+      "filmmaker gift",
+      "video editor gift",
+      "cinema format print",
+      "content creator gift",
+      "videographer poster",
+      "film nerd wall art",
+      "dark mode print",
+      "video production art",
+      "nerdy office decor",
+      "media room decor",
+      "tech wall art",
+      "YouTube wall art"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-03",
+    "method": "search-results",
+    "primaryKeyword": "aspect ratio poster",
+    "etsy": {
+      "searchPhrases": [
+        "poster aspect ratio",
+        "aspect ratio chart",
+        "filmmaker posters",
+        "video editor poster",
+        "gifts for video editor",
+        "videography poster",
+        "art for filmmakers",
+        "video production decor",
+        "cinematographic art"
+      ],
+      "competitorNotes": [
+        "Etsy aspect ratio results are mostly wall-art size guides and frame-size charts for sellers, not cinema format posters for buyers.",
+        "Filmmaker posters on Etsy lean heavily on patent-style vintage camera prints and cinema knowledge infographics; a dark-mode format joke is distinct.",
+        "A Film Formats poster with technical diagrams including aspect ratio charts is listed around $34.95; a Cinematography Knowledge poster is $25.79 on sale.",
+        "Video editor posters are mostly dictionary-style definition prints and Premiere Pro cheat sheets as digital downloads."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "filmmaker gift poster",
+        "videographer wall art",
+        "cinema wall art"
+      ],
+      "competitorNotes": [
+        "Amazon filmmaker gifts are dominated by patent-art prints of film reels, projectors, and cameras in blueprint style.",
+        "A Film Shot Size Chart canvas poster targets directors and cinematographers; no aspect-ratio-specific poster was found.",
+        "Amazon titles stack 'gift', 'wall art', 'home theater', and 'decor' as audience words."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/poster_aspect_ratio",
+      "https://www.etsy.com/uk/market/aspect_ratio_guide",
+      "https://www.etsy.com/market/aspect_ratio_chart",
+      "https://www.etsy.com/market/filmmaker_posters",
+      "https://www.etsy.com/market/video_editor_poster",
+      "https://www.etsy.com/market/gifts_for_video_editor",
+      "https://www.etsy.com/market/videography_poster",
+      "https://www.etsy.com/market/art_for_filmmakers",
+      "https://www.etsy.com/market/video_production_decor",
+      "https://www.etsy.com/market/cinematographic_art",
+      "https://www.amazon.com/Patent-Earth-Hollywood-Filmmaker-Theater/dp/B08BYYMG6P",
+      "https://www.amazon.com/Videographer-Wall-Art-Poster-Print/dp/B0GVPDJFN1"
+    ],
+    "notes": "'aspect ratio poster' chosen because Etsy indexes both 'poster_aspect_ratio' and 'aspect_ratio_chart' as market phrases, and no poster specifically about video aspect ratios (16:9, 9:16, 2.35:1) was found on either platform. The niche gap is clear: existing results are size guides for sellers or cinema patent prints. YouTube and Reels are named because they appear on the printed artwork. No priceRange: the one comparable physical poster ($34.95 Film Formats) is a different product type."
+  }
 }
