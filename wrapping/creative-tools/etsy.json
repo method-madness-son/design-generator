@@ -1,0 +1,73 @@
+{
+  "etsy": {
+    "title": "Graphic Designer Wrapping Paper, Creative Tools Gift Wrap, Artist Birthday, Digital Art Pen Tool",
+    "description": "Graphic designer wrapping paper featuring minimalist creative tool icons — pen tool, palette, and layers — in a tiled purple-on-dark pattern, perfect for wrapping gifts for the artist or designer in your life.\n\nWHAT YOU'LL GET\n• Physical wrapping paper printed on 90gsm fine art paper, shipped directly to you\n• Available in three sizes: 30×36″ (single sheet), 30×72″ (roll), and 30×180″ (large roll)\n• Choose matte or glossy finish\n• Dark charcoal background (#0D1117) with purple creative tool icons (#C084FC) in a repeating tile pattern\n\nHOW TO USE\nWrap birthday, holiday, or just-because gifts for any graphic designer, illustrator, digital artist, or creative professional. The dark color scheme and iconic design tools make every package look like it came straight off the artboard.\n\nThis listing is a physical product, not a digital download. The paper is recyclable. Thank you for supporting a small shop!",
+    "tags": [
+      "designer gift wrap",
+      "artist gift wrap",
+      "creative tools",
+      "graphic design gift",
+      "digital artist gift",
+      "illustrator gift",
+      "art teacher gift",
+      "purple gift wrap",
+      "pen tool palette",
+      "art lover birthday",
+      "ui ux designer",
+      "creative pro gift",
+      "dark mode design"
+    ],
+    "category": "Paper & Party Supplies > Gift Wrapping > Wrapping Paper"
+  },
+  "research": {
+    "researchedAt": "2026-11-07",
+    "method": "search-results",
+    "primaryKeyword": "graphic designer wrapping paper",
+    "etsy": {
+      "searchPhrases": [
+        "designer wrapping paper",
+        "wrapping paper for artists",
+        "creative wrapping paper",
+        "dark purple wrapping paper",
+        "purple and black wrapping paper",
+        "modern abstract art wrapping paper"
+      ],
+      "competitorNotes": [
+        "Art-supply-motif designs (paint palettes, brushes, splatters) exist but are aimed at traditional art; digital design tool icons are essentially absent from the market.",
+        "Purple wrapping paper is common but overwhelmingly botanical, celestial, or gothic; no listings pair purple with minimalist tech-design iconography.",
+        "One paint-themed listing (Paint Artist Wrapping Paper) targets art teachers and artists; titles naming a specific creative audience rank well.",
+        "Physical wrapping paper rolls on Etsy run roughly $7-35 depending on size, with most single sheets around $7-18 and rolls $18-27."
+      ],
+      "priceRange": {
+        "min": 7,
+        "max": 35,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "art wrapping paper",
+        "designer wrapping paper",
+        "graphic designer gifts"
+      ],
+      "competitorNotes": [
+        "Amazon titles use 'art wrapping paper' and 'designer wrapping paper' as openers, followed by audience terms like 'artist', 'creative', and 'birthday'.",
+        "A 12-sheet painting palette and brushes set (Pineraap) is the closest competitor; it targets traditional art supplies, not digital design tools.",
+        "No Amazon listings feature digital design tool icons (pen tool, layers, color palette); this is an uncontested niche."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/designer_wrapping_paper",
+      "https://www.etsy.com/market/wrapping_paper_for_artists",
+      "https://www.etsy.com/market/creative_wrapping_paper",
+      "https://www.etsy.com/market/dark_purple_wrapping_paper",
+      "https://www.etsy.com/market/purple_and_black_wrapping_paper",
+      "https://www.etsy.com/market/modern_abstract_art_wrapping_paper",
+      "https://www.etsy.com/listing/1865925568/paint-artist-wrapping-paper",
+      "https://www.amazon.com/graphic-designer-gifts/s?k=graphic+designer+gifts",
+      "https://www.amazon.com/art-wrapping-paper/s?k=art+wrapping+paper",
+      "https://www.amazon.com/designer-wrapping-paper/s?k=designer+wrapping+paper"
+    ],
+    "notes": "Primary keyword 'graphic designer wrapping paper' chosen because it directly matches buyer intent for someone shopping for a designer. Etsy has indexed market pages for 'designer_wrapping_paper' and 'wrapping_paper_for_artists', confirming search volume. The product's digital design tool icons (pen tool, palette, layers) are completely unrepresented in both Etsy and Amazon search results, which are dominated by traditional art supplies (paint brushes, palettes) or abstract patterns. The purple-on-dark color scheme differentiates from the dev-icons wrapping paper (teal-on-navy) and positions this for the design/creative professional audience rather than the programmer audience."
+  }
+}

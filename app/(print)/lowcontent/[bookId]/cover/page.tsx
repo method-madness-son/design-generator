@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { CoverSheet } from '@/components/lowcontent/CoverSheet';
 import { coverConceptFor } from '@/components/lowcontent/NdCover';
+import { devDesignFor } from '@/components/lowcontent/DevCover';
 import { getBookIds, loadBook } from '@/lib/lowcontent/books';
 
 export function generateStaticParams() {
@@ -52,6 +53,7 @@ export default async function LowContentCoverPage({
         mode="print"
         variant="wrap"
         concept={coverConceptFor(book.id, query.variant)}
+        devDesign={book.id === 'dev-notebook' ? devDesignFor(query.variant) : undefined}
       />
     </div>
   );

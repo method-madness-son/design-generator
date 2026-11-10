@@ -1,6 +1,6 @@
 import { AlignmentPicker } from '@/components/AlignmentPicker';
 import { CollapsibleSection } from '@/components/CollapsibleSection';
-import { ColorWheelPicker } from '@/components/ColorWheelPicker';
+import { ColorSwatchPicker } from '@/components/ColorSwatchPicker';
 import { FontPicker } from '@/components/FontPicker';
 import { PrintSizePicker } from '@/components/PrintSizePicker';
 import { ResetVariantsButton } from '@/components/ResetVariantsButton';
@@ -10,6 +10,8 @@ import { getColorOptions } from '@/lib/colorOptions';
 import { FONT_GROUPS, GLOBAL_FONTS } from '@/lib/fontOptions';
 import type { ReactNode } from 'react';
 import type { ProjectConfig, ResolvedPoster } from '@/types/poster';
+
+const BG_ZOOM_STEPS = [1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.5, 4, 4.5, 5];
 
 type Props = {
   // Replaces the print size picker, for products that don't come in poster sizes.
@@ -35,6 +37,7 @@ type Props = {
     bodyRem: string;
     printSize: string;
     align: string;
+    bgZoom: string;
   };
   compact?: boolean;
 };
@@ -69,13 +72,18 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
           <span className="text-[10px] font-semibold uppercase tracking-wider text-neutral-400">
             Background
           </span>
-          <ColorWheelPicker
-            param="backgroundColor"
-            colors={BACKGROUND_COLORS}
-            value={query.backgroundColor}
-            defaultColor={defaultBg}
-            sortBy="lightness"
-          />
+          <div className="flex items-center gap-1.5">
+            <ColorSwatchPicker
+              param="backgroundColor"
+              swatches={BACKGROUND_COLORS}
+              value={query.backgroundColor}
+              defaultValue={defaultBg}
+              sortBy="lightness"
+            />
+            {poster.backgroundImage && (
+              <SizeStepper param="bgZoom" options={BG_ZOOM_STEPS} value={query.bgZoom} defaultValue={poster.backgroundImage.zoom ?? 1} unit="x" />
+            )}
+          </div>
         </div>
 
         <div className="hidden h-7 w-px bg-neutral-200 lg:block" />
@@ -86,11 +94,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
             Icon
           </span>
           <div className="flex items-center gap-1.5">
-            <ColorWheelPicker
+            <ColorSwatchPicker
               param="iconColor"
-              colors={colorOptions}
+              swatches={colorOptions}
               value={query.iconColor}
-              defaultColor={defaultInk}
+              defaultValue={defaultInk}
             />
             {sizeScale && sizeScale.icon.length > 0 && (
               <SizeStepper param="iconRem" options={sizeScale.icon} value={query.iconRem} defaultValue={poster.iconDefaultRem} />
@@ -106,11 +114,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
             Title
           </span>
           <div className="flex items-center gap-1.5">
-            <ColorWheelPicker
+            <ColorSwatchPicker
               param="titleColor"
-              colors={colorOptions}
+              swatches={colorOptions}
               value={query.titleColor}
-              defaultColor={defaultInk}
+              defaultValue={defaultInk}
             />
             <FontPicker param="titleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.titleFont} />
             {sizeScale && sizeScale.title.length > 0 && (
@@ -127,11 +135,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
             Subtitle
           </span>
           <div className="flex items-center gap-1.5">
-            <ColorWheelPicker
+            <ColorSwatchPicker
               param="subtitleColor"
-              colors={colorOptions}
+              swatches={colorOptions}
               value={query.subtitleColor}
-              defaultColor={defaultInk}
+              defaultValue={defaultInk}
             />
             <FontPicker param="subtitleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.subtitleFont} />
             {sizeScale && sizeScale.subtitle.length > 0 && (
@@ -149,11 +157,11 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
                 Body
               </span>
               <div className="flex items-center gap-1.5">
-                <ColorWheelPicker
+                <ColorSwatchPicker
                   param="bodyColor"
-                  colors={colorOptions}
+                  swatches={colorOptions}
                   value={query.bodyColor}
-                  defaultColor={defaultInk}
+                  defaultValue={defaultInk}
                 />
                 <FontPicker param="bodyFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.bodyFont} />
                 {bodyScale && bodyScale.length > 0 && (
@@ -184,23 +192,26 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
         </CollapsibleSection>
 
         <CollapsibleSection label="Background">
-          <ColorWheelPicker
+          <ColorSwatchPicker
             label="Color"
             param="backgroundColor"
-            colors={BACKGROUND_COLORS}
+            swatches={BACKGROUND_COLORS}
             value={query.backgroundColor}
-            defaultColor={defaultBg}
+            defaultValue={defaultBg}
             sortBy="lightness"
           />
+          {poster.backgroundImage && (
+            <SizeStepper label="Zoom" param="bgZoom" options={BG_ZOOM_STEPS} value={query.bgZoom} defaultValue={poster.backgroundImage.zoom ?? 1} unit="x" />
+          )}
         </CollapsibleSection>
 
         <CollapsibleSection label="Icon">
-          <ColorWheelPicker
+          <ColorSwatchPicker
             label="Color"
             param="iconColor"
-            colors={colorOptions}
+            swatches={colorOptions}
             value={query.iconColor}
-            defaultColor={defaultInk}
+            defaultValue={defaultInk}
           />
           {sizeScale && sizeScale.icon.length > 0 && (
             <SizeStepper label="Size" param="iconRem" options={sizeScale.icon} value={query.iconRem} defaultValue={poster.iconDefaultRem} />
@@ -208,12 +219,12 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
         </CollapsibleSection>
 
         <CollapsibleSection label="Title">
-          <ColorWheelPicker
+          <ColorSwatchPicker
             label="Color"
             param="titleColor"
-            colors={colorOptions}
+            swatches={colorOptions}
             value={query.titleColor}
-            defaultColor={defaultInk}
+            defaultValue={defaultInk}
           />
           <FontPicker label="Font" param="titleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.titleFont} />
           {sizeScale && sizeScale.title.length > 0 && (
@@ -222,12 +233,12 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
         </CollapsibleSection>
 
         <CollapsibleSection label="Subtitle">
-          <ColorWheelPicker
+          <ColorSwatchPicker
             label="Color"
             param="subtitleColor"
-            colors={colorOptions}
+            swatches={colorOptions}
             value={query.subtitleColor}
-            defaultColor={defaultInk}
+            defaultValue={defaultInk}
           />
           <FontPicker label="Font" param="subtitleFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.subtitleFont} />
           {sizeScale && sizeScale.subtitle.length > 0 && (
@@ -237,12 +248,12 @@ export function PosterVariantSelects({ project, poster, query, compact = false, 
 
         {poster.body.length > 0 && (
           <CollapsibleSection label="Body">
-            <ColorWheelPicker
+            <ColorSwatchPicker
               label="Color"
               param="bodyColor"
-              colors={colorOptions}
+              swatches={colorOptions}
               value={query.bodyColor}
-              defaultColor={defaultInk}
+              defaultValue={defaultInk}
             />
             <FontPicker label="Font" param="bodyFont" groups={FONT_GROUPS} allFonts={GLOBAL_FONTS} value={query.bodyFont} />
             {bodyScale && bodyScale.length > 0 && (

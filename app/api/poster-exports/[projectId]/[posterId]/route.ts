@@ -1,11 +1,26 @@
 // Saves a studio-rendered print PNG into posters/<projectId>/<posterId>/exports/ (see lib/posterExports.ts).
 // It writes to the repo on disk, so it only works for the local studio (`npm run dev`).
+import fs from 'node:fs';
 import { deleteItem, deleteResponse } from '@/lib/itemDelete';
-import { saveExport } from '@/lib/posterExports';
+import { exportPath, savedSizes, saveExport } from '@/lib/posterExports';
 import { getPosterFile, getProject, getValidSelection } from '@/lib/posterResolver';
 import { isPosterSizeName } from '@/lib/posterSizes';
 
 const fail = (error: string, status = 400) => Response.json({ error }, { status });
+
+export async function GET(request: Request, { params }: { params: Promise<{ projectId: string; posterId: string }> }) {
+  const { projectId, posterId } = await params;
+  const url = new URL(request.url);
+  const size = url.searchParams.get('size');
+  const variant = url.searchParams.get('variant') ?? '';
+  if (!size || !isPosterSizeName(size)) return fail('Missing or invalid size param.', 400);
+  const sizes = savedSizes(projectId, posterId);
+  if (!sizes.includes(size)) return fail('No export for that size.', 404);
+  const filePath = exportPath(projectId, posterId, size, variant);
+  if (!fs.existsSync(filePath)) return fail('Export file not found.', 404);
+  const data = fs.readFileSync(filePath);
+  return new Response(data, { headers: { 'Content-Type': 'image/png', 'Cache-Control': 'no-store' } });
+}
 
 export async function DELETE(request: Request, { params }: { params: Promise<{ projectId: string; posterId: string }> }) {
   const { projectId, posterId } = await params;

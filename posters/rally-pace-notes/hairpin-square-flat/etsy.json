@@ -1,4 +1,79 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Hairpin Square Flat Rally Car Poster, Pace Notes Wall Art, Corner Types Print, Rally Driver Gift",
+    "description": "A rally car poster that prints three pace-note corner calls in bold stencil type: HAIRPIN, SQUARE, FLAT, with a graphic showing each corner shape.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in and 8×10 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally car poster",
+      "pace notes",
+      "hairpin square flat",
+      "rally wall art",
+      "rally driver gift",
+      "corner types poster",
+      "garage race decor",
+      "rally motorsport art",
+      "rallying poster",
+      "racing gifts for him",
+      "motorsport poster",
+      "rally car print",
+      "rally fan gift"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-04",
+    "method": "search-results",
+    "primaryKeyword": "hairpin rally car poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car poster",
+        "rally wall art",
+        "rally posters",
+        "rally motorsport art",
+        "rallying poster",
+        "rally fan gift",
+        "racing gifts for him",
+        "garage race decor",
+        "rally car print",
+        "vintage rally poster"
+      ],
+      "competitorNotes": [
+        "Hairpin-themed Etsy posters are almost all Monaco F1 hairpin prints; no rally pace-note corner-type poster was found.",
+        "Rally car poster results are dominated by real-car illustrations and digital downloads; typographic pace-note designs are a gap.",
+        "Physical rally prints in snippets ranged from about $18 to $50 USD for comparable poster sizes."
+      ],
+      "priceRange": {
+        "min": 18,
+        "max": 50,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally car poster",
+        "motorsport poster",
+        "rally wall art gift",
+        "car enthusiast gift"
+      ],
+      "competitorNotes": [
+        "Amazon rally posters are watercolor or photographic prints of real cars, sold unframed in 11x14, A2, and A3 sizes, marketed for garages and man caves.",
+        "No typographic pace-note corner-type posters found on Amazon."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/rallying_poster",
+      "https://www.etsy.com/market/rally_posters",
+      "https://www.etsy.com/market/vintage_rally_poster",
+      "https://www.etsy.com/market/rally_prints",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/uk/market/monaco_hairpin_poster",
+      "https://www.amazon.com/Sports-Racing-Painting-Unframed-Poster/dp/B0DSF9G6CG",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737",
+      "https://www.amazon.com/ALPINE-INK-CO-Racing-Poster/dp/B0H4J4H8MK"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). 'hairpin rally car poster' combines the design's lead word with the strongest indexed phrase. 'corner types poster' has no evidence as a search phrase; it describes the design. Hairpin Etsy results skew to F1 Monaco, not rally. Price range from physical poster snippets across rally results."
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "id": "cosmic-vortex",
+  "title": "Cosmic Vortex",
+  "subtitle": "Spiral Galaxy in Purple and Gold",
+  "backgroundImage": {
+    "src": "/images/space-paintings/cosmic-vortex.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "webb-telescope",
+  "title": "Webb Telescope",
+  "description": "Deep space imagery from the James Webb and Hubble Space Telescopes. Full-bleed photography with minimal typography.",
+  "colorPalette": {
+    "background": "#000000",
+    "ink": "#FFFFFF",
+    "accent": "#FFB347"
+  },
+  "defaultLayout": {
+    "aspectRatio": "4/5",
+    "printWidthInches": 12,
+    "containerClasses": "relative z-10 items-center justify-end gap-4 p-16 text-center"
+  },
+  "defaultBackground": {
+    "className": "bg-black"
+  },
+  "defaultTypography": {
+    "fontFamily": "var(--font-nunito), sans-serif",
+    "titleClasses": "font-bold leading-tight tracking-wide text-white uppercase",
+    "subtitleClasses": "font-light leading-tight tracking-widest text-white/80 uppercase",
+    "titleRem": 3,
+    "subtitleRem": 1.5
+  },
+  "iconRem": 10,
+  "sizeScale": {
+    "icon": [5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20],
+    "title": [1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+    "subtitle": [0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.5, 4]
+  }
+}

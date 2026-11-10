@@ -1,0 +1,11 @@
+{
+  "id": "galaxy-field",
+  "title": "Galaxy Field",
+  "subtitle": "A Thousand Spirals in Deep Blue",
+  "backgroundImage": {
+    "src": "/images/space-paintings/galaxy-field.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

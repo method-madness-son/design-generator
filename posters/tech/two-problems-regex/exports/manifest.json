@@ -18,6 +18,18 @@
         "printSize": "11x17",
         "align": "left"
       }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 411038,
+      "sha256": "7377bc56e085957a60a9585ccf4e9d618fd7342b1f04f809159bb0dc77ce65aa",
+      "savedAt": "2026-11-08T03:13:27.029Z",
+      "selection": {
+        "iconRem": "17",
+        "titleRem": "4.5",
+        "subtitleRem": "3.75"
+      }
     }
   }
 }

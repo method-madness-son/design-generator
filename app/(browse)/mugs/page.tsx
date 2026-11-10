@@ -1,16 +1,50 @@
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MugArtwork } from "@/components/mugs/MugArtwork";
+import { ProductTable, STATUS_STYLES, type ProductRow } from "@/components/ProductTable";
 import { getMugDesignIds, getMugProjects, loadResolvedMug } from "@/lib/mugDesigns";
 import { MUG_CANVASES } from "@/lib/mugSizes";
+import type { ResolvedMug } from "@/types/mug";
 
 export const metadata = {
   title: "Mugs",
   description: "White ceramic mug wraps and wireframe previews.",
 };
 
+function MugThumb({ mug }: { mug: ResolvedMug }) {
+  if (mug.errors.length > 0) return null;
+  return (
+    <div className="relative w-[150px] overflow-hidden" style={{ height: 70 }}>
+      <div className="absolute top-0 left-0" style={{ transform: "scale(0.0606)", transformOrigin: "top left" }}>
+        <MugArtwork mug={mug} size="11oz" />
+      </div>
+    </div>
+  );
+}
+
+function mugStatus(mug: ResolvedMug): ProductRow["status"] {
+  if (mug.errors.length > 0) return { label: "Has errors", style: STATUS_STYLES.warning };
+  if (mug.marketStatus === "proposed_unverified") return { label: "Unverified", style: STATUS_STYLES.warning };
+  return { label: "Ready", style: STATUS_STYLES.ready };
+}
+
 export default function MugsPage() {
   const projects = getMugProjects();
+  const rows: ProductRow[] = [];
+  for (const project of projects) {
+    for (const id of getMugDesignIds(project.id)) {
+      const mug = loadResolvedMug(id);
+      if (!mug) continue;
+      rows.push({
+        id,
+        href: `/mugs/${id}`,
+        title: mug.lines.map((line) => line.text).join(" / ") || id,
+        project: project.title,
+        status: mugStatus(mug),
+        detail: `${mug.wrap} · ${mug.sizes.map((size) => MUG_CANVASES[size].label).join(", ")}`,
+        thumbnail: <MugThumb mug={mug} />,
+      });
+    }
+  }
   return (
     <>
       <Breadcrumbs items={[{ label: "Mugs" }]} />
@@ -19,45 +53,8 @@ export default function MugsPage() {
         White ceramic wraps for Printify. The 11 oz file is 2475×1155 px. The 15 oz file is generated and marked unverified.
         Print files are built with <code className="text-sm">npm run mug-art</code>.
       </p>
-      {projects.map((project) => {
-        const ids = getMugDesignIds(project.id);
-        return (
-          <section key={project.id} className="mt-8">
-            <h2 className="text-lg font-semibold text-neutral-900">{project.title}</h2>
-            <p className="mt-1 max-w-2xl text-sm text-neutral-600">{project.description}</p>
-            {ids.length === 0 ? (
-              <p className="mt-4 text-sm text-neutral-600">No mugs in this project yet.</p>
-            ) : (
-              <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {ids.map((id) => {
-                  const mug = loadResolvedMug(id);
-                  if (!mug) return null;
-                  const phrase = mug.lines.map((line) => line.text).join(" / ");
-                  return (
-                    <li key={id}>
-                      <Link href={`/mugs/${id}`} className="block rounded-xl border border-neutral-200 bg-white p-3 shadow-sm transition hover:border-neutral-400">
-                        <div className="relative h-[120px] overflow-hidden rounded-md border border-neutral-200 bg-white">
-                          {mug.errors.length === 0 ? (
-                            <div className="absolute top-0 left-0" style={{ transform: "scale(0.1)", transformOrigin: "top left" }}>
-                              <MugArtwork mug={mug} size="11oz" />
-                            </div>
-                          ) : (
-                            <p className="p-3 text-xs text-neutral-700">{mug.errors[0]}</p>
-                          )}
-                        </div>
-                        <h3 className="mt-3 font-semibold text-neutral-900">{phrase || id}</h3>
-                        <p className="mt-1 text-xs text-neutral-500">
-                          {mug.wrap} · {mug.sizes.map((size) => MUG_CANVASES[size].label).join(", ")}
-                        </p>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </section>
-        );
-      })}
+      <p className="mt-2 text-sm text-neutral-500">{rows.length} designs</p>
+      <ProductTable rows={rows} />
     </>
   );
 }

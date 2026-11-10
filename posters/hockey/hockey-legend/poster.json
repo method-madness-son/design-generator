@@ -4,6 +4,7 @@
   "subtitle": "Certified puck slapper",
   "graphic": {
     "type": "crossed-sticks",
+    "svg": "crossed-sticks",
     "position": "top",
     "className": "mb-2 text-[var(--poster-ink)]",
     "sizeRem": 13

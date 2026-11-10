@@ -1,0 +1,28 @@
+{
+  "sizes": {
+    "8x10-solarized-dark": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 16344111,
+      "sha256": "dfdcd23a827b775c3c1d4ed857117f20547b8acc6fbe4e0144bfb6a998aa53d0",
+      "savedAt": "2026-11-09T02:23:50.349Z",
+      "selection": {
+        "backgroundColor": "Solarized Dark",
+        "printSize": "8x10"
+      },
+      "variant": "solarized-dark"
+    },
+    "11x17-solarized-dark": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 34106452,
+      "sha256": "50e1cf622749ff89f2e3d85f31739a3ca9f93eb5b5096f07dc11a3d9b5479897",
+      "savedAt": "2026-11-09T02:23:54.015Z",
+      "selection": {
+        "backgroundColor": "Solarized Dark",
+        "printSize": "11x17"
+      },
+      "variant": "solarized-dark"
+    }
+  }
+}

@@ -13,6 +13,50 @@
         "printSize": "11x17",
         "align": "center"
       }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 313567,
+      "sha256": "3404c58dcca10da171aa30111450b574363ced4b093b2dd0295f3fcc120ff154",
+      "savedAt": "2026-11-06T03:31:59.726Z",
+      "selection": {
+        "iconRem": "15.5",
+        "titleRem": "6.5",
+        "subtitleRem": "2.25"
+      }
+    },
+    "8x10-lavender": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 306048,
+      "sha256": "d4d3d30aafe455fcd8de98bf1569ce48e281a11b59839c53603b204872e6b719",
+      "savedAt": "2026-11-08T03:17:51.426Z",
+      "selection": {
+        "subtitleColor": "Lavender",
+        "iconColor": "Lavender",
+        "backgroundColor": "Lavender",
+        "iconRem": "15.5",
+        "titleRem": "5.75",
+        "subtitleRem": "2.25"
+      },
+      "variant": "lavender"
+    },
+    "11x17-lavender": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 658985,
+      "sha256": "c5b20fb223f9ca21e9aecee419097d7906f7172d813d13406d4b871e9d7f752a",
+      "savedAt": "2026-11-08T03:20:14.099Z",
+      "selection": {
+        "subtitleColor": "Lavender",
+        "iconColor": "Lavender",
+        "backgroundColor": "Lavender",
+        "iconRem": "22.75",
+        "titleRem": "6",
+        "printSize": "11x17"
+      },
+      "variant": "lavender"
     }
   }
 }

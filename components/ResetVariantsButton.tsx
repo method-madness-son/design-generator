@@ -18,8 +18,16 @@ const VARIANT_PARAMS = [
   'bodyRem',
   'printSize',
   'align',
+  'bgZoom',
   // Sticker pages only.
   'type',
+  // Low-content / KDP pages.
+  'variant',
+  'paper',
+  'ink',
+  'accent',
+  'displayFont',
+  'supportingFont',
 ];
 
 export function ResetVariantsButton() {

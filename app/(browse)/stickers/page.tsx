@@ -1,22 +1,62 @@
 import fs from "node:fs";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CANVAS_WIDTH, PosterCanvas } from "@/components/PosterCanvas";
+import { ProductTable, STATUS_STYLES, type ProductRow } from "@/components/ProductTable";
 import { getProject } from "@/lib/posterResolver";
 import { loadState } from "@/lib/printify/posters";
 import { loadSticker, stickerExportPath, stickerIds, stickerListing, stickerProjects } from "@/lib/stickerDesigns";
 import { STICKER_TYPES } from "@/lib/stickerSizes";
-import { cn } from "@/lib/utils";
 
 export const metadata = {
   title: "Stickers",
   description: "Sticker designs made from the poster projects.",
 };
 
-const PREVIEW_PX = 288;
+const THUMB_PX = 150;
+
+function StickerThumb({ sticker }: { sticker: NonNullable<ReturnType<typeof loadSticker>> }) {
+  return (
+    <div style={{ width: THUMB_PX, height: THUMB_PX, overflow: "hidden" }}>
+      <div style={{ transform: `scale(${THUMB_PX / CANVAS_WIDTH})`, transformOrigin: "top left" }}>
+        <PosterCanvas poster={sticker.poster} />
+      </div>
+    </div>
+  );
+}
+
+function stickerStatus(saved: boolean, hasListing: boolean, etsyUrl?: string): ProductRow["status"] {
+  if (etsyUrl) return { label: "Live on Etsy", style: STATUS_STYLES.listed };
+  if (saved && hasListing) return { label: "Ready", style: STATUS_STYLES.ready };
+  if (saved) return { label: "Needs listing", style: STATUS_STYLES.warning };
+  if (hasListing) return { label: "Needs export", style: STATUS_STYLES.warning };
+  return { label: "Idea", style: STATUS_STYLES.idea };
+}
 
 export default function StickersPage() {
   const printify = Object.assign({}, ...Object.values(loadState().shops).map((shop) => shop.posters));
+  const rows: ProductRow[] = [];
+  for (const projectId of stickerProjects()) {
+    const projectTitle = getProject(projectId)?.title ?? projectId;
+    for (const id of stickerIds(projectId)) {
+      const sticker = loadSticker(projectId, id);
+      if (!sticker) continue;
+      const saved = fs.existsSync(stickerExportPath(projectId, id, sticker.type));
+      const listing = stickerListing(projectId, id);
+      const synced = printify[`stickers/${projectId}/${id}`] as { etsyUrl?: string; publishedAt?: string } | undefined;
+      rows.push({
+        id: `stickers/${projectId}/${id}`,
+        href: `/stickers/${projectId}/${id}`,
+        title: listing.etsy?.title ?? id,
+        project: projectTitle,
+        status: stickerStatus(saved, !!listing.etsy, synced?.etsyUrl),
+        detail: STICKER_TYPES[sticker.type].label,
+        etsyUrl: synced?.etsyUrl,
+        thumbnail: <StickerThumb sticker={sticker} />,
+      });
+    }
+  }
+  const listed = rows.filter((r) => r.status.label === "Live on Etsy");
+  const rest = rows.filter((r) => r.status.label !== "Live on Etsy");
   return (
     <>
       <Breadcrumbs items={[{ label: "Stickers" }]} />
@@ -24,46 +64,19 @@ export default function StickersPage() {
       <p className="mt-1 max-w-2xl text-neutral-600">
         Poster designs reflowed for Printify&apos;s kiss-cut, square, and rectangular bumper stickers. Open one to choose its type, customize it, and save it.
       </p>
-      {stickerProjects().map((projectId) => (
-        <section key={projectId} className="mt-8">
-          <h2 className="text-lg font-semibold text-neutral-900">{getProject(projectId)?.title ?? projectId}</h2>
-          <ul className="mt-4 flex flex-wrap gap-5">
-            {stickerIds(projectId).map((id) => {
-              const sticker = loadSticker(projectId, id);
-              if (!sticker) return null;
-              const saved = fs.existsSync(stickerExportPath(projectId, id, sticker.type));
-              const listed = !!stickerListing(projectId, id).etsy;
-              const etsyUrl = (printify[`stickers/${projectId}/${id}`] as { etsyUrl?: string } | undefined)?.etsyUrl;
-              return (
-                <li key={id} style={{ width: PREVIEW_PX }}>
-                  <Link href={`/stickers/${projectId}/${id}`} className="group block">
-                    <div
-                      className={cn(
-                        "overflow-hidden border border-neutral-200 bg-white shadow-sm transition group-hover:border-neutral-400",
-                        sticker.type === "kiss-cut" && "rounded-xl",
-                      )}
-                      style={{ width: PREVIEW_PX, height: (PREVIEW_PX * STICKER_TYPES[sticker.type].heightPx) / STICKER_TYPES[sticker.type].widthPx }}
-                    >
-                      <div style={{ transform: `scale(${PREVIEW_PX / CANVAS_WIDTH})`, transformOrigin: "top left" }}>
-                        <PosterCanvas poster={sticker.poster} />
-                      </div>
-                    </div>
-                    <h3 className="mt-2 text-sm font-semibold text-neutral-900">{id}</h3>
-                  </Link>
-                  <p className="text-xs text-neutral-500">
-                    {STICKER_TYPES[sticker.type].label} · {saved ? "Print file built" : "No print file"} ·{" "}
-                    {etsyUrl ? (
-                      <a href={etsyUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                        Etsy listing ↗
-                      </a>
-                    ) : listed ? "Listing written" : "No listing"}
-                  </p>
-                </li>
-              );
-            })}
-          </ul>
+      <p className="mt-2 text-sm text-neutral-500">{listed.length} listed · {rest.length} in progress · {rows.length} total</p>
+      {listed.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold text-neutral-900">Live on Etsy ({listed.length})</h2>
+          <ProductTable rows={listed} />
         </section>
-      ))}
+      )}
+      {rest.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold text-neutral-900">In progress ({rest.length})</h2>
+          <ProductTable rows={rest} />
+        </section>
+      )}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { Fractal } from '@/components/Fractal';
 import { IconRenderer } from '@/components/IconRenderer';
+import { SvgGraphic } from '@/components/SvgGraphic';
 import { PosterWindow } from '@/components/PosterWindow';
 import { cn } from '@/lib/utils';
 import type { ResolvedPoster } from '@/types/poster';
@@ -25,12 +26,21 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
     />
   );
   const graphic = poster.graphic && (
-    <Fractal
-      type={poster.graphic.type}
-      sizeRem={poster.iconRem}
-      className={cn('shrink-0', poster.graphic.className)}
-      style={colorStyle}
-    />
+    poster.graphic.svg ? (
+      <SvgGraphic
+        name={poster.graphic.svg}
+        sizeRem={poster.iconRem}
+        className={cn('shrink-0', poster.graphic.className)}
+        style={colorStyle}
+      />
+    ) : (
+      <Fractal
+        type={poster.graphic.type}
+        sizeRem={poster.iconRem}
+        className={cn('shrink-0', poster.graphic.className)}
+        style={colorStyle}
+      />
+    )
   );
   // graphic replaces icon when both are set; position follows whichever one is active.
   const visual = graphic ?? icon;
@@ -71,11 +81,13 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
     </>
   );
 
+  const bgImage = poster.backgroundImage;
+
   return (
     <div
       id={id}
       // p-16 is the safety margin for bleed/frame-mat tolerance; containerClasses may widen it.
-      className={cn('flex shrink-0 flex-col overflow-hidden p-16', poster.bgClass, poster.containerClasses)}
+      className={cn('relative flex shrink-0 flex-col overflow-hidden p-16', poster.bgClass, poster.containerClasses)}
       style={
         {
           width: CANVAS_WIDTH,
@@ -86,6 +98,19 @@ export function PosterCanvas({ poster, id }: { poster: ResolvedPoster; id?: stri
         } as CSSProperties
       }
     >
+      {bgImage && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={bgImage.src}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          style={{
+            objectPosition: `${bgImage.offsetX ?? 50}% ${bgImage.offsetY ?? 50}%`,
+            transform: (bgImage.zoom ?? 1) !== 1 ? `scale(${bgImage.zoom})` : undefined,
+          }}
+        />
+      )}
       {poster.window ? (
         <PosterWindow config={poster.window}>{content}</PosterWindow>
       ) : poster.panel ? (

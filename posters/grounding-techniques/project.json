@@ -10,7 +10,7 @@
   "defaultLayout": {
     "aspectRatio": "4/5",
     "printWidthInches": 8,
-    "containerClasses": "items-center justify-center gap-6 p-16 text-center"
+    "containerClasses": "relative items-center justify-center gap-6 p-16 text-center before:pointer-events-none before:absolute before:inset-5 before:border-[2px] before:border-[var(--poster-accent)] before:content-['']"
   },
   "defaultBackground": {
     "className": "bg-[var(--poster-background)]"

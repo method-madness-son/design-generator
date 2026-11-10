@@ -1,4 +1,75 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Tulip Diagram Rally Wall Art, Road Book Navigation Print, Rally Car Gift, Garage Race Decor",
+    "description": "A rally wall art print of a tulip diagram—the navigation symbol co-drivers follow in every road book—with the caption TULIP (not the flower).\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in and 8×10 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally wall art",
+      "tulip diagram",
+      "rally car poster",
+      "rally driver gift",
+      "rally car gift",
+      "garage race decor",
+      "rally motorsport art",
+      "motorsport gift",
+      "pace notes",
+      "rallying poster",
+      "racing gifts for him",
+      "unique motorsport",
+      "rally art print"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-04",
+    "method": "search-results",
+    "primaryKeyword": "tulip diagram rally wall art",
+    "etsy": {
+      "searchPhrases": [
+        "rally wall art",
+        "rally car poster",
+        "rally motorsport art",
+        "rally art",
+        "rallying poster",
+        "unique motorsport",
+        "rally car gift",
+        "rally driver gift",
+        "racing gifts for him",
+        "garage race decor"
+      ],
+      "competitorNotes": [
+        "Etsy 'tulip' results are entirely flower prints, tulip festival posters, and Wall Street tulipmania art; no rally tulip-diagram products found.",
+        "Rally navigation or road book products on Etsy are limited to pace-note mugs and license plates; no road book posters surfaced.",
+        "This is a completely open niche on Etsy."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "rally roadbook",
+        "rally car poster",
+        "motorsport poster wall art",
+        "car enthusiast gift"
+      ],
+      "competitorNotes": [
+        "Amazon has pace-note notebooks for rally co-drivers but no tulip diagram or road book poster products.",
+        "Rally poster results on Amazon are watercolor and photo prints of real cars."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_motorsport_art",
+      "https://www.etsy.com/market/rally_art",
+      "https://www.etsy.com/market/rallying_poster",
+      "https://www.etsy.com/market/unique_motorsport",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/rally_driver_gift",
+      "https://www.etsy.com/market/racing_gifts_for_him",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/market/tulip_print_poster",
+      "https://www.etsy.com/market/rally_cars_print",
+      "https://www.amazon.com/PACENOTE-NOTEBOOK-Co-Pilot-Motorsport-Pacenotes/dp/B0DVLQYSSJ",
+      "https://www.amazon.com/Dynamic-Rally-Canvas-Print-High-Definition/dp/B0D84HJ737"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). 'tulip diagram rally wall art' pairs the design element with indexed 'rally wall art'. Tulip diagram posters are a completely open niche on both Etsy and Amazon. 'tulip diagram' and 'road book' have no Etsy search evidence as rally terms; Etsy tulip results are all flower prints. No priceRange: no comparable products exist."
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "sizes": {
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 14784307,
+      "sha256": "f7889730c6d86edd714524a04dcef419cdc4d6f72826b0112eb417db41727064",
+      "savedAt": "2026-11-09T02:26:33.285Z",
+      "selection": {
+        "printSize": "8x10"
+      }
+    },
+    "11x17": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 28143407,
+      "sha256": "91a1d4cf8afeeb09852b8399dd65c634b130a02af422ffe5ab2cf3b40326fa03",
+      "savedAt": "2026-11-09T02:26:36.867Z",
+      "selection": {
+        "printSize": "11x17"
+      }
+    }
+  }
+}

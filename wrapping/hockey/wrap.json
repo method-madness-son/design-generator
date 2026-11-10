@@ -1,0 +1,16 @@
+{
+  "id": "hockey",
+  "title": "Hockey Icons",
+  "source": { "kind": "standalone" },
+  "sizes": ["30x36", "30x72", "30x180"],
+  "tile": {
+    "widthIn": 6,
+    "heightIn": 6
+  },
+  "colors": {
+    "background": "#E8EDF2",
+    "foreground": "#0B2545",
+    "accent": "#C8102E"
+  },
+  "icons": ["crossed-sticks"]
+}

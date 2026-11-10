@@ -1,4 +1,78 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "Spoon Theory Poster, Today's Budget: 1 Choose Wisely, Funny Spoonie Wall Art, ADHD Gift for Adults",
+    "description": "A spoon theory poster for the day you wake up with exactly one spoon and have to choose wisely. A retro computer dialog box delivers the daily energy budget.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in and 8×10 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a home office, bedroom, or wherever the spoon count matters.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "spoon theory poster",
+      "spoon theory print",
+      "spoonie gift",
+      "spoonie wall art",
+      "funny adhd poster",
+      "adhd wall art",
+      "chronic illness gift",
+      "adhd humor",
+      "neurodivergent print",
+      "choose wisely poster",
+      "gift for adhd adult",
+      "adhd decor",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-05",
+    "method": "search-results",
+    "primaryKeyword": "spoon theory poster",
+    "etsy": {
+      "searchPhrases": [
+        "spoon theory poster",
+        "spoon theory print",
+        "spoonie art",
+        "spoon theory art",
+        "neurodivergent spoon theory",
+        "chronic illness wall art",
+        "out of spoons stickers"
+      ],
+      "competitorNotes": [
+        "Most spoon theory products on Etsy are digital downloads ($2-$10) or stickers; physical printed posters are a gap.",
+        "Common designs are infographic-style 'Self Care With Spoons' charts and affirmation prints like 'You are allowed to be out of spoons'.",
+        "Humor angle ('Used All My Spoons By 11am', 'Out of spoons, will use knives') appears mostly on stickers and tees, rarely as wall art.",
+        "Physical framed spoon theory prints run roughly $18-$22; canvas versions run higher."
+      ],
+      "priceRange": {
+        "min": 18,
+        "max": 22,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "spoon theory poster wall art",
+        "spoonie gift chronic illness",
+        "neurodivergent poster wall decor"
+      ],
+      "competitorNotes": [
+        "Amazon spoon theory results are generic canvas prints from bulk sellers with boilerplate descriptions; no original or humorous designs.",
+        "Spoonie search on Amazon returns mostly tees, pins, and stickers, not posters; wall art is a gap.",
+        "Amazon neurodivergent posters lean clinical and educational (iceberg charts, definition prints); humor is underrepresented."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/spoon_theory_poster",
+      "https://www.etsy.com/market/spoon_theory_print",
+      "https://www.etsy.com/market/spoon_theory_art",
+      "https://www.etsy.com/market/spoonie_art",
+      "https://www.etsy.com/market/neurodivergent_spoon_theory",
+      "https://www.etsy.com/market/chronic_illness_wall_art",
+      "https://www.etsy.com/market/chronic_illness_art",
+      "https://www.etsy.com/market/the_spoon_theory",
+      "https://www.etsy.com/market/spoon_theory_mental_health",
+      "https://www.etsy.com/listing/4368311012/spoon-theory-poster-bright-self",
+      "https://www.etsy.com/listing/640102050/spoon-theory-spoonies-spoony-spoonie",
+      "https://www.amazon.com/Explained-Painting-Bedroom-24x36inch-60x90cm/dp/B0F1CXC4Z5",
+      "https://www.amazon.com/spoonie/s?k=spoonie",
+      "https://www.amazon.com/Neurodiversity-Therapy-Counseling-Picture-20x30inch/dp/B0D294ZP35"
+    ],
+    "notes": "Primary keyword 'spoon theory poster' is indexed on Etsy and directly describes this product. The sibling poster 'out-of-spoons' uses 'spoonie art' as primary keyword and focuses on the depleted/recharging angle; this poster's humor is about budgeting the one spoon you have. New indexed phrases found: 'spoon theory art', 'neurodivergent spoon theory', 'spoon theory mental health', and 'the spoon theory art' are Etsy market pages not currently in research/keywords/neurodivergent.json."
+  }
 }

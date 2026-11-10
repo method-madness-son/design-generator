@@ -16,9 +16,10 @@ type Props = {
   // otherwise the first +/- press from Default would jump straight to the smallest/largest
   // option instead of stepping from what's actually on screen.
   defaultValue: number;
+  unit?: string;
 };
 
-export function SizeStepper({ label, param, options, value, defaultValue }: Props) {
+export function SizeStepper({ label, param, options, value, defaultValue, unit = 'rem' }: Props) {
   const setParam = useQueryParam(param);
   // Options at or below the default come first, then "Default" itself, then options above it —
   // so stepping up from Default always increases past what's currently shown, and stepping down
@@ -43,7 +44,7 @@ export function SizeStepper({ label, param, options, value, defaultValue }: Prop
           <path d="M5 12h14" />
         </StepButton>
         <span className="w-12 select-none text-center text-xs text-neutral-700">
-          {value ? `${value}rem` : `${defaultValue}rem`}
+          {value ? `${value}${unit}` : `${defaultValue}${unit}`}
         </span>
         <StepButton label="Increase" onClick={() => step(1)} disabled={atMax}>
           <path d="M12 5v14M5 12h14" />

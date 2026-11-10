@@ -1,0 +1,11 @@
+{
+  "id": "cigar-galaxy",
+  "title": "Cigar Galaxy",
+  "subtitle": "Messier 82 · Starburst Galaxy",
+  "backgroundImage": {
+    "src": "/images/webb-telescope/cigar-galaxy.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

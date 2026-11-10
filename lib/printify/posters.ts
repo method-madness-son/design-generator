@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { checkListing } from '@/lib/etsyListing';
-import { readPrintFile, savedSizesByPoster, type PrintFile } from '@/lib/posterExports';
+import { readPrintFile, savedSizesByPoster, savedVariants, type PrintFile } from '@/lib/posterExports';
 import { getPosterFile, resolvePosterIds } from '@/lib/posterResolver';
 import { POSTER_SIZES, isPosterSizeName, printFileErrors, type PosterSizeName } from '@/lib/posterSizes';
 import type { PosterFile } from '@/types/poster';
@@ -75,7 +75,11 @@ export type PosterJob = {
 function buildJob(config: PrintifyConfig, projectId: string, posterId: string, saved: PosterSizeName[]): PosterJob {
   const poster = getPosterFile(projectId, posterId)!;
   const sizes = saved.filter((size) => size in config.sizes);
-  const files = sizes.map((size) => readPrintFile(projectId, posterId, size));
+  const variants = savedVariants(projectId, posterId);
+  const files = sizes.map((size) => {
+    const match = variants.find((v) => v.size === size && !v.variant) ?? variants.find((v) => v.size === size);
+    return readPrintFile(projectId, posterId, size, match?.variant);
+  });
   // Checked against what will be uploaded, so the copy can't promise a size left out of the config.
   const { errors, warnings } = checkListing(poster, sizes);
   for (const file of files) errors.push(...printFileErrors(file.size, file));

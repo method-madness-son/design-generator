@@ -1,4 +1,72 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "ADHD Funny Poster, I Have a 4:00 Thing So Today Is Cancelled, Neurodivergent Wall Art, ADHD Gift for Adults",
+    "description": "A funny ADHD poster for the 4:00 thing that cancels the whole day. You know the feeling: one appointment later and suddenly nothing else is possible until it's over.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang in a home office, bedroom, or wherever the afternoon appointment rules the day.\n\nThis listing is a physical poster print, not a substitute for professional medical or therapy advice. Thank you for supporting a small shop!",
+    "tags": [
+      "adhd funny poster",
+      "time blindness humor",
+      "adhd waiting mode",
+      "today is cancelled",
+      "funny adhd gift",
+      "adhd wall art",
+      "neurodivergent art",
+      "adhd humor",
+      "adhd adult gift",
+      "adhd time anxiety",
+      "neurodiversity art",
+      "adhd decor",
+      "home office decor"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-04",
+    "method": "search-results",
+    "primaryKeyword": "adhd funny poster",
+    "etsy": {
+      "searchPhrases": [
+        "adhd funny poster",
+        "funny adhd posters",
+        "funny time blindness",
+        "adhd wall art",
+        "neurodivergent wall art",
+        "adhd waiting mode"
+      ],
+      "competitorNotes": [
+        "Time blindness prints exist on Etsy but are mostly digital downloads or definition-style; no physical poster captures waiting mode humor.",
+        "Waiting mode appears in SVG and PNG files for shirts and mugs but not as a wall art poster.",
+        "Physical prints with ADHD time humor are roughly $18-$22; digital downloads are $3-$10."
+      ],
+      "priceRange": {
+        "min": 18,
+        "max": 22,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "adhd poster",
+        "adhd decor",
+        "funny adhd wall art"
+      ],
+      "competitorNotes": [
+        "Amazon ADHD posters are mostly clinical (iceberg charts, therapy office decor) or metal signs.",
+        "No time blindness or waiting mode humor posters found on Amazon; the angle is unique."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/adhd_funny_poster",
+      "https://www.etsy.com/market/funny_adhd_posters",
+      "https://www.etsy.com/market/funny_time_blindness",
+      "https://www.etsy.com/market/adhd_wall_art",
+      "https://www.etsy.com/market/neurodivergent_wall_art",
+      "https://www.etsy.com/market/adhd_humor",
+      "https://www.etsy.com/market/adhd_gifts",
+      "https://www.etsy.com/listing/1891917401/adhd-waiting-mode-svg-png-files-funny",
+      "https://www.etsy.com/listing/4498996292/adhd-wall-art-print-funny-quote-poster",
+      "https://www.amazon.com/adhd-poster/s?k=adhd+poster",
+      "https://www.amazon.com/adhd-decor/s?k=adhd+decor"
+    ],
+    "notes": "'ADHD funny poster' is indexed on Etsy and specific enough for this humor poster. 'Funny time blindness' is also indexed but the poster is more specifically about waiting mode and appointment paralysis. No competing poster captures this exact angle."
+  }
 }

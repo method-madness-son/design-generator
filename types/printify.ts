@@ -28,8 +28,6 @@ export type PrintifyPublishFlags = {
 
 // printify/state.json: what has already been sent, so re-runs update instead of duplicating.
 export type PrintifyState = {
-  // Manual "staged" flag: keys are "<projectId>/<posterId>" or "stickers/<projectId>/<id>".
-  staged?: Record<string, true>;
   shops: Record<
     string,
     {
@@ -41,7 +39,7 @@ export type PrintifyState = {
           productId?: string;
           // A sticker's type when its product was created. Printify can't move a product to another blueprint.
           stickerType?: string;
-          // Set when a publish to Etsy was requested; the inventory shows these as Listed.
+          // Set when a publish to Etsy was requested; the inventory shows these as Published.
           publishedAt?: string;
           // The Etsy listing URL, fetched from Printify's external field after publishing.
           etsyUrl?: string;

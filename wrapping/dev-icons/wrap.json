@@ -12,12 +12,5 @@
     "foreground": "#7FDBCA",
     "accent": "#7FDBCA"
   },
-  "icons": [
-    "SquareTerminal", "Braces", "Code", "CodeXml", "Terminal",
-    "Bug", "GitBranch", "GitCommitHorizontal", "GitMerge", "GitPullRequest",
-    "Database", "Server", "Cpu", "Wifi", "Binary",
-    "Hash", "FileCode", "FolderCode", "Brackets", "Variable",
-    "Regex", "Command", "Keyboard", "Monitor", "Zap",
-    "Layers", "Box", "Package", "CircuitBoard", "Cable"
-  ]
+  "icons": ["SquareTerminal", "Braces", "Code"]
 }

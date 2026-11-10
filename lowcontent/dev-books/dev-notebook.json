@@ -1,0 +1,49 @@
+{
+  "id": "dev-notebook",
+  "project": "Dev Books",
+  "projectSlug": "dev-books",
+  "market": "dev",
+  "title": "Developer Notebook",
+  "subtitle": "Lined pages and dot grids for sketching, pseudocode, and notes",
+  "trim": "8.5x11",
+  "pageCount": 120,
+  "paper": "cream",
+  "ink": "black",
+  "bleed": false,
+  "author": null,
+  "theme": {
+    "palette": "dev",
+    "displayFont": "Space Mono",
+    "supportingFont": "JetBrains Mono"
+  },
+  "kdp": {
+    "title": "Developer Notebook: Lined & Dot Grid Pages for Coders",
+    "subtitle": "Lined pages and dot grids for sketching, pseudocode, and notes",
+    "description": "A plain notebook for software developers. 120 pages of college-ruled lined paper and dot grids. The lined pages are for meeting notes, pseudocode, and design thinking. The dot grids are for sketching wireframes, diagrams, and system architecture. 6 x 9 inches, cream paper, easy to carry in a bag.",
+    "keywords": [
+      "developer notebook",
+      "programmer journal",
+      "coding notebook lined",
+      "software engineer notebook",
+      "dot grid notebook developer",
+      "computer science notebook",
+      "tech notebook"
+    ],
+    "categories": [
+      { "label": "Computers & Technology" },
+      { "label": "Crafts, Hobbies & Home" }
+    ],
+    "priceUsd": 7.99,
+    "readingAge": null,
+    "lowContent": true,
+    "isbn": "none",
+    "sexuallyExplicit": false
+  },
+  "pages": [
+    { "template": "title", "repeat": 1 },
+    { "template": "belongs-to", "repeat": 1 },
+    { "template": "lined", "repeat": 80, "config": { "heading": "Lined" } },
+    { "template": "dot-grid", "repeat": 36, "config": { "heading": "Dot grid" } },
+    { "template": "graph", "repeat": 2, "config": { "heading": "Graph" } }
+  ]
+}

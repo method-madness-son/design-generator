@@ -1,4 +1,5 @@
 import { NdCover, type CoverConcept } from '@/components/lowcontent/NdCover';
+import { DevCover, type DevDesignId } from '@/components/lowcontent/DevCover';
 import { contrastRatio } from '@/lib/lowcontent/theme';
 import {
   COVER_SAFE_INSET_IN,
@@ -22,11 +23,69 @@ type CoverProps = {
   variant: 'wrap' | 'front';
   /** nd-planner cover concepts. Omit for the generic cover. */
   concept?: CoverConcept;
+  /** dev-notebook design id. Omit for the generic cover. */
+  devDesign?: DevDesignId;
+  iconRem?: number;
+  titleRem?: number;
+  subtitleRem?: number;
+  defaultIconRem?: number;
+  defaultTitleRem?: number;
+  defaultSubtitleRem?: number;
 };
 
-export function CoverSheet({ title, subtitle, description, pageCount, geometry, theme, mode, variant, concept }: CoverProps) {
+export function CoverSheet({
+  title,
+  subtitle,
+  description,
+  pageCount,
+  geometry,
+  theme,
+  mode,
+  variant,
+  concept,
+  devDesign,
+  iconRem,
+  titleRem,
+  subtitleRem,
+  defaultIconRem,
+  defaultTitleRem,
+  defaultSubtitleRem,
+}: CoverProps) {
   if (concept) {
-    return <NdCover concept={concept} geometry={geometry} theme={theme} mode={mode} variant={variant} pageCount={pageCount} />;
+    return (
+      <NdCover
+        concept={concept}
+        geometry={geometry}
+        theme={theme}
+        mode={mode}
+        variant={variant}
+        pageCount={pageCount}
+        titleRem={titleRem}
+        subtitleRem={subtitleRem}
+        defaultTitleRem={defaultTitleRem}
+        defaultSubtitleRem={defaultSubtitleRem}
+      />
+    );
+  }
+  if (devDesign) {
+    return (
+      <DevCover
+        design={devDesign}
+        geometry={geometry}
+        theme={theme}
+        mode={mode}
+        variant={variant}
+        title={title}
+        subtitle={subtitle}
+        pageCount={pageCount}
+        iconRem={iconRem}
+        titleRem={titleRem}
+        subtitleRem={subtitleRem}
+        defaultIconRem={defaultIconRem}
+        defaultTitleRem={defaultTitleRem}
+        defaultSubtitleRem={defaultSubtitleRem}
+      />
+    );
   }
   if (variant === 'front') {
     const widthPx = inchesToPixels(geometry.trimWidthIn);
@@ -41,6 +100,10 @@ export function CoverSheet({ title, subtitle, description, pageCount, geometry, 
           heightPx={heightPx}
           widthIn={geometry.trimWidthIn}
           heightIn={geometry.trimHeightIn}
+          titleRem={titleRem}
+          subtitleRem={subtitleRem}
+          defaultTitleRem={defaultTitleRem}
+          defaultSubtitleRem={defaultSubtitleRem}
         />
       </div>
     );
@@ -73,6 +136,10 @@ export function CoverSheet({ title, subtitle, description, pageCount, geometry, 
         heightIn={geometry.front.height}
         offsetX={sx(geometry.front.x)}
         offsetY={sy(geometry.front.y)}
+        titleRem={titleRem}
+        subtitleRem={subtitleRem}
+        defaultTitleRem={defaultTitleRem}
+        defaultSubtitleRem={defaultSubtitleRem}
       />
       <BackPanel
         title={title}
@@ -123,6 +190,10 @@ function FrontPanel({
   heightIn,
   offsetX = 0,
   offsetY = 0,
+  titleRem,
+  subtitleRem,
+  defaultTitleRem = 4.5,
+  defaultSubtitleRem = 3.25,
 }: {
   title: string;
   subtitle: string;
@@ -133,11 +204,17 @@ function FrontPanel({
   heightIn: number;
   offsetX?: number;
   offsetY?: number;
+  titleRem?: number;
+  subtitleRem?: number;
+  defaultTitleRem?: number;
+  defaultSubtitleRem?: number;
 }) {
   const sx = (inches: number) => scaleX(widthIn, widthPx, inches);
   const sy = (inches: number) => scaleY(heightIn, heightPx, inches);
   const pad = COVER_SAFE_INSET_IN;
   const onAccent = (contrastRatio('#ffffff', theme.accent) ?? 0) >= 3 ? '#ffffff' : theme.ink;
+  const titleScale = titleRem && defaultTitleRem ? titleRem / defaultTitleRem : 1;
+  const subtitleScale = subtitleRem && defaultSubtitleRem ? subtitleRem / defaultSubtitleRem : 1;
   return (
     <div
       data-lc-front="1"
@@ -168,7 +245,7 @@ function FrontPanel({
             style={{
               margin: 0,
               fontFamily: theme.displayFontCss,
-              fontSize: sy(0.62),
+              fontSize: sy(0.62 * titleScale),
               lineHeight: 0.95,
               fontWeight: 400,
             }}
@@ -176,7 +253,7 @@ function FrontPanel({
             {title}
           </h1>
         </div>
-        <p style={{ margin: `${sy(0.28)}px 0 0`, fontSize: sy(0.22), lineHeight: 1.3, maxWidth: '95%' }}>{subtitle}</p>
+        <p style={{ margin: `${sy(0.28)}px 0 0`, fontSize: sy(0.22 * subtitleScale), lineHeight: 1.3, maxWidth: '95%' }}>{subtitle}</p>
         <p style={{ marginTop: 'auto', marginBottom: 0, letterSpacing: '0.12em', textTransform: 'uppercase', fontSize: sy(0.14) }}>
           Low-content paperback
         </p>

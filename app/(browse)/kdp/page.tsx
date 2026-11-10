@@ -1,14 +1,54 @@
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { pageCountLabel } from "@/components/kdp/BookSheet";
+import { ProductTable, STATUS_STYLES, type ProductRow } from "@/components/ProductTable";
 import { loadBooks, type LoadedBook } from "@/lib/kdpBooks";
 import { TRIM_SPECS, formatInches } from "@/lib/kdpSizes";
 import { LOW_CONTENT_TEMPLATE_IDS, LOW_CONTENT_TEMPLATE_SUMMARIES } from "@/lib/kdpTemplates";
+import { loadProjects, type LoadedLowContentBook } from "@/lib/lowcontent/books";
 
 export const metadata = {
-  title: "KDP wireframes",
-  description: "Unbranded paperback interior wireframes, including low-content books.",
+  title: "KDP",
+  description: "Paperback interior wireframes and low-content books for KDP.",
 };
+
+function bookStatus(book: LoadedBook): ProductRow["status"] {
+  if (book.errors.length > 0) return { label: "Has errors", style: STATUS_STYLES.warning };
+  if (!book.geometry) return { label: "Not ready", style: STATUS_STYLES.idea };
+  return { label: "Ready", style: STATUS_STYLES.ready };
+}
+
+function bookDetail(book: LoadedBook): string {
+  if (!book.manifest) return "Manifest needs fixes";
+  const trim = TRIM_SPECS[book.manifest.trim];
+  const pages = book.geometry ? pageCountLabel(book.geometry.pageCount) : "not ready";
+  const isbn =
+    book.manifest.content === "low-content"
+      ? book.manifest.isbn === "none" ? " · no ISBN" : " · own ISBN"
+      : "";
+  return `${book.manifest.format} · ${trim?.label ?? book.manifest.trim} · ${pages}${isbn}`;
+}
+
+function bookRows(books: LoadedBook[]): ProductRow[] {
+  return books.map((book) => ({
+    id: book.id,
+    href: `/kdp/${book.id}`,
+    title: book.manifest?.kdp.title ?? book.id,
+    project: book.content ?? "unset",
+    status: bookStatus(book),
+    detail: bookDetail(book),
+  }));
+}
+
+function lcStatus(book: LoadedLowContentBook): ProductRow["status"] {
+  if (book.errors.length > 0) return { label: "Has errors", style: STATUS_STYLES.warning };
+  if (!book.geometry) return { label: "Not ready", style: STATUS_STYLES.idea };
+  return { label: "Ready", style: STATUS_STYLES.ready };
+}
+
+function lcDetail(book: LoadedLowContentBook): string {
+  if (!book.manifest) return "Manifest needs fixes";
+  return `${book.manifest.trim} · ${book.manifest.paper} · ${book.manifest.ink} · ${book.manifest.pageCount} pages`;
+}
 
 export default function KdpIndexPage() {
   const books = loadBooks();
@@ -16,21 +56,63 @@ export default function KdpIndexPage() {
   const standard = books.filter((book) => book.content === "standard");
   const ungrouped = books.filter((book) => book.content === null);
 
+  const lcProjects = loadProjects();
+  const totalLcBooks = lcProjects.reduce((sum, g) => sum + g.books.length, 0);
+
   return (
     <>
       <Breadcrumbs items={[{ label: "KDP" }]} />
-      <h1 className="mt-2 text-2xl font-semibold">KDP wireframes</h1>
+      <h1 className="mt-2 text-2xl font-semibold">KDP</h1>
       <p className="mt-1 max-w-2xl text-neutral-600">
-        Grayscale paperback interiors. Low-content books are log books, trackers, journals, planners, and notebooks:
-        the interior repeats a fill-in template. They use the same trim, bleed, gutter, and metadata checks as every
-        other book. Print-ready PDFs are built with <code className="text-sm">npm run book-pdf</code>.
+        Paperback interiors and low-content books for KDP.
+        Print-ready PDFs are built with <code className="text-sm">npm run book-pdf</code>.
+      </p>
+      <p className="mt-2 text-sm text-neutral-500">
+        {books.length} wireframes · {totalLcBooks} low-content books
       </p>
 
-      <BookSection
-        title="Low-content books"
-        description="Set content to low-content, pick isbn none or own, and repeat a template until the book has at least 24 pages."
-        books={lowContent}
-      />
+      {/* ── Low-content books (themed, from lowcontent/) ── */}
+      {lcProjects.some((g) => g.books.length > 0) && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold text-neutral-900">Low-content books ({totalLcBooks})</h2>
+          <p className="mt-1 max-w-2xl text-sm text-neutral-600">
+            Journals, planners, logbooks, and trackers. Each book is a manifest under <code className="text-sm">lowcontent/</code>.
+            Interiors and covers render to print-ready PDFs.
+          </p>
+          {lcProjects.map((group) => {
+            const rows: ProductRow[] = group.books.map((book) => ({
+              id: book.id,
+              href: `/lowcontent/${book.id}`,
+              title: book.manifest?.title ?? book.id,
+              project: group.project?.title ?? group.slug,
+              status: lcStatus(book),
+              detail: lcDetail(book),
+            }));
+            if (rows.length === 0) return null;
+            return (
+              <div key={group.slug} className="mt-3">
+                <h3 className="text-sm font-semibold text-neutral-700">
+                  {group.project?.title ?? group.slug} ({group.books.length})
+                </h3>
+                {group.errors.length > 0 && <p className="mt-1 text-sm text-neutral-700">{group.errors[0]}</p>}
+                <ProductTable rows={rows} />
+              </div>
+            );
+          })}
+        </section>
+      )}
+
+      {/* ── Wireframe low-content books (from kdp/) ── */}
+      {lowContent.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold text-neutral-900">Wireframe low-content ({lowContent.length})</h2>
+          <p className="mt-1 max-w-2xl text-sm text-neutral-600">
+            Grayscale wireframe interiors. Set content to low-content, pick isbn none or own, and repeat a template.
+          </p>
+          <ProductTable rows={bookRows(lowContent)} />
+        </section>
+      )}
+
       <h2 className="mt-8 text-sm font-semibold tracking-wide text-neutral-500 uppercase">Page templates</h2>
       <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
         {LOW_CONTENT_TEMPLATE_IDS.map((id) => (
@@ -41,63 +123,25 @@ export default function KdpIndexPage() {
         ))}
       </ul>
 
-      {standard.length > 0 ? (
-        <BookSection
-          title="Other interiors"
-          description="Standard paperbacks. These still need an ISBN at upload. This wireframe does not store that number."
-          books={standard}
-        />
-      ) : null}
-      {ungrouped.length > 0 ? (
-        <BookSection title="Needs a content field" description="These manifests did not say standard or low-content." books={ungrouped} />
-      ) : null}
-    </>
-  );
-}
-
-function BookSection({ title, description, books }: { title: string; description: string; books: LoadedBook[] }) {
-  return (
-    <section className="mt-8">
-      <h2 className="text-lg font-semibold text-neutral-900">{title}</h2>
-      <p className="mt-1 max-w-2xl text-sm text-neutral-600">{description}</p>
-      {books.length === 0 ? (
-        <p className="mt-4 text-neutral-600">No books in this section yet. Add a manifest under kdp/.</p>
-      ) : (
-        <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {books.map((book) => {
-            const bookTitle = book.manifest?.kdp.title ?? book.id;
-            const trim = book.manifest ? TRIM_SPECS[book.manifest.trim] : null;
-            const isbn =
-              book.manifest?.content === "low-content"
-                ? book.manifest.isbn === "none"
-                  ? " · no ISBN"
-                  : " · own ISBN"
-                : "";
-            return (
-              <li key={book.id}>
-                <Link
-                  href={`/kdp/${book.id}`}
-                  className="block rounded-xl border border-neutral-200 bg-white p-4 shadow-sm transition hover:border-neutral-400 hover:shadow-md"
-                >
-                  <h3 className="font-semibold text-neutral-900">{bookTitle}</h3>
-                  <p className="mt-1 text-sm text-neutral-600">
-                    {book.manifest
-                      ? `${book.manifest.format} · ${trim?.label ?? book.manifest.trim} · ${book.geometry ? pageCountLabel(book.geometry.pageCount) : "not ready"}${isbn}`
-                      : "Manifest needs fixes"}
-                  </p>
-                  {book.geometry ? (
-                    <p className="mt-2 text-xs text-neutral-500">
-                      Bleed page {formatInches(book.geometry.pageWidthIn)} × {formatInches(book.geometry.pageHeightIn)} ·
-                      gutter {formatInches(book.geometry.gutterIn)}
-                    </p>
-                  ) : null}
-                  {book.errors.length > 0 ? <p className="mt-2 text-xs text-neutral-700">{book.errors[0]}</p> : null}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      {standard.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold text-neutral-900">Other interiors ({standard.length})</h2>
+          <p className="mt-1 max-w-2xl text-sm text-neutral-600">
+            Standard paperbacks. These still need an ISBN at upload. This wireframe does not store that number.
+          </p>
+          <ProductTable rows={bookRows(standard)} />
+        </section>
       )}
-    </section>
+
+      {ungrouped.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold text-neutral-900">Needs a content field ({ungrouped.length})</h2>
+          <p className="mt-1 max-w-2xl text-sm text-neutral-600">
+            These manifests did not say standard or low-content.
+          </p>
+          <ProductTable rows={bookRows(ungrouped)} />
+        </section>
+      )}
+    </>
   );
 }

@@ -1,0 +1,16 @@
+{
+  "id": "creative-tools",
+  "title": "Creative Tools",
+  "source": { "kind": "standalone" },
+  "sizes": ["30x36", "30x72", "30x180"],
+  "tile": {
+    "widthIn": 6,
+    "heightIn": 6
+  },
+  "colors": {
+    "background": "#0D1117",
+    "foreground": "#C084FC",
+    "accent": "#C084FC"
+  },
+  "icons": ["PenTool", "Palette", "Layers"]
+}

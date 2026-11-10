@@ -1,0 +1,16 @@
+{
+  "id": "photo-icons",
+  "title": "Photo Icons",
+  "source": { "kind": "standalone" },
+  "sizes": ["30x36", "30x72", "30x180"],
+  "tile": {
+    "widthIn": 6,
+    "heightIn": 6
+  },
+  "colors": {
+    "background": "#18181B",
+    "foreground": "#FB923C",
+    "accent": "#FB923C"
+  },
+  "icons": ["Camera", "Film", "Crop"]
+}

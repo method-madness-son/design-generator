@@ -13,6 +13,35 @@
         "printSize": "11x17",
         "align": "center"
       }
+    },
+    "8x10": {
+      "width": 2400,
+      "height": 3000,
+      "bytes": 422201,
+      "sha256": "506dc67fe46a23df1fbcb33e9af552af9d289b67cf140877d4bf10b9d4596885",
+      "savedAt": "2026-11-06T03:31:42.635Z",
+      "selection": {
+        "iconRem": "14",
+        "titleRem": "5.5",
+        "subtitleRem": "3.25"
+      }
+    },
+    "11x17-lavender": {
+      "width": 3300,
+      "height": 5100,
+      "bytes": 808744,
+      "sha256": "d031bf039d5a11c334781b54eef3f6dc60fe2d50babaaeb3a65e68b12f06cc5e",
+      "savedAt": "2026-11-08T03:19:42.308Z",
+      "selection": {
+        "subtitleColor": "Lavender",
+        "iconColor": "Lavender",
+        "backgroundColor": "Lavender",
+        "iconRem": "22.75",
+        "titleRem": "5.5",
+        "subtitleRem": "3.25",
+        "printSize": "11x17"
+      },
+      "variant": "lavender"
     }
   }
 }

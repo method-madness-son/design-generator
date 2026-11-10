@@ -11,6 +11,10 @@ export function coverConceptFor(bookId: string, value: string | undefined): Cove
   return 'a';
 }
 
+export function hasCustomCover(bookId: string): boolean {
+  return bookId === 'nd-planner' || bookId === 'dev-notebook';
+}
+
 const NAVY = '#1D3557';
 const PAPER = '#F1FAEE';
 const POWDER = '#A8DADC';
@@ -25,9 +29,23 @@ type Props = {
   mode: 'print' | 'preview';
   variant: 'wrap' | 'front';
   pageCount: number;
+  titleRem?: number;
+  subtitleRem?: number;
+  defaultTitleRem?: number;
+  defaultSubtitleRem?: number;
 };
 
-export function NdCover({ concept, geometry, mode, variant, pageCount }: Props) {
+export function NdCover({
+  concept,
+  geometry,
+  mode,
+  variant,
+  pageCount,
+  titleRem,
+  subtitleRem,
+  defaultTitleRem,
+  defaultSubtitleRem,
+}: Props) {
   const widthPx = variant === 'front' ? Math.round(geometry.trimWidthIn * 300) : geometry.fullWidthPx;
   const heightPx = variant === 'front' ? Math.round(geometry.trimHeightIn * 300) : geometry.fullHeightPx;
   const widthIn = variant === 'front' ? geometry.trimWidthIn : geometry.fullWidthIn;
@@ -41,7 +59,22 @@ export function NdCover({ concept, geometry, mode, variant, pageCount }: Props) 
   if (variant === 'front') {
     return (
       <div data-lc-front-ready="1" style={{ position: 'relative', width: widthPx, height: heightPx, background: concept === 'b' ? BUTTER : PAPER }}>
-        <Front concept={concept} sx={sx} sy={sy} fredoka={fredoka} work={work} pad={COVER_SAFE_INSET_IN} />
+        <Front
+          concept={concept}
+          sx={sx}
+          sy={sy}
+          fredoka={fredoka}
+          work={work}
+          pad={COVER_SAFE_INSET_IN}
+        titleRem={titleRem}
+        subtitleRem={subtitleRem}
+        defaultTitleRem={defaultTitleRem}
+        defaultSubtitleRem={defaultSubtitleRem}
+          titleRem={titleRem}
+          subtitleRem={subtitleRem}
+          defaultTitleRem={defaultTitleRem}
+          defaultSubtitleRem={defaultSubtitleRem}
+        />
       </div>
     );
   }
@@ -62,6 +95,10 @@ export function NdCover({ concept, geometry, mode, variant, pageCount }: Props) 
         fredoka={fredoka}
         work={work}
         pad={COVER_SAFE_INSET_IN}
+        titleRem={titleRem}
+        subtitleRem={subtitleRem}
+        defaultTitleRem={defaultTitleRem}
+        defaultSubtitleRem={defaultSubtitleRem}
         offsetX={sx(geometry.front.x)}
         offsetY={sy(geometry.front.y)}
         width={sx(geometry.front.width)}
@@ -131,6 +168,10 @@ function Front({
   offsetY = 0,
   width,
   height,
+  titleRem,
+  subtitleRem,
+  defaultTitleRem = 4.5,
+  defaultSubtitleRem = 3.25,
 }: {
   concept: CoverConcept;
   sx: (inches: number) => number;
@@ -142,8 +183,13 @@ function Front({
   offsetY?: number;
   width?: number;
   height?: number;
+  titleRem?: number;
+  subtitleRem?: number;
+  defaultTitleRem?: number;
+  defaultSubtitleRem?: number;
 }) {
   const positioned = width !== undefined && height !== undefined;
+  const titleScale = titleRem && defaultTitleRem ? titleRem / defaultTitleRem : 1;
   return (
     <div
       data-lc-front="1"
@@ -161,15 +207,15 @@ function Front({
       }}
     >
       <div style={{ position: 'absolute', left: sx(pad), right: sx(pad), top: sy(pad), bottom: sy(pad), display: 'flex', flexDirection: 'column' }}>
-        {concept === 'a' ? <BrainTabs sx={sx} sy={sy} fredoka={fredoka} work={work} /> : null}
-        {concept === 'b' ? <BrainDump fredoka={fredoka} work={work} sy={sy} /> : null}
-        {concept === 'c' ? <NowNextLater fredoka={fredoka} work={work} sy={sy} /> : null}
+        {concept === 'a' ? <BrainTabs sx={sx} sy={sy} fredoka={fredoka} work={work} titleScale={titleScale} /> : null}
+        {concept === 'b' ? <BrainDump fredoka={fredoka} work={work} sy={sy} titleScale={titleScale} /> : null}
+        {concept === 'c' ? <NowNextLater fredoka={fredoka} work={work} sy={sy} titleScale={titleScale} /> : null}
       </div>
     </div>
   );
 }
 
-function BrainTabs({ sx, sy, fredoka, work }: { sx: (n: number) => number; sy: (n: number) => number; fredoka: string; work: string }) {
+function BrainTabs({ sx, sy, fredoka, work, titleScale = 1 }: { sx: (n: number) => number; sy: (n: number) => number; fredoka: string; work: string; titleScale?: number }) {
   const tabs = [
     { label: 'today', fill: PINK, active: true },
     { label: 'later', fill: LAVENDER, active: false },
@@ -178,7 +224,7 @@ function BrainTabs({ sx, sy, fredoka, work }: { sx: (n: number) => number; sy: (
   ];
   return (
     <>
-      <h1 style={{ margin: 0, fontFamily: fredoka, fontWeight: 600, fontSize: sy(0.92), lineHeight: 0.95, color: NAVY }}>
+      <h1 style={{ margin: 0, fontFamily: fredoka, fontWeight: 600, fontSize: sy(0.92 * titleScale), lineHeight: 0.95, color: NAVY }}>
         ADHD
         <br />
         Planner
@@ -215,12 +261,12 @@ function BrainTabs({ sx, sy, fredoka, work }: { sx: (n: number) => number; sy: (
   );
 }
 
-function BrainDump({ fredoka, work, sy }: { fredoka: string; work: string; sy: (n: number) => number }) {
+function BrainDump({ fredoka, work, sy, titleScale = 1 }: { fredoka: string; work: string; sy: (n: number) => number; titleScale?: number }) {
   return (
     <>
       <div style={{ position: 'relative', marginTop: sy(0.8) }}>
         <div style={{ position: 'absolute', left: '8%', right: '6%', top: sy(-0.15), height: sy(1.6), background: PINK, borderRadius: '50%', opacity: 0.95 }} />
-        <h1 style={{ position: 'relative', margin: 0, fontFamily: fredoka, fontWeight: 700, fontSize: sy(1.15), lineHeight: 0.9, color: NAVY }}>
+        <h1 style={{ position: 'relative', margin: 0, fontFamily: fredoka, fontWeight: 700, fontSize: sy(1.15 * titleScale), lineHeight: 0.9, color: NAVY }}>
           brain
           <br />
           dump
@@ -231,7 +277,7 @@ function BrainDump({ fredoka, work, sy }: { fredoka: string; work: string; sy: (
   );
 }
 
-function NowNextLater({ fredoka, work, sy }: { fredoka: string; work: string; sy: (n: number) => number }) {
+function NowNextLater({ fredoka, work, sy, titleScale = 1 }: { fredoka: string; work: string; sy: (n: number) => number; titleScale?: number }) {
   const bars = [
     { label: 'now', fill: PINK },
     { label: 'next', fill: POWDER },
@@ -239,7 +285,7 @@ function NowNextLater({ fredoka, work, sy }: { fredoka: string; work: string; sy
   ];
   return (
     <>
-      <h1 style={{ margin: 0, fontFamily: fredoka, fontWeight: 600, fontSize: sy(0.8), lineHeight: 0.95, color: NAVY }}>ADHD Planner</h1>
+      <h1 style={{ margin: 0, fontFamily: fredoka, fontWeight: 600, fontSize: sy(0.8 * titleScale), lineHeight: 0.95, color: NAVY }}>ADHD Planner</h1>
       <div style={{ marginTop: sy(0.45), display: 'flex', flexDirection: 'column', gap: sy(0.16) }}>
         {bars.map((bar) => (
           <div key={bar.label} style={{ background: bar.fill, color: NAVY, fontFamily: fredoka, fontWeight: 600, fontSize: sy(0.52), borderRadius: sy(0.12), padding: `${sy(0.12)}px ${sy(0.2)}px` }}>
@@ -266,6 +312,10 @@ function Back({
   sy: (n: number) => number;
   work: string;
   pageCount: number;
+  titleRem?: number;
+  subtitleRem?: number;
+  defaultTitleRem?: number;
+  defaultSubtitleRem?: number;
 }) {
   const pad = geometry.safeInsetIn;
   const textBottom = geometry.barcode.y - 0.2;

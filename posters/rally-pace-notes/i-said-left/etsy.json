@@ -1,4 +1,76 @@
 {
-  "etsy": null,
-  "research": null
+  "etsy": {
+    "title": "I Said Left Rally Car Poster, Funny Co-Driver Wall Art, Rally Driver Gift, Garage Race Decor",
+    "description": "A funny rally car poster with a co-driver's frustrated call in intercom style: I SAID LEFT, with two choices—Left and Other left.\n\nWHAT YOU'LL GET\n• A physical poster print, shipped directly to you\n• Available in 11×17 in\n• Printed on premium matte paper at 300 DPI\n\nHOW TO USE\nFrame and hang it in a garage, man cave, home office, or on a rally fan's wall. A great gift for the navigator who never gets listened to.\n\nAn original design with no team, series, or manufacturer marks.\n\nThis listing is a physical poster print. Thank you for supporting a small shop!",
+    "tags": [
+      "rally car poster",
+      "funny racing poster",
+      "i said left",
+      "co driver gift",
+      "rally driver gift",
+      "rally wall art",
+      "rally co driver",
+      "motorsport gift",
+      "garage race decor",
+      "racing man cave",
+      "pace notes",
+      "rally driving gift",
+      "rallying poster"
+    ],
+    "category": "Home & Living > Home Decor > Posters"
+  },
+  "research": {
+    "researchedAt": "2026-11-04",
+    "method": "search-results",
+    "primaryKeyword": "funny rally car poster",
+    "etsy": {
+      "searchPhrases": [
+        "rally car poster",
+        "rally driver gift",
+        "rally car gift",
+        "rally gifts",
+        "rally drivers",
+        "rally wall art",
+        "rally driving gifts",
+        "rally fan gift",
+        "garage race decor",
+        "racing man cave",
+        "motorsport gift him"
+      ],
+      "competitorNotes": [
+        "No co-driver humor posters found on Etsy; humor products in the rally niche are limited to T-shirts, hoodies, and bumper stickers.",
+        "The closest co-driver-specific item is a hoodie with 'CO-DRIVER NAVIGATOR' branding and pace note symbols on the back.",
+        "Definition-style funny rally prints exist but focus on the driver, not the co-driver's perspective."
+      ]
+    },
+    "amazon": {
+      "searchPhrases": [
+        "funny rally car gift",
+        "rally co driver gift",
+        "rally pace notes co driver",
+        "funny rally driving gift"
+      ],
+      "competitorNotes": [
+        "On Amazon, co-driver items are only apparel: a 'Rally Pace Notes Co Driver' T-shirt and a rally driver joke tote bag.",
+        "No funny co-driver posters or prints found on Amazon."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/rally_car_poster",
+      "https://www.etsy.com/market/rally_driver_gift",
+      "https://www.etsy.com/market/rally_car_gift",
+      "https://www.etsy.com/market/rally_gifts",
+      "https://www.etsy.com/market/rally_drivers",
+      "https://www.etsy.com/market/rally_wall_art",
+      "https://www.etsy.com/market/rally_driving_gifts",
+      "https://www.etsy.com/market/garage_race_decor",
+      "https://www.etsy.com/mx/market/racing_man_cave",
+      "https://www.etsy.com/market/motorsport_gift_him",
+      "https://www.etsy.com/dk-en/market/rally_driver_gift",
+      "https://www.amazon.com/Rally-Driver-Car-Motorsport-T-Shirt/dp/B0H28RYW9B",
+      "https://www.amazon.com/rally-car-shirt/s?k=rally+car+shirt",
+      "https://www.amazon.com/Funny-Rally-Driver-Gift-Okayest/dp/B0D7BRBNJ3"
+    ],
+    "notes": "Keyword phrases from research/keywords/rally.json (search-results, 2026-11-01). 'funny rally car poster' combines humor angle with the indexed 'rally car poster'. Co-driver humor posters are a gap on both Etsy and Amazon. 'i said left' has no search evidence; it is the printed text. No priceRange: comparable humor rally prints were not found."
+  }
 }

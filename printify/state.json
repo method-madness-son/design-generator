@@ -7,6 +7,10 @@
             "11x17": {
               "sha256": "0123851fab1b19e8b24d5a16f3c75fa5354b414de96b53fac8d3483da4504463",
               "imageId": "6ae7b4b16f79912dcec9e736"
+            },
+            "8x10": {
+              "sha256": "e97707cff76fbb774fa2c9d78cb229f7f1998c54d9d5a875f69a3509e793f47e",
+              "imageId": "6aed4d8b934832c3ad2c3a33"
             }
           },
           "productId": "6ae7b0e2a895c5bd4e00be1f",
@@ -18,6 +22,10 @@
             "11x17": {
               "sha256": "77694f98274d8727826007f08da7933a1f1cab09dbbd82949f5ff6c676e10c46",
               "imageId": "6ae7b4b4a1c93c0099f8850f"
+            },
+            "8x10": {
+              "sha256": "87e5cc95af342aac31b3815f36705f458432b141bb67ea61af8da5516a142ae4",
+              "imageId": "6aed4d8dba00f78e362734d5"
             }
           },
           "productId": "6ae7b4b6e9fcc76a29090984",
@@ -29,6 +37,10 @@
             "11x17": {
               "sha256": "da6f80d1be415082d8205f3a795d2c1be2e27db0a715bab2c52234c357806c9c",
               "imageId": "6ae7b4b853e3549918cdf234"
+            },
+            "8x10": {
+              "sha256": "2237c977d5a70d040635c46fab1f5b5e09472967ac0d78cc320cfcc8d93368c0",
+              "imageId": "6aed4d90c3a5aab8e4d4644b"
             }
           },
           "productId": "6ae7b4b9a895c5bd4e00c17a",
@@ -40,6 +52,10 @@
             "11x17": {
               "sha256": "c47b122a21c2a88da2ef5f2644d6442cb34cba2b65290a5771eefcb5dc52b63f",
               "imageId": "6ae7b4bd284e7884e7680b9c"
+            },
+            "8x10": {
+              "sha256": "1de5f667464b45b855c0b98de7515ceef1f1a394746ab2718b0a44cee5357845",
+              "imageId": "6aed4d95287d65cb1d47a6b6"
             }
           },
           "productId": "6ae7b4be202568f73b03374b",
@@ -51,6 +67,10 @@
             "11x17": {
               "sha256": "a32e1f0d1573c298003e832326868d8cb3f75663f727bb1988a1b9f135aee063",
               "imageId": "6ae7b4c07a4e15edf248c700"
+            },
+            "8x10": {
+              "sha256": "eea72e2634c8b8b6c716e84ba6435c6ef1d1704af37806ef9af6b3c79c70da99",
+              "imageId": "6aed4d9918c19e2910ebfc19"
             }
           },
           "productId": "6ae7b4c1cefd302331098c43",
@@ -62,6 +82,10 @@
             "11x17": {
               "sha256": "349ba59db500dd5b807322ec95369d877d5f42c14d6094835e2f7fbc8db5bd98",
               "imageId": "6ae7b4c3064d8e0b943a0ec1"
+            },
+            "8x10": {
+              "sha256": "4b50eb95788d4c47be932bf92ea4d90056fe7558be35904e8aee4215bb17f0d6",
+              "imageId": "6aed4d9b585ddacb02a6a0c2"
             }
           },
           "productId": "6ae7b4c4e9fcc76a29090998",
@@ -73,6 +97,10 @@
             "11x17": {
               "sha256": "c83b03c4c95b54fca5b2fa3642d28ae0e23a08c79c3ee947b6921e196c72894f",
               "imageId": "6ae7b4c6201dcd0079c3ccae"
+            },
+            "8x10": {
+              "sha256": "b95b7b561700ae1620995f1308b73ac27ef6f3f21e7df2a69d05c0e20f8108fb",
+              "imageId": "6aed4da118c19e2910ebfc1a"
             }
           },
           "productId": "6ae7b4c873a3950d580ae310",
@@ -95,6 +123,10 @@
             "11x17": {
               "sha256": "453668929d648ce2bea8647f44aa69243d38bfad2225851b6042d5ab8c1da173",
               "imageId": "6ae7b4ccae7cac807c805f0b"
+            },
+            "8x10": {
+              "sha256": "c18a577133af9ad3063b409be979b3f247a549e1d25fa881a9f7cbf539ed8c03",
+              "imageId": "6aed4da56122e07d428be3d6"
             }
           },
           "productId": "6ae7b4ce202568f73b03376e",
@@ -211,6 +243,10 @@
             "11x17": {
               "sha256": "84ab7ca2ae7c2ce90b30590d635fc397f0bd5ce7dec5d0a27748dd42ea99e329",
               "imageId": "6ae7b8f2954c69ea186226e1"
+            },
+            "8x10": {
+              "sha256": "a5a41ce3d65a1bee28993d1cf782960d9e1393664cba8b10168173f4cfa3a2d6",
+              "imageId": "6aed4cadddc928a6741f4e66"
             }
           },
           "productId": "6ae7b8f36aa5485ffc0a16e7",
@@ -237,6 +273,10 @@
             "11x17": {
               "sha256": "c7472a4549a7bd82c85d2b2387c8e19998590758aa870f04988b32a6c9ddeb26",
               "imageId": "6ae7b8faa6ec1e75c1ff05a5"
+            },
+            "8x10": {
+              "sha256": "736ffeffcabd20906eeb8c5a47adb23118405a282095a1f424f7340995d2c79a",
+              "imageId": "6aed4cb1da027cb28ddcd604"
             }
           },
           "productId": "6aebff2493a19fce550c3d8a",
@@ -274,6 +314,10 @@
             "11x17": {
               "sha256": "bb3c310b292ca5225b99975cf62d4477910a82612d47023b61dda3f57c715180",
               "imageId": "6aebff4e68dd2cb0bf93a251"
+            },
+            "8x10": {
+              "sha256": "64abdc4de90232c8e28b1f9f6175e3168409bd2036b3722befbad48d5d1a9e82",
+              "imageId": "6aed4ce5270a61d24fdf4517"
             }
           },
           "productId": "6aebff515c1b6abf5a0f452f",
@@ -285,6 +329,10 @@
             "11x17": {
               "sha256": "dae7f7e1c5e3da54c10eabc53bd657609d50e742d6b999022ec0facb7066556c",
               "imageId": "6ae7bb737e87248d54c1f0e2"
+            },
+            "8x10": {
+              "sha256": "c29e40d76f9a3744aa70d9030d7472c59e35bb26bf590f891397ff6507660b2d",
+              "imageId": "6aed4d613083c90c5213f215"
             }
           },
           "productId": "6ae7bb74f9c00c9ec00a144e",
@@ -296,6 +344,10 @@
             "11x17": {
               "sha256": "a41de4f3e023111b4aa71f1051c59dd3293c7dd1d8ac87da1b1e4dd8b22bb57a",
               "imageId": "6ae7bb79a6ec1e75c1ff0779"
+            },
+            "8x10": {
+              "sha256": "be280513baf0a44a7512c8ce68cb825357cdc9f00610b99de40d1b0dd121ef8a",
+              "imageId": "6aed4d644037d55156dc30c5"
             }
           },
           "productId": "6ae7bb7a6aa5485ffc0a1946",
@@ -307,6 +359,10 @@
             "11x17": {
               "sha256": "793ce23f87f61831a5c783bf139d44ef627335337f9f3fb3422f1dfa7afb1197",
               "imageId": "6ae7bb7cda3a96960e11f159"
+            },
+            "8x10": {
+              "sha256": "ae35ca90271335737a6b154764abbe3dfc42e275b819d588555ef5ae32a11c4b",
+              "imageId": "6aed4d66492ac174e2afb8cb"
             }
           },
           "productId": "6ae7bb7d202568f73b033e04",
@@ -318,6 +374,10 @@
             "11x17": {
               "sha256": "f07b4148e0d8a557ce775e15fc82676da658a6d3def4c4e41bdb23677e6645e8",
               "imageId": "6ae7bb83c6f36914e59c1c82"
+            },
+            "8x10": {
+              "sha256": "6c53409a8a461987aaad8dc8f02e9fbc6062017187742783179aca8567743a03",
+              "imageId": "6aed4d6a12dfd8886da9bcb9"
             }
           },
           "productId": "6ae7bb84263bab186e0457c0",
@@ -329,10 +389,14 @@
             "11x17": {
               "sha256": "df354c9d75ded44acdd2d3d15063cb7f61514d0320e9c0319dfe16791e3b8044",
               "imageId": "6ae7bc28c807690aa05e6e85"
+            },
+            "8x10": {
+              "sha256": "b5bf41e55cf9c01620bfd99a39addf3cc9d76c89609e422900a61021a3792c29",
+              "imageId": "6aed4d34ba86c5c1605a22ba"
             }
           },
           "productId": "6ae7bb89a895c5bd4e00c784",
-          "publishedAt": "2026-11-02T23:54:02.968Z",
+          "publishedAt": "2026-11-09T00:34:42.440Z",
           "etsyUrl": "https://www.etsy.com/listing/4607812797/body-doubling-sign-adhd-desk-sign-for"
         },
         "neuro-zones/collaboration-zone": {
@@ -340,10 +404,14 @@
             "11x17": {
               "sha256": "8c6bd75e36593c8b946aa5521da947821e0da1d708b779493007e0a9d4524555",
               "imageId": "6ae7bb8a0cbf60d836c1901f"
+            },
+            "8x10": {
+              "sha256": "506dc67fe46a23df1fbcb33e9af552af9d289b67cf140877d4bf10b9d4596885",
+              "imageId": "6aed4d38ada0cf453d2558df"
             }
           },
           "productId": "6ae922d5d9b54c795c0cba71",
-          "publishedAt": "2026-11-02T23:55:03.031Z",
+          "publishedAt": "2026-11-09T00:34:44.384Z",
           "etsyUrl": "https://www.etsy.com/listing/4608597664/teamwork-poster-teamwork-zone-classroom"
         },
         "neuro-zones/decompression-room": {
@@ -351,10 +419,14 @@
             "11x17": {
               "sha256": "4a0b6543762d9be953c69138e74f912acc5091ca7c15ec33d2c691fc784cdf4f",
               "imageId": "6ae7bc010fa0a3d6e18e2e5d"
+            },
+            "8x10": {
+              "sha256": "3404c58dcca10da171aa30111450b574363ced4b093b2dd0295f3fcc120ff154",
+              "imageId": "6aed4d3a889ec2a260005752"
             }
           },
           "productId": "6ae7bb8f6f1c67a16d06279d",
-          "publishedAt": "2026-11-02T23:54:04.796Z",
+          "publishedAt": "2026-11-09T00:34:46.320Z",
           "etsyUrl": "https://www.etsy.com/listing/4607834150/relax-room-sign-unwind-zone"
         },
         "neuro-zones/headphones-on": {
@@ -362,10 +434,14 @@
             "11x17": {
               "sha256": "67f05ee78c7b93dfce326ad224586366acc411f45aa73c6f836f2bd80e85a64d",
               "imageId": "6ae7bc2bc6f36914e59c1c94"
+            },
+            "8x10": {
+              "sha256": "b30e74838a81c692333827ede43b3223e63e898027f46475f0a07fd98228c246",
+              "imageId": "6aed4d412ffd4945f2907db8"
             }
           },
           "productId": "6ae7bb927861ac1c1c043ab8",
-          "publishedAt": "2026-11-02T23:54:07.888Z",
+          "publishedAt": "2026-11-09T00:34:50.123Z",
           "etsyUrl": "https://www.etsy.com/listing/4607833934/headphones-on-sign-do-not-disturb-office"
         },
         "neuro-zones/quiet-zone": {
@@ -373,10 +449,14 @@
             "11x17": {
               "sha256": "457d1460d8b1e2084e51f374c862277dcbe360e268422024e04363eb69b8a81f",
               "imageId": "6ae7bc2e54b096c484d98689"
+            },
+            "8x10": {
+              "sha256": "c26293142109e034aae7d68da5e3276abaa9acf934d6d6628de33047deaea6a7",
+              "imageId": "6aed4d4416050867340816c7"
             }
           },
           "productId": "6ae7bb967861ac1c1c043abe",
-          "publishedAt": "2026-11-02T23:54:09.445Z",
+          "publishedAt": "2026-11-09T00:34:52.167Z",
           "etsyUrl": "https://www.etsy.com/listing/4607812677/quiet-zone-sign-soft-voices-library"
         },
         "neuro-zones/regulation-station": {
@@ -384,10 +464,14 @@
             "11x17": {
               "sha256": "5491e30bb86c3ca54f83b3e6e454732fc6f1da48c3ce9a8687d6337117d9f380",
               "imageId": "6ae7bc323792ddb01067b14e"
+            },
+            "8x10": {
+              "sha256": "46269015813e99b47dff41cd99a0c7802fe3362e6c9582ae177746ef6e716a75",
+              "imageId": "6aed4d46588f692a1010b4ec"
             }
           },
           "productId": "6ae7bb9aa895c5bd4e00c79c",
-          "publishedAt": "2026-11-02T23:54:10.986Z",
+          "publishedAt": "2026-11-09T00:34:53.866Z",
           "etsyUrl": "https://www.etsy.com/listing/4607833820/regulation-station-sign-calm-down-corner"
         },
         "neuro-zones/sensory-room": {
@@ -395,10 +479,14 @@
             "11x17": {
               "sha256": "b5de34d5a04b598b75ae08023f0834e0eb9b7d5e151d1bd9ea6a69ca3460dbc3",
               "imageId": "6ae7bc350b10779df28e7f7b"
+            },
+            "8x10": {
+              "sha256": "bdc8d2867bd8531cea6d6f04e42bcdc3fcbf68faaf15b9de9a24bdfe8d3e4202",
+              "imageId": "6aed4d49629a828c5ef847ac"
             }
           },
           "productId": "6ae7bb9d6aa5485ffc0a1963",
-          "publishedAt": "2026-11-02T23:54:12.471Z",
+          "publishedAt": "2026-11-09T00:34:55.644Z",
           "etsyUrl": "https://www.etsy.com/listing/4607812521/sensory-room-sign-calm-space-door-poster"
         },
         "neuro-zones/volume-check": {
@@ -406,10 +494,14 @@
             "11x17": {
               "sha256": "3d9d142365b38934b4ff2651d1d8fc70a1167aa028637b827f81f0352ed14c3d",
               "imageId": "6ae7bc067e87248d54c1f0f8"
+            },
+            "8x10": {
+              "sha256": "c3431979814149c5363597f11f97231af981bc93ef6bd155d9c3d8c90d05cc1d",
+              "imageId": "6aed4d4bbcdc05e2677a4f95"
             }
           },
           "productId": "6ae7bba0f5f22e3bbd08710c",
-          "publishedAt": "2026-11-02T23:54:13.883Z",
+          "publishedAt": "2026-11-09T00:34:57.697Z",
           "etsyUrl": "https://www.etsy.com/listing/4607812841/inside-voice-sign-volume-check-classroom"
         },
         "neuro-zones/fidget-friendly-zone": {
@@ -417,10 +509,14 @@
             "11x17": {
               "sha256": "ea6e6d1e24aeaf882ca86c02af4acd70d8438c6b97920d478d273e969a65cc29",
               "imageId": "6ae7bc04c6f36914e59c1c8d"
+            },
+            "8x10": {
+              "sha256": "455270fa2468ed3936340263c7fe7fe11c55b73a6712cdc7c62865375afebab4",
+              "imageId": "6aed4d3eb9591ae4a9a6dfc7"
             }
           },
           "productId": "6ae7bbddf5f22e3bbd087134",
-          "publishedAt": "2026-11-02T23:54:06.286Z",
+          "publishedAt": "2026-11-09T00:34:48.237Z",
           "etsyUrl": "https://www.etsy.com/listing/4607834100/stim-poster-fidget-friendly-zone-sign"
         },
         "stickers/adhd-brain/hyperfocus-loading": {
@@ -492,7 +588,8 @@
           },
           "productId": "6ae7f76b8e9b48fce40e6cab",
           "stickerType": "kiss-cut",
-          "etsyUrl": "https://www.etsy.com/listing/4607939280/debugging-sticker-consolelog-joke-laptop"
+          "etsyUrl": "https://www.etsy.com/listing/4607939280/debugging-sticker-consolelog-joke-laptop",
+          "publishedAt": "2026-11-10T00:52:32.376Z"
         },
         "stickers/tech/git-commit-wip": {
           "images": {
@@ -503,7 +600,8 @@
           },
           "productId": "6ae7f76d202568f73b037715",
           "stickerType": "kiss-cut",
-          "etsyUrl": "https://www.etsy.com/listing/4607918753/git-commit-sticker-friday-459-pm-wip"
+          "etsyUrl": "https://www.etsy.com/listing/4607918753/git-commit-sticker-friday-459-pm-wip",
+          "publishedAt": "2026-11-10T00:52:34.731Z"
         },
         "stickers/tech/z-index": {
           "images": {
@@ -514,7 +612,8 @@
           },
           "productId": "6ae7f76e8e9b48fce40e6cae",
           "stickerType": "kiss-cut",
-          "etsyUrl": "https://www.etsy.com/listing/4607918705/css-sticker-z-index-99999-joke-laptop"
+          "etsyUrl": "https://www.etsy.com/listing/4607918705/css-sticker-z-index-99999-joke-laptop",
+          "publishedAt": "2026-11-10T00:52:36.332Z"
         },
         "stickers/kitchen-table/oven-cookies-done": {
           "images": {
@@ -525,7 +624,8 @@
           },
           "productId": "6ae7f77178a013c46402566d",
           "stickerType": "kiss-cut",
-          "etsyUrl": "https://www.etsy.com/listing/4607939152/funny-baking-sticker-cookies-are-done"
+          "etsyUrl": "https://www.etsy.com/listing/4607939152/funny-baking-sticker-cookies-are-done",
+          "publishedAt": "2026-11-10T00:52:27.468Z"
         },
         "stickers/kitchen-table/preheated-emotionally": {
           "images": {
@@ -548,7 +648,8 @@
           },
           "productId": "6ae7f77425384741ae0afd4e",
           "stickerType": "kiss-cut",
-          "etsyUrl": "https://www.etsy.com/listing/4607939080/taste-test-sticker-clean-spoons-left"
+          "etsyUrl": "https://www.etsy.com/listing/4607939080/taste-test-sticker-clean-spoons-left",
+          "publishedAt": "2026-11-10T00:52:29.362Z"
         },
         "stickers/rally-pace-notes/pace-note-warning": {
           "images": {
@@ -702,6 +803,10 @@
             "11x17": {
               "sha256": "193a89f8b87a2e432fd6d5ad953b0301b5e3b08fad9932a80a92522e7177ca45",
               "imageId": "6aea7dafc40a0bea8b9fd158"
+            },
+            "8x10": {
+              "sha256": "6e8afe418837bbe0bf80906bd4371f8f6487dd866278ce006ddcc1f4194e9279",
+              "imageId": "6aed4ccf23b953eaa4d45fd9"
             }
           },
           "productId": "6aea7db07002cd705002f017",
@@ -713,6 +818,10 @@
             "11x17": {
               "sha256": "850757c2f28177a69be2b56e5218c84b87642c8c49d9b0af02e7d78ad7d575c7",
               "imageId": "6aea7db2b89b85c628c213bf"
+            },
+            "8x10": {
+              "sha256": "38f05fa942cc1ce50a3602f9f886c24ca163a1c6cfb059963e9d492ce8ed31bf",
+              "imageId": "6aed4cd8a758c53ac08e5b02"
             }
           },
           "productId": "6aea7db37002cd705002f019",
@@ -724,6 +833,10 @@
             "11x17": {
               "sha256": "866e5669d132b1e42ee5d0b27defea3136ba9cd455f7f37d3c4ba3c5d71ab755",
               "imageId": "6aea7db69fbc05ba970ec823"
+            },
+            "8x10": {
+              "sha256": "a537a9a606da79c506ae81f73eada92a3c8cac3dfd8c908e9a01f754ec64212f",
+              "imageId": "6aed4cdc36b3bfdaad3885d8"
             }
           },
           "productId": "6aea7db77002cd705002f01c",
@@ -735,6 +848,10 @@
             "11x17": {
               "sha256": "5b61af5b05da7836f6b1cd07ef4972cebc0f7298974d345e6de8bd16957ecb47",
               "imageId": "6aea7dba7c4d783b14d33db5"
+            },
+            "8x10": {
+              "sha256": "bb5e6b16005969fbb9c0f97ca4290f35421266a9fa511f5d1d0a1e300f4fd2d3",
+              "imageId": "6aed4ce2b915398f914b72d5"
             }
           },
           "productId": "6aea7dbc60bb0c1cf30b61de",
@@ -746,6 +863,10 @@
             "11x17": {
               "sha256": "1624fa18b5a5ccca523e5bb7b542763b82052d7b831700cebba19ce99b43d39e",
               "imageId": "6aea7dc0e052e3eeeb843bd6"
+            },
+            "8x10": {
+              "sha256": "8a395069706ae6a8cef7a0c607483ce9a4b9639fbb2a3eee2f5ae93e8241a086",
+              "imageId": "6aed4ceac969a8b42864982d"
             }
           },
           "productId": "6aea7dc27002cd705002f02b",
@@ -757,6 +878,10 @@
             "11x17": {
               "sha256": "d04b2288a1a62106532c492be30889a259663ff387d704c71a0467eb3e13b363",
               "imageId": "6aea7dd0d30156f79bb3ce9e"
+            },
+            "8x10": {
+              "sha256": "c5fe88835aae2002674f769edc504fe8fcd9ade785a22c95ef9098236d544a9f",
+              "imageId": "6aed4d102bc0fc7cd511ffa0"
             }
           },
           "productId": "6aea7dd160bb0c1cf30b61f6",
@@ -768,6 +893,10 @@
             "11x17": {
               "sha256": "673bd543cc177b5ea4e803477b3a3060031218f77892d721d2119c58a7f20df0",
               "imageId": "6aea7dd4cfc14c8a61b4d48f"
+            },
+            "8x10": {
+              "sha256": "2c0010c6be5a0189cfa9aa259d91ee5acd07aefec9113cc978204b0983d2de1a",
+              "imageId": "6aed4d1319e90192093c4ab8"
             }
           },
           "productId": "6aebff615a21d376410cbd27",
@@ -779,6 +908,10 @@
             "11x17": {
               "sha256": "121724cbc46e8259a50634f3327d209814d671e0b6ab0e012a343d0b63ff361f",
               "imageId": "6aea7dd8e052e3eeeb843bd7"
+            },
+            "8x10": {
+              "sha256": "ab64978ff5404f81b0d51d9a82eaaf3f9fddf4e777259c5edd1f5d159ba109c2",
+              "imageId": "6aed4d17caf555da4493d790"
             }
           },
           "productId": "6aea7dda31b9ce71670ad75e",
@@ -790,6 +923,10 @@
             "11x17": {
               "sha256": "008b9400c5a10f2c8ab24cf88d24cdfdc163c9d5bd802942790a6d1b359454ae",
               "imageId": "6aea7ddc2c7cc13d7dab4ed2"
+            },
+            "8x10": {
+              "sha256": "e85c8b98dc95cf30d826442964e22a877bce63f2f66cf7f07c846aeca4522e81",
+              "imageId": "6aed4d1c71c1715ad1592daa"
             }
           },
           "productId": "6aea7dde365c19e4ba07d61b",
@@ -801,6 +938,10 @@
             "11x17": {
               "sha256": "a9304df7b9328a4f90b58e686bdfcc7e6423f3a0b070b2274aaf18f94061526b",
               "imageId": "6aea7de0b08a5eaa06deec59"
+            },
+            "8x10": {
+              "sha256": "d669031f1a7c4e64f433a43e0b5dd9e192451f054c051617b6a24a5d99fd8487",
+              "imageId": "6aed4d1f472e877d3075ac9f"
             }
           },
           "productId": "6aebff66816dfc65f80e623f",
@@ -812,6 +953,10 @@
             "11x17": {
               "sha256": "05119c62c17bc7855ca15d56c371b69a5c1bc2b266fcaf2c4b3567d290b26274",
               "imageId": "6aea7def8ef405bc11f37f2e"
+            },
+            "8x10": {
+              "sha256": "82f05ca65d851407047825e1fb49ef3cb627bb21d076ef84a752a31f8c73a3b4",
+              "imageId": "6aed4d8567bce1ff1dc0e9de"
             }
           },
           "productId": "6aea7df0eba4cf9b840bf4d5",
@@ -823,6 +968,10 @@
             "11x17": {
               "sha256": "35ee3755d55002b4953ed82a11bb487189a352069866af8ba248ce44bc4b2474",
               "imageId": "6aea7df215c027ac83c457a8"
+            },
+            "8x10": {
+              "sha256": "bf7b585c5d2cc61074d40faa35f8ef273981ea054d835470121d6199faef7a58",
+              "imageId": "6aed4d885916bc19ff281df1"
             }
           },
           "productId": "6aea7df4eba4cf9b840bf4d7",
@@ -834,6 +983,10 @@
             "11x17": {
               "sha256": "aec68f75ed433d2698591531c16fe23ed59ad83279e557833d11261b9296f9c3",
               "imageId": "6aea7dfdc40a0bea8b9fd15d"
+            },
+            "8x10": {
+              "sha256": "0fb975bcac134d3353269b7d7ea2e7791d2993d26f3c1105acb8583ce2e8ec37",
+              "imageId": "6aed4d939d4bd1583a7d61fd"
             }
           },
           "productId": "6aea7dff60bb0c1cf30b6220",
@@ -845,6 +998,10 @@
             "11x17": {
               "sha256": "913717c3c3d4de47ad6638b59286e5776bbbc0fa810af088220a4d3be8e4b5a6",
               "imageId": "6aea7e09b0da570209277f7e"
+            },
+            "8x10": {
+              "sha256": "0409e1aa3051936766cbcad923babbf869d6a19a3a2028782edb52148f58620c",
+              "imageId": "6aed4d9e340641ca7addb8b8"
             }
           },
           "productId": "6aea7e0a365c19e4ba07d643",
@@ -856,11 +1013,208 @@
             "11x17": {
               "sha256": "ad64c1a765be91ce3dc793d930e6a9b23bd130e05f51fcd3a98c5a1c3e8fb4d5",
               "imageId": "6aebfffb40c05c23bd703c09"
+            },
+            "8x10": {
+              "sha256": "786d3d322e3fb68d47e881f4c406ac6b9fa268846592f8b5b34bb5f900fe93a6",
+              "imageId": "6aed4ccb18c19e2910ebfc0d"
             }
           },
           "productId": "6aebfffe816dfc65f80e6329",
           "publishedAt": "2026-11-05T04:03:12.234Z",
           "etsyUrl": "https://www.etsy.com/listing/4610233110/hockey-biscuit-definition-poster-funny"
+        },
+        "adhd-brain/thing-at-four": {
+          "images": {
+            "11x17": {
+              "sha256": "d25f58586cd8704ebbfee2eb70182467f121608ef414b45886f7a00840223c69",
+              "imageId": "6aed4c5123b953eaa4d45fcf"
+            },
+            "8x10": {
+              "sha256": "0964035d04db88c8a7eef02f49b1582c10fc98cdfeb5dbda73e0d774df73a35c",
+              "imageId": "6af1153f6faf2bc53376e1a0"
+            }
+          },
+          "productId": "6aed4c53b5789b99220fbb45",
+          "publishedAt": "2026-11-09T00:35:13.637Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612917200/adhd-funny-poster-i-have-a-400-thing-so"
+        },
+        "rally-pace-notes/hairpin-square-flat": {
+          "images": {
+            "11x17": {
+              "sha256": "b12e5fe99542277c8712429e4ea67a1c7a9d56ddabc2012ab1ecdc25ddaeee32",
+              "imageId": "6aed4c6d42f9f063be87335e"
+            },
+            "8x10": {
+              "sha256": "beeb9f46112d765c80fc045d37d91d7a75b8a16e26e5c885e0ffed8f5ff54938",
+              "imageId": "6aed4c6fa9d59c997dce0fa8"
+            }
+          },
+          "productId": "6aed4c70258438e5f006f7a5",
+          "publishedAt": "2026-11-09T00:35:24.903Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612917254/hairpin-square-flat-rally-car-poster"
+        },
+        "rally-pace-notes/i-said-left": {
+          "images": {
+            "11x17": {
+              "sha256": "feebe6ad372fa7e41a7db4f93cfef31988cdb7ed53653279917cfe73154d707e",
+              "imageId": "6aed4c73648856052cd20c7b"
+            },
+            "8x10": {
+              "sha256": "0a5e44f903a9d15b581d00d6df3e68caa1d7ac271f62a514a864c32564e114c4",
+              "imageId": "6aed4c74d5b3a13c4952d4d1"
+            }
+          },
+          "productId": "6aed4c7679d0fa5f5b08ce1c",
+          "publishedAt": "2026-11-09T00:35:26.556Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612901631/i-said-left-rally-car-poster-funny-co"
+        },
+        "rally-pace-notes/tulip": {
+          "images": {
+            "11x17": {
+              "sha256": "481f61544e0ccf478f97add848517eef612947bbfbddea3343f950b4ceb7035e",
+              "imageId": "6aed4c789f68224a6b026fe3"
+            },
+            "8x10": {
+              "sha256": "117ddda6b3cef059b745789e50dc17c48adf325df45ae3d2a9c890c185a98201",
+              "imageId": "6aed4c7a5750c7ec7003f8e3"
+            }
+          },
+          "productId": "6aed4c7c63a19581ef0eea08",
+          "publishedAt": "2026-11-09T00:35:28.315Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612917364/tulip-diagram-rally-wall-art-road-book"
+        },
+        "adhd-brain/spoon-count": {
+          "images": {
+            "11x17": {
+              "sha256": "ecd996d3e0dec2aa9d1dbd1cc5741df270743c4fad766c7b79550c0ded2c8030",
+              "imageId": "6aed4db389e9e1d37ff9868c"
+            },
+            "8x10": {
+              "sha256": "98d0596cbfc48826b12c8978582a013c3357f233e1e833be03d0f2f1e85731ac",
+              "imageId": "6aed4db44ed3ffd24214ad31"
+            }
+          },
+          "productId": "6aed4db6f01d5dd523060159",
+          "publishedAt": "2026-11-09T00:35:10.462Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612917136/spoon-theory-poster-todays-budget-1"
+        },
+        "webb-telescope/hubble-ultra-deep-field": {
+          "images": {
+            "11x17": {
+              "sha256": "8a184079253a10d3a873168a906563977cad69fbab214423abbf576181d125a2",
+              "imageId": "6af115b7cf4f97393d098a1a"
+            },
+            "8x10": {
+              "sha256": "acc1a37244be35510029f8da6942a9e912763b9c785b40733d7a30cb37f3bbe9",
+              "imageId": "6af115bb06191ba8e03d7403"
+            }
+          },
+          "productId": "6af115be5a7173e14f0b140e",
+          "publishedAt": "2026-11-09T00:37:19.831Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612902315/hubble-ultra-deep-field-poster-10000"
+        },
+        "webb-telescope/pillars-of-creation": {
+          "images": {
+            "11x17": {
+              "sha256": "50e1cf622749ff89f2e3d85f31739a3ca9f93eb5b5096f07dc11a3d9b5479897",
+              "imageId": "6af26a0936bed6f721b0fcaf"
+            },
+            "8x10": {
+              "sha256": "dfdcd23a827b775c3c1d4ed857117f20547b8acc6fbe4e0144bfb6a998aa53d0",
+              "imageId": "6af26a0c6411a90e92615945"
+            }
+          },
+          "productId": "6af26a2120c0113c0a0bc29f",
+          "publishedAt": "2026-11-10T00:49:39.562Z"
+        },
+        "webb-telescope/cigar-galaxy": {
+          "images": {
+            "11x17": {
+              "sha256": "f57002d1eddb8286ba53ae2069f63ab4101ed55859ad0e4b3b49ec3c61e869a8",
+              "imageId": "6af1305ad784435017c84f46"
+            },
+            "8x10": {
+              "sha256": "3596c143747dec61011684fcffcda4150bd027a4d926961061ffaaba20fe5fbb",
+              "imageId": "6af13064d02c80eb8eea155e"
+            }
+          },
+          "productId": "6af1306ae16bc2f47108c8c4",
+          "publishedAt": "2026-11-09T02:31:07.403Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612950803/cigar-galaxy-poster-messier-82-starburst"
+        },
+        "webb-telescope/hercules-a": {
+          "images": {
+            "11x17": {
+              "sha256": "1fe7a7bac61817a1ba28942617193d276935fca21e62f479e92150b52f476347",
+              "imageId": "6af130793bdd9232652f8630"
+            },
+            "8x10": {
+              "sha256": "b90c3198bf3dc0410dbe285a2e8da94eb4e6de70c539f0607144f11e0f671566",
+              "imageId": "6af1308216ad3bd7e83aa1a0"
+            }
+          },
+          "productId": "6af13086e16bc2f47108c8ff",
+          "publishedAt": "2026-11-09T02:31:35.837Z",
+          "etsyUrl": "https://www.etsy.com/listing/4612966622/hercules-a-poster-radio-galaxy-plasma"
+        },
+        "space-paintings/cosmic-vortex": {
+          "images": {
+            "11x17": {
+              "sha256": "0c3cfe295e7c50121f13514896af23923bb3f5b36b39ca8244e6414040d9e57e",
+              "imageId": "6af268b74854be547d3dff4c"
+            },
+            "8x10": {
+              "sha256": "92ce4fd6eb0118a5bde6972ae797fe17df9e310321a4ab004c7dc75ea49d2955",
+              "imageId": "6af268bc36bed6f721b0fc5b"
+            }
+          },
+          "productId": "6af268da6060004898047326",
+          "publishedAt": "2026-11-10T00:44:12.383Z",
+          "etsyUrl": "https://www.etsy.com/listing/4613665307/spiral-galaxy-painting-poster-cosmic"
+        },
+        "space-paintings/galaxy-field": {
+          "images": {
+            "11x17": {
+              "sha256": "d82c562320eaafd0120f6598681e0f027f02eab34c0fccb94835a42f7026b397",
+              "imageId": "6af268c1f61c84c4b30bad83"
+            },
+            "8x10": {
+              "sha256": "4de84544e99abe6b3173ae922a6163b58ae26caf286f24e4c690149703c64827",
+              "imageId": "6af268c4a993730558ed4666"
+            }
+          },
+          "productId": "6af268dd20c0113c0a0bc1a1",
+          "publishedAt": "2026-11-10T00:44:15.429Z",
+          "etsyUrl": "https://www.etsy.com/listing/4613665387/galaxy-field-painting-poster-deep-blue"
+        },
+        "space-paintings/golden-spiral": {
+          "images": {
+            "11x17": {
+              "sha256": "91a1d4cf8afeeb09852b8399dd65c634b130a02af422ffe5ab2cf3b40326fa03",
+              "imageId": "6af268c9e6919aa81facf004"
+            },
+            "8x10": {
+              "sha256": "f7889730c6d86edd714524a04dcef419cdc4d6f72826b0112eb417db41727064",
+              "imageId": "6af268cc500c6ef46194583e"
+            }
+          },
+          "productId": "6af268e1566e1161c904441b",
+          "publishedAt": "2026-11-10T00:44:18.664Z",
+          "etsyUrl": "https://www.etsy.com/listing/4613665461/golden-spiral-space-poster-cosmic"
+        },
+        "space-paintings/nebula-burst": {
+          "images": {
+            "11x17": {
+              "sha256": "c3b63cd055b759bd1a8cba07ff5a2754a944feb87acfdee89a61325ff90c662b",
+              "imageId": "6af269fabf0357c3219f4d09"
+            },
+            "8x10": {
+              "sha256": "cc30d45024bb3971c1f31181605f55dfbf7fb680447aeb3b40fd37089f1f9737",
+              "imageId": "6af26a00a0e6647d183a2fa8"
+            }
+          },
+          "productId": "6af26a1bbc9cdf480e0a0bce",
+          "publishedAt": "2026-11-10T00:49:34.278Z"
         }
       }
     }

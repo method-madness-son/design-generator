@@ -38,7 +38,7 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend", preload: 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", preload: false });
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito", preload: false });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", preload: false });
-const bigShoulders = Big_Shoulders({ subsets: ["latin"], variable: "--font-big-shoulders", preload: false });
+const bigShoulders = Big_Shoulders({ subsets: ["latin"], variable: "--font-big-shoulders", preload: false, adjustFontFallback: false });
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
   weight: ["400"],
@@ -101,7 +101,7 @@ const geist = Geist({
   preload: false,
 });
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest", preload: false });
-const datatype = Datatype({ subsets: ["latin"], variable: "--font-datatype", preload: false });
+const datatype = Datatype({ subsets: ["latin"], variable: "--font-datatype", preload: false, adjustFontFallback: false });
 const notoSansMono = Noto_Sans_Mono({ subsets: ["latin"], variable: "--font-noto-sans-mono", preload: false });
 const crimsonPro = Crimson_Pro({
   subsets: ["latin"],

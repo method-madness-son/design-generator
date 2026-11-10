@@ -1,0 +1,11 @@
+{
+  "id": "hercules-a",
+  "title": "Hercules A",
+  "subtitle": "Relativistic Jets · Radio Galaxy 3C 348",
+  "backgroundImage": {
+    "src": "/images/webb-telescope/hercules-a.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

@@ -136,6 +136,11 @@ export type GlobalTheme = {
   };
   per_market_overrides: Record<string, MarketOverride>;
   color_tokens?: ColorTokens;
+  wrap_swatches?: {
+    backgrounds: Record<string, string>;
+    foregrounds: Record<string, string>;
+    note?: string;
+  };
   rules: {
     do: string[];
     dont: string[];

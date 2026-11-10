@@ -12,7 +12,7 @@ export type LcPaper = (typeof LC_PAPERS)[number];
 export const LC_INKS = ['black', 'standard-color', 'premium-color'] as const;
 export type LcInk = (typeof LC_INKS)[number];
 
-export const LC_MARKETS = ['nd', 'hockey', 'cooking', 'rally'] as const;
+export const LC_MARKETS = ['nd', 'hockey', 'cooking', 'rally', 'dev'] as const;
 export type LcMarket = (typeof LC_MARKETS)[number];
 
 export const LC_ISBN = ['none', 'own'] as const;

@@ -111,6 +111,8 @@ export function resolveWrap(id: string): ResolvedWrap | null {
       foreground: design.colors?.foreground ?? '#000000',
       accent: design.colors?.accent ?? '#666666',
     },
+    icons: design.icons ?? [],
+    customIcons: design.customIcons ?? {},
     etsy,
     warnings,
     errors,

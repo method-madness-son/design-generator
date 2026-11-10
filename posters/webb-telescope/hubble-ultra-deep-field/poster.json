@@ -1,0 +1,11 @@
+{
+  "id": "hubble-ultra-deep-field",
+  "title": "Hubble Ultra Deep Field",
+  "subtitle": "10,000 galaxies in a single frame",
+  "backgroundImage": {
+    "src": "/images/webb-telescope/hubble-ultra-deep-field.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

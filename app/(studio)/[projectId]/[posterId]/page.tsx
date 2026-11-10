@@ -32,6 +32,7 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
     bodyRem,
     printSize,
     align,
+    bgZoom,
   } = await searchParams;
   const project = getProject(projectId);
   if (!project) notFound();
@@ -52,14 +53,14 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
     bodyRem: String(bodyRem ?? ""),
     printSize: String(printSize ?? ""),
     align: String(align ?? ""),
+    bgZoom: String(bgZoom ?? ""),
   });
   const poster = getResolvedPoster(projectId, posterId, query);
   if (!poster) notFound();
 
   const state = loadState();
-  const staged = state.staged ?? {};
   const synced = Object.values(state.shops).map((shop) => shop.posters[`${projectId}/${posterId}`]).find(Boolean);
-  const posterStatus = synced?.publishedAt ? 'listed' as const : synced?.productId ? 'draft' as const : staged[`${projectId}/${posterId}`] ? 'staged' as const : undefined;
+  const posterStatus = synced?.publishedAt ? 'published' as const : synced?.productId ? 'ready' as const : undefined;
   const posterSizes = savedSizes(projectId, posterId);
   const [ratioWidth, ratioHeight] = poster.aspectRatio.split("/").map(Number);
   const printHeightInches = (poster.printWidthInches * ratioHeight) / ratioWidth;
@@ -80,7 +81,7 @@ export default async function PosterPage({ params, searchParams }: PageProps<"/[
                     { label: poster.title },
                   ]}
                 />
-                <ListingBadge sizes={posterSizes} hasEtsy={!!poster.etsy} status={posterStatus} listedSizes={synced ? Object.keys(synced.images) : undefined} />
+                <ListingBadge sizes={posterSizes} hasEtsy={!!poster.etsy} status={posterStatus} listedSizes={synced?.productId ? Object.keys(synced.images) : undefined} />
                 <div className="flex items-center gap-2 text-xs text-neutral-500">
                   <span className="font-semibold text-neutral-700">{poster.aspectRatio.replace("/", ":")}</span>
                   <span className="text-neutral-300">·</span>

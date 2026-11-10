@@ -12,5 +12,9 @@
       "bodyRem": 2.25,
       "iconRem": 13
     }
-  }
+  },
+  "type": "kiss-cut",
+  "titleRem": 5.75,
+  "subtitleRem": 2.5,
+  "iconRem": 19
 }

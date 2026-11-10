@@ -3,18 +3,11 @@
     "8x10": {
       "width": 2400,
       "height": 3000,
-      "bytes": 449539,
-      "sha256": "a863faada8978740b0c0aa6d8b94003b39739b997fd1e5b2c295444104e59659",
-      "savedAt": "2026-11-01T21:34:46.938Z",
+      "bytes": 464007,
+      "sha256": "e97707cff76fbb774fa2c9d78cb229f7f1998c54d9d5a875f69a3509e793f47e",
+      "savedAt": "2026-11-06T03:37:58.322Z",
       "selection": {
-        "titleFont": "Doto",
-        "titleColor": "White",
-        "subtitleColor": "Night Owl",
-        "iconColor": "Night Owl",
-        "backgroundColor": "Night Owl",
-        "iconRem": "14.5",
-        "titleRem": "4.5",
-        "subtitleRem": "3.25"
+        "iconRem": "16.25"
       }
     },
     "11x17": {

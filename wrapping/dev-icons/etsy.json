@@ -1,0 +1,78 @@
+{
+  "etsy": {
+    "title": "Programmer Wrapping Paper, Dark Mode Developer Gift Wrap, Coding Tech Birthday, Software Engineer Nerd",
+    "description": "Developer wrapping paper with minimalist terminal, code bracket, and angle bracket icons in a teal-on-navy tiled pattern, perfect for wrapping gifts for the programmer in your life.\n\nWHAT YOU'LL GET\n\u2022 Physical wrapping paper printed on 90gsm fine art paper, shipped directly to you\n\u2022 Available in three sizes: 30\u00d736\u2033 (single sheet), 30\u00d772\u2033 (roll), and 30\u00d7180\u2033 (large roll)\n\u2022 Choose matte or glossy finish\n\u2022 Dark navy background (#011627) with teal developer icons (#7FDBCA) in a repeating tile pattern with a subtle glow effect\n\nHOW TO USE\nWrap birthday, holiday, or just-because gifts for any coder, developer, or tech enthusiast. The dark mode color scheme makes every package look like it was designed in a code editor.\n\nThis listing is a physical product, not a digital download. The paper is recyclable. Thank you for supporting a small shop!",
+    "tags": [
+      "programmer gift wrap",
+      "coding gift wrap",
+      "developer gift",
+      "software engineer",
+      "tech gift wrap",
+      "nerdy wrapping paper",
+      "dark mode",
+      "coder gift",
+      "computer nerd gift",
+      "geek gift wrap",
+      "tech birthday gift",
+      "code wrapping paper",
+      "programmer birthday"
+    ],
+    "category": "Paper & Party Supplies > Gift Wrapping > Wrapping Paper"
+  },
+  "research": {
+    "researchedAt": "2026-11-05",
+    "method": "search-results",
+    "primaryKeyword": "programmer wrapping paper",
+    "etsy": {
+      "searchPhrases": [
+        "computer code wrapping paper",
+        "coding wrapping paper",
+        "nerdy wrapping paper",
+        "computer themed gift wrap",
+        "nerd wrapping paper",
+        "binary code wrapping paper",
+        "computer wrap"
+      ],
+      "competitorNotes": [
+        "Most competitor designs use binary code, circuit boards, or matrix-style patterns; minimalist icon-based designs are underrepresented.",
+        "Dark backgrounds (black, navy) are common; teal/green accents echo terminal and matrix themes.",
+        "Listings that name specific audiences (programmer, coder, software engineer) in the title appear to rank well.",
+        "Price range for physical wrapping paper rolls on Etsy runs roughly $9 to $35, with most single sheets around $7-18 and rolls around $18-27."
+      ],
+      "priceRange": {
+        "min": 9,
+        "max": 35,
+        "currency": "USD"
+      }
+    },
+    "amazon": {
+      "searchPhrases": [
+        "programmer wrapping paper",
+        "geek wrapping paper",
+        "coding themed gift wrap"
+      ],
+      "competitorNotes": [
+        "Amazon titles consistently use 'programmer wrapping paper' or 'coding themed gift wrap' as openers, followed by audience terms like 'developer', 'tech enthusiast', and 'nerd'.",
+        "Multi-sheet sets (12 sheets, 20x28 in) are the dominant format on Amazon, while Etsy favors rolls.",
+        "Circuit board and binary code designs dominate; minimalist icon patterns are rare."
+      ]
+    },
+    "sources": [
+      "https://www.etsy.com/market/computer_code_wrapping_paper",
+      "https://www.etsy.com/market/coding_wrapping_paper",
+      "https://www.etsy.com/market/nerdy_wrapping_paper",
+      "https://www.etsy.com/market/computer_themed_gift_wrap",
+      "https://www.etsy.com/market/nerd_wrapping_paper",
+      "https://www.etsy.com/market/binary_code_wrapping_paper",
+      "https://www.etsy.com/market/computer_wrap",
+      "https://www.etsy.com/listing/1115079436/geek-binary-code-wrapping-paper-computer",
+      "https://www.etsy.com/listing/1774191126/computer-programmer-gift-wrap-roll",
+      "https://www.etsy.com/ca/listing/1808774517/computer-science-wrapping-paper-tech",
+      "https://www.etsy.com/listing/1804824931/computer-programmer-wrapping-paper-coder",
+      "https://www.amazon.com/Programmer-Wrapping-Keyboard-Developers-Enthusiasts/dp/B0F428557V",
+      "https://www.amazon.com/geek-wrapping-paper/s?k=geek+wrapping+paper",
+      "https://www.amazon.com/Technology-Circuit-Board-Wrapping-Themed/dp/B0GZMC172Z"
+    ],
+    "notes": "Primary keyword 'programmer wrapping paper' chosen because it directly targets the buyer intent and appears frequently in both Etsy and Amazon listing titles. Etsy has indexed market pages for 'coding_wrapping_paper', 'nerdy_wrapping_paper', and 'computer_code_wrapping_paper', confirming buyer search volume. Our product differentiates with a minimalist icon-based design rather than the common binary code or circuit board patterns, and the dark navy + teal color scheme stands out from the typical black + green matrix look."
+  }
+}

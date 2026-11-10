@@ -26,6 +26,7 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
     bodyRem,
     printSize,
     align,
+    bgZoom,
   } = await searchParams;
   const project = getProject(projectId);
   if (!project) notFound();
@@ -46,11 +47,11 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
     bodyRem: String(bodyRem ?? ""),
     printSize: String(printSize ?? ""),
     align: String(align ?? ""),
+    bgZoom: String(bgZoom ?? ""),
   });
   const posters = getResolvedPosters(projectId, query);
   const saved = savedSizesByPoster(projectId);
   const state = loadState();
-  const staged = state.staged ?? {};
   const printify = Object.assign({}, ...Object.values(state.shops).map((shop) => shop.posters));
 
   return (
@@ -80,12 +81,11 @@ export default async function ProjectPage({ params, searchParams }: PageProps<"/
                       sizes={saved.get(poster.id) ?? []}
                       hasEtsy={!!poster.etsy}
                       status={
-                        synced?.publishedAt ? 'listed'
-                        : synced?.productId ? 'draft'
-                        : staged[`${projectId}/${poster.id}`] ? 'staged'
+                        synced?.publishedAt ? 'published'
+                        : synced?.productId ? 'ready'
                         : undefined
                       }
-                      listedSizes={synced?.images ? Object.keys(synced.images) : undefined}
+                      listedSizes={synced?.productId && synced.images ? Object.keys(synced.images) : undefined}
                     />
                   );
                 })()}

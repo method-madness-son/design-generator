@@ -1,0 +1,11 @@
+{
+  "id": "golden-spiral",
+  "title": "Golden Spiral",
+  "subtitle": "Supernova in Teal and Gold",
+  "backgroundImage": {
+    "src": "/images/space-paintings/golden-spiral.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "eskimo-nebula",
+  "title": "Eskimo Nebula",
+  "subtitle": "NGC 2392 · Planetary Nebula",
+  "backgroundImage": {
+    "src": "/images/webb-telescope/eskimo-nebula.png",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

@@ -97,6 +97,8 @@ export type VariantSelection = {
   // Horizontal alignment of the icon and text: 'left' | 'center' | 'right'; empty means the
   // project's own containerClasses alignment.
   align?: string;
+  // Background image zoom level; empty means the poster's own default.
+  bgZoom?: string;
 };
 
 const ALIGN_OPTIONS = ['left', 'center', 'right'] as const;
@@ -138,6 +140,7 @@ export function getValidSelection(project: ProjectConfig, selection: VariantSele
     bodyRem,
     printSize,
     align,
+    bgZoom,
   } = selection;
   const colorOptions = getColorOptions(project);
   return {
@@ -158,6 +161,7 @@ export function getValidSelection(project: ProjectConfig, selection: VariantSele
     bodyRem: validRem(bodyRem, project.sizeScale?.body ?? project.sizeScale?.subtitle),
     printSize: printSize && POSTER_SIZES[printSize as PosterSizeName] ? printSize : '',
     align: align && isAlignOption(align) ? align : '',
+    bgZoom: bgZoom && Number(bgZoom) >= 1 && Number(bgZoom) <= 5 ? bgZoom : '',
   };
 }
 
@@ -203,6 +207,10 @@ export function getResolvedPoster(
     icon: poster.icon,
     graphic: poster.graphic,
     window: poster.window,
+    backgroundImage: poster.backgroundImage ? {
+      ...poster.backgroundImage,
+      ...(selected.bgZoom ? { zoom: Number(selected.bgZoom) } : undefined),
+    } : undefined,
     pinterest: poster.pinterest,
     etsy: poster.etsy,
     aspectRatio: sizeOverride?.aspectRatio || overrides?.defaultLayout?.aspectRatio || project.defaultLayout.aspectRatio,

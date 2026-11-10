@@ -1,0 +1,11 @@
+{
+  "id": "nebula-burst",
+  "title": "Nebula Burst",
+  "subtitle": "Stellar Nursery in Swirling Light",
+  "backgroundImage": {
+    "src": "/images/space-paintings/nebula-burst.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

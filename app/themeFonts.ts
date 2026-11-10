@@ -107,6 +107,7 @@ const bigShouldersStencil = Big_Shoulders_Stencil({
   weight: "800",
   preload: false,
   variable: "--font-theme-big-shoulders-stencil",
+  adjustFontFallback: false,
 });
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -120,6 +121,7 @@ const atkinsonNext = Atkinson_Hyperlegible_Next({
   weight: ["400", "700"],
   preload: false,
   variable: "--font-theme-atkinson-next",
+  adjustFontFallback: false,
 });
 
 /** Class string for the root element. Poster faces stay in app/fonts.ts. */

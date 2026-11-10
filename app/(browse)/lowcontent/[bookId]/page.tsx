@@ -3,10 +3,13 @@ import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { CoverSheet } from '@/components/lowcontent/CoverSheet';
 import { coverConceptFor } from '@/components/lowcontent/NdCover';
+import { devDesignFor } from '@/components/lowcontent/DevCover';
 import { InteriorSheet } from '@/components/lowcontent/InteriorSheet';
+import { LcDownloadPackButton } from '@/components/lowcontent/LcDownloadPackButton';
 import { ScaledSheet } from '@/components/lowcontent/ScaledSheet';
 import { getBookIds, loadBook } from '@/lib/lowcontent/books';
-import { formatInches, type InteriorGeometry } from '@/lib/lowcontent/specs';
+import { savedElements } from '@/lib/lowcontent/exports';
+import { inchesToPixels, formatInches, type InteriorGeometry } from '@/lib/lowcontent/specs';
 import type { LowContentManifest, RenderedLcPage, ResolvedInteriorTheme, LcOutlineEntry } from '@/types/lowcontent';
 
 export function generateStaticParams() {
@@ -19,6 +22,18 @@ export async function generateMetadata({ params }: { params: Promise<{ bookId: s
   return { title: book?.manifest ? `${book.manifest.title} — low-content preview` : 'Low-content preview' };
 }
 
+function uniqueTemplatePages(pages: RenderedLcPage[]): RenderedLcPage[] {
+  const seen = new Set<string>();
+  const result: RenderedLcPage[] = [];
+  for (const page of pages) {
+    if (!seen.has(page.template)) {
+      seen.add(page.template);
+      result.push(page);
+    }
+  }
+  return result;
+}
+
 export default async function LowContentBookPage({ params }: { params: Promise<{ bookId: string }> }) {
   const { bookId } = await params;
   const book = loadBook(bookId);
@@ -28,7 +43,7 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
   return (
     <>
       <div className="flex flex-wrap items-center gap-4">
-        <Breadcrumbs items={[{ label: "Low-content", href: "/lowcontent" }, { label: manifest?.title ?? book.id }]} />
+        <Breadcrumbs items={[{ label: "KDP", href: "/kdp" }, { label: manifest?.title ?? book.id }]} />
         {manifest ? (
           <>
             <Link href={`/lowcontent/${book.id}/print`} className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
@@ -37,6 +52,7 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
             <Link href={`/lowcontent/${book.id}/cover`} className="text-sm font-medium text-neutral-600 hover:text-neutral-900">
               Cover file
             </Link>
+            <LcDownloadPackButton bookId={book.id} bookTitle={manifest.title} savedElements={savedElements(book.id)} />
           </>
         ) : null}
       </div>
@@ -46,7 +62,68 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
       <MessageList items={book.warnings} tone="warn" />
       {manifest && geometry && cover && theme ? (
         <>
-          <dl className="mt-6 grid max-w-3xl grid-cols-1 gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
+          {/* ── Thumbnail grid ── */}
+          <h2 className="mt-6 text-lg font-semibold">Design</h2>
+          <p className="mt-1 text-sm text-neutral-500">Click a thumbnail to open the designer for that element.</p>
+          <div className="mt-3 flex flex-wrap gap-4">
+            {/* Front cover */}
+            <Thumbnail
+              label="Front cover"
+              href={`/lowcontent/${book.id}/design/front-cover`}
+            >
+              <ScaledSheet widthPx={inchesToPixels(cover.trimWidthIn)} heightPx={inchesToPixels(cover.trimHeightIn)} displayWidth={140}>
+                <CoverSheet
+                  title={manifest.title}
+                  subtitle={manifest.subtitle}
+                  description={manifest.kdp.description}
+                  pageCount={manifest.pageCount}
+                  geometry={cover}
+                  theme={theme}
+                  mode="preview"
+                  variant="front"
+                  concept={coverConceptFor(manifest.id, undefined)}
+                  devDesign={manifest.id === 'dev-notebook' ? devDesignFor(undefined) : undefined}
+                />
+              </ScaledSheet>
+            </Thumbnail>
+
+            {/* Back cover */}
+            <Thumbnail
+              label="Back cover"
+              href={`/lowcontent/${book.id}/design/back-cover`}
+            >
+              <BackCoverThumb
+                manifest={manifest}
+                cover={cover}
+                theme={theme}
+              />
+            </Thumbnail>
+
+            {/* Interior page templates */}
+            {uniqueTemplatePages(pages).map((page) => (
+              <Thumbnail
+                key={page.template}
+                label={page.config.heading || page.template}
+                href={`/lowcontent/${book.id}/design/${page.template}`}
+              >
+                <ScaledSheet widthPx={geometry.pageWidthPx} heightPx={geometry.pageHeightPx} displayWidth={140}>
+                  <InteriorSheet
+                    title={manifest.title}
+                    subtitle={manifest.subtitle}
+                    page={page}
+                    outline={outline}
+                    geometry={geometry}
+                    theme={theme}
+                    mode="preview"
+                    monochrome={manifest.ink === 'black'}
+                  />
+                </ScaledSheet>
+              </Thumbnail>
+            ))}
+          </div>
+
+          {/* ── Specs ── */}
+          <dl className="mt-8 grid max-w-3xl grid-cols-1 gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
             <Spec term="Project" value={manifest.project} />
             <Spec term="Trim" value={`${geometry.trim.label}${geometry.largeTrim ? ' · large trim' : ''}`} />
             <Spec term="Pages" value={String(geometry.pageCount)} />
@@ -61,13 +138,15 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
             <Spec term="Price" value={`$${manifest.kdp.priceUsd.toFixed(2)} USD`} />
           </dl>
           <p className="mt-4 max-w-3xl text-sm text-neutral-600">{manifest.kdp.description}</p>
-          <ul className="mt-4 flex flex-wrap gap-4 text-xs text-neutral-500">
+
+          {/* ── Full cover ── */}
+          <ul className="mt-6 flex flex-wrap gap-4 text-xs text-neutral-500">
             <li>Solid line: trim</li>
             <li>Dashed line: safe zone</li>
             <li>Blue line: spine</li>
             <li>Barcode box: preview only</li>
           </ul>
-          <h2 className="mt-8 text-lg font-semibold">Cover</h2>
+          <h2 className="mt-4 text-lg font-semibold">Full wrap cover</h2>
           <div className="mt-3 inline-block bg-neutral-200 p-3">
             <ScaledSheet widthPx={cover.fullWidthPx} heightPx={cover.fullHeightPx} displayWidth={720}>
               <CoverSheet
@@ -80,17 +159,14 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
                 mode="preview"
                 variant="wrap"
                 concept={coverConceptFor(manifest.id, undefined)}
+                devDesign={manifest.id === 'dev-notebook' ? devDesignFor(undefined) : undefined}
               />
             </ScaledSheet>
           </div>
+
+          {/* ── Interior pages ── */}
           {pages.length > 40 ? (
-            <ContactSheet
-              pages={pages}
-              manifest={manifest}
-              geometry={geometry}
-              theme={theme}
-              outline={outline}
-            />
+            <ContactSheet pages={pages} manifest={manifest} geometry={geometry} theme={theme} outline={outline} />
           ) : (
             <>
               <h2 className="mt-8 text-lg font-semibold">Interior spreads</h2>
@@ -119,6 +195,41 @@ export default async function LowContentBookPage({ params }: { params: Promise<{
         </>
       ) : null}
     </>
+  );
+}
+
+function Thumbnail({ label, href, children }: { label: string; href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="group flex flex-col items-center gap-1.5">
+      <div className="overflow-hidden rounded border border-neutral-300 bg-neutral-200 p-1.5 transition-all group-hover:border-neutral-500 group-hover:shadow-md">
+        {children}
+      </div>
+      <span className="max-w-[140px] truncate text-xs font-medium text-neutral-600 group-hover:text-neutral-900">{label}</span>
+    </Link>
+  );
+}
+
+function BackCoverThumb({
+  manifest,
+  cover,
+  theme,
+}: {
+  manifest: LowContentManifest;
+  cover: NonNullable<ReturnType<typeof loadBook>>['cover'] & {};
+  theme: ResolvedInteriorTheme;
+}) {
+  const widthPx = inchesToPixels(cover.trimWidthIn);
+  const heightPx = inchesToPixels(cover.trimHeightIn);
+  return (
+    <ScaledSheet widthPx={widthPx} heightPx={heightPx} displayWidth={140}>
+      <div style={{ position: 'relative', width: widthPx, height: heightPx, background: theme.paper, color: theme.ink, fontFamily: theme.supportingFontCss }}>
+        <div style={{ position: 'absolute', left: widthPx * 0.08, top: heightPx * 0.08, right: widthPx * 0.08, bottom: heightPx * 0.3 }}>
+          <p style={{ margin: 0, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: heightPx * 0.015 }}>{manifest.title}</p>
+          <p style={{ margin: `${heightPx * 0.02}px 0 0`, fontSize: heightPx * 0.013, lineHeight: 1.35 }}>{manifest.kdp.description}</p>
+          <p style={{ margin: `${heightPx * 0.025}px 0 0`, fontSize: heightPx * 0.011 }}>{manifest.pageCount} write-in pages</p>
+        </div>
+      </div>
+    </ScaledSheet>
   );
 }
 

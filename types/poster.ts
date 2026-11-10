@@ -65,11 +65,23 @@ export type PosterFile = {
     sizeRem?: number;
   };
   // Renders a built-in generative graphic (components/Fractal.tsx) instead of a lucide icon.
+  // When `svg` is set, loads an SVG file from graphics/<svg>.svg instead of a Fractal type.
   graphic?: {
     type: FractalType;
     position: 'top' | 'bottom';
     className?: string;
     sizeRem?: number;
+    svg?: string;
+  };
+  // A full-bleed photograph behind the poster content (e.g. Webb telescope images).
+  backgroundImage?: {
+    src: string;
+    // 1 = cover, >1 = zoomed in. Default 1.
+    zoom?: number;
+    // Horizontal offset in % (0–100). Default 50 (centred).
+    offsetX?: number;
+    // Vertical offset in % (0–100). Default 50 (centred).
+    offsetY?: number;
   };
   // Wraps the content in a retro dialog window (components/PosterWindow.tsx).
   window?: PosterWindowConfig;
@@ -168,6 +180,7 @@ export type ResolvedPoster = {
   icon?: PosterFile['icon'];
   graphic?: PosterFile['graphic'];
   window?: PosterFile['window'];
+  backgroundImage?: PosterFile['backgroundImage'];
   // Sets the content on a solid rounded panel, so a kiss-cut follows the panel's shape.
   panel?: boolean;
   panelColor?: string;

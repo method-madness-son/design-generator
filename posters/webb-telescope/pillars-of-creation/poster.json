@@ -1,0 +1,11 @@
+{
+  "id": "pillars-of-creation",
+  "title": "Pillars of Creation",
+  "subtitle": "Eagle Nebula · James Webb Space Telescope",
+  "backgroundImage": {
+    "src": "/images/webb-telescope/pillars-of-creation.jpg",
+    "zoom": 1,
+    "offsetX": 50,
+    "offsetY": 50
+  }
+}

@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { IconRenderer } from '@/components/IconRenderer';
 import { Fractal, type FractalType } from '@/components/Fractal';
+import { SvgGraphic, SVG_GRAPHIC_NAMES } from '@/components/SvgGraphic';
 import { Tabs } from '@/components/Tabs';
 import { TypographySpecimen } from '@/components/TypographySpecimen';
 import { EDITOR_THEME_COLORS } from '@/lib/editorThemeColors';
@@ -103,23 +104,85 @@ function TypographyPanel({ projects }: { projects: ReturnType<typeof getProjects
   );
 }
 
+const HIDDEN_GRAPHICS = new Set(['crossed-sticks', 'card-fan']);
+
+const GRAPHIC_CATEGORIES: Record<string, { label: string; description: string; types: string[] }> = {
+  'adhd-neuro': {
+    label: 'ADHD & Neurodivergent',
+    description: 'Spoon theory, executive function, and neurodivergent life.',
+    types: ['pen-arrow', 'progress-bar', 'spoon-count', 'spoon-battery', 'spoon-badge', 'side-quest-fork', 'squiggles', 'three-cautions'],
+  },
+  rally: {
+    label: 'Rally & Pace Notes',
+    description: 'Roadbook tulips, pace note pictograms, and rally stage icons.',
+    types: ['road-arrow', 'loop-arrow', 'tulip', 'left-right-oops', 'hairpin-square-flat', 'crest-jump-landing', 'surfaces', 'recce-rally-repair'],
+  },
+  mtg: {
+    label: 'Tabletop & MTG',
+    description: 'Magic: The Gathering, D&D, and tabletop gaming.',
+    types: ['d20-life', 'tap-card', 'mana-shield', 'mana-wheel', 'lightning-bolt'],
+  },
+  hockey: {
+    label: 'Hockey',
+    description: 'Hockey culture and locker room humour.',
+    types: ['goal-holes', 'three-hats', 'headstone'],
+  },
+  chaos: {
+    label: 'Chaos Theory',
+    description: 'Fractals, attractors, and mathematical beauty.',
+    types: ['lorenz', 'tree', 'spiral'],
+  },
+};
+
 function GraphicsPanel({ graphics }: { graphics: string[] }) {
+  const available = new Set(graphics.filter((g) => !HIDDEN_GRAPHICS.has(g)));
+
   return (
     <>
+      {SVG_GRAPHIC_NAMES.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-lg font-semibold text-neutral-900">SVG Graphics</h2>
+          <p className="mb-4 text-sm text-neutral-600">
+            Traced SVG files from graphics/. Support multi-color fills with accent and knockout classes.
+          </p>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {SVG_GRAPHIC_NAMES.map((name) => (
+              <div key={name} className="flex flex-col items-center rounded-lg border border-neutral-200 bg-white p-6"
+                style={{ '--poster-accent': '#c0272d', '--poster-background': '#ffffff' } as React.CSSProperties}>
+                <div className="flex h-28 w-28 items-center justify-center text-neutral-800">
+                  <SvgGraphic name={name} sizeRem={6} />
+                </div>
+                <p className="mt-3 text-center text-sm font-medium text-neutral-700">{name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <p className="mb-6 max-w-2xl text-sm text-neutral-600">
         Built-in SVG graphics rendered by the Fractal component. Each is drawn in currentColor
         and scales to the poster&apos;s icon size.
       </p>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-        {graphics.map((type) => (
-          <div key={type} className="flex flex-col items-center rounded-lg border border-neutral-200 bg-white p-4">
-            <div className="flex h-16 w-16 items-center justify-center text-neutral-800">
-              <Fractal type={type as FractalType} sizeRem={3.5} />
+      {Object.entries(GRAPHIC_CATEGORIES).map(([key, category]) => {
+        const visible = category.types.filter((t) => available.has(t));
+        if (visible.length === 0) return null;
+        return (
+          <section key={key} className="mt-8 first:mt-0">
+            <h2 className="text-lg font-semibold text-neutral-900">{category.label}</h2>
+            <p className="mb-4 text-sm text-neutral-600">{category.description}</p>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {visible.map((type) => (
+                <div key={type} className="flex flex-col items-center rounded-lg border border-neutral-200 bg-white p-6">
+                  <div className="flex h-28 w-28 items-center justify-center text-neutral-800">
+                    <Fractal type={type as FractalType} sizeRem={6} />
+                  </div>
+                  <p className="mt-3 text-center text-sm font-medium text-neutral-700">{type}</p>
+                </div>
+              ))}
             </div>
-            <p className="mt-2 text-center text-xs font-medium text-neutral-700">{type}</p>
-          </div>
-        ))}
-      </div>
+          </section>
+        );
+      })}
     </>
   );
 }
@@ -130,13 +193,13 @@ function IconsPanel({ icons }: { icons: string[] }) {
       <p className="mb-6 max-w-2xl text-sm text-neutral-600">
         Lucide icons currently used across poster designs. Each icon is referenced by name in poster.json.
       </p>
-      <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
         {icons.map((name) => (
-          <div key={name} className="flex flex-col items-center rounded-lg border border-neutral-200 bg-white p-3">
-            <div className="flex h-10 w-10 items-center justify-center text-neutral-800">
-              <IconRenderer name={name} sizeRem={1.75} />
+          <div key={name} className="flex flex-col items-center rounded-lg border border-neutral-200 bg-white p-6">
+            <div className="flex h-28 w-28 items-center justify-center text-neutral-800">
+              <IconRenderer name={name} sizeRem={3.5} />
             </div>
-            <p className="mt-1.5 text-center text-[11px] leading-tight text-neutral-600">{name}</p>
+            <p className="mt-3 text-center text-sm font-medium text-neutral-600">{name}</p>
           </div>
         ))}
       </div>
