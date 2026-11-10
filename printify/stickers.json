@@ -6,13 +6,13 @@
     "sizes": {
       "3x3": {
         "variantId": 45750,
-        "priceCents": 450,
+        "priceCents": 899,
         "placeholderWidth": 832,
         "placeholderHeight": 832
       },
       "4x4": {
         "variantId": 45752,
-        "priceCents": 550,
+        "priceCents": 899,
         "placeholderWidth": 1113,
         "placeholderHeight": 1113
       }
@@ -25,13 +25,13 @@
     "sizes": {
       "3x3": {
         "variantId": 45742,
-        "priceCents": 450,
+        "priceCents": 899,
         "placeholderWidth": 832,
         "placeholderHeight": 832
       },
       "4x4": {
         "variantId": 45744,
-        "priceCents": 550,
+        "priceCents": 899,
         "placeholderWidth": 1113,
         "placeholderHeight": 1113
       }

@@ -1,11 +1,11 @@
 {
   "shopId": 29566612,
   "blueprintId": 282,
-  "printProviderId": 2,
+  "printProviderId": 99,
   "placeholderPosition": "front",
   "sizes": {
-    "8x10": { "variantId": 114557, "priceCents": 1800 },
-    "11x17": { "variantId": 101125, "priceCents": 2400 }
+    "8x10": { "variantId": 114557, "priceCents": 2699 },
+    "11x17": { "variantId": 101125, "priceCents": 2799 }
   },
   "publish": {
     "title": true,

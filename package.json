@@ -32,6 +32,7 @@
     "printify:catalog": "tsx scripts/printify.ts catalog",
     "printify:check": "tsx scripts/printify.ts check",
     "printify:sync": "tsx scripts/printify.ts sync",
+    "printify:costs": "tsx scripts/printify-costs.ts",
     "listing:check": "tsx scripts/listing.ts check",
     "listing:brief": "tsx scripts/listing.ts brief"
   },
